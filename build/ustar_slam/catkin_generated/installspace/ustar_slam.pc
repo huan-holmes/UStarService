@@ -1,0 +1,8 @@
+prefix=/home/mingo/UStarService/install
+
+Name: ustar_slam
+Description: Description of ustar_slam
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

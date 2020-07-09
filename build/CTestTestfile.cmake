@@ -1,0 +1,35 @@
+# CMake generated Testfile for 
+# Source directory: /home/mingo/UStarService/src
+# Build directory: /home/mingo/UStarService/build
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+subdirs("gtest")
+subdirs("navigation/navigation")
+subdirs("openslam_gmapping")
+subdirs("scan_tools/scan_tools")
+subdirs("slam_gmapping/slam_gmapping")
+subdirs("navigation/map_server")
+subdirs("scan_tools/laser_scan_sparsifier")
+subdirs("scan_tools/laser_scan_splitter")
+subdirs("slam_gmapping/gmapping")
+subdirs("scan_tools/ncd_parser")
+subdirs("scan_tools/laser_ortho_projector")
+subdirs("scan_tools/laser_scan_matcher")
+subdirs("scan_tools/polar_scan_matcher")
+subdirs("scan_tools/scan_to_cloud_converter")
+subdirs("navigation/amcl")
+subdirs("navigation/fake_localization")
+subdirs("ustar_slam")
+subdirs("navigation/voxel_grid")
+subdirs("navigation/costmap_2d")
+subdirs("navigation/nav_core")
+subdirs("navigation/base_local_planner")
+subdirs("navigation/carrot_planner")
+subdirs("navigation/clear_costmap_recovery")
+subdirs("navigation/dwa_local_planner")
+subdirs("navigation/move_slow_and_clear")
+subdirs("navigation/navfn")
+subdirs("navigation/global_planner")
+subdirs("navigation/rotate_recovery")
+subdirs("navigation/move_base")

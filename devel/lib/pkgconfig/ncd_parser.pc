@@ -1,0 +1,8 @@
+prefix=/home/mingo/UStarService/devel
+
+Name: ncd_parser
+Description: Description of ncd_parser
+Version: 0.3.2
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
