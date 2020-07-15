@@ -1,0 +1,27 @@
+<launch>
+
+  #### rosrun map_server #################################################
+
+  <node  name="map_load" pkg="map_server" type="map_server" output="screen" 
+    args="$(find ustar_slam)/data/maps/mymap.yaml">
+  </node>
+
+
+      
+        <arg name="model" />
+        <param name="robot_description" textfile="$(find ustar_slam)/urdf/robotmodel.urdf"/>
+         <node pkg="tf" type="static_transform_publisher" name="base_link_to_map" 
+    args="0.0 0.0 0.0 0.0 0.0 0.0 /base_link /map 40" />
+
+        <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+        </node>
+
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
+        </node>
+
+        <node name="rviz" pkg="rviz" type="rviz"  />
+
+
+
+
+</launch>
