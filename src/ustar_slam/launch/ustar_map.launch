@@ -3,25 +3,31 @@
   #### rosrun map_server #################################################
 
   <node  name="map_load" pkg="map_server" type="map_server" output="screen" 
-    args="$(find ustar_slam)/data/maps/mymap.yaml">
-  </node>
+    args="$(find ustar_slam)/data/maps/mymap.yaml" />
 
+  #### publish marker_array ###############################################
 
-      
-        <arg name="model" />
-        <param name="robot_description" textfile="$(find ustar_slam)/urdf/robotmodel.urdf"/>
-         <node pkg="tf" type="static_transform_publisher" name="base_link_to_map" 
+  <node name="ustar_simulation" pkg="ustar_slam" type="sim_markers_node" output="screen" />
+  
+  #### model ############################################################
+
+  <arg name="model" />
+
+  #### robot_description ##################################################
+
+  <param name="robot_description" textfile="$(find ustar_slam)/urdf/robotmodel.urdf"/>
+
+  #### publish static_transform from base_link to map #########################
+
+  <node pkg="tf" type="static_transform_publisher" name="base_link_to_map" 
     args="0.0 0.0 0.0 0.0 0.0 0.0 /base_link /map 40" />
 
-        <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
-        </node>
+  #### publish state ######################################################
 
-        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
-        </node>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  
+  #### start rviz ##########################################################
 
-        <node name="rviz" pkg="rviz" type="rviz"  />
-
-
-
-
+  <node name="rviz" pkg="rviz" type="rviz"  />
 </launch>

@@ -92,7 +92,7 @@
     <joint_properties damping="0.0" friction="0.0"/>
   </joint>
 
-  <link name="head">
+  <!-- <link name="head">
     <visual>
       <geometry>
         <box size=".02 .03 .03"/>
@@ -107,5 +107,5 @@
     <parent link="base_link"/>
     <child link="head"/>
     <origin xyz="0 0.08 0.025"/>
-  </joint>
+  </joint> -->
 </robot>
