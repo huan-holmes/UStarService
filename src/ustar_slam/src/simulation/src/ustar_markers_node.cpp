@@ -24,17 +24,17 @@ int main(int argc, char **argv)
             marker.type = shape;
             marker.action = visualization_msgs::Marker::ADD;
 
-            marker.pose.position.x = -2;
-            marker.pose.position.y = -2 + i;
+            marker.pose.position.x = 2;
+            marker.pose.position.y = 2 + i;
             marker.pose.position.z = 0;
             marker.pose.orientation.x = 0.0;
             marker.pose.orientation.y = 0.0;
             marker.pose.orientation.z = 0.0;
             marker.pose.orientation.w = 1.0;
 
-            marker.scale.x = 0.05;
-            marker.scale.y = 0.05;
-            marker.scale.z = 0.3;
+            marker.scale.x = 0.15;
+            marker.scale.y = 0.15;
+            marker.scale.z = 1.0;
 
             marker.color.r = 0.0f;
             marker.color.g = 1.0f;

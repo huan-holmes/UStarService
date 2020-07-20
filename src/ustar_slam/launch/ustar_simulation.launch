@@ -3,7 +3,7 @@
   #### rosrun map_server #################################################
 
   <node  name="map_load" pkg="map_server" type="map_server" output="screen" 
-    args="$(find ustar_slam)/data/maps/mymap.yaml" />
+    args="$(find ustar_slam)/data/maps/map1.yaml" />
 
   #### publish marker_array ###############################################
 
@@ -29,5 +29,7 @@
   
   #### start rviz ##########################################################
 
-  <node name="rviz" pkg="rviz" type="rviz"  />
+  <node name="rviz" pkg="rviz" type="rviz"
+  args="-d $(find ustar_slam)/launch/ustar_simulation.rviz" />
+
 </launch>

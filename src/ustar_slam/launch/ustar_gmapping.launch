@@ -11,7 +11,7 @@ slam_gmapping
 
  
  <node pkg="rosbag" type="play" name="play" 
-    args="$(find laser_scan_matcher)/demo/test4.bag --delay=4 --clock"/>
+    args="$(find laser_scan_matcher)/demo/test8.bag --delay=4 --clock"/>
 
   #### publish an example base_link -> laser transform ###########
 
@@ -59,7 +59,7 @@ slam_gmapping
     <param name="ymin" value="-5.0"/>
     <param name="xmax" value="5.0"/>
     <param name="ymax" value="5.0"/>
-    <param name="delta" value="0.02"/>
+    <param name="delta" value="0.05"/>
     <param name="llsamplerange" value="0.01"/>
     <param name="llsamplestep" value="0.05"/>
     <param name="lasamplerange" value="0.05"/>
