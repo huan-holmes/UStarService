@@ -25,8 +25,10 @@ namespace Simulation{
             int count_;
             uint32_t shape_;
 
-            int maxX_;
-            int maxY_;
+            int s_xmin_;
+            int s_ymin_;
+            int s_xmax_;
+            int s_ymax_;
             
     };
 };

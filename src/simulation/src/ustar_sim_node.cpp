@@ -6,7 +6,8 @@
 
 namespace Simulation
 {
-    UStarSimulation::UStarSimulation() : count_(0), r_(1), num_(3), shape_(visualization_msgs::Marker::CUBE)
+    UStarSimulation::UStarSimulation() : s_xmin_(-100),  s_ymin_(-100), s_xmax_(100), s_ymax_(100),
+        count_(0), r_(1), num_(3), shape_(visualization_msgs::Marker::CUBE)
     {
     }
 
@@ -67,9 +68,20 @@ namespace Simulation
 
     void UStarSimulation::UpdateMarkerState()
     {
-        visualization_msgs::Marker *marker;
-        marker = &marker_array_.markers[0];
-        marker->pose.position.x += 0.05; 
+        
+        
+        for(size_t i = 0; i < marker_array_.markers.size(); i ++) {
+            visualization_msgs::Marker *marker_ptr;
+            marker_ptr = &marker_array_.markers[i];
+            if (i == 0) {    
+                marker_ptr->pose.position.x += 0.05; 
+            }
+            if (i == 1) {
+                marker_ptr->pose.position.y += 0.05; 
+            }
+            //delete marker_ptr;
+            
+        }
         markerArr_pub_.publish(marker_array_);
         r_.sleep();
     }

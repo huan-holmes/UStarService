@@ -29,7 +29,7 @@
   
   #### start rviz ##########################################################
 
-  <node name="rviz" pkg="rviz" type="rviz" />
-  <!-- args="-d $(find simulation)/launch/ustar_simulation.rviz" /> -->
+  <node name="rviz" pkg="rviz" type="rviz"
+  args="-d $(find simulation)/launch/ustar_simulation.rviz" />
 
 </launch>
