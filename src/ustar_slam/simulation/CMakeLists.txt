@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ustar_slam)
+project(simulation)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -104,7 +104,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES ustar_slam
+#  LIBRARIES simulation
 #  CATKIN_DEPENDS roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
@@ -118,16 +118,15 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
-  #  src/simulation/include
+  include
 )
 
-#add_library(${PROJECT_NAME}
-#  src/simulation/src/markers_node.cpp
-#)
+add_executable(ustar_sim_node src/main.cpp src/ustar_sim_node.cpp)
+target_link_libraries(ustar_sim_node ${catkin_LIBRARIES})
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/ustar_slam.cpp
+#   src/${PROJECT_NAME}/simulation.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -138,16 +137,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/ustar_slam_node.cpp)
-#add_executable(ustar_sim_node src/simulation/src/ustar_sim_node.cpp)
-#target_link_libraries(ustar_sim_node ${catkin_LIBRARIES})
-
-#add_executable(sim_markers_node src/simulation/src/ustar_markers_node.cpp)
-#target_link_libraries(sim_markers_node ${catkin_LIBRARIES})
-
-#add_executable(markers_node src/simulation/src/main.cpp src/simulation/src/markers_node.cpp)
-#target_link_libraries(markers_node ${catkin_LIBRARIES})
-
+# add_executable(${PROJECT_NAME}_node src/simulation_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -211,7 +201,7 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_star_slam.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_simulation.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

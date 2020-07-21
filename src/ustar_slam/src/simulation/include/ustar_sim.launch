@@ -1,3 +1,0 @@
-<launch>
-<node name="ustar_simulation" pkg="ustar_slam" type="ustar_sim_node" output="screen" />
-</launch>

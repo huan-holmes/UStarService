@@ -7,7 +7,7 @@
 
   #### publish marker_array ###############################################
 
-  <node name="ustar_simulation" pkg="ustar_slam" type="sim_markers_node" output="screen" />
+  <node name="ustar_simulation" pkg="simulation" type="ustar_sim_node" output="screen" />
   
   #### model ############################################################
 
@@ -15,7 +15,7 @@
 
   #### robot_description ##################################################
 
-  <param name="robot_description" textfile="$(find ustar_slam)/urdf/robotmodel.urdf"/>
+  <param name="robot_description" textfile="$(find simulation)/urdf/robotmodel.urdf"/>
 
   #### publish static_transform from base_link to map #########################
 
@@ -29,7 +29,7 @@
   
   #### start rviz ##########################################################
 
-  <node name="rviz" pkg="rviz" type="rviz"
-  args="-d $(find ustar_slam)/launch/ustar_simulation.rviz" />
+  <node name="rviz" pkg="rviz" type="rviz" />
+  <!-- args="-d $(find simulation)/launch/ustar_simulation.rviz" /> -->
 
 </launch>
