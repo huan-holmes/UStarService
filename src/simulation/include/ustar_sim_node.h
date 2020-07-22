@@ -3,7 +3,9 @@
 
 #include<string>
 #include <ros/ros.h>
+#include <boost/thread.hpp>
 #include "visualization_msgs/MarkerArray.h"
+#include "nav_msgs/GetMap.h"
 
 namespace Simulation{
     class UStarSimulation{
@@ -13,10 +15,13 @@ namespace Simulation{
             void run();
             void markerPublish();
             void UpdateMarkerState();
+            void mapCallback(const nav_msgs::OccupancyGrid::ConstPtr& msg);
+
             
         private:
             ros::NodeHandle nh_;
             ros::Publisher markerArr_pub_;
+            ros::Subscriber map_sub_;
             ros::Rate r_;
 
             visualization_msgs::MarkerArray marker_array_;

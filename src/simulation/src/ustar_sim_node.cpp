@@ -3,11 +3,13 @@
 #include "ros/ros.h"
 #include "visualization_msgs/Marker.h"
 #include "visualization_msgs/MarkerArray.h"
+#include "nav_msgs/GetMap.h"
+#include <boost/foreach.hpp>
 
 namespace Simulation
 {
-    UStarSimulation::UStarSimulation() : s_xmin_(-100),  s_ymin_(-100), s_xmax_(100), s_ymax_(100),
-        count_(0), r_(1), num_(3), shape_(visualization_msgs::Marker::CUBE)
+    UStarSimulation::UStarSimulation() : s_xmin_(-100), s_ymin_(-100), s_xmax_(100), s_ymax_(100),
+                                         count_(0), r_(1), num_(3), shape_(visualization_msgs::Marker::CUBE)
     {
     }
 
@@ -18,71 +20,77 @@ namespace Simulation
     void UStarSimulation::run()
     {
         markerArr_pub_ = nh_.advertise<visualization_msgs::MarkerArray>("visualization_marker_array", 5);
+        map_sub_ = nh_.subscribe("map", 10, &UStarSimulation::mapCallback, this);
         markerPublish();
     }
 
     void UStarSimulation::markerPublish()
     {
-        while (ros::ok())
+
+        if (count_ == num_)
         {
-            if (count_ == num_){
-                UpdateMarkerState();
-                continue;
-            }
-            //marker_array_.markers.clear();
-            for (int i = 0; i < num_; i++)
-            {
-                count_++;
-                visualization_msgs::Marker marker;
-                marker.header.frame_id = "/map";
-                marker.header.stamp = ros::Time::now();
-                marker.ns = "ustar_sim_node";
-                marker.id = i;
-                marker.type = shape_;
-                marker.action = visualization_msgs::Marker::ADD;
-
-                marker.pose.position.x = 2;
-                marker.pose.position.y = 2 + i;
-                marker.pose.position.z = 0;
-                marker.pose.orientation.x = 0.0;
-                marker.pose.orientation.y = 0.0;
-                marker.pose.orientation.z = 0.0;
-                marker.pose.orientation.w = 1.0;
-
-                marker.scale.x = 0.15;
-                marker.scale.y = 0.15;
-                marker.scale.z = 1.0;
-
-                marker.color.r = 0.0f;
-                marker.color.g = 1.0f;
-                marker.color.b = 0.0f;
-                marker.color.a = 1.0;
-
-                marker.lifetime = ros::Duration();
-                marker_array_.markers.push_back(marker);
-            }
-           markerArr_pub_.publish(marker_array_);
-            r_.sleep();
+            UpdateMarkerState();
+            return;
+            // continue;
         }
-    }
+        for (int i = 0; i < num_; i++)
+        {
+            count_++;
+            visualization_msgs::Marker marker;
+            marker.header.frame_id = "/map";
+            marker.header.stamp = ros::Time::now();
+            marker.ns = "ustar_sim_node";
+            marker.id = i;
+            marker.type = shape_;
+            marker.action = visualization_msgs::Marker::ADD;
 
-    void UStarSimulation::UpdateMarkerState()
-    {
-        
-        
-        for(size_t i = 0; i < marker_array_.markers.size(); i ++) {
-            visualization_msgs::Marker *marker_ptr;
-            marker_ptr = &marker_array_.markers[i];
-            if (i == 0) {    
-                marker_ptr->pose.position.x += 0.05; 
-            }
-            if (i == 1) {
-                marker_ptr->pose.position.y += 0.05; 
-            }
-            //delete marker_ptr;
-            
+            marker.pose.position.x = 2;
+            marker.pose.position.y = 2 + i;
+            marker.pose.position.z = 0;
+            marker.pose.orientation.x = 0.0;
+            marker.pose.orientation.y = 0.0;
+            marker.pose.orientation.z = 0.0;
+            marker.pose.orientation.w = 1.0;
+
+            marker.scale.x = 0.15;
+            marker.scale.y = 0.15;
+            marker.scale.z = 1.0;
+
+            marker.color.r = 0.0f;
+            marker.color.g = 1.0f;
+            marker.color.b = 0.0f;
+            marker.color.a = 1.0;
+
+            marker.lifetime = ros::Duration();
+            marker_array_.markers.push_back(marker);
         }
         markerArr_pub_.publish(marker_array_);
         r_.sleep();
     }
-}; // namespace UStarSlam
+
+    void UStarSimulation::UpdateMarkerState()
+    {
+
+        for (size_t i = 0; i < marker_array_.markers.size(); i++)
+        {
+            visualization_msgs::Marker *marker_ptr;
+            marker_ptr = &marker_array_.markers[i];
+            if (i == 0)
+            {
+                marker_ptr->pose.position.x += 0.05;
+            }
+            if (i == 1)
+            {
+                marker_ptr->pose.position.y += 0.05;
+            }
+            //delete marker_ptr;
+        }
+        markerArr_pub_.publish(marker_array_);
+        r_.sleep();
+    }
+    void UStarSimulation::mapCallback(const nav_msgs::OccupancyGrid::ConstPtr &msg)
+    {
+        ROS_INFO_STREAM("----mapCallback()----");
+        
+    }
+}; // namespace Simulation
