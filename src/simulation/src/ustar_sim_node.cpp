@@ -77,49 +77,73 @@ namespace Simulation
         {
             visualization_msgs::Marker *marker_ptr;
             marker_ptr = &marker_array_.markers[i];
+            int cell_x;
+            int cell_y;
+            int occ;
             if (i == 0)
             {
                 marker_ptr->pose.position.x -= 0.5;
-                int cell_x;
-                cell_x = int((marker_ptr->pose.position.x - origin_pose_.position.x)/map_resolution_);
-                int cell_y;
-                cell_y = int((marker_ptr->pose.position.y - origin_pose_.position.y)/map_resolution_);
-                int occ;
+                cell_x = int((marker_ptr->pose.position.x - origin_pose_.position.x) / map_resolution_);
+                cell_y = int((marker_ptr->pose.position.y - origin_pose_.position.y) / map_resolution_);
                 occ = round(map_ptr_->data[MAP_IDX(map_width_, cell_x, cell_y)]);
-                ROS_INFO_STREAM(occ);
-                while (occ != -1){
+                while (occ != -1)
+                {
                     marker_ptr->pose.position.x += 0.5;
                     marker_ptr->pose.position.y -= 0.5;
-                    cell_x = int((marker_ptr->pose.position.x - origin_pose_.position.x)/map_resolution_);
-                    cell_y = int((marker_ptr->pose.position.y - origin_pose_.position.y)/map_resolution_);
+                    cell_x = int((marker_ptr->pose.position.x - origin_pose_.position.x) / map_resolution_);
+                    cell_y = int((marker_ptr->pose.position.y - origin_pose_.position.y) / map_resolution_);
                     occ = round(map_ptr_->data[MAP_IDX(map_width_, cell_x, cell_y)]);
                 }
-                
             }
             if (i == 1)
             {
                 marker_ptr->pose.position.y += 0.5;
-           
+                cell_x = int((marker_ptr->pose.position.x - origin_pose_.position.x) / map_resolution_);
+                cell_y = int((marker_ptr->pose.position.y - origin_pose_.position.y) / map_resolution_);
+                occ = round(map_ptr_->data[MAP_IDX(map_width_, cell_x, cell_y)]);
+                while (occ != -1)
+                {
+                    marker_ptr->pose.position.x -= 0.5;
+                    marker_ptr->pose.position.y -= 0.5;
+                    cell_x = int((marker_ptr->pose.position.x - origin_pose_.position.x) / map_resolution_);
+                    cell_y = int((marker_ptr->pose.position.y - origin_pose_.position.y) / map_resolution_);
+                    occ = round(map_ptr_->data[MAP_IDX(map_width_, cell_x, cell_y)]);
+                }
+            }
+            if (i == 2)
+            {
+                marker_ptr->pose.position.y += 0.5;
+                cell_x = int((marker_ptr->pose.position.x - origin_pose_.position.x) / map_resolution_);
+                cell_y = int((marker_ptr->pose.position.y - origin_pose_.position.y) / map_resolution_);
+                occ = round(map_ptr_->data[MAP_IDX(map_width_, cell_x, cell_y)]);
+                while (occ != -1)
+                {
+                    marker_ptr->pose.position.x -= 0.5;
+                    marker_ptr->pose.position.y -= 0.5;
+                    cell_x = int((marker_ptr->pose.position.x - origin_pose_.position.x) / map_resolution_);
+                    cell_y = int((marker_ptr->pose.position.y - origin_pose_.position.y) / map_resolution_);
+                    occ = round(map_ptr_->data[MAP_IDX(map_width_, cell_x, cell_y)]);
+                }
             }
             //delete marker_ptr;
         }
-        markerArr_pub_.publish(marker_array_);
-        r_.sleep();
-    }
-    void UStarSimulation::mapCallback(const nav_msgs::OccupancyGrid::ConstPtr &msg)
-    {
-
-        if(got_map_){
-            
-            return;
+            markerArr_pub_.publish(marker_array_);
+            r_.sleep();
         }
-        ROS_INFO_STREAM("----mapCallback()----");
-        map_ptr_ = msg;
-        map_width_ = msg->info.width;
-        map_height_ = msg->info.height;
-        map_resolution_ = msg->info.resolution;
-        origin_pose_ = msg->info.origin;
-        got_map_ = true;
-        
-    }
-}; // namespace Simulation
+        void UStarSimulation::mapCallback(const nav_msgs::OccupancyGrid::ConstPtr &msg)
+        {
+
+            if (got_map_)
+            {
+
+                return;
+            }
+            ROS_INFO_STREAM("----mapCallback()----");
+            map_ptr_ = msg;
+            map_width_ = msg->info.width;
+            map_height_ = msg->info.height;
+            map_resolution_ = msg->info.resolution;
+            origin_pose_ = msg->info.origin;
+            got_map_ = true;
+        }
+    }; // namespace Simulation
