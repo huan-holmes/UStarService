@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  tf
 )
 
 ## System dependencies are found with CMake's conventions
@@ -141,6 +142,9 @@ include_directories(
 # add_executable(${PROJECT_NAME}_node src/ustar_slam_node.cpp)
 #add_executable(ustar_sim_node src/simulation/src/ustar_sim_node.cpp)
 #target_link_libraries(ustar_sim_node ${catkin_LIBRARIES})
+
+add_executable(odom_to_base_node src/odom_to_base_node)
+target_link_libraries(odom_to_base_node ${catkin_LIBRARIES})
 
 #add_executable(sim_markers_node src/simulation/src/ustar_markers_node.cpp)
 #target_link_libraries(sim_markers_node ${catkin_LIBRARIES})

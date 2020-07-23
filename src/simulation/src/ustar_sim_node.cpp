@@ -82,13 +82,13 @@ namespace Simulation
             int occ;
             if (i == 0)
             {
-                marker_ptr->pose.position.x -= 0.5;
+                marker_ptr->pose.position.x += 0.5;
                 cell_x = int((marker_ptr->pose.position.x - origin_pose_.position.x) / map_resolution_);
                 cell_y = int((marker_ptr->pose.position.y - origin_pose_.position.y) / map_resolution_);
                 occ = round(map_ptr_->data[MAP_IDX(map_width_, cell_x, cell_y)]);
                 while (occ != -1)
                 {
-                    marker_ptr->pose.position.x += 0.5;
+                    marker_ptr->pose.position.x -= 1.0;
                     marker_ptr->pose.position.y -= 0.5;
                     cell_x = int((marker_ptr->pose.position.x - origin_pose_.position.x) / map_resolution_);
                     cell_y = int((marker_ptr->pose.position.y - origin_pose_.position.y) / map_resolution_);
@@ -103,8 +103,8 @@ namespace Simulation
                 occ = round(map_ptr_->data[MAP_IDX(map_width_, cell_x, cell_y)]);
                 while (occ != -1)
                 {
-                    marker_ptr->pose.position.x -= 0.5;
-                    marker_ptr->pose.position.y -= 0.5;
+                    marker_ptr->pose.position.x += 0.5;
+                    marker_ptr->pose.position.y -= 1.0;
                     cell_x = int((marker_ptr->pose.position.x - origin_pose_.position.x) / map_resolution_);
                     cell_y = int((marker_ptr->pose.position.y - origin_pose_.position.y) / map_resolution_);
                     occ = round(map_ptr_->data[MAP_IDX(map_width_, cell_x, cell_y)]);
@@ -112,14 +112,14 @@ namespace Simulation
             }
             if (i == 2)
             {
-                marker_ptr->pose.position.y += 0.5;
+                marker_ptr->pose.position.y -= 0.5;
                 cell_x = int((marker_ptr->pose.position.x - origin_pose_.position.x) / map_resolution_);
                 cell_y = int((marker_ptr->pose.position.y - origin_pose_.position.y) / map_resolution_);
                 occ = round(map_ptr_->data[MAP_IDX(map_width_, cell_x, cell_y)]);
                 while (occ != -1)
                 {
                     marker_ptr->pose.position.x -= 0.5;
-                    marker_ptr->pose.position.y -= 0.5;
+                    marker_ptr->pose.position.y += 0.5;
                     cell_x = int((marker_ptr->pose.position.x - origin_pose_.position.x) / map_resolution_);
                     cell_y = int((marker_ptr->pose.position.y - origin_pose_.position.y) / map_resolution_);
                     occ = round(map_ptr_->data[MAP_IDX(map_width_, cell_x, cell_y)]);

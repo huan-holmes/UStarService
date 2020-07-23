@@ -47,11 +47,11 @@ slam_gmapping
     <param name="temporalUpdate" value="0.4"/>
     <param name="resampleThreshold" value="0.5"/>
     <param name="particles" value="10"/>
-    <param name="xmin" value="-5.0"/>
-    <param name="ymin" value="-5.0"/>
-    <param name="xmax" value="5.0"/>
-    <param name="ymax" value="5.0"/>
-    <param name="delta" value="0.02"/>
+    <param name="xmin" value="-50.0"/>
+    <param name="ymin" value="-50.0"/>
+    <param name="xmax" value="50.0"/>
+    <param name="ymax" value="50.0"/>
+    <param name="delta" value="0.05"/>
     <param name="llsamplerange" value="0.01"/>
     <param name="llsamplestep" value="0.05"/>
     <param name="lasamplerange" value="0.05"/>
