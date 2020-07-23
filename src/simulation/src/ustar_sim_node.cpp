@@ -6,10 +6,12 @@
 #include "nav_msgs/GetMap.h"
 #include <boost/foreach.hpp>
 
+#define MAP_IDX(sx, i, j) ((sx) * (j) + (i))
+
 namespace Simulation
 {
     UStarSimulation::UStarSimulation() : s_xmin_(-100), s_ymin_(-100), s_xmax_(100), s_ymax_(100),
-                                         count_(0), r_(1), num_(3), shape_(visualization_msgs::Marker::CUBE)
+                                         count_(0), r_(1), num_(3), shape_(visualization_msgs::Marker::CUBE), got_map_(false)
     {
     }
 
@@ -77,11 +79,27 @@ namespace Simulation
             marker_ptr = &marker_array_.markers[i];
             if (i == 0)
             {
-                marker_ptr->pose.position.x += 0.05;
+                marker_ptr->pose.position.x -= 0.5;
+                int cell_x;
+                cell_x = int((marker_ptr->pose.position.x - origin_pose_.position.x)/map_resolution_);
+                int cell_y;
+                cell_y = int((marker_ptr->pose.position.y - origin_pose_.position.y)/map_resolution_);
+                int occ;
+                occ = round(map_ptr_->data[MAP_IDX(map_width_, cell_x, cell_y)]);
+                ROS_INFO_STREAM(occ);
+                while (occ != -1){
+                    marker_ptr->pose.position.x += 0.5;
+                    marker_ptr->pose.position.y -= 0.5;
+                    cell_x = int((marker_ptr->pose.position.x - origin_pose_.position.x)/map_resolution_);
+                    cell_y = int((marker_ptr->pose.position.y - origin_pose_.position.y)/map_resolution_);
+                    occ = round(map_ptr_->data[MAP_IDX(map_width_, cell_x, cell_y)]);
+                }
+                
             }
             if (i == 1)
             {
-                marker_ptr->pose.position.y += 0.05;
+                marker_ptr->pose.position.y += 0.5;
+           
             }
             //delete marker_ptr;
         }
@@ -90,7 +108,18 @@ namespace Simulation
     }
     void UStarSimulation::mapCallback(const nav_msgs::OccupancyGrid::ConstPtr &msg)
     {
+
+        if(got_map_){
+            
+            return;
+        }
         ROS_INFO_STREAM("----mapCallback()----");
+        map_ptr_ = msg;
+        map_width_ = msg->info.width;
+        map_height_ = msg->info.height;
+        map_resolution_ = msg->info.resolution;
+        origin_pose_ = msg->info.origin;
+        got_map_ = true;
         
     }
 }; // namespace Simulation

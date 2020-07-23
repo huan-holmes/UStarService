@@ -1,11 +1,13 @@
 #ifndef USTAR_SIM_NODE_H_
 #define USTAR_SIM_NODE_H_
 
-#include<string>
+#include <string>
 #include <ros/ros.h>
 #include <boost/thread.hpp>
 #include "visualization_msgs/MarkerArray.h"
 #include "nav_msgs/GetMap.h"
+#include <boost/shared_ptr.hpp>
+#include <geometry_msgs/Pose.h>
 
 namespace Simulation{
     class UStarSimulation{
@@ -34,7 +36,13 @@ namespace Simulation{
             int s_ymin_;
             int s_xmax_;
             int s_ymax_;
-            
+
+            bool got_map_;
+            boost::shared_ptr<nav_msgs::OccupancyGrid const> map_ptr_;
+            int map_width_;
+            int map_height_;
+            float map_resolution_;
+            geometry_msgs::Pose origin_pose_;    
     };
 };
 #endif
