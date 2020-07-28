@@ -145,6 +145,8 @@ include_directories(
 
 add_executable(odom_to_base_node src/odom_to_base_node)
 target_link_libraries(odom_to_base_node ${catkin_LIBRARIES})
+add_executable(amcl_location_node src/amcl_location_node)
+target_link_libraries(amcl_location_node ${catkin_LIBRARIES})
 
 #add_executable(sim_markers_node src/simulation/src/ustar_markers_node.cpp)
 #target_link_libraries(sim_markers_node ${catkin_LIBRARIES})
