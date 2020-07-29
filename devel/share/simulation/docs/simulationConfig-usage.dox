@@ -1,0 +1,7 @@
+\subsubsection usage Usage
+\verbatim
+<node name="ustar_sim_node" pkg="simulation" type="ustar_sim_node">
+  <param name="number" type="int" value="3" />
+</node>
+\endverbatim
+

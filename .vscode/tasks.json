@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "install",
+			"path": "src/sensor/ldcp_sdk/third_party/RapidJSON/rapidjson-1.1.0/",
+			"problemMatcher": [],
+			"label": "npm: install - src/sensor/ldcp_sdk/third_party/RapidJSON/rapidjson-1.1.0",
+			"detail": "install dependencies from package",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
