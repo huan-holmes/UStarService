@@ -3,7 +3,7 @@
    
 #### load map ################################################################################################
 
-  <!-- <node pkg="map_server" type="map_server" name="map_server" args="$(find ustar_slam)/data/maps/mymap.yaml" /> -->
+  <node pkg="map_server" type="map_server" name="map_server" args="$(find ustar_slam)/data/maps/map1.yaml" />
 
   <arg name="model" />
 
@@ -21,7 +21,7 @@
 
 #### play bag #################################################################################################
 
-<!-- <param name="/use_sim_time" value="true"/> -->
+<param name="/use_sim_time" value="true"/>
 
 #### publish static tf laser: the parent of base_link ###################################################################
 
@@ -30,14 +30,14 @@
 
 #### match map by laser_scan ####################################################################################
 
-  <!-- <node pkg="laser_scan_matcher" type="laser_scan_matcher_node" 
+  <node pkg="laser_scan_matcher" type="laser_scan_matcher_node" 
     name="laser_scan_matcher_node" output="screen">
     
 #### odom_frame == world_frame #################################################################################
 
     <param name="fixed_frame" value = "odom"/>
     <param name="max_iterations" value="10"/>
-  </node> -->
+  </node>
 
 #### re location #################################################################################################
 
@@ -70,9 +70,9 @@
      <!-- //扫描和路径发布到可视化软件的最大频率，设置参数为-1.0意为失能此功能，默认-1.0 -->
     <param name="save_pose_rate" value="0.5"/> 
      <!-- //存储上一次估计的位姿和协方差到参数服务器的最大速率。被保存的位姿将会用在连续的运动上来初始化滤波器。-1.0失能。 -->
-    <param name="use_map_topic" value="true"/> 
+    <param name="use_map_topic" value="false"/> 
      <!-- //当设置为true时，AMCL将会订阅map话题，而不是调用服务返回地图。也就是说，当设置为true时，有另外一个节点实时的发布map话题，也就是机器人在实时的进行地图构建，并供给amcl话题使用；当设置为false时，通过map server，也就是调用已经构建完成的地图。在navigation 1.4.2中新加入的参数。 -->
-    <param name="first_map_only" value="false"/>  
+    <param name="first_map_only" value="true"/>  
     <!-- //当设置为true时，AMCL将仅仅使用订阅的第一个地图，而不是每次接收到新的时更新为一个新的地图，在navigation 1.4.2中新加入的参数。 -->
 
     <!-- //激光模型参数 -->

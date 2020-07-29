@@ -68,37 +68,17 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -112,6 +92,27 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -123,17 +124,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -167,6 +167,90 @@ depend:
 	cd /home/mingo/UStarService/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+ustar_slam/CMakeFiles/amcl_location_node.dir/rule:
+	cd /home/mingo/UStarService/build && $(MAKE) -f CMakeFiles/Makefile2 ustar_slam/CMakeFiles/amcl_location_node.dir/rule
+.PHONY : ustar_slam/CMakeFiles/amcl_location_node.dir/rule
+
+# Convenience name for target.
+amcl_location_node: ustar_slam/CMakeFiles/amcl_location_node.dir/rule
+
+.PHONY : amcl_location_node
+
+# fast build rule for target.
+amcl_location_node/fast:
+	cd /home/mingo/UStarService/build && $(MAKE) -f ustar_slam/CMakeFiles/amcl_location_node.dir/build.make ustar_slam/CMakeFiles/amcl_location_node.dir/build
+.PHONY : amcl_location_node/fast
+
+# Convenience name for target.
+ustar_slam/CMakeFiles/odom_to_base_node.dir/rule:
+	cd /home/mingo/UStarService/build && $(MAKE) -f CMakeFiles/Makefile2 ustar_slam/CMakeFiles/odom_to_base_node.dir/rule
+.PHONY : ustar_slam/CMakeFiles/odom_to_base_node.dir/rule
+
+# Convenience name for target.
+odom_to_base_node: ustar_slam/CMakeFiles/odom_to_base_node.dir/rule
+
+.PHONY : odom_to_base_node
+
+# fast build rule for target.
+odom_to_base_node/fast:
+	cd /home/mingo/UStarService/build && $(MAKE) -f ustar_slam/CMakeFiles/odom_to_base_node.dir/build.make ustar_slam/CMakeFiles/odom_to_base_node.dir/build
+.PHONY : odom_to_base_node/fast
+
+src/amcl_location_node.o: src/amcl_location_node.cpp.o
+
+.PHONY : src/amcl_location_node.o
+
+# target to build an object file
+src/amcl_location_node.cpp.o:
+	cd /home/mingo/UStarService/build && $(MAKE) -f ustar_slam/CMakeFiles/amcl_location_node.dir/build.make ustar_slam/CMakeFiles/amcl_location_node.dir/src/amcl_location_node.cpp.o
+.PHONY : src/amcl_location_node.cpp.o
+
+src/amcl_location_node.i: src/amcl_location_node.cpp.i
+
+.PHONY : src/amcl_location_node.i
+
+# target to preprocess a source file
+src/amcl_location_node.cpp.i:
+	cd /home/mingo/UStarService/build && $(MAKE) -f ustar_slam/CMakeFiles/amcl_location_node.dir/build.make ustar_slam/CMakeFiles/amcl_location_node.dir/src/amcl_location_node.cpp.i
+.PHONY : src/amcl_location_node.cpp.i
+
+src/amcl_location_node.s: src/amcl_location_node.cpp.s
+
+.PHONY : src/amcl_location_node.s
+
+# target to generate assembly for a file
+src/amcl_location_node.cpp.s:
+	cd /home/mingo/UStarService/build && $(MAKE) -f ustar_slam/CMakeFiles/amcl_location_node.dir/build.make ustar_slam/CMakeFiles/amcl_location_node.dir/src/amcl_location_node.cpp.s
+.PHONY : src/amcl_location_node.cpp.s
+
+src/odom_to_base_node.o: src/odom_to_base_node.cpp.o
+
+.PHONY : src/odom_to_base_node.o
+
+# target to build an object file
+src/odom_to_base_node.cpp.o:
+	cd /home/mingo/UStarService/build && $(MAKE) -f ustar_slam/CMakeFiles/odom_to_base_node.dir/build.make ustar_slam/CMakeFiles/odom_to_base_node.dir/src/odom_to_base_node.cpp.o
+.PHONY : src/odom_to_base_node.cpp.o
+
+src/odom_to_base_node.i: src/odom_to_base_node.cpp.i
+
+.PHONY : src/odom_to_base_node.i
+
+# target to preprocess a source file
+src/odom_to_base_node.cpp.i:
+	cd /home/mingo/UStarService/build && $(MAKE) -f ustar_slam/CMakeFiles/odom_to_base_node.dir/build.make ustar_slam/CMakeFiles/odom_to_base_node.dir/src/odom_to_base_node.cpp.i
+.PHONY : src/odom_to_base_node.cpp.i
+
+src/odom_to_base_node.s: src/odom_to_base_node.cpp.s
+
+.PHONY : src/odom_to_base_node.s
+
+# target to generate assembly for a file
+src/odom_to_base_node.cpp.s:
+	cd /home/mingo/UStarService/build && $(MAKE) -f ustar_slam/CMakeFiles/odom_to_base_node.dir/build.make ustar_slam/CMakeFiles/odom_to_base_node.dir/src/odom_to_base_node.cpp.s
+.PHONY : src/odom_to_base_node.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -174,12 +258,20 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... edit_cache"
-	@echo "... list_install_components"
-	@echo "... test"
-	@echo "... install/local"
-	@echo "... rebuild_cache"
 	@echo "... install"
+	@echo "... amcl_location_node"
+	@echo "... install/local"
+	@echo "... test"
+	@echo "... list_install_components"
+	@echo "... odom_to_base_node"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... src/amcl_location_node.o"
+	@echo "... src/amcl_location_node.i"
+	@echo "... src/amcl_location_node.s"
+	@echo "... src/odom_to_base_node.o"
+	@echo "... src/odom_to_base_node.i"
+	@echo "... src/odom_to_base_node.s"
 .PHONY : help
 
 

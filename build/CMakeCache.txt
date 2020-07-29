@@ -17,6 +17,9 @@
 //The threading library used by boost-thread
 BOOST_THREAD_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.so
 
+//Build device manager
+BUILD_DEVICE_MANAGER:BOOL=OFF
+
 //Builds the googlemock subproject
 BUILD_GMOCK:BOOL=ON
 
@@ -945,11 +948,26 @@ laser_scan_splitter_nodelet_LIB_DEPENDS:STATIC=general;laser_scan_splitter;
 //Dependencies for the target
 layers_LIB_DEPENDS:STATIC=general;costmap_2d;
 
+//Value Computed by CMake
+ldcp_sdk_BINARY_DIR:STATIC=/home/mingo/UStarService/build/ltme_node-master/lib/ldcp_sdk
+
+//Dependencies for the target
+ldcp_sdk_LIB_DEPENDS:STATIC=general;pthread;
+
+//Value Computed by CMake
+ldcp_sdk_SOURCE_DIR:STATIC=/home/mingo/UStarService/src/ltme_node-master/lib/ldcp_sdk
+
 //Path to a library.
 lib:FILEPATH=/opt/ros/melodic/lib/librospack.so
 
 //Dependencies for the target
 log_LIB_DEPENDS:STATIC=general;sensor_range;general;sensor_odometry;general;sensor_base;
+
+//Value Computed by CMake
+ltme_node_BINARY_DIR:STATIC=/home/mingo/UStarService/build/ltme_node-master
+
+//Value Computed by CMake
+ltme_node_SOURCE_DIR:STATIC=/home/mingo/UStarService/src/ltme_node-master
 
 //The directory containing a CMake configuration file for map_msgs.
 map_msgs_DIR:PATH=/opt/ros/melodic/share/map_msgs/cmake
@@ -1089,6 +1107,9 @@ rosgraph_DIR:PATH=/opt/ros/melodic/share/rosgraph/cmake
 //The directory containing a CMake configuration file for rosgraph_msgs.
 rosgraph_msgs_DIR:PATH=/opt/ros/melodic/share/rosgraph_msgs/cmake
 
+//The directory containing a CMake configuration file for roslaunch.
+roslaunch_DIR:PATH=/opt/ros/melodic/share/roslaunch/cmake
+
 //The directory containing a CMake configuration file for roslib.
 roslib_DIR:PATH=/opt/ros/melodic/share/roslib/cmake
 
@@ -1147,6 +1168,12 @@ sensor_odometry_LIB_DEPENDS:STATIC=general;sensor_base;
 sensor_range_LIB_DEPENDS:STATIC=general;sensor_base;
 
 //Value Computed by CMake
+simulation_BINARY_DIR:STATIC=/home/mingo/UStarService/build/simulation
+
+//Value Computed by CMake
+simulation_SOURCE_DIR:STATIC=/home/mingo/UStarService/src/simulation
+
+//Value Computed by CMake
 slam_gmapping_BINARY_DIR:STATIC=/home/mingo/UStarService/build/slam_gmapping/slam_gmapping
 
 //Value Computed by CMake
@@ -1193,6 +1220,12 @@ topic_tools_DIR:PATH=/opt/ros/melodic/share/topic_tools/cmake
 
 //Dependencies for the target
 trajectory_planner_ros_LIB_DEPENDS:STATIC=general;base_local_planner;
+
+//Value Computed by CMake
+urdf_tutorial_BINARY_DIR:STATIC=/home/mingo/UStarService/build/urdf_tutorial
+
+//Value Computed by CMake
+urdf_tutorial_SOURCE_DIR:STATIC=/home/mingo/UStarService/src/urdf_tutorial
 
 //Value Computed by CMake
 ustar_slam_BINARY_DIR:STATIC=/home/mingo/UStarService/build/ustar_slam
@@ -1391,7 +1424,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=33
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=37
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
