@@ -11,7 +11,7 @@ slam_gmapping
 
  
  <node pkg="rosbag" type="play" name="play" 
-    args="$(find laser_scan_matcher)/demo/test9.bag --delay=4 --clock"/>
+    args="$(find laser_scan_matcher)/demo/test20.bag --delay=4 --clock"/>
 
   #### publish an example base_link -> laser transform ###########
 
