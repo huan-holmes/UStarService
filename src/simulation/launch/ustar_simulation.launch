@@ -20,9 +20,10 @@
   #### publish static_transform from base_link to map #########################
 
   <node pkg="tf" type="static_transform_publisher" name="odom_to_map" 
-    args="0.0 0.0 0.0 0.0 0.0 0.0 /odom /map 40" />
+    args="0.0 0.0 0.0 0.0 0.0 0.0 /map /odom 100" />
 
-  <node name="odom_to_base_link" pkg="ustar_slam" type="odom_to_base_node" />
+  <!-- <node name="odom_to_base_link" pkg="ustar_slam" type="odom_to_base_node" /> -->
+  <include file="$(find simulation)/launch/fake_move_base.launch" />
 
   #### publish state ######################################################
 
