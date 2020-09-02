@@ -5,13 +5,13 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
-subdirs(control)
 subdirs(drivers)
 subdirs(perception)
+subdirs(serial)
+subdirs(control)
 subdirs(ltme_node-master)
 subdirs(map)
 subdirs(localization)
-subdirs(ustar_serial)
 subdirs(voxel_grid)
 subdirs(costmap)
 subdirs(nav_core)
