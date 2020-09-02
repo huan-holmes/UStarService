@@ -1,0 +1,6 @@
+set(planning_SETUP_PY_VERSION "0.0.0")
+set(planning_SETUP_PY_SCRIPTS "")
+set(planning_SETUP_PY_PACKAGES "local_planner_limits")
+set(planning_SETUP_PY_PACKAGE_DIRS "src/planning/local_planner/local_planner_limits")
+set(planning_SETUP_PY_MODULES "")
+set(planning_SETUP_PY_MODULE_DIRS "")

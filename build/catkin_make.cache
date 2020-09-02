@@ -1,0 +1,2 @@
+clear_costmap_recovery:control:costmap:drivers:localization:map:move_base:nav_core:navfn:perception:planning:rotate_recovery:serial:voxel_grid
+-DCATKIN_DEVEL_PREFIX=/home/boocax/UstarService/devel -DCMAKE_INSTALL_PREFIX=/home/boocax/UstarService/install -G Unix Makefiles

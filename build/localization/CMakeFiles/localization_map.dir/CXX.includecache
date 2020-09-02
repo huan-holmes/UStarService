@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/boocax/UstarService/src/localization/include/localization/map/map.h
+stdint.h
+-
+
+/home/boocax/UstarService/src/localization/src/localization/map/map_cspace.cpp
+queue
+-
+math.h
+-
+stdlib.h
+-
+string.h
+-
+localization/map/map.h
+/home/boocax/UstarService/src/localization/src/localization/map/localization/map/map.h
+

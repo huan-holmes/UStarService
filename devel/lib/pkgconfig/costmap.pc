@@ -1,0 +1,8 @@
+prefix=/home/boocax/UstarService/devel
+
+Name: costmap
+Description: Description of costmap
+Version: 0.0.0
+Cflags: -I/home/boocax/UstarService/devel/include -I/home/boocax/UstarService/src/costmap/include -I/usr/include/eigen3 -I/usr/include
+Libs: -L${prefix}/lib -lcostmap -llayers /usr/lib/x86_64-linux-gnu/libboost_system.so /usr/lib/x86_64-linux-gnu/libboost_thread.so /usr/lib/x86_64-linux-gnu/libboost_chrono.so /usr/lib/x86_64-linux-gnu/libboost_date_time.so /usr/lib/x86_64-linux-gnu/libboost_atomic.so /usr/lib/x86_64-linux-gnu/libpthread.so
+Requires: dynamic_reconfigure geometry_msgs laser_geometry map_msgs message_filters message_runtime nav_msgs pluginlib roscpp sensor_msgs std_msgs tf2_ros visualization_msgs voxel_grid
