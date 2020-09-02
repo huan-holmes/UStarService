@@ -2,4 +2,4 @@
 source_root_dir = "/home/boocax/UstarService/src"
 whitelisted_packages = "".split(';') if "" != "" else []
 blacklisted_packages = "".split(';') if "" != "" else []
-underlay_workspaces = "/home/boocax/UstarService/devel;/home/boocax/roswork/devel;/opt/ros/kinetic".split(';') if "/home/boocax/UstarService/devel;/home/boocax/roswork/devel;/opt/ros/kinetic" != "" else []
+underlay_workspaces = "/home/boocax/UstarService/devel;/opt/ros/kinetic".split(';') if "/home/boocax/UstarService/devel;/opt/ros/kinetic" != "" else []

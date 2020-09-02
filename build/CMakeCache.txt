@@ -17,6 +17,9 @@
 //The threading library used by boost-thread
 BOOST_THREAD_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.so
 
+//Build device manager
+BUILD_DEVICE_MANAGER:BOOL=OFF
+
 //Build shared libraries (DLLs).
 BUILD_SHARED_LIBS:BOOL=ON
 
@@ -325,9 +328,6 @@ actionlib_msgs_DIR:PATH=/opt/ros/kinetic/share/actionlib_msgs/cmake
 //The directory containing a CMake configuration file for angles.
 angles_DIR:PATH=/opt/ros/kinetic/share/angles/cmake
 
-//The directory containing a CMake configuration file for base_local_planner.
-base_local_planner_DIR:PATH=base_local_planner_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/kinetic/share/catkin/cmake
 
@@ -354,9 +354,6 @@ control_BINARY_DIR:STATIC=/home/boocax/UstarService/build/control
 
 //Value Computed by CMake
 control_SOURCE_DIR:STATIC=/home/boocax/UstarService/src/control
-
-//The directory containing a CMake configuration file for costmap_2d.
-costmap_2d_DIR:PATH=costmap_2d_DIR-NOTFOUND
 
 //Value Computed by CMake
 costmap_BINARY_DIR:STATIC=/home/boocax/UstarService/build/costmap
@@ -461,6 +458,15 @@ laser_geometry_DIR:PATH=/opt/ros/kinetic/share/laser_geometry/cmake
 //Dependencies for the target
 layers_LIB_DEPENDS:STATIC=general;costmap;
 
+//Value Computed by CMake
+ldcp_sdk_BINARY_DIR:STATIC=/home/boocax/UstarService/build/ltme_node-master/lib/ldcp_sdk
+
+//Dependencies for the target
+ldcp_sdk_LIB_DEPENDS:STATIC=general;pthread;
+
+//Value Computed by CMake
+ldcp_sdk_SOURCE_DIR:STATIC=/home/boocax/UstarService/src/ltme_node-master/lib/ldcp_sdk
+
 //Path to a library.
 lib:FILEPATH=/opt/ros/kinetic/lib/libtf.so
 
@@ -478,6 +484,12 @@ localization_pf_LIB_DEPENDS:STATIC=
 
 //Dependencies for the target
 localization_sensor_LIB_DEPENDS:STATIC=general;localization_map;general;localization_pf;general;localization_map;general;localization_pf;
+
+//Value Computed by CMake
+ltme_node_BINARY_DIR:STATIC=/home/boocax/UstarService/build/ltme_node-master
+
+//Value Computed by CMake
+ltme_node_SOURCE_DIR:STATIC=/home/boocax/UstarService/src/ltme_node-master
 
 //Value Computed by CMake
 map_BINARY_DIR:STATIC=/home/boocax/UstarService/build/map
@@ -614,14 +626,8 @@ sensor_LIB_DEPENDS:STATIC=
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/kinetic/share/sensor_msgs/cmake
 
-//Value Computed by CMake
-serial_BINARY_DIR:STATIC=/home/boocax/UstarService/build/serial
-
-//Dependencies for the target
-serial_LIB_DEPENDS:STATIC=general;rt;general;pthread;
-
-//Value Computed by CMake
-serial_SOURCE_DIR:STATIC=/home/boocax/UstarService/src/serial
+//The directory containing a CMake configuration file for serial.
+serial_DIR:PATH=/opt/ros/kinetic/share/serial/cmake
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/kinetic/share/std_msgs/cmake
@@ -652,6 +658,12 @@ tf_DIR:PATH=/opt/ros/kinetic/share/tf/cmake
 
 //The directory containing a CMake configuration file for topic_tools.
 topic_tools_DIR:PATH=/opt/ros/kinetic/share/topic_tools/cmake
+
+//Value Computed by CMake
+ustar_serial_BINARY_DIR:STATIC=/home/boocax/UstarService/build/ustar_serial
+
+//Value Computed by CMake
+ustar_serial_SOURCE_DIR:STATIC=/home/boocax/UstarService/src/ustar_serial
 
 //Dependencies for target
 utils_LIB_DEPENDS:STATIC=
@@ -804,7 +816,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=19
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=20
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

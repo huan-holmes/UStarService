@@ -1,0 +1,8 @@
+prefix=/home/boocax/UstarService/devel
+
+Name: ustar_serial
+Description: Description of ustar_serial
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
