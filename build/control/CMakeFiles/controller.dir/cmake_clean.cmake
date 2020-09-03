@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/controller.dir/src/main.cpp.o"
   "CMakeFiles/controller.dir/src/control.cpp.o"
   "/home/boocax/UstarService/devel/lib/control/controller.pdb"
   "/home/boocax/UstarService/devel/lib/control/controller"

@@ -17,14 +17,15 @@ find_package(catkin REQUIRED COMPONENTS
   nav_msgs
 )
 catkin_package(
-#  INCLUDE_DIRS include
+  INCLUDE_DIRS include
 #  LIBRARIES base_controller
   CATKIN_DEPENDS roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
 include_directories(
+  include
   ${catkin_INCLUDE_DIRS}
   ${serial_INCLUDE_DIRS}
 )
-add_executable(controller src/control.cpp)
+add_executable(controller src/main.cpp src/control.cpp)
 target_link_libraries(controller ${catkin_LIBRARIES})

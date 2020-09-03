@@ -6,15 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/boocax/UstarService/src/control/src/control.cpp
+/home/boocax/UstarService/src/control/include/control/control.h
 ros/ros.h
-/home/boocax/UstarService/src/control/src/ros/ros.h
+-
 geometry_msgs/Twist.h
 -
 tf/transform_broadcaster.h
 -
 nav_msgs/Odometry.h
 -
+serial/serial.h
+-
+string
+-
+boost/thread.hpp
+-
+
+/home/boocax/UstarService/src/control/src/control.cpp
 string
 -
 iostream
@@ -25,8 +33,20 @@ unistd.h
 -
 math.h
 -
+control/control.h
+/home/boocax/UstarService/src/control/src/control/control.h
+boost/foreach.hpp
+-
+geometry_msgs/Twist.h
+-
 serial/serial.h
-/home/boocax/UstarService/src/control/src/serial/serial.h
+-
+
+/home/boocax/UstarService/src/control/src/main.cpp
+ros/ros.h
+-
+control/control.h
+/home/boocax/UstarService/src/control/src/control/control.h
 
 /home/boocax/UstarService/src/serial/include/serial/serial.h
 limits

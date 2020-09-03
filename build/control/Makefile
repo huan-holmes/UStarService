@@ -957,6 +957,33 @@ src/control.cpp.s:
 	cd /home/boocax/UstarService/build && $(MAKE) -f control/CMakeFiles/controller.dir/build.make control/CMakeFiles/controller.dir/src/control.cpp.s
 .PHONY : src/control.cpp.s
 
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	cd /home/boocax/UstarService/build && $(MAKE) -f control/CMakeFiles/controller.dir/build.make control/CMakeFiles/controller.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	cd /home/boocax/UstarService/build && $(MAKE) -f control/CMakeFiles/controller.dir/build.make control/CMakeFiles/controller.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	cd /home/boocax/UstarService/build && $(MAKE) -f control/CMakeFiles/controller.dir/build.make control/CMakeFiles/controller.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1024,6 +1051,9 @@ help:
 	@echo "... src/control.o"
 	@echo "... src/control.i"
 	@echo "... src/control.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

@@ -106,7 +106,7 @@ CMakeFiles/run_tests.dir/all: navfn/test/CMakeFiles/_run_tests_navfn.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/run_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : CMakeFiles/run_tests.dir/rule
@@ -174,7 +174,7 @@ CMakeFiles/tests.dir/all: navfn/test/CMakeFiles/path_calc_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : CMakeFiles/tests.dir/rule
@@ -368,12 +368,12 @@ clean: gtest/gtest/CMakeFiles/gtest.dir/clean
 gtest/gtest/CMakeFiles/gtest_main.dir/all: gtest/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=40 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=40,41 "Built target gtest_main"
 .PHONY : gtest/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/gtest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/gtest/CMakeFiles/gtest_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : gtest/gtest/CMakeFiles/gtest_main.dir/rule
@@ -597,7 +597,7 @@ serial/tests/CMakeFiles/_run_tests_serial.dir/all: serial/tests/CMakeFiles/_run_
 
 # Build rule for subdir invocation for target.
 serial/tests/CMakeFiles/_run_tests_serial.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 serial/tests/CMakeFiles/_run_tests_serial.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : serial/tests/CMakeFiles/_run_tests_serial.dir/rule
@@ -696,7 +696,7 @@ serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test-timer.dir/all: seria
 
 # Build rule for subdir invocation for target.
 serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test-timer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test-timer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test-timer.dir/rule
@@ -729,7 +729,7 @@ serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/all: serial/tests/CMakeFiles
 
 # Build rule for subdir invocation for target.
 serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/rule
@@ -795,7 +795,7 @@ serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/all: serial/test
 
 # Build rule for subdir invocation for target.
 serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/rule
@@ -1948,7 +1948,7 @@ clean: control/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
 control/CMakeFiles/controller.dir/all: serial/CMakeFiles/serial.dir/all
 	$(MAKE) -f control/CMakeFiles/controller.dir/build.make control/CMakeFiles/controller.dir/depend
 	$(MAKE) -f control/CMakeFiles/controller.dir/build.make control/CMakeFiles/controller.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=3 "Built target controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=3,4 "Built target controller"
 .PHONY : control/CMakeFiles/controller.dir/all
 
 # Include target in all.
@@ -1958,7 +1958,7 @@ all: control/CMakeFiles/controller.dir/all
 
 # Build rule for subdir invocation for target.
 control/CMakeFiles/controller.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 control/CMakeFiles/controller.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : control/CMakeFiles/controller.dir/rule
@@ -2677,7 +2677,7 @@ ltme_node-master/preinstall: ltme_node-master/lib/ldcp_sdk/preinstall
 ltme_node-master/CMakeFiles/ltme_node.dir/all: ltme_node-master/lib/ldcp_sdk/CMakeFiles/ldcp_sdk.dir/all
 	$(MAKE) -f ltme_node-master/CMakeFiles/ltme_node.dir/build.make ltme_node-master/CMakeFiles/ltme_node.dir/depend
 	$(MAKE) -f ltme_node-master/CMakeFiles/ltme_node.dir/build.make ltme_node-master/CMakeFiles/ltme_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=62,63 "Built target ltme_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=63 "Built target ltme_node"
 .PHONY : ltme_node-master/CMakeFiles/ltme_node.dir/all
 
 # Include target in all.
@@ -2687,7 +2687,7 @@ all: ltme_node-master/CMakeFiles/ltme_node.dir/all
 
 # Build rule for subdir invocation for target.
 ltme_node-master/CMakeFiles/ltme_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 ltme_node-master/CMakeFiles/ltme_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : ltme_node-master/CMakeFiles/ltme_node.dir/rule
@@ -2732,7 +2732,7 @@ ltme_node-master/lib/ldcp_sdk/preinstall:
 ltme_node-master/lib/ldcp_sdk/CMakeFiles/ldcp_sdk.dir/all:
 	$(MAKE) -f ltme_node-master/lib/ldcp_sdk/CMakeFiles/ldcp_sdk.dir/build.make ltme_node-master/lib/ldcp_sdk/CMakeFiles/ldcp_sdk.dir/depend
 	$(MAKE) -f ltme_node-master/lib/ldcp_sdk/CMakeFiles/ldcp_sdk.dir/build.make ltme_node-master/lib/ldcp_sdk/CMakeFiles/ldcp_sdk.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=45,46,47,48 "Built target ldcp_sdk"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=46,47,48,49 "Built target ldcp_sdk"
 .PHONY : ltme_node-master/lib/ldcp_sdk/CMakeFiles/ldcp_sdk.dir/all
 
 # Include target in all.
@@ -2865,7 +2865,7 @@ map/CMakeFiles/gmapping_node.dir/all: map/CMakeFiles/topic_tools_generate_messag
 map/CMakeFiles/gmapping_node.dir/all: map/CMakeFiles/topic_tools_generate_messages_py.dir/all
 	$(MAKE) -f map/CMakeFiles/gmapping_node.dir/build.make map/CMakeFiles/gmapping_node.dir/depend
 	$(MAKE) -f map/CMakeFiles/gmapping_node.dir/build.make map/CMakeFiles/gmapping_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=32,33 "Built target gmapping_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=33 "Built target gmapping_node"
 .PHONY : map/CMakeFiles/gmapping_node.dir/all
 
 # Include target in all.
@@ -2875,7 +2875,7 @@ all: map/CMakeFiles/gmapping_node.dir/all
 
 # Build rule for subdir invocation for target.
 map/CMakeFiles/gmapping_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 map/CMakeFiles/gmapping_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : map/CMakeFiles/gmapping_node.dir/rule
@@ -3658,7 +3658,7 @@ clean: localization/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/clea
 localization/CMakeFiles/localization_gencfg.dir/all:
 	$(MAKE) -f localization/CMakeFiles/localization_gencfg.dir/build.make localization/CMakeFiles/localization_gencfg.dir/depend
 	$(MAKE) -f localization/CMakeFiles/localization_gencfg.dir/build.make localization/CMakeFiles/localization_gencfg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=49 "Built target localization_gencfg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num= "Built target localization_gencfg"
 .PHONY : localization/CMakeFiles/localization_gencfg.dir/all
 
 # Include target in all.
@@ -3668,7 +3668,7 @@ all: localization/CMakeFiles/localization_gencfg.dir/all
 
 # Build rule for subdir invocation for target.
 localization/CMakeFiles/localization_gencfg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/localization_gencfg.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : localization/CMakeFiles/localization_gencfg.dir/rule
@@ -3871,7 +3871,7 @@ localization/CMakeFiles/localization_sensor.dir/all: localization/CMakeFiles/loc
 localization/CMakeFiles/localization_sensor.dir/all: localization/CMakeFiles/localization_map.dir/all
 	$(MAKE) -f localization/CMakeFiles/localization_sensor.dir/build.make localization/CMakeFiles/localization_sensor.dir/depend
 	$(MAKE) -f localization/CMakeFiles/localization_sensor.dir/build.make localization/CMakeFiles/localization_sensor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=60,61 "Built target localization_sensor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=60,61,62 "Built target localization_sensor"
 .PHONY : localization/CMakeFiles/localization_sensor.dir/all
 
 # Include target in all.
@@ -3881,7 +3881,7 @@ all: localization/CMakeFiles/localization_sensor.dir/all
 
 # Build rule for subdir invocation for target.
 localization/CMakeFiles/localization_sensor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/localization_sensor.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : localization/CMakeFiles/localization_sensor.dir/rule
@@ -4043,7 +4043,7 @@ voxel_grid/CMakeFiles/_run_tests_voxel_grid_gtest_voxel_grid_tests.dir/all: voxe
 
 # Build rule for subdir invocation for target.
 voxel_grid/CMakeFiles/_run_tests_voxel_grid_gtest_voxel_grid_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 voxel_grid/CMakeFiles/_run_tests_voxel_grid_gtest_voxel_grid_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : voxel_grid/CMakeFiles/_run_tests_voxel_grid_gtest_voxel_grid_tests.dir/rule
@@ -4075,7 +4075,7 @@ voxel_grid/CMakeFiles/_run_tests_voxel_grid.dir/all: voxel_grid/CMakeFiles/_run_
 
 # Build rule for subdir invocation for target.
 voxel_grid/CMakeFiles/_run_tests_voxel_grid.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 voxel_grid/CMakeFiles/_run_tests_voxel_grid.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : voxel_grid/CMakeFiles/_run_tests_voxel_grid.dir/rule
@@ -4254,7 +4254,7 @@ voxel_grid/CMakeFiles/_run_tests_voxel_grid_gtest.dir/all: voxel_grid/CMakeFiles
 
 # Build rule for subdir invocation for target.
 voxel_grid/CMakeFiles/_run_tests_voxel_grid_gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 voxel_grid/CMakeFiles/_run_tests_voxel_grid_gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : voxel_grid/CMakeFiles/_run_tests_voxel_grid_gtest.dir/rule
@@ -4437,7 +4437,7 @@ costmap/CMakeFiles/costmap_2d_node.dir/all: costmap/CMakeFiles/map_msgs_generate
 costmap/CMakeFiles/costmap_2d_node.dir/all: costmap/CMakeFiles/costmap_generate_messages_py.dir/all
 	$(MAKE) -f costmap/CMakeFiles/costmap_2d_node.dir/build.make costmap/CMakeFiles/costmap_2d_node.dir/depend
 	$(MAKE) -f costmap/CMakeFiles/costmap_2d_node.dir/build.make costmap/CMakeFiles/costmap_2d_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=14,15 "Built target costmap_2d_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=15 "Built target costmap_2d_node"
 .PHONY : costmap/CMakeFiles/costmap_2d_node.dir/all
 
 # Include target in all.
@@ -4447,7 +4447,7 @@ all: costmap/CMakeFiles/costmap_2d_node.dir/all
 
 # Build rule for subdir invocation for target.
 costmap/CMakeFiles/costmap_2d_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 costmap/CMakeFiles/costmap_2d_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : costmap/CMakeFiles/costmap_2d_node.dir/rule
@@ -4547,7 +4547,7 @@ costmap/CMakeFiles/costmap_2d_markers.dir/all: costmap/CMakeFiles/map_msgs_gener
 costmap/CMakeFiles/costmap_2d_markers.dir/all: costmap/CMakeFiles/costmap_generate_messages_py.dir/all
 	$(MAKE) -f costmap/CMakeFiles/costmap_2d_markers.dir/build.make costmap/CMakeFiles/costmap_2d_markers.dir/depend
 	$(MAKE) -f costmap/CMakeFiles/costmap_2d_markers.dir/build.make costmap/CMakeFiles/costmap_2d_markers.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=13 "Built target costmap_2d_markers"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=14 "Built target costmap_2d_markers"
 .PHONY : costmap/CMakeFiles/costmap_2d_markers.dir/all
 
 # Include target in all.
@@ -4557,7 +4557,7 @@ all: costmap/CMakeFiles/costmap_2d_markers.dir/all
 
 # Build rule for subdir invocation for target.
 costmap/CMakeFiles/costmap_2d_markers.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 costmap/CMakeFiles/costmap_2d_markers.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : costmap/CMakeFiles/costmap_2d_markers.dir/rule
@@ -4657,7 +4657,7 @@ costmap/CMakeFiles/layers.dir/all: costmap/CMakeFiles/map_msgs_generate_messages
 costmap/CMakeFiles/layers.dir/all: costmap/CMakeFiles/costmap_generate_messages_py.dir/all
 	$(MAKE) -f costmap/CMakeFiles/layers.dir/build.make costmap/CMakeFiles/layers.dir/depend
 	$(MAKE) -f costmap/CMakeFiles/layers.dir/build.make costmap/CMakeFiles/layers.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=41,42,43,44 "Built target layers"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=42,43,44,45 "Built target layers"
 .PHONY : costmap/CMakeFiles/layers.dir/all
 
 # Include target in all.
@@ -4667,7 +4667,7 @@ all: costmap/CMakeFiles/layers.dir/all
 
 # Build rule for subdir invocation for target.
 costmap/CMakeFiles/layers.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 20
 	$(MAKE) -f CMakeFiles/Makefile2 costmap/CMakeFiles/layers.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : costmap/CMakeFiles/layers.dir/rule
@@ -4766,7 +4766,7 @@ costmap/CMakeFiles/costmap.dir/all: costmap/CMakeFiles/map_msgs_generate_message
 costmap/CMakeFiles/costmap.dir/all: costmap/CMakeFiles/costmap_generate_messages_py.dir/all
 	$(MAKE) -f costmap/CMakeFiles/costmap.dir/build.make costmap/CMakeFiles/costmap.dir/depend
 	$(MAKE) -f costmap/CMakeFiles/costmap.dir/build.make costmap/CMakeFiles/costmap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=4,5,6,7,8,9,10,11 "Built target costmap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=5,6,7,8,9,10,11 "Built target costmap"
 .PHONY : costmap/CMakeFiles/costmap.dir/all
 
 # Include target in all.
@@ -4776,7 +4776,7 @@ all: costmap/CMakeFiles/costmap.dir/all
 
 # Build rule for subdir invocation for target.
 costmap/CMakeFiles/costmap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 costmap/CMakeFiles/costmap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : costmap/CMakeFiles/costmap.dir/rule
@@ -4907,12 +4907,12 @@ costmap/CMakeFiles/costmap_generate_messages_nodejs.dir/all: costmap/CMakeFiles/
 costmap/CMakeFiles/costmap_generate_messages_nodejs.dir/all: costmap/CMakeFiles/_costmap_generate_messages_check_deps_VoxelGrid.dir/all
 	$(MAKE) -f costmap/CMakeFiles/costmap_generate_messages_nodejs.dir/build.make costmap/CMakeFiles/costmap_generate_messages_nodejs.dir/depend
 	$(MAKE) -f costmap/CMakeFiles/costmap_generate_messages_nodejs.dir/build.make costmap/CMakeFiles/costmap_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num= "Built target costmap_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=22 "Built target costmap_generate_messages_nodejs"
 .PHONY : costmap/CMakeFiles/costmap_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 costmap/CMakeFiles/costmap_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 costmap/CMakeFiles/costmap_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : costmap/CMakeFiles/costmap_generate_messages_nodejs.dir/rule
@@ -5075,7 +5075,7 @@ costmap/CMakeFiles/costmap_gennodejs.dir/all: costmap/CMakeFiles/costmap_generat
 
 # Build rule for subdir invocation for target.
 costmap/CMakeFiles/costmap_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 costmap/CMakeFiles/costmap_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : costmap/CMakeFiles/costmap_gennodejs.dir/rule
@@ -5267,7 +5267,7 @@ costmap/CMakeFiles/costmap_genpy.dir/all: costmap/CMakeFiles/costmap_generate_me
 
 # Build rule for subdir invocation for target.
 costmap/CMakeFiles/costmap_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 costmap/CMakeFiles/costmap_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : costmap/CMakeFiles/costmap_genpy.dir/rule
@@ -5542,7 +5542,7 @@ costmap/CMakeFiles/costmap_2d_cloud.dir/all: costmap/CMakeFiles/map_msgs_generat
 costmap/CMakeFiles/costmap_2d_cloud.dir/all: costmap/CMakeFiles/costmap_generate_messages_py.dir/all
 	$(MAKE) -f costmap/CMakeFiles/costmap_2d_cloud.dir/build.make costmap/CMakeFiles/costmap_2d_cloud.dir/depend
 	$(MAKE) -f costmap/CMakeFiles/costmap_2d_cloud.dir/build.make costmap/CMakeFiles/costmap_2d_cloud.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=12 "Built target costmap_2d_cloud"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=12,13 "Built target costmap_2d_cloud"
 .PHONY : costmap/CMakeFiles/costmap_2d_cloud.dir/all
 
 # Include target in all.
@@ -5646,12 +5646,12 @@ costmap/CMakeFiles/costmap_generate_messages_py.dir/all: costmap/CMakeFiles/map_
 costmap/CMakeFiles/costmap_generate_messages_py.dir/all: costmap/CMakeFiles/_costmap_generate_messages_check_deps_VoxelGrid.dir/all
 	$(MAKE) -f costmap/CMakeFiles/costmap_generate_messages_py.dir/build.make costmap/CMakeFiles/costmap_generate_messages_py.dir/depend
 	$(MAKE) -f costmap/CMakeFiles/costmap_generate_messages_py.dir/build.make costmap/CMakeFiles/costmap_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=22,23 "Built target costmap_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=23 "Built target costmap_generate_messages_py"
 .PHONY : costmap/CMakeFiles/costmap_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 costmap/CMakeFiles/costmap_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 costmap/CMakeFiles/costmap_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : costmap/CMakeFiles/costmap_generate_messages_py.dir/rule
@@ -5727,7 +5727,7 @@ clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery.dir/all: cle
 
 # Build rule for subdir invocation for target.
 clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery.dir/rule
@@ -5759,7 +5759,7 @@ clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery.dir/all: clea
 
 # Build rule for subdir invocation for target.
 clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery.dir/rule
@@ -5795,7 +5795,7 @@ clear_costmap_recovery/CMakeFiles/clear_tester.dir/all: clear_costmap_recovery/C
 
 # Build rule for subdir invocation for target.
 clear_costmap_recovery/CMakeFiles/clear_tester.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 clear_costmap_recovery/CMakeFiles/clear_tester.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : clear_costmap_recovery/CMakeFiles/clear_tester.dir/rule
@@ -5829,7 +5829,7 @@ clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest_test
 
 # Build rule for subdir invocation for target.
 clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/rule
@@ -5861,7 +5861,7 @@ clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest.dir/
 
 # Build rule for subdir invocation for target.
 clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest.dir/rule
@@ -5973,7 +5973,7 @@ all: clear_costmap_recovery/CMakeFiles/clear_costmap_recovery.dir/all
 
 # Build rule for subdir invocation for target.
 clear_costmap_recovery/CMakeFiles/clear_costmap_recovery.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 21
 	$(MAKE) -f CMakeFiles/Makefile2 clear_costmap_recovery/CMakeFiles/clear_costmap_recovery.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : clear_costmap_recovery/CMakeFiles/clear_costmap_recovery.dir/rule
@@ -6005,7 +6005,7 @@ clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest.dir/a
 
 # Build rule for subdir invocation for target.
 clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest.dir/rule
@@ -6069,7 +6069,7 @@ clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest_test_
 
 # Build rule for subdir invocation for target.
 clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/rule
@@ -6145,7 +6145,7 @@ all: navfn/CMakeFiles/navfn_node.dir/all
 
 # Build rule for subdir invocation for target.
 navfn/CMakeFiles/navfn_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 24
 	$(MAKE) -f CMakeFiles/Makefile2 navfn/CMakeFiles/navfn_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : navfn/CMakeFiles/navfn_node.dir/rule
@@ -6258,7 +6258,7 @@ all: navfn/CMakeFiles/navfn.dir/all
 
 # Build rule for subdir invocation for target.
 navfn/CMakeFiles/navfn.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 navfn/CMakeFiles/navfn.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : navfn/CMakeFiles/navfn.dir/rule
@@ -6750,7 +6750,7 @@ navfn/test/CMakeFiles/_run_tests_navfn.dir/all: navfn/test/CMakeFiles/_run_tests
 
 # Build rule for subdir invocation for target.
 navfn/test/CMakeFiles/_run_tests_navfn.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 navfn/test/CMakeFiles/_run_tests_navfn.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : navfn/test/CMakeFiles/_run_tests_navfn.dir/rule
@@ -6782,7 +6782,7 @@ navfn/test/CMakeFiles/run_tests_navfn.dir/all: navfn/test/CMakeFiles/run_tests_n
 
 # Build rule for subdir invocation for target.
 navfn/test/CMakeFiles/run_tests_navfn.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 26
 	$(MAKE) -f CMakeFiles/Makefile2 navfn/test/CMakeFiles/run_tests_navfn.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : navfn/test/CMakeFiles/run_tests_navfn.dir/rule
@@ -6818,7 +6818,7 @@ navfn/test/CMakeFiles/path_calc_test.dir/all: navfn/CMakeFiles/navfn.dir/all
 
 # Build rule for subdir invocation for target.
 navfn/test/CMakeFiles/path_calc_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 26
 	$(MAKE) -f CMakeFiles/Makefile2 navfn/test/CMakeFiles/path_calc_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : navfn/test/CMakeFiles/path_calc_test.dir/rule
@@ -6850,7 +6850,7 @@ navfn/test/CMakeFiles/_run_tests_navfn_gtest.dir/all: navfn/test/CMakeFiles/_run
 
 # Build rule for subdir invocation for target.
 navfn/test/CMakeFiles/_run_tests_navfn_gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 navfn/test/CMakeFiles/_run_tests_navfn_gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : navfn/test/CMakeFiles/_run_tests_navfn_gtest.dir/rule
@@ -6882,7 +6882,7 @@ navfn/test/CMakeFiles/run_tests_navfn_gtest_path_calc_test.dir/all: navfn/test/C
 
 # Build rule for subdir invocation for target.
 navfn/test/CMakeFiles/run_tests_navfn_gtest_path_calc_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 26
 	$(MAKE) -f CMakeFiles/Makefile2 navfn/test/CMakeFiles/run_tests_navfn_gtest_path_calc_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : navfn/test/CMakeFiles/run_tests_navfn_gtest_path_calc_test.dir/rule
@@ -6916,7 +6916,7 @@ navfn/test/CMakeFiles/_run_tests_navfn_gtest_path_calc_test.dir/all: navfn/test/
 
 # Build rule for subdir invocation for target.
 navfn/test/CMakeFiles/_run_tests_navfn_gtest_path_calc_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 navfn/test/CMakeFiles/_run_tests_navfn_gtest_path_calc_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : navfn/test/CMakeFiles/_run_tests_navfn_gtest_path_calc_test.dir/rule
@@ -6980,7 +6980,7 @@ navfn/test/CMakeFiles/run_tests_navfn_gtest.dir/all: navfn/test/CMakeFiles/run_t
 
 # Build rule for subdir invocation for target.
 navfn/test/CMakeFiles/run_tests_navfn_gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 26
 	$(MAKE) -f CMakeFiles/Makefile2 navfn/test/CMakeFiles/run_tests_navfn_gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : navfn/test/CMakeFiles/run_tests_navfn_gtest.dir/rule
@@ -7114,7 +7114,7 @@ planning/CMakeFiles/global_planner_node.dir/all: planning/CMakeFiles/global_plan
 planning/CMakeFiles/global_planner_node.dir/all: planning/CMakeFiles/planning_gencfg.dir/all
 	$(MAKE) -f planning/CMakeFiles/global_planner_node.dir/build.make planning/CMakeFiles/global_planner_node.dir/depend
 	$(MAKE) -f planning/CMakeFiles/global_planner_node.dir/build.make planning/CMakeFiles/global_planner_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=31 "Built target global_planner_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=31,32 "Built target global_planner_node"
 .PHONY : planning/CMakeFiles/global_planner_node.dir/all
 
 # Include target in all.
@@ -7124,7 +7124,7 @@ all: planning/CMakeFiles/global_planner_node.dir/all
 
 # Build rule for subdir invocation for target.
 planning/CMakeFiles/global_planner_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 38
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 39
 	$(MAKE) -f CMakeFiles/Makefile2 planning/CMakeFiles/global_planner_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : planning/CMakeFiles/global_planner_node.dir/rule
@@ -7389,7 +7389,7 @@ clean: planning/CMakeFiles/dwa_local_planner.dir/clean
 planning/CMakeFiles/planning_gencfg.dir/all:
 	$(MAKE) -f planning/CMakeFiles/planning_gencfg.dir/build.make planning/CMakeFiles/planning_gencfg.dir/depend
 	$(MAKE) -f planning/CMakeFiles/planning_gencfg.dir/build.make planning/CMakeFiles/planning_gencfg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=80 "Built target planning_gencfg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=80,81 "Built target planning_gencfg"
 .PHONY : planning/CMakeFiles/planning_gencfg.dir/all
 
 # Include target in all.
@@ -7399,7 +7399,7 @@ all: planning/CMakeFiles/planning_gencfg.dir/all
 
 # Build rule for subdir invocation for target.
 planning/CMakeFiles/planning_gencfg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 planning/CMakeFiles/planning_gencfg.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : planning/CMakeFiles/planning_gencfg.dir/rule
@@ -7522,7 +7522,7 @@ rotate_recovery/CMakeFiles/rotate_recovery.dir/all: planning/CMakeFiles/dwa_loca
 rotate_recovery/CMakeFiles/rotate_recovery.dir/all: planning/CMakeFiles/planning_gencfg.dir/all
 	$(MAKE) -f rotate_recovery/CMakeFiles/rotate_recovery.dir/build.make rotate_recovery/CMakeFiles/rotate_recovery.dir/depend
 	$(MAKE) -f rotate_recovery/CMakeFiles/rotate_recovery.dir/build.make rotate_recovery/CMakeFiles/rotate_recovery.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=81,82 "Built target rotate_recovery"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=82 "Built target rotate_recovery"
 .PHONY : rotate_recovery/CMakeFiles/rotate_recovery.dir/all
 
 # Include target in all.
@@ -7532,7 +7532,7 @@ all: rotate_recovery/CMakeFiles/rotate_recovery.dir/all
 
 # Build rule for subdir invocation for target.
 rotate_recovery/CMakeFiles/rotate_recovery.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 rotate_recovery/CMakeFiles/rotate_recovery.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : rotate_recovery/CMakeFiles/rotate_recovery.dir/rule
@@ -7852,7 +7852,7 @@ all: move_base/CMakeFiles/move_base.dir/all
 
 # Build rule for subdir invocation for target.
 move_base/CMakeFiles/move_base.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 39
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 38
 	$(MAKE) -f CMakeFiles/Makefile2 move_base/CMakeFiles/move_base.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : move_base/CMakeFiles/move_base.dir/rule
@@ -7986,7 +7986,7 @@ all: move_base/CMakeFiles/move_base_node.dir/all
 
 # Build rule for subdir invocation for target.
 move_base/CMakeFiles/move_base_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 40
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 39
 	$(MAKE) -f CMakeFiles/Makefile2 move_base/CMakeFiles/move_base_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/boocax/UstarService/build/CMakeFiles 0
 .PHONY : move_base/CMakeFiles/move_base_node.dir/rule
