@@ -9,4 +9,4 @@ global_costmap:
      - {name: static_layer,            type: "UstarCostmap::StaticLayer"}
      - {name: obstacle_layer,          type: "UstarCostmap::VoxelLayer"}
      - {name: inflation_layer,         type: "UstarCostmap::InflationLayer"}
- 
+  

@@ -62,7 +62,7 @@ namespace dwa_local_planner {
       std::string name,
       tf2_ros::Buffer* tf,
       UstarCostmap::Costmap2DROS* costmap_ros) {
-    if (! isInitialized()) {
+    if (!isInitialized()) {
 
       ros::NodeHandle private_nh("~/" + name);
       g_plan_pub_ = private_nh.advertise<nav_msgs::Path>("global_plan", 1);
@@ -81,9 +81,9 @@ namespace dwa_local_planner {
 
       if( private_nh.getParam( "odom_topic", odom_topic_ ))
       {
-        odom_helper_.setOdomTopic( odom_topic_ );
+        odom_helper_.setOdomTopic(odom_topic_);
       }
-      
+       
       initialized_ = true;
 
       // Warn about deprecated parameters -- remove this block in N-turtle

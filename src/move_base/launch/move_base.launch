@@ -1,12 +1,14 @@
 <launch>
+	<node name="map_server" pkg="map_server" type="map_server" args="$(find my_map_packge)/my_map.pgm my_map_resolution" />
+	<include file="$(find location)/launch/amcl_diff.launch" />
 	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-	<rosparam file="$(find costmap)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
-	<rosparam file="$(find costmap)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
-	<rosparam file="$(find costmap)/param/local_costmap_params.yaml" command="load" />
-	<rosparam file="$(find costmap)/param/global_costmap_params.yaml" command="load" />
-	<rosparam file="$(find costmap)/param/dwa_local_planner_params.yaml" command="load" />
-	<rosparam file="$(find costmap)/param/global_planner_params.yaml" command="load" />
-	<rosparam file="$(find costmap)/param/move_base_params.yaml" command="load" />
-	<rosparam file="$(find costmap)/param/navfn_global_planner_params.yaml" command="load" />
+		<rosparam file="$(find costmap)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
+		<rosparam file="$(find costmap)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
+		<rosparam file="$(find costmap)/param/local_costmap_params.yaml" command="load" />
+		<rosparam file="$(find costmap)/param/global_costmap_params.yaml" command="load" />
+		<rosparam file="$(find costmap)/param/dwa_local_planner_params.yaml" command="load" />
+		<rosparam file="$(find costmap)/param/global_planner_params.yaml" command="load" />
+		<rosparam file="$(find costmap)/param/move_base_params.yaml" command="load" />
+		<!-- <rosparam file="$(find costmap)/param/navfn_global_planner_params.yaml" command="load" /> -->
 	</node>
 </launch>

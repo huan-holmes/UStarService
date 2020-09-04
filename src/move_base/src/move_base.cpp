@@ -137,6 +137,7 @@ namespace move_base {
   }
 
   void MoveBase::reconfigureCB(move_base::MoveBaseConfig &config, uint32_t level){
+ 
     boost::recursive_mutex::scoped_lock l(configuration_mutex_);
 
     //The first time we're called, we just want to make sure we have the

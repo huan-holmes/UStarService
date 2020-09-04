@@ -28,12 +28,12 @@ namespace UstarCostmap
   Costmap2DROS::Costmap2DROS(const std::string &name, tf2_ros::Buffer &tf): 
                              layered_costmap_(NULL), name_(name), tf_(tf), transform_tolerance_(0.3), map_update_thread_shutdown_(false),
                              stop_updates_(false), initialized_(true), stopped_(false), robot_stopped_(false), map_update_thread_(NULL),
-                             last_publish_(0), plugin_loader_("UstarCostmap", "UstarCostmap::Layer"), publisher_(NULL), dsrv_(NULL), footprint_padding_(0.0)
+                             last_publish_(0), plugin_loader_("costmap", "UstarCostmap::Layer"), publisher_(NULL), dsrv_(NULL), footprint_padding_(0.0)
   {
     // Initialize old pose with something
     tf2::toMsg(tf2::Transform::getIdentity(), old_pose_.pose);
 
-    ros::NodeHandle private_nh("~/" + name);
+    ros::NodeHandle private_nh("~/" + name); 
     ros::NodeHandle g_nh;
 
     // get global and robot base frame names
