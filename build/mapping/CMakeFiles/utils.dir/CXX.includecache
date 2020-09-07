@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/boocax/UstarService/src/mapping/include/gmapping/utils/gvalues.h
+values.h
+-
+limits.h
+-
+math.h
+-
+limits
+-
+
+/home/boocax/UstarService/src/mapping/include/gmapping/utils/point.h
+assert.h
+-
+math.h
+-
+iostream
+-
+gmapping/utils/gvalues.h
+/home/boocax/UstarService/src/mapping/include/gmapping/utils/gmapping/utils/gvalues.h
+
+/home/boocax/UstarService/src/mapping/include/gmapping/utils/stat.h
+gmapping/utils/point.h
+/home/boocax/UstarService/src/mapping/include/gmapping/utils/gmapping/utils/point.h
+vector
+-
+gmapping/utils/gvalues.h
+/home/boocax/UstarService/src/mapping/include/gmapping/utils/gmapping/utils/gvalues.h
+
+/home/boocax/UstarService/src/mapping/src/gmapping/utils/stat.cpp
+stdlib.h
+-
+math.h
+-
+gmapping/utils/stat.h
+/home/boocax/UstarService/src/mapping/src/gmapping/utils/gmapping/utils/stat.h
+

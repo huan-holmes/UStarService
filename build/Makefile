@@ -1163,7 +1163,7 @@ gmapping_node: cmake_check_build_system
 
 # fast build rule for target.
 gmapping_node/fast:
-	$(MAKE) -f map/CMakeFiles/gmapping_node.dir/build.make map/CMakeFiles/gmapping_node.dir/build
+	$(MAKE) -f mapping/CMakeFiles/gmapping_node.dir/build.make mapping/CMakeFiles/gmapping_node.dir/build
 .PHONY : gmapping_node/fast
 
 #=============================================================================
@@ -1176,7 +1176,7 @@ utils: cmake_check_build_system
 
 # fast build rule for target.
 utils/fast:
-	$(MAKE) -f map/CMakeFiles/utils.dir/build.make map/CMakeFiles/utils.dir/build
+	$(MAKE) -f mapping/CMakeFiles/utils.dir/build.make mapping/CMakeFiles/utils.dir/build
 .PHONY : utils/fast
 
 #=============================================================================
@@ -1189,7 +1189,7 @@ sensor: cmake_check_build_system
 
 # fast build rule for target.
 sensor/fast:
-	$(MAKE) -f map/CMakeFiles/sensor.dir/build.make map/CMakeFiles/sensor.dir/build
+	$(MAKE) -f mapping/CMakeFiles/sensor.dir/build.make mapping/CMakeFiles/sensor.dir/build
 .PHONY : sensor/fast
 
 #=============================================================================
@@ -1202,7 +1202,7 @@ scanmatcher: cmake_check_build_system
 
 # fast build rule for target.
 scanmatcher/fast:
-	$(MAKE) -f map/CMakeFiles/scanmatcher.dir/build.make map/CMakeFiles/scanmatcher.dir/build
+	$(MAKE) -f mapping/CMakeFiles/scanmatcher.dir/build.make mapping/CMakeFiles/scanmatcher.dir/build
 .PHONY : scanmatcher/fast
 
 #=============================================================================
@@ -1215,7 +1215,7 @@ std_srvs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 std_srvs_generate_messages_lisp/fast:
-	$(MAKE) -f map/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make map/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+	$(MAKE) -f mapping/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make mapping/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
 .PHONY : std_srvs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -1228,7 +1228,7 @@ topic_tools_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 topic_tools_generate_messages_cpp/fast:
-	$(MAKE) -f map/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make map/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
+	$(MAKE) -f mapping/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make mapping/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
 .PHONY : topic_tools_generate_messages_cpp/fast
 
 #=============================================================================
@@ -1241,7 +1241,7 @@ std_srvs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 std_srvs_generate_messages_eus/fast:
-	$(MAKE) -f map/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make map/CMakeFiles/std_srvs_generate_messages_eus.dir/build
+	$(MAKE) -f mapping/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make mapping/CMakeFiles/std_srvs_generate_messages_eus.dir/build
 .PHONY : std_srvs_generate_messages_eus/fast
 
 #=============================================================================
@@ -1254,7 +1254,7 @@ std_srvs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 std_srvs_generate_messages_py/fast:
-	$(MAKE) -f map/CMakeFiles/std_srvs_generate_messages_py.dir/build.make map/CMakeFiles/std_srvs_generate_messages_py.dir/build
+	$(MAKE) -f mapping/CMakeFiles/std_srvs_generate_messages_py.dir/build.make mapping/CMakeFiles/std_srvs_generate_messages_py.dir/build
 .PHONY : std_srvs_generate_messages_py/fast
 
 #=============================================================================
@@ -1267,7 +1267,7 @@ std_srvs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 std_srvs_generate_messages_nodejs/fast:
-	$(MAKE) -f map/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make map/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
+	$(MAKE) -f mapping/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make mapping/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
 .PHONY : std_srvs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -1280,7 +1280,7 @@ topic_tools_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 topic_tools_generate_messages_lisp/fast:
-	$(MAKE) -f map/CMakeFiles/topic_tools_generate_messages_lisp.dir/build.make map/CMakeFiles/topic_tools_generate_messages_lisp.dir/build
+	$(MAKE) -f mapping/CMakeFiles/topic_tools_generate_messages_lisp.dir/build.make mapping/CMakeFiles/topic_tools_generate_messages_lisp.dir/build
 .PHONY : topic_tools_generate_messages_lisp/fast
 
 #=============================================================================
@@ -1293,7 +1293,7 @@ std_srvs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 std_srvs_generate_messages_cpp/fast:
-	$(MAKE) -f map/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make map/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+	$(MAKE) -f mapping/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make mapping/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
 .PHONY : std_srvs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -1306,7 +1306,7 @@ topic_tools_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 topic_tools_generate_messages_eus/fast:
-	$(MAKE) -f map/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make map/CMakeFiles/topic_tools_generate_messages_eus.dir/build
+	$(MAKE) -f mapping/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make mapping/CMakeFiles/topic_tools_generate_messages_eus.dir/build
 .PHONY : topic_tools_generate_messages_eus/fast
 
 #=============================================================================
@@ -1319,7 +1319,7 @@ topic_tools_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 topic_tools_generate_messages_nodejs/fast:
-	$(MAKE) -f map/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build.make map/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build
+	$(MAKE) -f mapping/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build.make mapping/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build
 .PHONY : topic_tools_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -1332,7 +1332,7 @@ topic_tools_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 topic_tools_generate_messages_py/fast:
-	$(MAKE) -f map/CMakeFiles/topic_tools_generate_messages_py.dir/build.make map/CMakeFiles/topic_tools_generate_messages_py.dir/build
+	$(MAKE) -f mapping/CMakeFiles/topic_tools_generate_messages_py.dir/build.make mapping/CMakeFiles/topic_tools_generate_messages_py.dir/build
 .PHONY : topic_tools_generate_messages_py/fast
 
 #=============================================================================

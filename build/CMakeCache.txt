@@ -500,6 +500,12 @@ map_SOURCE_DIR:STATIC=/home/boocax/UstarService/src/map
 //The directory containing a CMake configuration file for map_msgs.
 map_msgs_DIR:PATH=/opt/ros/kinetic/share/map_msgs/cmake
 
+//Value Computed by CMake
+mapping_BINARY_DIR:STATIC=/home/boocax/UstarService/build/mapping
+
+//Value Computed by CMake
+mapping_SOURCE_DIR:STATIC=/home/boocax/UstarService/src/mapping
+
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/kinetic/share/message_filters/cmake
 
