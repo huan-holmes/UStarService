@@ -120,26 +120,12 @@ class LocalizationNode
      * before starting to process the bagfile
      */
     void runFromBag(const std::string &in_bag_fn, bool trigger_global_localization = false);
-
+    
     int process();
     void savePoseToServer();
 
   private:
-    std::shared_ptr<tf2_ros::TransformBroadcaster> tfb_;
-    std::shared_ptr<tf2_ros::TransformListener> tfl_;
-    std::shared_ptr<tf2_ros::Buffer> tf_;
-
-    bool sent_first_transform_;
-
-    tf2::Transform latest_tf_;
-    bool latest_tf_valid_;
-
-    // Pose-generating function used to uniformly distribute particles over
-    // the map
-    static pf_vector_t uniformPoseGenerator(void* arg);
-#if NEW_UNIFORM_SAMPLING
-    static std::vector<std::pair<int,int> > free_space_indices;
-#endif
+    
     // Callbacks
     bool globalLocalizationCallback(std_srvs::Empty::Request& req,
                                     std_srvs::Empty::Response& res);
@@ -159,6 +145,29 @@ class LocalizationNode
     void updatePoseFromServer();
     void applyInitialPose();
 
+    void cameraCallback(const geometry_msgs::PoseStamped& msg);
+
+
+  private:
+
+    geometry_msgs::PoseStamped camera_pose_;
+    ros::Subscriber camera_pose_sub_;
+
+    std::shared_ptr<tf2_ros::TransformBroadcaster> tfb_;
+    std::shared_ptr<tf2_ros::TransformListener> tfl_;
+    std::shared_ptr<tf2_ros::Buffer> tf_;
+
+    bool sent_first_transform_;
+
+    tf2::Transform latest_tf_;
+    bool latest_tf_valid_;
+
+    // Pose-generating function used to uniformly distribute particles over
+    // the map
+    static pf_vector_t uniformPoseGenerator(void* arg);
+#if NEW_UNIFORM_SAMPLING
+    static std::vector<std::pair<int,int> > free_space_indices;
+#endif
     //parameter for what odom to use
     std::string odom_frame_id_;
 
@@ -284,8 +293,7 @@ void sigintHandler(int sig)
   ros::shutdown();
 }
 
-int
-main(int argc, char** argv)
+int main(int argc, char** argv)
 {
   ros::init(argc, argv, "localization_node");
   ros::NodeHandle nh;
@@ -464,6 +472,7 @@ LocalizationNode::LocalizationNode() :
   laser_scan_filter_->registerCallback(boost::bind(&LocalizationNode::laserReceived,
                                                    this, _1));
   initial_pose_sub_ = nh_.subscribe("initialpose", 2, &LocalizationNode::initialPoseReceived, this);
+  camera_pose_sub_ = nh_.subscribe("camerapose", 2, &LocalizationNode::cameraCallback, this);
 
   if(use_map_topic_) {
     map_sub_ = nh_.subscribe("map", 1, &LocalizationNode::mapReceived, this);
@@ -1401,7 +1410,16 @@ LocalizationNode::laserReceived(const sensor_msgs::LaserScanConstPtr& laser_scan
          puts("");
          }
        */
-
+      if (abs(ros::Time::now().toSec() - camera_pose_.header.stamp.toSec()) < 0.1)
+      {
+        p.pose.pose.position.x = camera_pose_.pose.position.x;
+        p.pose.pose.position.y = camera_pose_.pose.position.y;
+        p.pose.pose.position.z = camera_pose_.pose.position.z;
+        p.pose.pose.orientation.x = camera_pose_.pose.orientation.x;
+        p.pose.pose.orientation.y = camera_pose_.pose.orientation.y;
+        p.pose.pose.orientation.z = camera_pose_.pose.orientation.z;
+        p.pose.pose.orientation.w = camera_pose_.pose.orientation.w;
+      }
       pose_pub_.publish(p);
       last_published_pose = p;
 
@@ -1486,14 +1504,26 @@ LocalizationNode::laserReceived(const sensor_msgs::LaserScanConstPtr& laser_scan
   diagnosic_updater_.update();
 }
 
-void
-LocalizationNode::initialPoseReceived(const geometry_msgs::PoseWithCovarianceStampedConstPtr& msg)
+void LocalizationNode::initialPoseReceived(const geometry_msgs::PoseWithCovarianceStampedConstPtr& msg)
 {
   handleInitialPoseMessage(*msg);
 }
 
-void
-LocalizationNode::handleInitialPoseMessage(const geometry_msgs::PoseWithCovarianceStamped& msg)
+void LocalizationNode::cameraCallback(const geometry_msgs::PoseStamped& msg)
+{
+  camera_pose_.header.frame_id = msg.header.frame_id;
+  camera_pose_.header.stamp = msg.header.stamp;
+  camera_pose_.pose.position.x = msg.pose.position.x;
+  camera_pose_.pose.position.y = msg.pose.position.y;
+  camera_pose_.pose.position.z = msg.pose.position.z;
+  camera_pose_.pose.orientation.x = msg.pose.orientation.x;
+  camera_pose_.pose.orientation.y = msg.pose.orientation.y;
+  camera_pose_.pose.orientation.z = msg.pose.orientation.z;
+  camera_pose_.pose.orientation.w = msg.pose.orientation.w;
+}
+
+
+void LocalizationNode::handleInitialPoseMessage(const geometry_msgs::PoseWithCovarianceStamped& msg)
 {
   boost::recursive_mutex::scoped_lock prl(configuration_mutex_);
   if(msg.header.frame_id == "")
