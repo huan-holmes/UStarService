@@ -83,15 +83,15 @@ namespace local_planner {
   DWAPlanner::DWAPlanner(std::string name, base_local_planner::LocalPlannerUtil *planner_util) :
       planner_util_(planner_util),
       obstacle_costs_(planner_util->getCostmap()),
-      path_costs_(planner_util->getCostmap()),
+      path_costs_(planner_util->getCostmap()), 
       goal_costs_(planner_util->getCostmap(), 0.0, 0.0, true),
       goal_front_costs_(planner_util->getCostmap(), 0.0, 0.0, true),
       alignment_costs_(planner_util->getCostmap())
   {
     ros::NodeHandle private_nh("~/" + name);
-
-    goal_front_costs_.setStopOnFailure( false );
-    alignment_costs_.setStopOnFailure( false );
+ 
+    goal_front_costs_.setStopOnFailure(false);
+    alignment_costs_.setStopOnFailure(false);
 
     //Assuming this planner is being run within the navigation stack, we can
     //just do an upward search for the frequency at which its being run. This

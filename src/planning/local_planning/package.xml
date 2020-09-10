@@ -55,7 +55,7 @@
   <depend>costmap</depend>
   <depend>dynamic_reconfigure</depend>
   <depend>eigen</depend>
-  <depend>nav_core</depend>
+
   <depend>nav_msgs</depend>
   <depend>pluginlib</depend>
   <depend>sensor_msgs</depend>

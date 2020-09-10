@@ -15,7 +15,7 @@
 #include <nav_msgs/Odometry.h>
 
 #include <costmap/costmap_ros/costmap_2d_ros.h>
-#include <nav_core/base_local_planner.h>
+
 #include <local_planner/latched_stop_rotate_controller.h>
 
 #include <local_planner/odometry_helper_ros.h>
@@ -28,7 +28,7 @@ namespace local_planner {
    * @brief ROS Wrapper for the DWAPlanner that adheres to the
    * BaseLocalPlanner interface and can be used as a plugin for move_base.
    */
-  class DWAPlannerROS : public UstarPlanning::BaseLocalPlanner {
+  class DWAPlannerROS : public base_local_planner::BaseLocalPlanner {
     public:
       /**
        * @brief  Constructor for DWAPlannerROS wrapper

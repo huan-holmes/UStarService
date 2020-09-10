@@ -7,7 +7,7 @@ find_package(catkin REQUIRED
     costmap
     dynamic_reconfigure
     geometry_msgs
-    nav_core
+
 
     nav_msgs
     pluginlib

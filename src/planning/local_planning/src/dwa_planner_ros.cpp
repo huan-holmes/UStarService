@@ -11,10 +11,10 @@
 #include <nav_msgs/Path.h>
 #include <tf2/utils.h>
 
-#include <nav_core/parameter_magic.h>
+#include <local_planner/parameter_magic.h>
 
 //register this planner as a BaseLocalPlanner plugin
-PLUGINLIB_EXPORT_CLASS(local_planner::DWAPlannerROS, UstarPlanning::BaseLocalPlanner)
+PLUGINLIB_EXPORT_CLASS(local_planner::DWAPlannerROS, base_local_planner::BaseLocalPlanner)
 
 namespace local_planner {
 
@@ -74,7 +74,7 @@ namespace local_planner {
       // make sure to update the costmap we'll use for this cycle
       UstarCostmap::Costmap2D* costmap = costmap_ros_->getCostmap();
 
-      planner_util_.initialize(tf, costmap, costmap_ros_->getGlobalFrameID());
+      planner_util_.initialize(tf, costmap, costmap_ros_->getGlobalFrameID()); 
 
       //create the actual planner that we'll use.. it'll configure itself from the parameter server
       dp_ = boost::shared_ptr<DWAPlanner>(new DWAPlanner(name, &planner_util_));
@@ -87,12 +87,12 @@ namespace local_planner {
       initialized_ = true;
 
       // Warn about deprecated parameters -- remove this block in N-turtle
-      UstarPlanning::warnRenamedParameter(private_nh, "max_vel_trans", "max_trans_vel");
-      UstarPlanning::warnRenamedParameter(private_nh, "min_vel_trans", "min_trans_vel");
-      UstarPlanning::warnRenamedParameter(private_nh, "max_vel_theta", "max_rot_vel");
-      UstarPlanning::warnRenamedParameter(private_nh, "min_vel_theta", "min_rot_vel");
-      UstarPlanning::warnRenamedParameter(private_nh, "acc_lim_trans", "acc_limit_trans");
-      UstarPlanning::warnRenamedParameter(private_nh, "theta_stopped_vel", "rot_stopped_vel");
+      base_local_planner::warnRenamedParameter(private_nh, "max_vel_trans", "max_trans_vel");
+      base_local_planner::warnRenamedParameter(private_nh, "min_vel_trans", "min_trans_vel");
+      base_local_planner::warnRenamedParameter(private_nh, "max_vel_theta", "max_rot_vel");
+      base_local_planner::warnRenamedParameter(private_nh, "min_vel_theta", "min_rot_vel");
+      base_local_planner::warnRenamedParameter(private_nh, "acc_lim_trans", "acc_limit_trans");
+      base_local_planner::warnRenamedParameter(private_nh, "theta_stopped_vel", "rot_stopped_vel");
 
       dsrv_ = new dynamic_reconfigure::Server<DWAPlannerConfig>(private_nh);
       dynamic_reconfigure::Server<DWAPlannerConfig>::CallbackType cb = boost::bind(&DWAPlannerROS::reconfigureCB, this, _1, _2);
