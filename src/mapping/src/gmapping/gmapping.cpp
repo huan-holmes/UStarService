@@ -282,8 +282,7 @@ namespace UstarSlam
     return true;
   }
 
-  bool
-  UstarGMapping::initMapper(const sensor_msgs::LaserScan &scan)
+  bool UstarGMapping::initMapper(const sensor_msgs::LaserScan &scan)
   {
     laser_frame_ = scan.header.frame_id;
     // Get the laser's pose, relative to base.
@@ -428,8 +427,7 @@ namespace UstarSlam
     return true;
   }
 
-  bool
-  UstarGMapping::addScan(const sensor_msgs::LaserScan &scan, UstarSlam::OrientedPoint &gmap_pose)
+  bool UstarGMapping::addScan(const sensor_msgs::LaserScan &scan, UstarSlam::OrientedPoint &gmap_pose)
   {
     if (!getOdomPose(gmap_pose, scan.header.stamp))
       return false;
@@ -488,8 +486,7 @@ namespace UstarSlam
     return gsp_->processScan(reading);
   }
 
-  void
-  UstarGMapping::laserCallback(const sensor_msgs::LaserScan::ConstPtr &scan)
+  void UstarGMapping::laserCallback(const sensor_msgs::LaserScan::ConstPtr &scan)
   {
     laser_count_++;
     if ((laser_count_ % throttle_scans_) != 0)
@@ -534,8 +531,7 @@ namespace UstarSlam
       ROS_DEBUG("cannot process scan");
   }
 
-  double
-  UstarGMapping::computePoseEntropy()
+  double UstarGMapping::computePoseEntropy()
   {
     double weight_total = 0.0;
     for (std::vector<UstarSlam::MatchProcessor::Particle>::const_iterator it = gsp_->getParticles().begin();
@@ -555,8 +551,7 @@ namespace UstarSlam
     return -entropy;
   }
 
-  void
-  UstarGMapping::updateMap(const sensor_msgs::LaserScan &scan)
+  void UstarGMapping::updateMap(const sensor_msgs::LaserScan &scan)
   {
     ROS_DEBUG("Update map");
     boost::mutex::scoped_lock map_lock(map_mutex_);
@@ -668,8 +663,7 @@ namespace UstarSlam
     sstm_.publish(map_.map.info);
   }
 
-  bool
-  UstarGMapping::mapCallback(nav_msgs::GetMap::Request &req,
+  bool UstarGMapping::mapCallback(nav_msgs::GetMap::Request &req,
                              nav_msgs::GetMap::Response &res)
   {
     boost::mutex::scoped_lock map_lock(map_mutex_);

@@ -4,7 +4,7 @@ project(move_base)
 find_package(catkin REQUIRED
     COMPONENTS
         actionlib
-        planning
+        local_planner
         clear_costmap_recovery
         cmake_modules
         costmap

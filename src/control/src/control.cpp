@@ -24,14 +24,13 @@ namespace UstarController
     }
     void Controller::init()
     {
-        
     
-        odom_pub_ = nh_.advertise<nav_msgs::Odometry>("odom", 1, true);
+        
     }
     void Controller::start()
     {
-        vel_sub_ = nh_.subscribe("cmd_vel", 1, &Controller::cmdCallback, this);
-        
+        odom_pub_ = nh_.advertise<nav_msgs::Odometry>("odom", 1, true);
+        vel_sub_ = nh_.subscribe("cmd_vel", 20, &Controller::cmdCallback, this);
         odom_thread_ = new boost::thread(boost::bind(&Controller::publishLoop, this, publish_period_));
     }
     
