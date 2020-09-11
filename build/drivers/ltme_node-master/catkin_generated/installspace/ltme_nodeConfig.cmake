@@ -66,7 +66,7 @@ endif()
 set(ltme_node_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
-if("TRUE" STREQUAL "TRUE")
+if("FALSE" STREQUAL "TRUE")
   set(ltme_node_SOURCE_PREFIX /home/boocax/UstarService/src/drivers/ltme_node-master)
   set(ltme_node_DEVEL_PREFIX /home/boocax/UstarService/devel)
   set(ltme_node_INSTALL_PREFIX "")
@@ -110,7 +110,7 @@ if(NOT " " STREQUAL " ")
         message(FATAL_ERROR "Project 'ltme_node' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'ltme_node' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/boocax/UstarService/src/drivers/ltme_node-master/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'ltme_node' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '\${prefix}/${idir}'.  ${_report}")
     endif()
     _list_append_unique(ltme_node_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/boocax/UstarService/devel/lib;/home/boocax/UstarService/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/boocax/UstarService/install/lib;/home/boocax/UstarService/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

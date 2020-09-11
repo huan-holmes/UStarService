@@ -968,7 +968,7 @@ ltme_node: cmake_check_build_system
 
 # fast build rule for target.
 ltme_node/fast:
-	$(MAKE) -f ltme_node-master/CMakeFiles/ltme_node.dir/build.make ltme_node-master/CMakeFiles/ltme_node.dir/build
+	$(MAKE) -f drivers/ltme_node-master/CMakeFiles/ltme_node.dir/build.make drivers/ltme_node-master/CMakeFiles/ltme_node.dir/build
 .PHONY : ltme_node/fast
 
 #=============================================================================
@@ -981,7 +981,7 @@ ldcp_sdk: cmake_check_build_system
 
 # fast build rule for target.
 ldcp_sdk/fast:
-	$(MAKE) -f ltme_node-master/lib/ldcp_sdk/CMakeFiles/ldcp_sdk.dir/build.make ltme_node-master/lib/ldcp_sdk/CMakeFiles/ldcp_sdk.dir/build
+	$(MAKE) -f drivers/ltme_node-master/lib/ldcp_sdk/CMakeFiles/ldcp_sdk.dir/build.make drivers/ltme_node-master/lib/ldcp_sdk/CMakeFiles/ldcp_sdk.dir/build
 .PHONY : ldcp_sdk/fast
 
 #=============================================================================

@@ -7,7 +7,7 @@
 subdirs(gtest)
 subdirs(perception)
 subdirs(control)
-subdirs(ltme_node-master)
+subdirs(drivers/ltme_node-master)
 subdirs(mapping)
 subdirs(localization)
 subdirs(drivers/usb_cam)

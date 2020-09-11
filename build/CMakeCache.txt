@@ -471,13 +471,13 @@ laser_geometry_DIR:PATH=/opt/ros/kinetic/share/laser_geometry/cmake
 layers_LIB_DEPENDS:STATIC=general;costmap;
 
 //Value Computed by CMake
-ldcp_sdk_BINARY_DIR:STATIC=/home/boocax/UstarService/build/ltme_node-master/lib/ldcp_sdk
+ldcp_sdk_BINARY_DIR:STATIC=/home/boocax/UstarService/build/drivers/ltme_node-master/lib/ldcp_sdk
 
 //Dependencies for the target
 ldcp_sdk_LIB_DEPENDS:STATIC=general;pthread;
 
 //Value Computed by CMake
-ldcp_sdk_SOURCE_DIR:STATIC=/home/boocax/UstarService/src/ltme_node-master/lib/ldcp_sdk
+ldcp_sdk_SOURCE_DIR:STATIC=/home/boocax/UstarService/src/drivers/ltme_node-master/lib/ldcp_sdk
 
 //Path to a library.
 lib:FILEPATH=/opt/ros/kinetic/lib/libvoxel_grid.so
@@ -507,10 +507,10 @@ localization_pf_LIB_DEPENDS:STATIC=
 localization_sensor_LIB_DEPENDS:STATIC=general;localization_map;general;localization_pf;general;localization_map;general;localization_pf;
 
 //Value Computed by CMake
-ltme_node_BINARY_DIR:STATIC=/home/boocax/UstarService/build/ltme_node-master
+ltme_node_BINARY_DIR:STATIC=/home/boocax/UstarService/build/drivers/ltme_node-master
 
 //Value Computed by CMake
-ltme_node_SOURCE_DIR:STATIC=/home/boocax/UstarService/src/ltme_node-master
+ltme_node_SOURCE_DIR:STATIC=/home/boocax/UstarService/src/drivers/ltme_node-master
 
 //The directory containing a CMake configuration file for map_msgs.
 map_msgs_DIR:PATH=/opt/ros/kinetic/share/map_msgs/cmake
