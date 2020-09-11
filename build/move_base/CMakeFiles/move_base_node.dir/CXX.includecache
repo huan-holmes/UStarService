@@ -162,13 +162,13 @@ move_base/move_base.h
 tf2_ros/transform_listener.h
 -
 
-/home/boocax/UstarService/src/nav_core/include/nav_core/base_global_planner.h
+/home/boocax/UstarService/src/planning/nav_core/include/nav_core/base_global_planner.h
 geometry_msgs/PoseStamped.h
 -
 costmap/costmap_ros/costmap_2d_ros.h
 -
 
-/home/boocax/UstarService/src/nav_core/include/nav_core/base_local_planner.h
+/home/boocax/UstarService/src/planning/nav_core/include/nav_core/base_local_planner.h
 geometry_msgs/PoseStamped.h
 -
 geometry_msgs/Twist.h
@@ -178,7 +178,7 @@ costmap/costmap_ros/costmap_2d_ros.h
 tf2_ros/buffer.h
 -
 
-/home/boocax/UstarService/src/nav_core/include/nav_core/recovery_behavior.h
+/home/boocax/UstarService/src/planning/nav_core/include/nav_core/recovery_behavior.h
 costmap/costmap_ros/costmap_2d_ros.h
 -
 tf2_ros/buffer.h

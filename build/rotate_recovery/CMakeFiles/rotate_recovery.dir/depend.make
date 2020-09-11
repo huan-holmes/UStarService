@@ -10,11 +10,11 @@ rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/
 rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/costmap/include/costmap/utils/cost_values.h
 rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/costmap/include/costmap/utils/footprint.h
 rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/costmap/include/costmap/utils/observation.h
-rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/nav_core/include/nav_core/parameter_magic.h
-rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/nav_core/include/nav_core/recovery_behavior.h
-rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/planning/include/planning/local_planner/costmap_model.h
-rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/planning/include/planning/local_planner/planar_laser_scan.h
-rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/planning/include/planning/local_planner/world_model.h
+rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/planning/local_planning/include/local_planner/costmap_model.h
+rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/planning/local_planning/include/local_planner/planar_laser_scan.h
+rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/planning/local_planning/include/local_planner/world_model.h
+rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/planning/nav_core/include/nav_core/parameter_magic.h
+rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/planning/nav_core/include/nav_core/recovery_behavior.h
 rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/rotate_recovery/include/rotate_recovery/rotate_recovery.h
 rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/rotate_recovery/src/rotate_recovery.cpp
 rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /opt/ros/kinetic/include/angles/angles.h

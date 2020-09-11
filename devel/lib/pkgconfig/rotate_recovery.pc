@@ -3,6 +3,6 @@ prefix=/home/boocax/UstarService/devel
 Name: rotate_recovery
 Description: Description of rotate_recovery
 Version: 1.17.1
-Cflags: -I/home/boocax/UstarService/src/rotate_recovery/include
+Cflags: -I/home/boocax/UstarService/src/ustar_move/rotate_recovery/include
 Libs: -L${prefix}/lib -lrotate_recovery
 Requires: costmap geometry_msgs nav_core pluginlib roscpp tf2 tf2_ros

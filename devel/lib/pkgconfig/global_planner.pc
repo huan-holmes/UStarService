@@ -1,0 +1,8 @@
+prefix=/home/boocax/UstarService/devel
+
+Name: global_planner
+Description: Description of global_planner
+Version: 0.0.0
+Cflags: -I/home/boocax/UstarService/devel/include -I/home/boocax/UstarService/src/planning/global_planner/include
+Libs: -L${prefix}/lib -lglobal_planner
+Requires: costmap dynamic_reconfigure geometry_msgs navfn nav_msgs pluginlib roscpp tf2_ros

@@ -1,8 +1,0 @@
-prefix=/home/boocax/UstarService/devel
-
-Name: planning
-Description: Description of planning
-Version: 0.0.0
-Cflags: -I/home/boocax/UstarService/devel/include -I/home/boocax/UstarService/src/planning/include
-Libs: -L${prefix}/lib -ldwa_local_planner
-Requires: dynamic_reconfigure nav_msgs pluginlib sensor_msgs roscpp tf2 tf2_ros

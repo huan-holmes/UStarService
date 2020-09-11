@@ -3,8 +3,6 @@
 
 control/CMakeFiles/controller.dir/src/control.cpp.o: /home/boocax/UstarService/src/control/include/control/control.h
 control/CMakeFiles/controller.dir/src/control.cpp.o: /home/boocax/UstarService/src/control/src/control.cpp
-control/CMakeFiles/controller.dir/src/control.cpp.o: /home/boocax/UstarService/src/serial/include/serial/serial.h
-control/CMakeFiles/controller.dir/src/control.cpp.o: /home/boocax/UstarService/src/serial/include/serial/v8stdint.h
 control/CMakeFiles/controller.dir/src/control.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Point.h
 control/CMakeFiles/controller.dir/src/control.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
 control/CMakeFiles/controller.dir/src/control.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose.h
@@ -76,6 +74,8 @@ control/CMakeFiles/controller.dir/src/control.cpp.o: /opt/ros/kinetic/include/ro
 control/CMakeFiles/controller.dir/src/control.cpp.o: /opt/ros/kinetic/include/ros/wall_timer.h
 control/CMakeFiles/controller.dir/src/control.cpp.o: /opt/ros/kinetic/include/ros/wall_timer_options.h
 control/CMakeFiles/controller.dir/src/control.cpp.o: /opt/ros/kinetic/include/rosconsole/macros_generated.h
+control/CMakeFiles/controller.dir/src/control.cpp.o: /opt/ros/kinetic/include/serial/serial.h
+control/CMakeFiles/controller.dir/src/control.cpp.o: /opt/ros/kinetic/include/serial/v8stdint.h
 control/CMakeFiles/controller.dir/src/control.cpp.o: /opt/ros/kinetic/include/std_msgs/Header.h
 control/CMakeFiles/controller.dir/src/control.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Matrix3x3.h
 control/CMakeFiles/controller.dir/src/control.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/MinMax.h
@@ -109,8 +109,6 @@ control/CMakeFiles/controller.dir/src/control.cpp.o: /opt/ros/kinetic/include/xm
 
 control/CMakeFiles/controller.dir/src/main.cpp.o: /home/boocax/UstarService/src/control/include/control/control.h
 control/CMakeFiles/controller.dir/src/main.cpp.o: /home/boocax/UstarService/src/control/src/main.cpp
-control/CMakeFiles/controller.dir/src/main.cpp.o: /home/boocax/UstarService/src/serial/include/serial/serial.h
-control/CMakeFiles/controller.dir/src/main.cpp.o: /home/boocax/UstarService/src/serial/include/serial/v8stdint.h
 control/CMakeFiles/controller.dir/src/main.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Point.h
 control/CMakeFiles/controller.dir/src/main.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
 control/CMakeFiles/controller.dir/src/main.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose.h
@@ -182,6 +180,8 @@ control/CMakeFiles/controller.dir/src/main.cpp.o: /opt/ros/kinetic/include/ros/t
 control/CMakeFiles/controller.dir/src/main.cpp.o: /opt/ros/kinetic/include/ros/wall_timer.h
 control/CMakeFiles/controller.dir/src/main.cpp.o: /opt/ros/kinetic/include/ros/wall_timer_options.h
 control/CMakeFiles/controller.dir/src/main.cpp.o: /opt/ros/kinetic/include/rosconsole/macros_generated.h
+control/CMakeFiles/controller.dir/src/main.cpp.o: /opt/ros/kinetic/include/serial/serial.h
+control/CMakeFiles/controller.dir/src/main.cpp.o: /opt/ros/kinetic/include/serial/v8stdint.h
 control/CMakeFiles/controller.dir/src/main.cpp.o: /opt/ros/kinetic/include/std_msgs/Header.h
 control/CMakeFiles/controller.dir/src/main.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Matrix3x3.h
 control/CMakeFiles/controller.dir/src/main.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/MinMax.h

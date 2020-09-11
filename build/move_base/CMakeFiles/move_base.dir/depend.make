@@ -12,9 +12,9 @@ move_base/CMakeFiles/move_base.dir/src/move_base.cpp.o: /home/boocax/UstarServic
 move_base/CMakeFiles/move_base.dir/src/move_base.cpp.o: /home/boocax/UstarService/src/costmap/include/costmap/utils/footprint.h
 move_base/CMakeFiles/move_base.dir/src/move_base.cpp.o: /home/boocax/UstarService/src/move_base/include/move_base/move_base.h
 move_base/CMakeFiles/move_base.dir/src/move_base.cpp.o: /home/boocax/UstarService/src/move_base/src/move_base.cpp
-move_base/CMakeFiles/move_base.dir/src/move_base.cpp.o: /home/boocax/UstarService/src/nav_core/include/nav_core/base_global_planner.h
-move_base/CMakeFiles/move_base.dir/src/move_base.cpp.o: /home/boocax/UstarService/src/nav_core/include/nav_core/base_local_planner.h
-move_base/CMakeFiles/move_base.dir/src/move_base.cpp.o: /home/boocax/UstarService/src/nav_core/include/nav_core/recovery_behavior.h
+move_base/CMakeFiles/move_base.dir/src/move_base.cpp.o: /home/boocax/UstarService/src/planning/nav_core/include/nav_core/base_global_planner.h
+move_base/CMakeFiles/move_base.dir/src/move_base.cpp.o: /home/boocax/UstarService/src/planning/nav_core/include/nav_core/base_local_planner.h
+move_base/CMakeFiles/move_base.dir/src/move_base.cpp.o: /home/boocax/UstarService/src/planning/nav_core/include/nav_core/recovery_behavior.h
 move_base/CMakeFiles/move_base.dir/src/move_base.cpp.o: /opt/ros/kinetic/include/actionlib/action_definition.h
 move_base/CMakeFiles/move_base.dir/src/move_base.cpp.o: /opt/ros/kinetic/include/actionlib/decl.h
 move_base/CMakeFiles/move_base.dir/src/move_base.cpp.o: /opt/ros/kinetic/include/actionlib/destruction_guard.h

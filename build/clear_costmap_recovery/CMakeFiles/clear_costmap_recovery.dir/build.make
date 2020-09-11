@@ -94,6 +94,7 @@ clear_costmap_recovery_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /opt/ros/kinetic/lib/liblaser_geometry.so
 /home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /opt/ros/kinetic/lib/libtf.so
+/home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /opt/ros/kinetic/lib/libvoxel_grid.so
 /home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
 /home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /opt/ros/kinetic/lib/libclass_loader.so
 /home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /usr/lib/libPocoFoundation.so
@@ -130,7 +131,6 @@ clear_costmap_recovery_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /opt/ros/kinetic/lib/liblaser_geometry.so
 /home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /opt/ros/kinetic/lib/libtf.so
-/home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /home/boocax/UstarService/devel/lib/libvoxel_grid.so
 /home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
 /home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /opt/ros/kinetic/lib/libclass_loader.so
 /home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /usr/lib/libPocoFoundation.so
@@ -142,6 +142,7 @@ clear_costmap_recovery_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
 /home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /opt/ros/kinetic/lib/liborocos-kdl.so
 /home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /opt/ros/kinetic/lib/liborocos-kdl.so.1.3.2
+/home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /opt/ros/kinetic/lib/libvoxel_grid.so
 /home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /opt/ros/kinetic/lib/libtf2_ros.so
 /home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /opt/ros/kinetic/lib/libactionlib.so
 /home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so: /opt/ros/kinetic/lib/libmessage_filters.so

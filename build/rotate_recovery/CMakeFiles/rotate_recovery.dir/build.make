@@ -91,9 +91,11 @@ rotate_recovery_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: rotate_recovery/CMakeFiles/rotate_recovery.dir/build.make
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /home/boocax/UstarService/devel/lib/libdwa_local_planner.so
+/home/boocax/UstarService/devel/lib/librotate_recovery.so: /home/boocax/UstarService/devel/lib/liblayers.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/liblaser_geometry.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/libtf.so
+/home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/libvoxel_grid.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/libclass_loader.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /usr/lib/libPocoFoundation.so
@@ -128,15 +130,11 @@ rotate_recovery_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/boocax/UstarService/devel/lib/librotate_recovery.so: /home/boocax/UstarService/devel/lib/libnavfn.so
-/home/boocax/UstarService/devel/lib/librotate_recovery.so: /home/boocax/UstarService/devel/lib/liblayers.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /home/boocax/UstarService/devel/lib/libcostmap.so
-/home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/liborocos-kdl.so
-/home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/liborocos-kdl.so.1.3.2
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/liblaser_geometry.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/libtf.so
-/home/boocax/UstarService/devel/lib/librotate_recovery.so: /home/boocax/UstarService/devel/lib/libvoxel_grid.so
+/home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/libvoxel_grid.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/libclass_loader.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /usr/lib/libPocoFoundation.so
@@ -146,6 +144,8 @@ rotate_recovery_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /usr/lib/x86_64-linux-gnu/libpython2.7.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
+/home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/liborocos-kdl.so
+/home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/liborocos-kdl.so.1.3.2
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/libtf2_ros.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/libactionlib.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/libmessage_filters.so

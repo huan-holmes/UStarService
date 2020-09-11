@@ -99,7 +99,7 @@ clear_tester_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/boocax/UstarService/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/kinetic/lib/liblaser_geometry.so
 /home/boocax/UstarService/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/kinetic/lib/libtf.so
-/home/boocax/UstarService/devel/lib/clear_costmap_recovery/clear_tester: /home/boocax/UstarService/devel/lib/libvoxel_grid.so
+/home/boocax/UstarService/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/kinetic/lib/libvoxel_grid.so
 /home/boocax/UstarService/devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
 /home/boocax/UstarService/devel/lib/clear_costmap_recovery/clear_tester: /opt/ros/kinetic/lib/libclass_loader.so
 /home/boocax/UstarService/devel/lib/clear_costmap_recovery/clear_tester: /usr/lib/libPocoFoundation.so

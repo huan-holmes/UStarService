@@ -1,2 +1,2 @@
-clear_costmap_recovery:control:costmap:drivers:localization:ltme_node-master:mapping:move_base:nav_core:navfn:perception:planning:rotate_recovery:serial:voxel_grid
+control:costmap:drivers/usb_cam:localization:ltme_node-master:mapping:perception:planning/global_planner:planning/local_planning:planning/nav_core:planning/navfn:ustar_move/clear_costmap_recovery:ustar_move/move_base:ustar_move/rotate_recovery
 -DCATKIN_DEVEL_PREFIX=/home/boocax/UstarService/devel -DCMAKE_INSTALL_PREFIX=/home/boocax/UstarService/install -G Unix Makefiles

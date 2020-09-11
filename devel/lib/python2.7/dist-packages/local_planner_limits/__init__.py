@@ -7,7 +7,7 @@ from sys import path as sys_path
 
 from pkgutil import extend_path
 
-__extended_path = "/home/boocax/UstarService/src/planning/src/planning/local_planner".split(";")
+__extended_path = "/home/boocax/UstarService/src/planning/local_planning/src/local_planner".split(";")
 for p in reversed(__extended_path):
     sys_path.insert(0, p)
     del p

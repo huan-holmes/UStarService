@@ -1,8 +1,0 @@
-prefix=/home/boocax/UstarService/devel
-
-Name: drivers
-Description: Description of drivers
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

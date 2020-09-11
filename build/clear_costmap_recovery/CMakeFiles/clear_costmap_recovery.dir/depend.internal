@@ -13,7 +13,7 @@ clear_costmap_recovery/CMakeFiles/clear_costmap_recovery.dir/src/clear_costmap_r
  /home/boocax/UstarService/src/costmap/include/costmap/layers/layer.h
  /home/boocax/UstarService/src/costmap/include/costmap/utils/cost_values.h
  /home/boocax/UstarService/src/costmap/include/costmap/utils/footprint.h
- /home/boocax/UstarService/src/nav_core/include/nav_core/recovery_behavior.h
+ /home/boocax/UstarService/src/planning/nav_core/include/nav_core/recovery_behavior.h
  /opt/ros/kinetic/include/class_loader/./class_loader.hpp
  /opt/ros/kinetic/include/class_loader/./multi_library_class_loader.hpp
  /opt/ros/kinetic/include/class_loader/class_loader.h

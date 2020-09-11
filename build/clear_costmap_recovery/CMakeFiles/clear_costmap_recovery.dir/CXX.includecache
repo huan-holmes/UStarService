@@ -130,7 +130,7 @@ geometry_msgs/Point.h
 geometry_msgs/Point32.h
 -
 
-/home/boocax/UstarService/src/nav_core/include/nav_core/recovery_behavior.h
+/home/boocax/UstarService/src/planning/nav_core/include/nav_core/recovery_behavior.h
 costmap/costmap_ros/costmap_2d_ros.h
 -
 tf2_ros/buffer.h

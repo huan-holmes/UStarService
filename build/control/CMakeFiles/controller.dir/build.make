@@ -116,8 +116,7 @@ controller_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/control/controller: control/CMakeFiles/controller.dir/src/main.cpp.o
 /home/boocax/UstarService/devel/lib/control/controller: control/CMakeFiles/controller.dir/src/control.cpp.o
 /home/boocax/UstarService/devel/lib/control/controller: control/CMakeFiles/controller.dir/build.make
-/home/boocax/UstarService/devel/lib/control/controller: /home/boocax/UstarService/devel/lib/libserial.so
-/home/boocax/UstarService/devel/lib/control/controller: /usr/lib/x86_64-linux-gnu/librt.so
+/home/boocax/UstarService/devel/lib/control/controller: /opt/ros/kinetic/lib/libserial.so
 /home/boocax/UstarService/devel/lib/control/controller: /opt/ros/kinetic/lib/libtf.so
 /home/boocax/UstarService/devel/lib/control/controller: /opt/ros/kinetic/lib/libtf2_ros.so
 /home/boocax/UstarService/devel/lib/control/controller: /opt/ros/kinetic/lib/libactionlib.so

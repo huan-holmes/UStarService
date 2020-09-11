@@ -292,177 +292,8 @@ _catkin_empty_exported_target: cmake_check_build_system
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	$(MAKE) -f drivers/CMakeFiles/_catkin_empty_exported_target.dir/build.make drivers/CMakeFiles/_catkin_empty_exported_target.dir/build
+	$(MAKE) -f perception/CMakeFiles/_catkin_empty_exported_target.dir/build.make perception/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
-
-#=============================================================================
-# Target rules for targets named serial_example
-
-# Build rule for target.
-serial_example: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 serial_example
-.PHONY : serial_example
-
-# fast build rule for target.
-serial_example/fast:
-	$(MAKE) -f serial/CMakeFiles/serial_example.dir/build.make serial/CMakeFiles/serial_example.dir/build
-.PHONY : serial_example/fast
-
-#=============================================================================
-# Target rules for targets named serial
-
-# Build rule for target.
-serial: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 serial
-.PHONY : serial
-
-# fast build rule for target.
-serial/fast:
-	$(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/build
-.PHONY : serial/fast
-
-#=============================================================================
-# Target rules for targets named _run_tests_serial
-
-# Build rule for target.
-_run_tests_serial: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_serial
-.PHONY : _run_tests_serial
-
-# fast build rule for target.
-_run_tests_serial/fast:
-	$(MAKE) -f serial/tests/CMakeFiles/_run_tests_serial.dir/build.make serial/tests/CMakeFiles/_run_tests_serial.dir/build
-.PHONY : _run_tests_serial/fast
-
-#=============================================================================
-# Target rules for targets named run_tests_serial_gtest_serial-test
-
-# Build rule for target.
-run_tests_serial_gtest_serial-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_serial_gtest_serial-test
-.PHONY : run_tests_serial_gtest_serial-test
-
-# fast build rule for target.
-run_tests_serial_gtest_serial-test/fast:
-	$(MAKE) -f serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test.dir/build.make serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test.dir/build
-.PHONY : run_tests_serial_gtest_serial-test/fast
-
-#=============================================================================
-# Target rules for targets named serial-test
-
-# Build rule for target.
-serial-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 serial-test
-.PHONY : serial-test
-
-# fast build rule for target.
-serial-test/fast:
-	$(MAKE) -f serial/tests/CMakeFiles/serial-test.dir/build.make serial/tests/CMakeFiles/serial-test.dir/build
-.PHONY : serial-test/fast
-
-#=============================================================================
-# Target rules for targets named _run_tests_serial_gtest_serial-test-timer
-
-# Build rule for target.
-_run_tests_serial_gtest_serial-test-timer: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_serial_gtest_serial-test-timer
-.PHONY : _run_tests_serial_gtest_serial-test-timer
-
-# fast build rule for target.
-_run_tests_serial_gtest_serial-test-timer/fast:
-	$(MAKE) -f serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test-timer.dir/build.make serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test-timer.dir/build
-.PHONY : _run_tests_serial_gtest_serial-test-timer/fast
-
-#=============================================================================
-# Target rules for targets named _run_tests_serial_gtest
-
-# Build rule for target.
-_run_tests_serial_gtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_serial_gtest
-.PHONY : _run_tests_serial_gtest
-
-# fast build rule for target.
-_run_tests_serial_gtest/fast:
-	$(MAKE) -f serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/build.make serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/build
-.PHONY : _run_tests_serial_gtest/fast
-
-#=============================================================================
-# Target rules for targets named run_tests_serial
-
-# Build rule for target.
-run_tests_serial: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_serial
-.PHONY : run_tests_serial
-
-# fast build rule for target.
-run_tests_serial/fast:
-	$(MAKE) -f serial/tests/CMakeFiles/run_tests_serial.dir/build.make serial/tests/CMakeFiles/run_tests_serial.dir/build
-.PHONY : run_tests_serial/fast
-
-#=============================================================================
-# Target rules for targets named _run_tests_serial_gtest_serial-test
-
-# Build rule for target.
-_run_tests_serial_gtest_serial-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_serial_gtest_serial-test
-.PHONY : _run_tests_serial_gtest_serial-test
-
-# fast build rule for target.
-_run_tests_serial_gtest_serial-test/fast:
-	$(MAKE) -f serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/build.make serial/tests/CMakeFiles/_run_tests_serial_gtest_serial-test.dir/build
-.PHONY : _run_tests_serial_gtest_serial-test/fast
-
-#=============================================================================
-# Target rules for targets named clean_test_results_serial
-
-# Build rule for target.
-clean_test_results_serial: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results_serial
-.PHONY : clean_test_results_serial
-
-# fast build rule for target.
-clean_test_results_serial/fast:
-	$(MAKE) -f serial/tests/CMakeFiles/clean_test_results_serial.dir/build.make serial/tests/CMakeFiles/clean_test_results_serial.dir/build
-.PHONY : clean_test_results_serial/fast
-
-#=============================================================================
-# Target rules for targets named run_tests_serial_gtest
-
-# Build rule for target.
-run_tests_serial_gtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_serial_gtest
-.PHONY : run_tests_serial_gtest
-
-# fast build rule for target.
-run_tests_serial_gtest/fast:
-	$(MAKE) -f serial/tests/CMakeFiles/run_tests_serial_gtest.dir/build.make serial/tests/CMakeFiles/run_tests_serial_gtest.dir/build
-.PHONY : run_tests_serial_gtest/fast
-
-#=============================================================================
-# Target rules for targets named serial-test-timer
-
-# Build rule for target.
-serial-test-timer: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 serial-test-timer
-.PHONY : serial-test-timer
-
-# fast build rule for target.
-serial-test-timer/fast:
-	$(MAKE) -f serial/tests/CMakeFiles/serial-test-timer.dir/build.make serial/tests/CMakeFiles/serial-test-timer.dir/build
-.PHONY : serial-test-timer/fast
-
-#=============================================================================
-# Target rules for targets named run_tests_serial_gtest_serial-test-timer
-
-# Build rule for target.
-run_tests_serial_gtest_serial-test-timer: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_serial_gtest_serial-test-timer
-.PHONY : run_tests_serial_gtest_serial-test-timer
-
-# fast build rule for target.
-run_tests_serial_gtest_serial-test-timer/fast:
-	$(MAKE) -f serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/build.make serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/build
-.PHONY : run_tests_serial_gtest_serial-test-timer/fast
 
 #=============================================================================
 # Target rules for targets named nav_msgs_generate_messages_nodejs
@@ -1544,121 +1375,30 @@ dynamic_reconfigure_gencfg/fast:
 .PHONY : dynamic_reconfigure_gencfg/fast
 
 #=============================================================================
-# Target rules for targets named voxel_grid_tests
+# Target rules for targets named usb_cam
 
 # Build rule for target.
-voxel_grid_tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 voxel_grid_tests
-.PHONY : voxel_grid_tests
+usb_cam: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam
+.PHONY : usb_cam
 
 # fast build rule for target.
-voxel_grid_tests/fast:
-	$(MAKE) -f voxel_grid/CMakeFiles/voxel_grid_tests.dir/build.make voxel_grid/CMakeFiles/voxel_grid_tests.dir/build
-.PHONY : voxel_grid_tests/fast
+usb_cam/fast:
+	$(MAKE) -f drivers/usb_cam/CMakeFiles/usb_cam.dir/build.make drivers/usb_cam/CMakeFiles/usb_cam.dir/build
+.PHONY : usb_cam/fast
 
 #=============================================================================
-# Target rules for targets named _run_tests_voxel_grid_gtest_voxel_grid_tests
+# Target rules for targets named usb_cam_node
 
 # Build rule for target.
-_run_tests_voxel_grid_gtest_voxel_grid_tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_voxel_grid_gtest_voxel_grid_tests
-.PHONY : _run_tests_voxel_grid_gtest_voxel_grid_tests
+usb_cam_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam_node
+.PHONY : usb_cam_node
 
 # fast build rule for target.
-_run_tests_voxel_grid_gtest_voxel_grid_tests/fast:
-	$(MAKE) -f voxel_grid/CMakeFiles/_run_tests_voxel_grid_gtest_voxel_grid_tests.dir/build.make voxel_grid/CMakeFiles/_run_tests_voxel_grid_gtest_voxel_grid_tests.dir/build
-.PHONY : _run_tests_voxel_grid_gtest_voxel_grid_tests/fast
-
-#=============================================================================
-# Target rules for targets named _run_tests_voxel_grid
-
-# Build rule for target.
-_run_tests_voxel_grid: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_voxel_grid
-.PHONY : _run_tests_voxel_grid
-
-# fast build rule for target.
-_run_tests_voxel_grid/fast:
-	$(MAKE) -f voxel_grid/CMakeFiles/_run_tests_voxel_grid.dir/build.make voxel_grid/CMakeFiles/_run_tests_voxel_grid.dir/build
-.PHONY : _run_tests_voxel_grid/fast
-
-#=============================================================================
-# Target rules for targets named run_tests_voxel_grid
-
-# Build rule for target.
-run_tests_voxel_grid: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_voxel_grid
-.PHONY : run_tests_voxel_grid
-
-# fast build rule for target.
-run_tests_voxel_grid/fast:
-	$(MAKE) -f voxel_grid/CMakeFiles/run_tests_voxel_grid.dir/build.make voxel_grid/CMakeFiles/run_tests_voxel_grid.dir/build
-.PHONY : run_tests_voxel_grid/fast
-
-#=============================================================================
-# Target rules for targets named voxel_grid
-
-# Build rule for target.
-voxel_grid: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 voxel_grid
-.PHONY : voxel_grid
-
-# fast build rule for target.
-voxel_grid/fast:
-	$(MAKE) -f voxel_grid/CMakeFiles/voxel_grid.dir/build.make voxel_grid/CMakeFiles/voxel_grid.dir/build
-.PHONY : voxel_grid/fast
-
-#=============================================================================
-# Target rules for targets named run_tests_voxel_grid_gtest
-
-# Build rule for target.
-run_tests_voxel_grid_gtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_voxel_grid_gtest
-.PHONY : run_tests_voxel_grid_gtest
-
-# fast build rule for target.
-run_tests_voxel_grid_gtest/fast:
-	$(MAKE) -f voxel_grid/CMakeFiles/run_tests_voxel_grid_gtest.dir/build.make voxel_grid/CMakeFiles/run_tests_voxel_grid_gtest.dir/build
-.PHONY : run_tests_voxel_grid_gtest/fast
-
-#=============================================================================
-# Target rules for targets named run_tests_voxel_grid_gtest_voxel_grid_tests
-
-# Build rule for target.
-run_tests_voxel_grid_gtest_voxel_grid_tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_voxel_grid_gtest_voxel_grid_tests
-.PHONY : run_tests_voxel_grid_gtest_voxel_grid_tests
-
-# fast build rule for target.
-run_tests_voxel_grid_gtest_voxel_grid_tests/fast:
-	$(MAKE) -f voxel_grid/CMakeFiles/run_tests_voxel_grid_gtest_voxel_grid_tests.dir/build.make voxel_grid/CMakeFiles/run_tests_voxel_grid_gtest_voxel_grid_tests.dir/build
-.PHONY : run_tests_voxel_grid_gtest_voxel_grid_tests/fast
-
-#=============================================================================
-# Target rules for targets named _run_tests_voxel_grid_gtest
-
-# Build rule for target.
-_run_tests_voxel_grid_gtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_voxel_grid_gtest
-.PHONY : _run_tests_voxel_grid_gtest
-
-# fast build rule for target.
-_run_tests_voxel_grid_gtest/fast:
-	$(MAKE) -f voxel_grid/CMakeFiles/_run_tests_voxel_grid_gtest.dir/build.make voxel_grid/CMakeFiles/_run_tests_voxel_grid_gtest.dir/build
-.PHONY : _run_tests_voxel_grid_gtest/fast
-
-#=============================================================================
-# Target rules for targets named clean_test_results_voxel_grid
-
-# Build rule for target.
-clean_test_results_voxel_grid: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results_voxel_grid
-.PHONY : clean_test_results_voxel_grid
-
-# fast build rule for target.
-clean_test_results_voxel_grid/fast:
-	$(MAKE) -f voxel_grid/CMakeFiles/clean_test_results_voxel_grid.dir/build.make voxel_grid/CMakeFiles/clean_test_results_voxel_grid.dir/build
-.PHONY : clean_test_results_voxel_grid/fast
+usb_cam_node/fast:
+	$(MAKE) -f drivers/usb_cam/CMakeFiles/usb_cam_node.dir/build.make drivers/usb_cam/CMakeFiles/usb_cam_node.dir/build
+.PHONY : usb_cam_node/fast
 
 #=============================================================================
 # Target rules for targets named costmap_2d_node
@@ -2025,6 +1765,32 @@ costmap_generate_messages_py/fast:
 .PHONY : costmap_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named dwa_local_planner
+
+# Build rule for target.
+dwa_local_planner: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dwa_local_planner
+.PHONY : dwa_local_planner
+
+# fast build rule for target.
+dwa_local_planner/fast:
+	$(MAKE) -f planning/local_planning/CMakeFiles/dwa_local_planner.dir/build.make planning/local_planning/CMakeFiles/dwa_local_planner.dir/build
+.PHONY : dwa_local_planner/fast
+
+#=============================================================================
+# Target rules for targets named local_planner_gencfg
+
+# Build rule for target.
+local_planner_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 local_planner_gencfg
+.PHONY : local_planner_gencfg
+
+# fast build rule for target.
+local_planner_gencfg/fast:
+	$(MAKE) -f planning/local_planning/CMakeFiles/local_planner_gencfg.dir/build.make planning/local_planning/CMakeFiles/local_planner_gencfg.dir/build
+.PHONY : local_planner_gencfg/fast
+
+#=============================================================================
 # Target rules for targets named _run_tests_clear_costmap_recovery
 
 # Build rule for target.
@@ -2034,7 +1800,7 @@ _run_tests_clear_costmap_recovery: cmake_check_build_system
 
 # fast build rule for target.
 _run_tests_clear_costmap_recovery/fast:
-	$(MAKE) -f clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery.dir/build.make clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery.dir/build
+	$(MAKE) -f ustar_move/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery.dir/build.make ustar_move/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery.dir/build
 .PHONY : _run_tests_clear_costmap_recovery/fast
 
 #=============================================================================
@@ -2047,7 +1813,7 @@ run_tests_clear_costmap_recovery: cmake_check_build_system
 
 # fast build rule for target.
 run_tests_clear_costmap_recovery/fast:
-	$(MAKE) -f clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery.dir/build.make clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery.dir/build
+	$(MAKE) -f ustar_move/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery.dir/build.make ustar_move/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery.dir/build
 .PHONY : run_tests_clear_costmap_recovery/fast
 
 #=============================================================================
@@ -2060,7 +1826,7 @@ clear_tester: cmake_check_build_system
 
 # fast build rule for target.
 clear_tester/fast:
-	$(MAKE) -f clear_costmap_recovery/CMakeFiles/clear_tester.dir/build.make clear_costmap_recovery/CMakeFiles/clear_tester.dir/build
+	$(MAKE) -f ustar_move/clear_costmap_recovery/CMakeFiles/clear_tester.dir/build.make ustar_move/clear_costmap_recovery/CMakeFiles/clear_tester.dir/build
 .PHONY : clear_tester/fast
 
 #=============================================================================
@@ -2073,7 +1839,7 @@ _run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch: cmake_check_b
 
 # fast build rule for target.
 _run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch/fast:
-	$(MAKE) -f clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/build.make clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/build
+	$(MAKE) -f ustar_move/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/build.make ustar_move/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/build
 .PHONY : _run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch/fast
 
 #=============================================================================
@@ -2086,7 +1852,7 @@ _run_tests_clear_costmap_recovery_rostest: cmake_check_build_system
 
 # fast build rule for target.
 _run_tests_clear_costmap_recovery_rostest/fast:
-	$(MAKE) -f clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest.dir/build.make clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest.dir/build
+	$(MAKE) -f ustar_move/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest.dir/build.make ustar_move/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest.dir/build
 .PHONY : _run_tests_clear_costmap_recovery_rostest/fast
 
 #=============================================================================
@@ -2099,7 +1865,7 @@ clear_costmap_recovery: cmake_check_build_system
 
 # fast build rule for target.
 clear_costmap_recovery/fast:
-	$(MAKE) -f clear_costmap_recovery/CMakeFiles/clear_costmap_recovery.dir/build.make clear_costmap_recovery/CMakeFiles/clear_costmap_recovery.dir/build
+	$(MAKE) -f ustar_move/clear_costmap_recovery/CMakeFiles/clear_costmap_recovery.dir/build.make ustar_move/clear_costmap_recovery/CMakeFiles/clear_costmap_recovery.dir/build
 .PHONY : clear_costmap_recovery/fast
 
 #=============================================================================
@@ -2112,7 +1878,7 @@ run_tests_clear_costmap_recovery_rostest: cmake_check_build_system
 
 # fast build rule for target.
 run_tests_clear_costmap_recovery_rostest/fast:
-	$(MAKE) -f clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest.dir/build.make clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest.dir/build
+	$(MAKE) -f ustar_move/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest.dir/build.make ustar_move/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest.dir/build
 .PHONY : run_tests_clear_costmap_recovery_rostest/fast
 
 #=============================================================================
@@ -2125,7 +1891,7 @@ clean_test_results_clear_costmap_recovery: cmake_check_build_system
 
 # fast build rule for target.
 clean_test_results_clear_costmap_recovery/fast:
-	$(MAKE) -f clear_costmap_recovery/CMakeFiles/clean_test_results_clear_costmap_recovery.dir/build.make clear_costmap_recovery/CMakeFiles/clean_test_results_clear_costmap_recovery.dir/build
+	$(MAKE) -f ustar_move/clear_costmap_recovery/CMakeFiles/clean_test_results_clear_costmap_recovery.dir/build.make ustar_move/clear_costmap_recovery/CMakeFiles/clean_test_results_clear_costmap_recovery.dir/build
 .PHONY : clean_test_results_clear_costmap_recovery/fast
 
 #=============================================================================
@@ -2138,7 +1904,7 @@ run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch: cmake_check_bu
 
 # fast build rule for target.
 run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch/fast:
-	$(MAKE) -f clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/build.make clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/build
+	$(MAKE) -f ustar_move/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/build.make ustar_move/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/build
 .PHONY : run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch/fast
 
 #=============================================================================
@@ -2151,7 +1917,7 @@ navfn_node: cmake_check_build_system
 
 # fast build rule for target.
 navfn_node/fast:
-	$(MAKE) -f navfn/CMakeFiles/navfn_node.dir/build.make navfn/CMakeFiles/navfn_node.dir/build
+	$(MAKE) -f planning/navfn/CMakeFiles/navfn_node.dir/build.make planning/navfn/CMakeFiles/navfn_node.dir/build
 .PHONY : navfn_node/fast
 
 #=============================================================================
@@ -2164,7 +1930,7 @@ navfn: cmake_check_build_system
 
 # fast build rule for target.
 navfn/fast:
-	$(MAKE) -f navfn/CMakeFiles/navfn.dir/build.make navfn/CMakeFiles/navfn.dir/build
+	$(MAKE) -f planning/navfn/CMakeFiles/navfn.dir/build.make planning/navfn/CMakeFiles/navfn.dir/build
 .PHONY : navfn/fast
 
 #=============================================================================
@@ -2177,7 +1943,7 @@ navfn_genpy: cmake_check_build_system
 
 # fast build rule for target.
 navfn_genpy/fast:
-	$(MAKE) -f navfn/CMakeFiles/navfn_genpy.dir/build.make navfn/CMakeFiles/navfn_genpy.dir/build
+	$(MAKE) -f planning/navfn/CMakeFiles/navfn_genpy.dir/build.make planning/navfn/CMakeFiles/navfn_genpy.dir/build
 .PHONY : navfn_genpy/fast
 
 #=============================================================================
@@ -2190,7 +1956,7 @@ navfn_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 navfn_generate_messages_py/fast:
-	$(MAKE) -f navfn/CMakeFiles/navfn_generate_messages_py.dir/build.make navfn/CMakeFiles/navfn_generate_messages_py.dir/build
+	$(MAKE) -f planning/navfn/CMakeFiles/navfn_generate_messages_py.dir/build.make planning/navfn/CMakeFiles/navfn_generate_messages_py.dir/build
 .PHONY : navfn_generate_messages_py/fast
 
 #=============================================================================
@@ -2203,7 +1969,7 @@ navfn_gennodejs: cmake_check_build_system
 
 # fast build rule for target.
 navfn_gennodejs/fast:
-	$(MAKE) -f navfn/CMakeFiles/navfn_gennodejs.dir/build.make navfn/CMakeFiles/navfn_gennodejs.dir/build
+	$(MAKE) -f planning/navfn/CMakeFiles/navfn_gennodejs.dir/build.make planning/navfn/CMakeFiles/navfn_gennodejs.dir/build
 .PHONY : navfn_gennodejs/fast
 
 #=============================================================================
@@ -2216,7 +1982,7 @@ navfn_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 navfn_generate_messages_cpp/fast:
-	$(MAKE) -f navfn/CMakeFiles/navfn_generate_messages_cpp.dir/build.make navfn/CMakeFiles/navfn_generate_messages_cpp.dir/build
+	$(MAKE) -f planning/navfn/CMakeFiles/navfn_generate_messages_cpp.dir/build.make planning/navfn/CMakeFiles/navfn_generate_messages_cpp.dir/build
 .PHONY : navfn_generate_messages_cpp/fast
 
 #=============================================================================
@@ -2229,7 +1995,7 @@ _navfn_generate_messages_check_deps_SetCostmap: cmake_check_build_system
 
 # fast build rule for target.
 _navfn_generate_messages_check_deps_SetCostmap/fast:
-	$(MAKE) -f navfn/CMakeFiles/_navfn_generate_messages_check_deps_SetCostmap.dir/build.make navfn/CMakeFiles/_navfn_generate_messages_check_deps_SetCostmap.dir/build
+	$(MAKE) -f planning/navfn/CMakeFiles/_navfn_generate_messages_check_deps_SetCostmap.dir/build.make planning/navfn/CMakeFiles/_navfn_generate_messages_check_deps_SetCostmap.dir/build
 .PHONY : _navfn_generate_messages_check_deps_SetCostmap/fast
 
 #=============================================================================
@@ -2242,7 +2008,7 @@ _navfn_generate_messages_check_deps_MakeNavPlan: cmake_check_build_system
 
 # fast build rule for target.
 _navfn_generate_messages_check_deps_MakeNavPlan/fast:
-	$(MAKE) -f navfn/CMakeFiles/_navfn_generate_messages_check_deps_MakeNavPlan.dir/build.make navfn/CMakeFiles/_navfn_generate_messages_check_deps_MakeNavPlan.dir/build
+	$(MAKE) -f planning/navfn/CMakeFiles/_navfn_generate_messages_check_deps_MakeNavPlan.dir/build.make planning/navfn/CMakeFiles/_navfn_generate_messages_check_deps_MakeNavPlan.dir/build
 .PHONY : _navfn_generate_messages_check_deps_MakeNavPlan/fast
 
 #=============================================================================
@@ -2255,7 +2021,7 @@ navfn_generate_messages: cmake_check_build_system
 
 # fast build rule for target.
 navfn_generate_messages/fast:
-	$(MAKE) -f navfn/CMakeFiles/navfn_generate_messages.dir/build.make navfn/CMakeFiles/navfn_generate_messages.dir/build
+	$(MAKE) -f planning/navfn/CMakeFiles/navfn_generate_messages.dir/build.make planning/navfn/CMakeFiles/navfn_generate_messages.dir/build
 .PHONY : navfn_generate_messages/fast
 
 #=============================================================================
@@ -2268,7 +2034,7 @@ navfn_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 navfn_generate_messages_eus/fast:
-	$(MAKE) -f navfn/CMakeFiles/navfn_generate_messages_eus.dir/build.make navfn/CMakeFiles/navfn_generate_messages_eus.dir/build
+	$(MAKE) -f planning/navfn/CMakeFiles/navfn_generate_messages_eus.dir/build.make planning/navfn/CMakeFiles/navfn_generate_messages_eus.dir/build
 .PHONY : navfn_generate_messages_eus/fast
 
 #=============================================================================
@@ -2281,7 +2047,7 @@ navfn_gencpp: cmake_check_build_system
 
 # fast build rule for target.
 navfn_gencpp/fast:
-	$(MAKE) -f navfn/CMakeFiles/navfn_gencpp.dir/build.make navfn/CMakeFiles/navfn_gencpp.dir/build
+	$(MAKE) -f planning/navfn/CMakeFiles/navfn_gencpp.dir/build.make planning/navfn/CMakeFiles/navfn_gencpp.dir/build
 .PHONY : navfn_gencpp/fast
 
 #=============================================================================
@@ -2294,7 +2060,7 @@ navfn_geneus: cmake_check_build_system
 
 # fast build rule for target.
 navfn_geneus/fast:
-	$(MAKE) -f navfn/CMakeFiles/navfn_geneus.dir/build.make navfn/CMakeFiles/navfn_geneus.dir/build
+	$(MAKE) -f planning/navfn/CMakeFiles/navfn_geneus.dir/build.make planning/navfn/CMakeFiles/navfn_geneus.dir/build
 .PHONY : navfn_geneus/fast
 
 #=============================================================================
@@ -2307,7 +2073,7 @@ navfn_genlisp: cmake_check_build_system
 
 # fast build rule for target.
 navfn_genlisp/fast:
-	$(MAKE) -f navfn/CMakeFiles/navfn_genlisp.dir/build.make navfn/CMakeFiles/navfn_genlisp.dir/build
+	$(MAKE) -f planning/navfn/CMakeFiles/navfn_genlisp.dir/build.make planning/navfn/CMakeFiles/navfn_genlisp.dir/build
 .PHONY : navfn_genlisp/fast
 
 #=============================================================================
@@ -2320,7 +2086,7 @@ navfn_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 navfn_generate_messages_lisp/fast:
-	$(MAKE) -f navfn/CMakeFiles/navfn_generate_messages_lisp.dir/build.make navfn/CMakeFiles/navfn_generate_messages_lisp.dir/build
+	$(MAKE) -f planning/navfn/CMakeFiles/navfn_generate_messages_lisp.dir/build.make planning/navfn/CMakeFiles/navfn_generate_messages_lisp.dir/build
 .PHONY : navfn_generate_messages_lisp/fast
 
 #=============================================================================
@@ -2333,7 +2099,7 @@ navfn_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 navfn_generate_messages_nodejs/fast:
-	$(MAKE) -f navfn/CMakeFiles/navfn_generate_messages_nodejs.dir/build.make navfn/CMakeFiles/navfn_generate_messages_nodejs.dir/build
+	$(MAKE) -f planning/navfn/CMakeFiles/navfn_generate_messages_nodejs.dir/build.make planning/navfn/CMakeFiles/navfn_generate_messages_nodejs.dir/build
 .PHONY : navfn_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -2346,7 +2112,7 @@ _run_tests_navfn: cmake_check_build_system
 
 # fast build rule for target.
 _run_tests_navfn/fast:
-	$(MAKE) -f navfn/test/CMakeFiles/_run_tests_navfn.dir/build.make navfn/test/CMakeFiles/_run_tests_navfn.dir/build
+	$(MAKE) -f planning/navfn/test/CMakeFiles/_run_tests_navfn.dir/build.make planning/navfn/test/CMakeFiles/_run_tests_navfn.dir/build
 .PHONY : _run_tests_navfn/fast
 
 #=============================================================================
@@ -2359,7 +2125,7 @@ run_tests_navfn: cmake_check_build_system
 
 # fast build rule for target.
 run_tests_navfn/fast:
-	$(MAKE) -f navfn/test/CMakeFiles/run_tests_navfn.dir/build.make navfn/test/CMakeFiles/run_tests_navfn.dir/build
+	$(MAKE) -f planning/navfn/test/CMakeFiles/run_tests_navfn.dir/build.make planning/navfn/test/CMakeFiles/run_tests_navfn.dir/build
 .PHONY : run_tests_navfn/fast
 
 #=============================================================================
@@ -2372,7 +2138,7 @@ path_calc_test: cmake_check_build_system
 
 # fast build rule for target.
 path_calc_test/fast:
-	$(MAKE) -f navfn/test/CMakeFiles/path_calc_test.dir/build.make navfn/test/CMakeFiles/path_calc_test.dir/build
+	$(MAKE) -f planning/navfn/test/CMakeFiles/path_calc_test.dir/build.make planning/navfn/test/CMakeFiles/path_calc_test.dir/build
 .PHONY : path_calc_test/fast
 
 #=============================================================================
@@ -2385,7 +2151,7 @@ _run_tests_navfn_gtest: cmake_check_build_system
 
 # fast build rule for target.
 _run_tests_navfn_gtest/fast:
-	$(MAKE) -f navfn/test/CMakeFiles/_run_tests_navfn_gtest.dir/build.make navfn/test/CMakeFiles/_run_tests_navfn_gtest.dir/build
+	$(MAKE) -f planning/navfn/test/CMakeFiles/_run_tests_navfn_gtest.dir/build.make planning/navfn/test/CMakeFiles/_run_tests_navfn_gtest.dir/build
 .PHONY : _run_tests_navfn_gtest/fast
 
 #=============================================================================
@@ -2398,7 +2164,7 @@ run_tests_navfn_gtest_path_calc_test: cmake_check_build_system
 
 # fast build rule for target.
 run_tests_navfn_gtest_path_calc_test/fast:
-	$(MAKE) -f navfn/test/CMakeFiles/run_tests_navfn_gtest_path_calc_test.dir/build.make navfn/test/CMakeFiles/run_tests_navfn_gtest_path_calc_test.dir/build
+	$(MAKE) -f planning/navfn/test/CMakeFiles/run_tests_navfn_gtest_path_calc_test.dir/build.make planning/navfn/test/CMakeFiles/run_tests_navfn_gtest_path_calc_test.dir/build
 .PHONY : run_tests_navfn_gtest_path_calc_test/fast
 
 #=============================================================================
@@ -2411,7 +2177,7 @@ _run_tests_navfn_gtest_path_calc_test: cmake_check_build_system
 
 # fast build rule for target.
 _run_tests_navfn_gtest_path_calc_test/fast:
-	$(MAKE) -f navfn/test/CMakeFiles/_run_tests_navfn_gtest_path_calc_test.dir/build.make navfn/test/CMakeFiles/_run_tests_navfn_gtest_path_calc_test.dir/build
+	$(MAKE) -f planning/navfn/test/CMakeFiles/_run_tests_navfn_gtest_path_calc_test.dir/build.make planning/navfn/test/CMakeFiles/_run_tests_navfn_gtest_path_calc_test.dir/build
 .PHONY : _run_tests_navfn_gtest_path_calc_test/fast
 
 #=============================================================================
@@ -2424,7 +2190,7 @@ clean_test_results_navfn: cmake_check_build_system
 
 # fast build rule for target.
 clean_test_results_navfn/fast:
-	$(MAKE) -f navfn/test/CMakeFiles/clean_test_results_navfn.dir/build.make navfn/test/CMakeFiles/clean_test_results_navfn.dir/build
+	$(MAKE) -f planning/navfn/test/CMakeFiles/clean_test_results_navfn.dir/build.make planning/navfn/test/CMakeFiles/clean_test_results_navfn.dir/build
 .PHONY : clean_test_results_navfn/fast
 
 #=============================================================================
@@ -2437,21 +2203,21 @@ run_tests_navfn_gtest: cmake_check_build_system
 
 # fast build rule for target.
 run_tests_navfn_gtest/fast:
-	$(MAKE) -f navfn/test/CMakeFiles/run_tests_navfn_gtest.dir/build.make navfn/test/CMakeFiles/run_tests_navfn_gtest.dir/build
+	$(MAKE) -f planning/navfn/test/CMakeFiles/run_tests_navfn_gtest.dir/build.make planning/navfn/test/CMakeFiles/run_tests_navfn_gtest.dir/build
 .PHONY : run_tests_navfn_gtest/fast
 
 #=============================================================================
-# Target rules for targets named global_planner_node
+# Target rules for targets named global_planner_gencfg
 
 # Build rule for target.
-global_planner_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 global_planner_node
-.PHONY : global_planner_node
+global_planner_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 global_planner_gencfg
+.PHONY : global_planner_gencfg
 
 # fast build rule for target.
-global_planner_node/fast:
-	$(MAKE) -f planning/CMakeFiles/global_planner_node.dir/build.make planning/CMakeFiles/global_planner_node.dir/build
-.PHONY : global_planner_node/fast
+global_planner_gencfg/fast:
+	$(MAKE) -f planning/global_planner/CMakeFiles/global_planner_gencfg.dir/build.make planning/global_planner/CMakeFiles/global_planner_gencfg.dir/build
+.PHONY : global_planner_gencfg/fast
 
 #=============================================================================
 # Target rules for targets named global_planner
@@ -2463,34 +2229,21 @@ global_planner: cmake_check_build_system
 
 # fast build rule for target.
 global_planner/fast:
-	$(MAKE) -f planning/CMakeFiles/global_planner.dir/build.make planning/CMakeFiles/global_planner.dir/build
+	$(MAKE) -f planning/global_planner/CMakeFiles/global_planner.dir/build.make planning/global_planner/CMakeFiles/global_planner.dir/build
 .PHONY : global_planner/fast
 
 #=============================================================================
-# Target rules for targets named dwa_local_planner
+# Target rules for targets named global_planner_node
 
 # Build rule for target.
-dwa_local_planner: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dwa_local_planner
-.PHONY : dwa_local_planner
+global_planner_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 global_planner_node
+.PHONY : global_planner_node
 
 # fast build rule for target.
-dwa_local_planner/fast:
-	$(MAKE) -f planning/CMakeFiles/dwa_local_planner.dir/build.make planning/CMakeFiles/dwa_local_planner.dir/build
-.PHONY : dwa_local_planner/fast
-
-#=============================================================================
-# Target rules for targets named planning_gencfg
-
-# Build rule for target.
-planning_gencfg: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 planning_gencfg
-.PHONY : planning_gencfg
-
-# fast build rule for target.
-planning_gencfg/fast:
-	$(MAKE) -f planning/CMakeFiles/planning_gencfg.dir/build.make planning/CMakeFiles/planning_gencfg.dir/build
-.PHONY : planning_gencfg/fast
+global_planner_node/fast:
+	$(MAKE) -f planning/global_planner/CMakeFiles/global_planner_node.dir/build.make planning/global_planner/CMakeFiles/global_planner_node.dir/build
+.PHONY : global_planner_node/fast
 
 #=============================================================================
 # Target rules for targets named rotate_recovery
@@ -2502,7 +2255,7 @@ rotate_recovery: cmake_check_build_system
 
 # fast build rule for target.
 rotate_recovery/fast:
-	$(MAKE) -f rotate_recovery/CMakeFiles/rotate_recovery.dir/build.make rotate_recovery/CMakeFiles/rotate_recovery.dir/build
+	$(MAKE) -f ustar_move/rotate_recovery/CMakeFiles/rotate_recovery.dir/build.make ustar_move/rotate_recovery/CMakeFiles/rotate_recovery.dir/build
 .PHONY : rotate_recovery/fast
 
 #=============================================================================
@@ -2515,7 +2268,7 @@ move_base_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 move_base_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f move_base/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build.make move_base/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build.make ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build
 .PHONY : move_base_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -2528,7 +2281,7 @@ move_base_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 move_base_msgs_generate_messages_py/fast:
-	$(MAKE) -f move_base/CMakeFiles/move_base_msgs_generate_messages_py.dir/build.make move_base/CMakeFiles/move_base_msgs_generate_messages_py.dir/build
+	$(MAKE) -f ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_py.dir/build.make ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_py.dir/build
 .PHONY : move_base_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -2541,7 +2294,7 @@ move_base_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 move_base_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
 .PHONY : move_base_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -2554,7 +2307,7 @@ move_base_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 move_base_msgs_generate_messages_eus/fast:
-	$(MAKE) -f move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build.make move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build.make ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build
 .PHONY : move_base_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -2567,7 +2320,7 @@ move_base_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 move_base_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f move_base/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build.make move_base/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build.make ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build
 .PHONY : move_base_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -2580,7 +2333,7 @@ move_base: cmake_check_build_system
 
 # fast build rule for target.
 move_base/fast:
-	$(MAKE) -f move_base/CMakeFiles/move_base.dir/build.make move_base/CMakeFiles/move_base.dir/build
+	$(MAKE) -f ustar_move/move_base/CMakeFiles/move_base.dir/build.make ustar_move/move_base/CMakeFiles/move_base.dir/build
 .PHONY : move_base/fast
 
 #=============================================================================
@@ -2593,7 +2346,7 @@ move_base_node: cmake_check_build_system
 
 # fast build rule for target.
 move_base_node/fast:
-	$(MAKE) -f move_base/CMakeFiles/move_base_node.dir/build.make move_base/CMakeFiles/move_base_node.dir/build
+	$(MAKE) -f ustar_move/move_base/CMakeFiles/move_base_node.dir/build.make ustar_move/move_base/CMakeFiles/move_base_node.dir/build
 .PHONY : move_base_node/fast
 
 #=============================================================================
@@ -2606,7 +2359,7 @@ move_base_gencfg: cmake_check_build_system
 
 # fast build rule for target.
 move_base_gencfg/fast:
-	$(MAKE) -f move_base/CMakeFiles/move_base_gencfg.dir/build.make move_base/CMakeFiles/move_base_gencfg.dir/build
+	$(MAKE) -f ustar_move/move_base/CMakeFiles/move_base_gencfg.dir/build.make ustar_move/move_base/CMakeFiles/move_base_gencfg.dir/build
 .PHONY : move_base_gencfg/fast
 
 # Help Target
@@ -2632,19 +2385,6 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... _catkin_empty_exported_target"
-	@echo "... serial_example"
-	@echo "... serial"
-	@echo "... _run_tests_serial"
-	@echo "... run_tests_serial_gtest_serial-test"
-	@echo "... serial-test"
-	@echo "... _run_tests_serial_gtest_serial-test-timer"
-	@echo "... _run_tests_serial_gtest"
-	@echo "... run_tests_serial"
-	@echo "... _run_tests_serial_gtest_serial-test"
-	@echo "... clean_test_results_serial"
-	@echo "... run_tests_serial_gtest"
-	@echo "... serial-test-timer"
-	@echo "... run_tests_serial_gtest_serial-test-timer"
 	@echo "... nav_msgs_generate_messages_nodejs"
 	@echo "... nav_msgs_generate_messages_lisp"
 	@echo "... nav_msgs_generate_messages_eus"
@@ -2728,15 +2468,8 @@ help:
 	@echo "... localization_sensor"
 	@echo "... localization_map"
 	@echo "... dynamic_reconfigure_gencfg"
-	@echo "... voxel_grid_tests"
-	@echo "... _run_tests_voxel_grid_gtest_voxel_grid_tests"
-	@echo "... _run_tests_voxel_grid"
-	@echo "... run_tests_voxel_grid"
-	@echo "... voxel_grid"
-	@echo "... run_tests_voxel_grid_gtest"
-	@echo "... run_tests_voxel_grid_gtest_voxel_grid_tests"
-	@echo "... _run_tests_voxel_grid_gtest"
-	@echo "... clean_test_results_voxel_grid"
+	@echo "... usb_cam"
+	@echo "... usb_cam_node"
 	@echo "... costmap_2d_node"
 	@echo "... costmap_2d_markers"
 	@echo "... layers"
@@ -2765,6 +2498,8 @@ help:
 	@echo "... costmap_gencpp"
 	@echo "... map_msgs_generate_messages_lisp"
 	@echo "... costmap_generate_messages_py"
+	@echo "... dwa_local_planner"
+	@echo "... local_planner_gencfg"
 	@echo "... _run_tests_clear_costmap_recovery"
 	@echo "... run_tests_clear_costmap_recovery"
 	@echo "... clear_tester"
@@ -2797,10 +2532,9 @@ help:
 	@echo "... _run_tests_navfn_gtest_path_calc_test"
 	@echo "... clean_test_results_navfn"
 	@echo "... run_tests_navfn_gtest"
-	@echo "... global_planner_node"
+	@echo "... global_planner_gencfg"
 	@echo "... global_planner"
-	@echo "... dwa_local_planner"
-	@echo "... planning_gencfg"
+	@echo "... global_planner_node"
 	@echo "... rotate_recovery"
 	@echo "... move_base_msgs_generate_messages_nodejs"
 	@echo "... move_base_msgs_generate_messages_py"
