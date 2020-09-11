@@ -4,7 +4,7 @@
 using namespace std;
 
 namespace base_local_planner{
-
+ 
   MapGrid::MapGrid()
     : size_x_(0), size_y_(0)
   {
@@ -36,7 +36,7 @@ namespace base_local_planner{
         map_[id].cy = i;
       }
     }
-  }
+  } 
 
   size_t MapGrid::getIndex(int x, int y){
     return size_x_ * y + x;

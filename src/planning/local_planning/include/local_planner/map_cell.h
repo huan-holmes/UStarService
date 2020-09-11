@@ -29,7 +29,7 @@ namespace base_local_planner {
       bool target_mark; ///< @brief Marks for computing path/goal distances
 
       bool within_robot; ///< @brief Mark for cells within the robot footprint
-  };
+  }; 
 };
 
 #endif

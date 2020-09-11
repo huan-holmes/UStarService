@@ -9,7 +9,7 @@ MapGridCostFunction::MapGridCostFunction(UstarCostmap::Costmap2D* costmap,
     double yshift,
     bool is_local_goal_function,
     CostAggregationType aggregationType) :
-    costmap_(costmap),
+    costmap_(costmap), 
     map_(costmap->getSizeInCellsX(), costmap->getSizeInCellsY()),
     aggregationType_(aggregationType),
     xshift_(xshift),
