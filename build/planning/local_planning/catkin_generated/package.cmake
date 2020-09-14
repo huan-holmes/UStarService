@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "local_planner")
 set(local_planner_VERSION "0.0.0")
-set(local_planner_MAINTAINER "boocax <boocax@todo.todo>")
+set(local_planner_MAINTAINER "huan-holmes <1124782663@qq.com>")
 set(local_planner_PACKAGE_FORMAT "2")
 set(local_planner_BUILD_DEPENDS "angles" "cmake_modules" "costmap" "dynamic_reconfigure" "eigen" "nav_msgs" "pluginlib" "sensor_msgs" "roscpp" "tf2" "tf2_geometry_msgs" "tf2_ros")
 set(local_planner_BUILD_EXPORT_DEPENDS "costmap" "dynamic_reconfigure" "eigen" "nav_msgs" "pluginlib" "sensor_msgs" "roscpp" "tf2" "tf2_geometry_msgs" "tf2_ros")

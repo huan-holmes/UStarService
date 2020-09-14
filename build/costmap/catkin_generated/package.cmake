@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "costmap")
 set(costmap_VERSION "0.0.0")
-set(costmap_MAINTAINER "boocax <boocax@todo.todo>")
+set(costmap_MAINTAINER "huan-holmes <1124782663@qq.com>")
 set(costmap_PACKAGE_FORMAT "2")
 set(costmap_BUILD_DEPENDS "cmake_modules" "message_generation" "tf2_geometry_msgs" "tf2_sensor_msgs" "dynamic_reconfigure" "geometry_msgs" "laser_geometry" "map_msgs" "message_filters" "nav_msgs" "pluginlib" "roscpp" "rostest" "sensor_msgs" "std_msgs" "tf2" "tf2_ros" "visualization_msgs" "voxel_grid")
 set(costmap_BUILD_EXPORT_DEPENDS "dynamic_reconfigure" "geometry_msgs" "laser_geometry" "map_msgs" "message_filters" "nav_msgs" "pluginlib" "roscpp" "rostest" "sensor_msgs" "std_msgs" "tf2" "tf2_ros" "visualization_msgs" "voxel_grid")

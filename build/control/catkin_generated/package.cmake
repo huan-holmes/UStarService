@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "control")
 set(control_VERSION "0.0.0")
-set(control_MAINTAINER "boocax <boocax@todo.todo>")
+set(control_MAINTAINER "huan-holmes <11224782663@qq.com>")
 set(control_PACKAGE_FORMAT "2")
 set(control_BUILD_DEPENDS "roscpp" "serial" "rospy" "std_msgs")
 set(control_BUILD_EXPORT_DEPENDS "roscpp" "serial")

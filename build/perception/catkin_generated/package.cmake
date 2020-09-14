@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "perception")
 set(perception_VERSION "0.0.0")
-set(perception_MAINTAINER "boocax <boocax@todo.todo>")
+set(perception_MAINTAINER "huan-holmes <1124782663@qq.com>")
 set(perception_PACKAGE_FORMAT "2")
 set(perception_BUILD_DEPENDS )
 set(perception_BUILD_EXPORT_DEPENDS )

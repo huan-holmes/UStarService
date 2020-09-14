@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "mapping")
 set(mapping_VERSION "0.0.0")
-set(mapping_MAINTAINER "boocax <boocax@todo.todo>")
+set(mapping_MAINTAINER "huan-holmes <1124782663@qq.com>")
 set(mapping_PACKAGE_FORMAT "2")
 set(mapping_BUILD_DEPENDS "nav_msgs" "roscpp" "rostest" "tf" "nodelet")
 set(mapping_BUILD_EXPORT_DEPENDS )

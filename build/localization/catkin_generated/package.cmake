@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "localization")
 set(localization_VERSION "0.0.0")
-set(localization_MAINTAINER "boocax <boocax@todo.todo>")
+set(localization_MAINTAINER "huan-holmes <1124782663@qq.com>")
 set(localization_PACKAGE_FORMAT "2")
 set(localization_BUILD_DEPENDS "message_filters" "tf2_geometry_msgs" "diagnostic_updater" "dynamic_reconfigure" "geometry_msgs" "nav_msgs" "rosbag" "roscpp" "sensor_msgs" "std_srvs" "tf2" "tf2_msgs" "tf2_ros")
 set(localization_BUILD_EXPORT_DEPENDS "diagnostic_updater" "dynamic_reconfigure" "geometry_msgs" "nav_msgs" "rosbag" "roscpp" "sensor_msgs" "std_srvs" "tf2" "tf2_msgs" "tf2_ros")

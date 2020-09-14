@@ -14,13 +14,17 @@ kd_tree *tree_alloc(int max_size)
     self->size[1] = 0.50;
     self->size[2] = (10 * M_PI / 180);
 
-    self->root = NULL;
-    self->node_count - 0;
-    self->node_max_count = max_size;
-
     self->leaf_count = 0;
 
+    self->root = NULL;
+    self->node_count = 0;
+    self->node_max_count = max_size;
     self->nodes = calloc(self->node_max_count, sizeof(tree_node_t));
+    
+    self->cluster_d = 0.5;
+    self->cluster_count = 0;
+    self->cluster_max_count = max_size;
+    self->clusters = calloc(self->node_max_count, sizeof(tree_cluster_t));
     return self;
 }
 
@@ -31,21 +35,7 @@ void tree_free(kd_tree *self)
     free(self);
 }
 
-// Insert a node into the tree
-void tree_insert(kd_tree *self, p_vector pose, double value)
-{
-    int key[3];
-
-    key[0] = floor(pose.p[0] / self->size[0]);
-    key[1] = floor(pose.p[1] / self->size[1]);
-    key[2] = floor(pose.p[2] / self->size[2]);
-
-    self->root = tree_insert_node(self, NULL, self->root, key, value);
-    
-    return;
-}
-
-tree_node_t *tree_insert_node(kd_tree *self, tree_node_t *parent, tree_node_t *node, int key[], double value)
+tree_node_t *tree_insert_node(kd_tree *self, tree_node_t *parent, tree_node_t *node, int key[], double value, p_vector pose)
 {
     int i;
     int split, max_split;
@@ -67,6 +57,7 @@ tree_node_t *tree_insert_node(kd_tree *self, tree_node_t *parent, tree_node_t *n
             node->key[i] = key[i];
         
         node->value = value;
+        node->pose = pose;
         self->leaf_count += 1;
     }
     else if (node->leaf)
@@ -94,13 +85,13 @@ tree_node_t *tree_insert_node(kd_tree *self, tree_node_t *parent, tree_node_t *n
             
             if (key[node->pivot_dim] < node->pivot_value)
             {
-                node->children[0] = tree_insert_node(self, node, NULL, key, value);
-                node->children[1] = tree_insert_node(self, node, NULL, node->key, node->value);
+                node->children[0] = tree_insert_node(self, node, NULL, key, value, pose);
+                node->children[1] = tree_insert_node(self, node, NULL, node->key, node->value, node->pose);
             } 
             else
             {
-                node->children[0] = tree_insert_node(self, node, NULL, node->key, node->value);
-                node->children[1] = tree_insert_node(self, node, NULL, key, value);
+                node->children[0] = tree_insert_node(self, node, NULL, node->key, node->value, node->pose);
+                node->children[1] = tree_insert_node(self, node, NULL, key, value, pose);
             }
 
             node->leaf = 0;
@@ -114,48 +105,30 @@ tree_node_t *tree_insert_node(kd_tree *self, tree_node_t *parent, tree_node_t *n
         assert(node->children[0] != NULL);
         assert(node->children[1] != NULL);
         if (key[node->pivot_dim] < node->pivot_value)
-            tree_insert_node(self, node, node->children[0], key, value);
+            tree_insert_node(self, node, node->children[0], key, value, pose);
         else
-            tree_insert_node(self, node, node->children[1], key, value);
+            tree_insert_node(self, node, node->children[1], key, value, pose);
         
     }
     
 }
-
-void tree_cluster(kd_tree *self)
+// Insert a node into the tree
+void tree_insert(kd_tree *self, p_vector pose, double value)
 {
-    int i;
-    int queue_count, cluster_count;
-    tree_node_t **queue, *node;
+    int key[3];
 
-    queue_count = 0;
-    queue = calloc(self->node_count, sizeof(queue[0]));
+    key[0] = floor(pose.p[0] / self->size[0]);
+    key[1] = floor(pose.p[1] / self->size[1]);
+    key[2] = floor(pose.p[2] / self->size[2]);
 
-    for (i = 0; i < self->node_count; i++)
-    {
-        node = self->nodes + i;
-        if (node->leaf)
-        {
-            node->cluster = -1;
-            assert(queue_count < self->node_count);
-            queue[queue_count++] = node;
-            assert(node == tree_find_node(self, self->root, node->key));
-        }
-    }
-
-    cluster_count = 0;
-    while (queue_count > 0)
-    {
-        node = queue[--queue_count];
-        if (node->cluster >= 0)
-            continue;
-        node->cluster = cluster_count++;
-
-        tree_cluster_node(self, node, 0);
-    }
-    free(queue);
+    self->root = tree_insert_node(self, NULL, self->root, key, value, pose);
+    
     return;
 }
+
+
+
+
 
 tree_node_t *tree_find_node(kd_tree *self, tree_node_t *node, int key[])
 {
@@ -185,35 +158,40 @@ tree_node_t *tree_find_node(kd_tree *self, tree_node_t *node, int key[])
 
   return NULL;
 }
-
-void tree_cluster_node(kd_tree *self, tree_node_t *node, int depth)
+tree_node_t *tree_find_sim_node(kd_tree *self, tree_node_t *node, int key[])
 {
-    int i;
-    int nkey[3];
-    tree_node_t *nnode;
-
-    for (i = 0; i < 3 * 3 * 3; i++)
+    if (node->leaf)
     {
-        nkey[0] = node->key[0] + (i / 9) - 1;
-        nkey[1] = node->key[1] + ((i % 9) / 3) -1;
-        nkey[2] = node->key[2] + ((i % 9) % 3) - 1;
-
-        nnode = tree_find_node(self, self->root, nkey);
-        if (nnode == NULL)
-            continue;
-
-        assert(nnode->leaf);
-
-        if (node->cluster >= 0)
-        {
-            assert(nnode->cluster == node->cluster);
-            continue;
-        }
-
-        nnode->cluster = node->cluster;
-        tree_cluster_node(self, nnode, depth + 1);
+        if (tree_node_sim(self, node))
+            return node;
+        else
+            return NULL;
+    }   
+    else
+    {
+        assert(node->children[0] != NULL);
+        assert(node->children[1] != NULL);
+        if (key[node->pivot_dim] < node->pivot_value)
+            return tree_find_sim_node(self, node->children[0], key);
+        else
+            return tree_find_sim_node(self, node->children[1], key);
     }
-    return;
+    return NULL;
+    
+}
+
+
+
+
+int tree_node_sim(kd_tree *self, tree_node_t *node)
+{
+    tree_cluster_t *cluster;
+    cluster = self->clusters + node->cluster;
+    double d = sqrt((cluster->mean.p[0] - node->pose.p[0]) * (cluster->mean.p[0] - node->pose.p[0]) +
+                    (cluster->mean.p[1] - node->pose.p[1]) * (cluster->mean.p[1] - node->pose.p[1]));
+    if (d > self->cluster_d)
+        return 0;
+    return 1;
 }
 
 int tree_node_equal(kd_tree *self, int key_a[], int key_b[])
@@ -226,3 +204,13 @@ int tree_node_equal(kd_tree *self, int key_a[], int key_b[])
         return 0;
     return 1;
 }
+
+p_vector p_vector_zero()
+{
+    p_vector pz;
+    pz.p[0] = 0;
+    pz.p[1] = 0;
+    pz.p[2] = 0;
+    return pz;
+}
+

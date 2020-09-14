@@ -46,7 +46,7 @@ typedef struct
 
   // The number of leaf nodes in the tree
   int leaf_count;
-
+ 
 } pf_kdtree_t;
 
 

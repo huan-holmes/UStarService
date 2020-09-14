@@ -575,6 +575,12 @@ perception_SOURCE_DIR:STATIC=/home/boocax/UstarService/src/perception
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/kinetic/share/pluginlib/cmake
 
+//Value Computed by CMake
+radar_process_BINARY_DIR:STATIC=/home/boocax/UstarService/build/fusion/radar_process
+
+//Value Computed by CMake
+radar_process_SOURCE_DIR:STATIC=/home/boocax/UstarService/src/fusion/radar_process
+
 //The directory containing a CMake configuration file for rosbag.
 rosbag_DIR:PATH=/opt/ros/kinetic/share/rosbag/cmake
 
@@ -641,11 +647,20 @@ sensor_msgs_DIR:PATH=/opt/ros/kinetic/share/sensor_msgs/cmake
 //The directory containing a CMake configuration file for serial.
 serial_DIR:PATH=/opt/ros/kinetic/share/serial/cmake
 
+//Value Computed by CMake
+simulation_BINARY_DIR:STATIC=/home/boocax/UstarService/build/simulation
+
+//Value Computed by CMake
+simulation_SOURCE_DIR:STATIC=/home/boocax/UstarService/src/simulation
+
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/kinetic/share/std_msgs/cmake
 
 //The directory containing a CMake configuration file for std_srvs.
 std_srvs_DIR:PATH=/opt/ros/kinetic/share/std_srvs/cmake
+
+//Dependencies for target
+test_cluster_LIB_DEPENDS:STATIC=
 
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/kinetic/share/tf2/cmake
@@ -822,7 +837,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=19
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

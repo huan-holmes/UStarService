@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "global_planner")
 set(global_planner_VERSION "0.0.0")
-set(global_planner_MAINTAINER "boocax <boocax@todo.todo>")
+set(global_planner_MAINTAINER "huan-holmes <1124782663@qq.com>")
 set(global_planner_PACKAGE_FORMAT "2")
 set(global_planner_BUILD_DEPENDS "angles" "tf2_geometry_msgs" "costmap" "dynamic_reconfigure" "geometry_msgs" "nav_msgs" "navfn" "pluginlib" "roscpp" "tf2_ros")
 set(global_planner_BUILD_EXPORT_DEPENDS "costmap" "dynamic_reconfigure" "geometry_msgs" "nav_msgs" "navfn" "pluginlib" "roscpp" "tf2_ros")

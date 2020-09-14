@@ -985,6 +985,32 @@ ldcp_sdk/fast:
 .PHONY : ldcp_sdk/fast
 
 #=============================================================================
+# Target rules for targets named test_cluster
+
+# Build rule for target.
+test_cluster: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_cluster
+.PHONY : test_cluster
+
+# fast build rule for target.
+test_cluster/fast:
+	$(MAKE) -f fusion/radar_process/CMakeFiles/test_cluster.dir/build.make fusion/radar_process/CMakeFiles/test_cluster.dir/build
+.PHONY : test_cluster/fast
+
+#=============================================================================
+# Target rules for targets named test_cluster_node
+
+# Build rule for target.
+test_cluster_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_cluster_node
+.PHONY : test_cluster_node
+
+# fast build rule for target.
+test_cluster_node/fast:
+	$(MAKE) -f fusion/radar_process/CMakeFiles/test_cluster_node.dir/build.make fusion/radar_process/CMakeFiles/test_cluster_node.dir/build
+.PHONY : test_cluster_node/fast
+
+#=============================================================================
 # Target rules for targets named gmapping_node
 
 # Build rule for target.
@@ -2438,6 +2464,8 @@ help:
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... ltme_node"
 	@echo "... ldcp_sdk"
+	@echo "... test_cluster"
+	@echo "... test_cluster_node"
 	@echo "... gmapping_node"
 	@echo "... utils"
 	@echo "... sensor"
