@@ -30,8 +30,8 @@ include_directories(
 )
 
 add_library(test_cluster 
-  src/radar_process/cluster.c
   src/radar_process/kd_tree.c
+  #src/radar_process/cluster.cpp
 )
 add_executable(test_cluster_node test/test_cluster.cpp)
 target_link_libraries(test_cluster_node test_cluster ${catkin_LIBRARIES})

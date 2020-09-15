@@ -195,33 +195,6 @@ test_cluster_node/fast:
 	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/test_cluster_node.dir/build.make fusion/radar_process/CMakeFiles/test_cluster_node.dir/build
 .PHONY : test_cluster_node/fast
 
-src/radar_process/cluster.o: src/radar_process/cluster.c.o
-
-.PHONY : src/radar_process/cluster.o
-
-# target to build an object file
-src/radar_process/cluster.c.o:
-	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/test_cluster.dir/build.make fusion/radar_process/CMakeFiles/test_cluster.dir/src/radar_process/cluster.c.o
-.PHONY : src/radar_process/cluster.c.o
-
-src/radar_process/cluster.i: src/radar_process/cluster.c.i
-
-.PHONY : src/radar_process/cluster.i
-
-# target to preprocess a source file
-src/radar_process/cluster.c.i:
-	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/test_cluster.dir/build.make fusion/radar_process/CMakeFiles/test_cluster.dir/src/radar_process/cluster.c.i
-.PHONY : src/radar_process/cluster.c.i
-
-src/radar_process/cluster.s: src/radar_process/cluster.c.s
-
-.PHONY : src/radar_process/cluster.s
-
-# target to generate assembly for a file
-src/radar_process/cluster.c.s:
-	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/test_cluster.dir/build.make fusion/radar_process/CMakeFiles/test_cluster.dir/src/radar_process/cluster.c.s
-.PHONY : src/radar_process/cluster.c.s
-
 src/radar_process/kd_tree.o: src/radar_process/kd_tree.c.o
 
 .PHONY : src/radar_process/kd_tree.o
@@ -291,9 +264,6 @@ help:
 	@echo "... test_cluster_node"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... src/radar_process/cluster.o"
-	@echo "... src/radar_process/cluster.i"
-	@echo "... src/radar_process/cluster.s"
 	@echo "... src/radar_process/kd_tree.o"
 	@echo "... src/radar_process/kd_tree.i"
 	@echo "... src/radar_process/kd_tree.s"
