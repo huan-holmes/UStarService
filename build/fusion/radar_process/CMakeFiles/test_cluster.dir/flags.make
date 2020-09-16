@@ -6,5 +6,5 @@ C_FLAGS = -fPIC
 
 C_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"radar_process\" -Dtest_cluster_EXPORTS
 
-C_INCLUDES = -I/home/boocax/UstarService/src/fusion/radar_process/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+C_INCLUDES = -I/home/boocax/UstarService/src/fusion/radar_process/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 -I/usr/include/pcl-1.7 -I/usr/include/ni -I/usr/include/vtk-6.2 -I/usr/lib/openmpi/include/openmpi/opal/mca/event/libevent2021/libevent -I/usr/lib/openmpi/include/openmpi/opal/mca/event/libevent2021/libevent/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include/jsoncpp -I/usr/include/x86_64-linux-gnu -I/usr/include/freetype2 -I/usr/include/python2.7 -I/usr/include/libxml2 -I/usr/include/tcl 
 

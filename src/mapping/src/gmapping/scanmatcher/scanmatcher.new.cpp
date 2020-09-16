@@ -391,7 +391,7 @@ namespace UstarSlam
 	{
 		if (m_laserAngles)
 			delete[] m_laserAngles;
-		m_laserPose = lpose;
+		m_laserPose = lpose; 
 		m_laserBeams = beams;
 		//m_laserAngles = new double[beams]; 
 		memcpy(m_laserAngles, angles, sizeof(double) * m_laserBeams);

@@ -1,2 +1,0 @@
-/usr/bin/ar qc /home/boocax/UstarService/devel/lib/ldcp_sdk.a  CMakeFiles/ldcp_sdk.dir/src/device.cpp.o CMakeFiles/ldcp_sdk.dir/src/device_info.cpp.o CMakeFiles/ldcp_sdk.dir/src/location.cpp.o CMakeFiles/ldcp_sdk.dir/src/session.cpp.o CMakeFiles/ldcp_sdk.dir/src/transport.cpp.o
-/usr/bin/ranlib /home/boocax/UstarService/devel/lib/ldcp_sdk.a

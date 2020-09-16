@@ -11,6 +11,9 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   sensor_msgs
+  pcl_conversions
+  pcl_ros
+  laser_geometry
 )
 
 catkin_package(
@@ -27,6 +30,7 @@ catkin_package(
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
+  ${PCL_INCLUDE_DIRS}
 )
 
 add_library(test_cluster 
@@ -35,3 +39,9 @@ add_library(test_cluster
 )
 add_executable(test_cluster_node test/test_cluster.cpp)
 target_link_libraries(test_cluster_node test_cluster ${catkin_LIBRARIES})
+
+add_library(test_pcl
+  src/radar_process/filter.cpp
+)
+add_executable(my_pcl_node test/test_pcl.cpp)
+target_link_libraries(my_pcl_node test_pcl ${catkin_LIBRARIES})

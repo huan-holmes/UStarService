@@ -56,16 +56,16 @@ CMAKE_BINARY_DIR = /home/boocax/UstarService/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
 
-.PHONY : install/strip/fast
+.PHONY : edit_cache/fast
 
 # Special rule for the target test
 test:
@@ -77,6 +77,17 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
@@ -100,6 +111,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -110,28 +132,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,109 +166,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-localization/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : localization/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+localization/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
+.PHONY : localization/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-dynamic_reconfigure_generate_messages_py: localization/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+diagnostic_msgs_generate_messages_nodejs: localization/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
 
-.PHONY : dynamic_reconfigure_generate_messages_py
+.PHONY : diagnostic_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make localization/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
-
-# Convenience name for target.
-localization/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-.PHONY : localization/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_nodejs: localization/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_nodejs/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make localization/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
-
-# Convenience name for target.
-localization/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : localization/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: localization/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_lisp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make localization/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
-
-# Convenience name for target.
-localization/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : localization/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: localization/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_cpp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make localization/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
-
-# Convenience name for target.
-localization/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-.PHONY : localization/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_eus: localization/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_eus
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_eus/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make localization/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_eus/fast
-
-# Convenience name for target.
-localization/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-.PHONY : localization/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_py: localization/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_py
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_py/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make localization/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
-.PHONY : diagnostic_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-localization/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
-.PHONY : localization/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_cpp: localization/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_cpp
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_cpp/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make localization/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
-.PHONY : diagnostic_msgs_generate_messages_cpp/fast
+diagnostic_msgs_generate_messages_nodejs/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make localization/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
+.PHONY : diagnostic_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 localization/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule:
@@ -286,19 +196,94 @@ diagnostic_msgs_generate_messages_eus/fast:
 .PHONY : diagnostic_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-localization/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
-.PHONY : localization/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
+localization/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
+.PHONY : localization/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-diagnostic_msgs_generate_messages_nodejs: localization/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
+diagnostic_msgs_generate_messages_cpp: localization/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : diagnostic_msgs_generate_messages_nodejs
+.PHONY : diagnostic_msgs_generate_messages_cpp
 
 # fast build rule for target.
-diagnostic_msgs_generate_messages_nodejs/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make localization/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
-.PHONY : diagnostic_msgs_generate_messages_nodejs/fast
+diagnostic_msgs_generate_messages_cpp/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make localization/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
+.PHONY : diagnostic_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+localization/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
+.PHONY : localization/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+diagnostic_msgs_generate_messages_py: localization/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
+
+.PHONY : diagnostic_msgs_generate_messages_py
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_py/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make localization/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
+.PHONY : diagnostic_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+localization/CMakeFiles/localization_pf.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/localization_pf.dir/rule
+.PHONY : localization/CMakeFiles/localization_pf.dir/rule
+
+# Convenience name for target.
+localization_pf: localization/CMakeFiles/localization_pf.dir/rule
+
+.PHONY : localization_pf
+
+# fast build rule for target.
+localization_pf/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/localization_pf.dir/build.make localization/CMakeFiles/localization_pf.dir/build
+.PHONY : localization_pf/fast
+
+# Convenience name for target.
+localization/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
+.PHONY : localization/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+diagnostic_msgs_generate_messages_lisp: localization/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : diagnostic_msgs_generate_messages_lisp
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_lisp/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make localization/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
+.PHONY : diagnostic_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+localization/CMakeFiles/localization_map.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/localization_map.dir/rule
+.PHONY : localization/CMakeFiles/localization_map.dir/rule
+
+# Convenience name for target.
+localization_map: localization/CMakeFiles/localization_map.dir/rule
+
+.PHONY : localization_map
+
+# fast build rule for target.
+localization_map/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/localization_map.dir/build.make localization/CMakeFiles/localization_map.dir/build
+.PHONY : localization_map/fast
+
+# Convenience name for target.
+localization/CMakeFiles/localization_sensor.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/localization_sensor.dir/rule
+.PHONY : localization/CMakeFiles/localization_sensor.dir/rule
+
+# Convenience name for target.
+localization_sensor: localization/CMakeFiles/localization_sensor.dir/rule
+
+.PHONY : localization_sensor
+
+# fast build rule for target.
+localization_sensor/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/localization_sensor.dir/build.make localization/CMakeFiles/localization_sensor.dir/build
+.PHONY : localization_sensor/fast
 
 # Convenience name for target.
 localization/CMakeFiles/localization_gencfg.dir/rule:
@@ -329,81 +314,6 @@ localization_node: localization/CMakeFiles/localization_node.dir/rule
 localization_node/fast:
 	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/localization_node.dir/build.make localization/CMakeFiles/localization_node.dir/build
 .PHONY : localization_node/fast
-
-# Convenience name for target.
-localization/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
-.PHONY : localization/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_lisp: localization/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_lisp
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_lisp/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make localization/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
-.PHONY : diagnostic_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-localization/CMakeFiles/localization_pf.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/localization_pf.dir/rule
-.PHONY : localization/CMakeFiles/localization_pf.dir/rule
-
-# Convenience name for target.
-localization_pf: localization/CMakeFiles/localization_pf.dir/rule
-
-.PHONY : localization_pf
-
-# fast build rule for target.
-localization_pf/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/localization_pf.dir/build.make localization/CMakeFiles/localization_pf.dir/build
-.PHONY : localization_pf/fast
-
-# Convenience name for target.
-localization/CMakeFiles/localization_sensor.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/localization_sensor.dir/rule
-.PHONY : localization/CMakeFiles/localization_sensor.dir/rule
-
-# Convenience name for target.
-localization_sensor: localization/CMakeFiles/localization_sensor.dir/rule
-
-.PHONY : localization_sensor
-
-# fast build rule for target.
-localization_sensor/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/localization_sensor.dir/build.make localization/CMakeFiles/localization_sensor.dir/build
-.PHONY : localization_sensor/fast
-
-# Convenience name for target.
-localization/CMakeFiles/localization_map.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/localization_map.dir/rule
-.PHONY : localization/CMakeFiles/localization_map.dir/rule
-
-# Convenience name for target.
-localization_map: localization/CMakeFiles/localization_map.dir/rule
-
-.PHONY : localization_map
-
-# fast build rule for target.
-localization_map/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/localization_map.dir/build.make localization/CMakeFiles/localization_map.dir/build
-.PHONY : localization_map/fast
-
-# Convenience name for target.
-localization/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-.PHONY : localization/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_gencfg: localization/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-.PHONY : dynamic_reconfigure_gencfg
-
-# fast build rule for target.
-dynamic_reconfigure_gencfg/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make localization/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
-.PHONY : dynamic_reconfigure_gencfg/fast
 
 src/localization/map/map.o: src/localization/map/map.c.o
 
@@ -816,29 +726,23 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... dynamic_reconfigure_generate_messages_py"
-	@echo "... dynamic_reconfigure_generate_messages_nodejs"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
-	@echo "... dynamic_reconfigure_generate_messages_eus"
-	@echo "... install/strip"
+	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... diagnostic_msgs_generate_messages_py"
-	@echo "... diagnostic_msgs_generate_messages_cpp"
-	@echo "... install"
-	@echo "... diagnostic_msgs_generate_messages_eus"
+	@echo "... install/local"
 	@echo "... diagnostic_msgs_generate_messages_nodejs"
-	@echo "... localization_gencfg"
-	@echo "... localization_node"
-	@echo "... list_install_components"
-	@echo "... diagnostic_msgs_generate_messages_lisp"
+	@echo "... diagnostic_msgs_generate_messages_eus"
+	@echo "... install"
+	@echo "... diagnostic_msgs_generate_messages_cpp"
+	@echo "... diagnostic_msgs_generate_messages_py"
 	@echo "... localization_pf"
-	@echo "... localization_sensor"
+	@echo "... list_install_components"
+	@echo "... install/strip"
+	@echo "... diagnostic_msgs_generate_messages_lisp"
 	@echo "... localization_map"
 	@echo "... rebuild_cache"
-	@echo "... install/local"
-	@echo "... dynamic_reconfigure_gencfg"
-	@echo "... edit_cache"
+	@echo "... localization_sensor"
+	@echo "... localization_gencfg"
+	@echo "... localization_node"
 	@echo "... src/localization/map/map.o"
 	@echo "... src/localization/map/map.i"
 	@echo "... src/localization/map/map.s"
