@@ -14,6 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
   pcl_conversions
   pcl_ros
   laser_geometry
+  jsk_recognition_msgs
 )
 
 catkin_package(

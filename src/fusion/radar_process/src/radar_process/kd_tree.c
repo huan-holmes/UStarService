@@ -20,7 +20,7 @@ kd_tree *tree_alloc(int max_size)
     self->node_count = 0;
     self->node_max_count = max_size;
     self->nodes = calloc(self->node_max_count, sizeof(tree_node_t));
-    
+     
     self->cluster_d = 0.5;
     self->cluster_count = 0;
     self->cluster_max_count = max_size;

@@ -17,6 +17,7 @@ fusion/radar_process/CMakeFiles/my_pcl_node.dir/test/test_pcl.cpp.o
  /opt/ros/kinetic/include/geometry_msgs/TwistStamped.h
  /opt/ros/kinetic/include/geometry_msgs/Vector3.h
  /opt/ros/kinetic/include/geometry_msgs/Vector3Stamped.h
+ /opt/ros/kinetic/include/jsk_recognition_msgs/BoundingBox.h
  /opt/ros/kinetic/include/laser_geometry/laser_geometry.h
  /opt/ros/kinetic/include/pcl_conversions/pcl_conversions.h
  /opt/ros/kinetic/include/pcl_msgs/ModelCoefficients.h

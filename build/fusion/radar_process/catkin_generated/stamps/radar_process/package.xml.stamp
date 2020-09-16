@@ -59,6 +59,7 @@
   <exec_depend>rospy</exec_depend>
   <exec_depend>libpcl-all</exec_depend>
   <depend>sensor_msgs</depend>
+  <depend> jsk_recognition_msgs</depend>
   <depend>pcl_ros</depend>
   <!-- The export tag contains other, unspecified, tags -->
   <export>

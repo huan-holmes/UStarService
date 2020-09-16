@@ -200,7 +200,7 @@ class LocalizationNode
     std::map< std::string, int > frame_to_laser_;
 
     // Particle filter
-    pf_t *pf_;
+    pf_t *pf_; 
     double pf_err_, pf_z_;
     bool pf_init_;
     pf_vector_t pf_odom_pose_;
