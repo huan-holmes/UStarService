@@ -2,18 +2,18 @@
 #include <limits>
 #include <list>
 #include <iostream>
-#include "gmapping/utils/point.h"
+
 #include "gmapping/scanmatcher/scanmatcher.h"
-#include "gmapping/map/gridlinetraversal.h"
+#include "gmapping/scanmatcher/gridlinetraversal.h"
 //#define GENERATE_MAPS
 
 namespace Ustarslam
-{
+{	
 
 	using namespace std;
 
 	const double ScanMatcher::nullLikelihood = -.5;
-
+	
 	ScanMatcher::ScanMatcher() : m_laserPose(0, 0, 0)
 	{
 		//m_laserAngles=0;
@@ -34,20 +34,20 @@ namespace Ustarslam
 		m_initialBeamsSkip = 0;
 
 		/*	
-	// This  are the dafault settings for a grid map of 10 cm
-	m_llsamplerange=0.1;
-	m_llsamplestep=0.1;
-	m_lasamplerange=0.02;
-	m_lasamplestep=0.01;
-*/
+		// This  are the dafault settings for a grid map of 10 cm
+		m_llsamplerange=0.1;
+		m_llsamplestep=0.1;
+		m_lasamplerange=0.02;
+		m_lasamplestep=0.01;
+		*/
 		// This  are the dafault settings for a grid map of 20/25 cm
 		/*
-	m_llsamplerange=0.2;
-	m_llsamplestep=0.1;
-	m_lasamplerange=0.02;
-	m_lasamplestep=0.01;
-	m_generateMap=false;
-*/
+		m_llsamplerange=0.2;
+		m_llsamplestep=0.1;
+		m_lasamplerange=0.02;
+		m_lasamplestep=0.01;
+		m_generateMap=false;
+		*/
 
 		m_linePoints = new IntPoint[20000];
 	}

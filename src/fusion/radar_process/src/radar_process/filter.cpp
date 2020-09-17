@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include "radar_process/filter.h"
-#define MIN_CLUSTER_SIZE 100
+#define MIN_CLUSTER_SIZE 0
 #define MAX_CLUSTER_SIZE 25000
 namespace UstarFusion
 {
@@ -125,7 +125,6 @@ namespace UstarFusion
 
         for (size_t i = 0; i < obj_list.size(); i++)
         {
-            ROS_INFO_STREAM(obj_list[i].bounding_box_.dimensions.x);
             bbox_array.boxes.push_back(obj_list[i].bounding_box_);
         }
         bbox_array.header.frame_id = "laser";
@@ -144,10 +143,12 @@ namespace UstarFusion
         for (size_t i = 0; i < cloud_2d->points.size(); i++)
         {
             cloud_2d->points[i].z = 0;
+           // ROS_INFO_STREAM(cloud_2d->points[i].x);
         }
 
         if (cloud_2d->points.size() > 0)
             tree->setInputCloud(cloud_2d);
+        
 
         std::vector<pcl::PointIndices> local_indices;
 
@@ -173,7 +174,7 @@ namespace UstarFusion
 
             for (std::vector<pcl::PointIndices>::const_iterator pit = local_indices.begin(); pit != local_indices.end(); ++pit)
             {
-                pcl::PointCloud<pcl::PointXYZ>::Ptr cluster(new pcl::PointCloud<pcl::PointXYZ>);
+                ROS_INFO_STREAM(local_indices.size());   
                 for (std::vector<int>::const_iterator point = pit->indices.begin(); point != pit->indices.end(); point++)
                 {
                     //fill new colored cluster point by point
@@ -181,7 +182,7 @@ namespace UstarFusion
                     p.x = in_pc->points[*point].x;
                     p.y = in_pc->points[*point].y;
                     p.z = in_pc->points[*point].z;
-
+                   
                     obj_info.centroid_.x += p.x;
                     obj_info.centroid_.y += p.y;
                     obj_info.centroid_.z += p.z;

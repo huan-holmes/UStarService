@@ -357,12 +357,11 @@ namespace UstarSlam
       laser_angles_[i] = theta;
       theta += std::fabs(scan.angle_increment);
     }
-
+    
     ROS_DEBUG("Laser angles in laser-frame: min: %.3f max: %.3f inc: %.3f", scan.angle_min, scan.angle_max,
               scan.angle_increment);
     ROS_DEBUG("Laser angles in top-down centered laser-frame: min: %.3f max: %.3f inc: %.3f", laser_angles_.front(),
               laser_angles_.back(), std::fabs(scan.angle_increment));
-
     UstarSlam::OrientedPoint gmap_pose(0, 0, 0);
 
     // setting maxRange and maxUrange here so we can set a reasonable default
@@ -371,7 +370,6 @@ namespace UstarSlam
       maxRange_ = scan.range_max - 0.01;
     if (!private_nh_.getParam("maxUrange", maxUrange_))
       maxUrange_ = maxRange_;
-
     // The laser must be called "FLASER".
     // We pass in the absolute value of the computed angle increment, on the
     // assumption that GMapping requires a positive angle increment.  If the
@@ -384,11 +382,9 @@ namespace UstarSlam
                                             0.0,
                                             maxRange_);
     ROS_ASSERT(gsp_laser_);
-
     UstarSlam::SensorMap smap;
     smap.insert(make_pair(gsp_laser_->getName(), gsp_laser_));
     gsp_->setSensorMap(smap);
-
     gsp_odom_ = new UstarSlam::OdometrySensor(odom_frame_);
     ROS_ASSERT(gsp_odom_);
 
@@ -488,6 +484,7 @@ namespace UstarSlam
 
   void UstarGMapping::laserCallback(const sensor_msgs::LaserScan::ConstPtr &scan)
   {
+    ROS_INFO_STREAM("----laserCallback()----");
     laser_count_++;
     if ((laser_count_ % throttle_scans_) != 0)
       return;
@@ -554,6 +551,7 @@ namespace UstarSlam
   void UstarGMapping::updateMap(const sensor_msgs::LaserScan &scan)
   {
     ROS_DEBUG("Update map");
+    ROS_INFO_STREAM("----updateMap()----");
     boost::mutex::scoped_lock map_lock(map_mutex_);
     UstarSlam::ScanMatcher matcher;
 
@@ -570,7 +568,6 @@ namespace UstarSlam
     entropy.data = computePoseEntropy();
     if (entropy.data > 0.0)
       entropy_publisher_.publish(entropy);
-
     if (!got_map_)
     {
       map_.map.info.resolution = delta_;
@@ -582,14 +579,12 @@ namespace UstarSlam
       map_.map.info.origin.orientation.z = 0.0;
       map_.map.info.origin.orientation.w = 1.0;
     }
-
     UstarSlam::Point center;
     center.x = (xmin_ + xmax_) / 2.0;
     center.y = (ymin_ + ymax_) / 2.0;
 
     UstarSlam::ScanMatcherMap smap(center, xmin_, ymin_, xmax_, ymax_,
                                    delta_);
-
     ROS_DEBUG("Trajectory tree:");
     for (UstarSlam::MatchProcessor::TNode *n = best.node;
          n;
@@ -633,7 +628,6 @@ namespace UstarSlam
 
       ROS_DEBUG("map origin: (%f, %f)", map_.map.info.origin.position.x, map_.map.info.origin.position.y);
     }
-
     for (int x = 0; x < smap.getMapSizeX(); x++)
     {
       for (int y = 0; y < smap.getMapSizeY(); y++)
@@ -641,9 +635,14 @@ namespace UstarSlam
         /// @todo Sort out the unknown vs. free vs. obstacle thresholding
         UstarSlam::IntPoint p(x, y);
         double occ = smap.cell(p);
+        
         assert(occ <= 1.0);
+
         if (occ < 0)
+ 
           map_.map.data[MAP_IDX(map_.map.info.width, x, y)] = -1;
+          //ROS_INFO_STREAM(MAP_IDX(map_.map.info.width, x, y));
+     
         else if (occ > occ_thresh_)
         {
           //map_.map.data[MAP_IDX(map_.map.info.width, x, y)] = (int)round(occ*100.0);

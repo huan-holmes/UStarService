@@ -1,5 +1,5 @@
-#ifndef SCANMATCHER_H
-#define SCANMATCHER_H
+#ifndef _SCANMATCHER_H_
+#define _SCANMATCHER_H_
 
 #include "icp.h"
 #include "gmapping/map/smmap.h"

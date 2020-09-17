@@ -1,8 +1,9 @@
 #include <list>
 #include <iostream>
 #include <string.h>
+#include "ros/ros.h"
 #include "gmapping/scanmatcher/scanmatcher.h"
-#include "gmapping/map/gridlinetraversal.h"
+#include "gmapping/scanmatcher/gridlinetraversal.h"
 //#define GENERATE_MAPS
 
 using namespace std;
@@ -42,8 +43,9 @@ namespace UstarSlam
 
 	ScanMatcher::~ScanMatcher()
 	{
-		if (m_laserAngles)
-			delete[] m_laserAngles;
+		ROS_INFO_STREAM("~ScanMatcher()----");
+		// if (m_laserAngles)
+		// 	delete[] m_laserAngles;
 	}
 
 	void ScanMatcher::invalidateActiveArea()
@@ -99,7 +101,9 @@ namespace UstarSlam
 				Point phit = lp;
 				phit.x += *r * cos(lp.theta + *angle);
 				phit.y += *r * sin(lp.theta + *angle);
+				
 				IntPoint p1 = map.world2map(phit);
+			
 				assert(p1.x >= 0 && p1.y >= 0);
 				IntPoint cp = map.storage().patchIndexes(p1);
 				assert(cp.x >= 0 && cp.y >= 0);
@@ -389,11 +393,12 @@ namespace UstarSlam
 
 	void ScanMatcher::setLaserParameters(unsigned int beams, double *angles, const OrientedPoint &lpose)
 	{
-		if (m_laserAngles)
-			delete[] m_laserAngles;
+		ROS_INFO_STREAM("----setLaserParameters()-----");
+		// if (m_laserAngles)
+		// 	delete[] m_laserAngles;
 		m_laserPose = lpose; 
 		m_laserBeams = beams;
-		//m_laserAngles = new double[beams]; 
+		// m_laserAngles = new double[beams]; 
 		memcpy(m_laserAngles, angles, sizeof(double) * m_laserBeams);
 	}
 

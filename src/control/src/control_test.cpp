@@ -93,7 +93,7 @@ int main(int argc, char **argv)
     geometry_msgs::TransformStamped odom_trans;       //创建一个tf发布需要使用的TransformStamped类型消息
     nav_msgs::Odometry odom;                          //定义里程计对象
     geometry_msgs::Quaternion odom_quat;              //四元数变量
-    //定义covariance矩阵，作用为解决文职和速度的不同测量的不确定性
+    //定义covariance矩阵，作用为解决位置和速度的不同测量的不确定性
     float covariance[36] = {0.01, 0, 0, 0, 0, 0,  // covariance on gps_x
                             0, 0.01, 0, 0, 0, 0,  // covariance on gps_y
                             0, 0, 99999, 0, 0, 0, // covariance on gps_z
