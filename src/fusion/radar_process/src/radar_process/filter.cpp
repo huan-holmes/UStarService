@@ -5,7 +5,7 @@
 #include <iostream>
 #include "radar_process/filter.h"
 #define MIN_CLUSTER_SIZE 8
-#define MAX_CLUSTER_SIZE 30
+#define MAX_CLUSTER_SIZE 60
 namespace UstarFusion
 {
 
@@ -118,7 +118,7 @@ namespace UstarFusion
     }
     void LaserFilter::pclCloudCallback(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &cloud)
     {
-        double in_max_cluster_distance = 0.8;
+        double in_max_cluster_distance = 0.3;
         std::vector<Detected_Obj> obj_list;
         clusterSegment(cloud, in_max_cluster_distance, obj_list);
         jsk_recognition_msgs::BoundingBoxArray bbox_array;
