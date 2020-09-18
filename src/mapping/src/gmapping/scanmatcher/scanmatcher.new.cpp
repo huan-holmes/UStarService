@@ -103,7 +103,10 @@ namespace UstarSlam
 				phit.y += *r * sin(lp.theta + *angle);
 				
 				IntPoint p1 = map.world2map(phit);
-			
+				ROS_INFO_STREAM(phit.x);
+				ROS_INFO_STREAM(phit.y);
+				ROS_INFO_STREAM(p1.x);
+				ROS_INFO_STREAM(p1.y);
 				assert(p1.x >= 0 && p1.y >= 0);
 				IntPoint cp = map.storage().patchIndexes(p1);
 				assert(cp.x >= 0 && cp.y >= 0);

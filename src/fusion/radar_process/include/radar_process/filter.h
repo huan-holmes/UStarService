@@ -47,8 +47,9 @@ namespace UstarFusion
         tf::TransformListener tfListener_;
 
         //发布　"PointCloud2"
-        ros::Publisher point_cloud_publisher_;
-        ros::Publisher pub_bounding_boxs_;
+        ros::Publisher point_cloud_pub_;
+        ros::Publisher box_array_pub_;
+        //ros::Publisher pub_bounding_boxs_;
         //订阅 "/scan"
         ros::Subscriber scan_sub_;
 

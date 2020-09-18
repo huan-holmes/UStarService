@@ -4,8 +4,8 @@
 
 #include <iostream>
 #include "radar_process/filter.h"
-#define MIN_CLUSTER_SIZE 0
-#define MAX_CLUSTER_SIZE 25000
+#define MIN_CLUSTER_SIZE 8
+#define MAX_CLUSTER_SIZE 30
 namespace UstarFusion
 {
 
@@ -19,9 +19,9 @@ namespace UstarFusion
         scan_sub_ = nh_.subscribe<sensor_msgs::LaserScan>("/scan", 10, &LaserFilter::scanCallback_2, this);
 
         //发布LaserScan转换为PointCloud2的后的数据
-        point_cloud_publisher_ = nh_.advertise<sensor_msgs::PointCloud2>("/cloud2", 10, false);
-        pub_bounding_boxs_ = nh_.advertise<jsk_recognition_msgs::BoundingBoxArray>("/detected_bounding_boxs", 10, false);
-
+        point_cloud_pub_ = nh_.advertise<sensor_msgs::PointCloud2>("/cloud2", 10, false);
+        box_array_pub_ = nh_.advertise<jsk_recognition_msgs::BoundingBoxArray>("/detected_bounding_boxs", 10, false);
+        //boundingBox_pub_ = nh_.advertise<jsk_recognition_msgs::BoundingBox>("/bounding_boxs", 10, false);
         //此处的tf是 laser_geometry 要用到的
         tfListener_.setExtrapolationLimit(ros::Duration(0.1));
 
@@ -33,7 +33,7 @@ namespace UstarFusion
     {
         sensor_msgs::PointCloud2 cloud;
         projector_.transformLaserScanToPointCloud("laser", *scan, cloud, tfListener_);
-        point_cloud_publisher_.publish(cloud);
+        point_cloud_pub_.publish(cloud);
     }
 
     void LaserFilter::scanCallback_2(const sensor_msgs::LaserScan::ConstPtr &scan)
@@ -59,7 +59,7 @@ namespace UstarFusion
             //std::cout << rawCloud.points[i].x << "\t" << rawCloud.points[i].y << "\t" << rawCloud.points[i].z << std::endl;
         }
 
-        point_cloud_publisher_.publish(cloud);
+        point_cloud_pub_.publish(cloud);
     }
 
     void LaserFilter::pclCloudCallback1(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &cloud)
@@ -118,7 +118,7 @@ namespace UstarFusion
     }
     void LaserFilter::pclCloudCallback(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &cloud)
     {
-        double in_max_cluster_distance = 0.02;
+        double in_max_cluster_distance = 0.8;
         std::vector<Detected_Obj> obj_list;
         clusterSegment(cloud, in_max_cluster_distance, obj_list);
         jsk_recognition_msgs::BoundingBoxArray bbox_array;
@@ -128,8 +128,8 @@ namespace UstarFusion
             bbox_array.boxes.push_back(obj_list[i].bounding_box_);
         }
         bbox_array.header.frame_id = "laser";
-    
-        pub_bounding_boxs_.publish(bbox_array);
+
+        box_array_pub_.publish(bbox_array);
     }
     void LaserFilter::clusterSegment(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &in_pc, double in_max_cluster_distance, std::vector<Detected_Obj> &obj_list)
     {
@@ -143,12 +143,11 @@ namespace UstarFusion
         for (size_t i = 0; i < cloud_2d->points.size(); i++)
         {
             cloud_2d->points[i].z = 0;
-           // ROS_INFO_STREAM(cloud_2d->points[i].x);
+            // ROS_INFO_STREAM(cloud_2d->points[i].x);
         }
 
         if (cloud_2d->points.size() > 0)
             tree->setInputCloud(cloud_2d);
-        
 
         std::vector<pcl::PointIndices> local_indices;
 
@@ -159,7 +158,7 @@ namespace UstarFusion
         euclid.setMaxClusterSize(MAX_CLUSTER_SIZE);
         euclid.setSearchMethod(tree);
         euclid.extract(local_indices);
-
+        ROS_INFO_STREAM(local_indices.size());
         for (size_t i = 0; i < local_indices.size(); i++)
         {
             // the structure to save one detected object
@@ -172,35 +171,35 @@ namespace UstarFusion
             float min_z = std::numeric_limits<float>::max();
             float max_z = -std::numeric_limits<float>::max();
 
-            for (std::vector<pcl::PointIndices>::const_iterator pit = local_indices.begin(); pit != local_indices.end(); ++pit)
-            {
-                ROS_INFO_STREAM(local_indices.size());   
-                for (std::vector<int>::const_iterator point = pit->indices.begin(); point != pit->indices.end(); point++)
-                {
-                    //fill new colored cluster point by point
-                    pcl::PointXYZ p;
-                    p.x = in_pc->points[*point].x;
-                    p.y = in_pc->points[*point].y;
-                    p.z = in_pc->points[*point].z;
-                   
-                    obj_info.centroid_.x += p.x;
-                    obj_info.centroid_.y += p.y;
-                    obj_info.centroid_.z += p.z;
+            // for (std::vector<pcl::PointIndices>::const_iterator pit = local_indices.begin(); pit != local_indices.end(); ++pit)
+            // {
 
-                    if (p.x < min_x)
-                        min_x = p.x;
-                    if (p.y < min_y)
-                        min_y = p.y;
-                    if (p.z < min_z)
-                        min_z = p.z;
-                    if (p.x > max_x)
-                        max_x = p.x;
-                    if (p.y > max_y)
-                        max_y = p.y;
-                    if (p.z > max_z)
-                        max_z = p.z;
-                }
+            for (std::vector<int>::const_iterator point = local_indices[i].indices.begin(); point != local_indices[i].indices.end(); point++)
+            {
+                //fill new colored cluster point by point
+                pcl::PointXYZ p;
+                p.x = in_pc->points[*point].x;
+                p.y = in_pc->points[*point].y;
+                p.z = in_pc->points[*point].z;
+
+                obj_info.centroid_.x += p.x;
+                obj_info.centroid_.y += p.y;
+                obj_info.centroid_.z += p.z;
+
+                if (p.x < min_x)
+                    min_x = p.x;
+                if (p.y < min_y)
+                    min_y = p.y;
+                if (p.z < min_z)
+                    min_z = p.z;
+                if (p.x > max_x)
+                    max_x = p.x;
+                if (p.y > max_y)
+                    max_y = p.y;
+                if (p.z > max_z)
+                    max_z = p.z;
             }
+            //}
 
             //min, max points
             obj_info.min_point_.x = min_x;
@@ -230,10 +229,15 @@ namespace UstarFusion
             obj_info.bounding_box_.pose.position.y = obj_info.min_point_.y + width_ / 2;
             obj_info.bounding_box_.pose.position.z = obj_info.min_point_.z + height_ / 2;
 
+            // obj_info.bounding_box_.pose.position.x = obj_info.centroid_.x;
+            // obj_info.bounding_box_.pose.position.y = obj_info.centroid_.x;
+            // obj_info.bounding_box_.pose.position.z = 2;
+
             obj_info.bounding_box_.dimensions.x = ((length_ < 0) ? -1 * length_ : length_);
             obj_info.bounding_box_.dimensions.y = ((width_ < 0) ? -1 * width_ : width_);
-            obj_info.bounding_box_.dimensions.z = ((height_ < 0) ? -1 * height_ : height_);
-            
+            // obj_info.bounding_box_.dimensions.z = ((height_ < 0) ? -1 * height_ : height_);
+            obj_info.bounding_box_.dimensions.z = 2;
+            //boundingBox_pub_.publish(obj_info.bounding_box_);
             obj_list.push_back(obj_info);
         }
     }
