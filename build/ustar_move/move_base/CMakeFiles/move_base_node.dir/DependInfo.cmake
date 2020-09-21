@@ -19,10 +19,10 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/boocax/UstarService/devel/include"
   "/home/boocax/UstarService/src/ustar_move/move_base/include"
-  "/home/boocax/UstarService/src/planning/local_planning/include"
-  "/home/boocax/UstarService/src/ustar_move/clear_costmap_recovery/include"
+  "/home/boocax/UstarService/src/planning/base_local_planner/include"
   "/home/boocax/UstarService/src/costmap/include"
   "/home/boocax/UstarService/src/planning/nav_core/include"
+  "/home/boocax/UstarService/src/ustar_move/clear_costmap_recovery/include"
   "/home/boocax/UstarService/src/planning/navfn/include"
   "/home/boocax/UstarService/src/ustar_move/rotate_recovery/include"
   "/opt/ros/kinetic/include"
@@ -37,7 +37,8 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/boocax/UstarService/build/ustar_move/clear_costmap_recovery/CMakeFiles/clear_costmap_recovery.dir/DependInfo.cmake"
   "/home/boocax/UstarService/build/planning/navfn/CMakeFiles/navfn.dir/DependInfo.cmake"
   "/home/boocax/UstarService/build/ustar_move/rotate_recovery/CMakeFiles/rotate_recovery.dir/DependInfo.cmake"
-  "/home/boocax/UstarService/build/planning/local_planning/CMakeFiles/dwa_local_planner.dir/DependInfo.cmake"
+  "/home/boocax/UstarService/build/planning/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/DependInfo.cmake"
+  "/home/boocax/UstarService/build/planning/base_local_planner/CMakeFiles/base_local_planner.dir/DependInfo.cmake"
   "/home/boocax/UstarService/build/costmap/CMakeFiles/layers.dir/DependInfo.cmake"
   "/home/boocax/UstarService/build/costmap/CMakeFiles/costmap.dir/DependInfo.cmake"
   )

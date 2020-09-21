@@ -90,8 +90,7 @@ rotate_recovery_EXTERNAL_OBJECTS =
 
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: ustar_move/rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: ustar_move/rotate_recovery/CMakeFiles/rotate_recovery.dir/build.make
-/home/boocax/UstarService/devel/lib/librotate_recovery.so: /home/boocax/UstarService/devel/lib/libdwa_local_planner.so
-/home/boocax/UstarService/devel/lib/librotate_recovery.so: /home/boocax/UstarService/devel/lib/liblayers.so
+/home/boocax/UstarService/devel/lib/librotate_recovery.so: /home/boocax/UstarService/devel/lib/libtrajectory_planner_ros.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/liblaser_geometry.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/libtf.so
@@ -130,6 +129,8 @@ rotate_recovery_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+/home/boocax/UstarService/devel/lib/librotate_recovery.so: /home/boocax/UstarService/devel/lib/libbase_local_planner.so
+/home/boocax/UstarService/devel/lib/librotate_recovery.so: /home/boocax/UstarService/devel/lib/liblayers.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /home/boocax/UstarService/devel/lib/libcostmap.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/boocax/UstarService/devel/lib/librotate_recovery.so: /opt/ros/kinetic/lib/liblaser_geometry.so

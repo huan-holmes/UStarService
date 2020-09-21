@@ -12,13 +12,13 @@ planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/astar.c
  /home/boocax/UstarService/src/costmap/include/costmap/utils/cost_values.h
  /home/boocax/UstarService/src/costmap/include/costmap/utils/footprint.h
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/astar.h
- /home/boocax/UstarService/src/planning/global_planner/include/global_planner/base_global_planner.h
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/expander.h
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/orientation_filter.h
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/planner_core.h
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/potential_calculator.h
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/traceback.h
  /home/boocax/UstarService/src/planning/global_planner/src/global_planner/astar.cpp
+ /home/boocax/UstarService/src/planning/nav_core/include/nav_core/base_global_planner.h
  /opt/ros/kinetic/include/class_loader/./multi_library_class_loader.hpp
  /opt/ros/kinetic/include/class_loader/class_loader.h
  /opt/ros/kinetic/include/class_loader/class_loader.hpp
@@ -154,7 +154,6 @@ planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/dijkstr
  /home/boocax/UstarService/src/costmap/include/costmap/layers/layer.h
  /home/boocax/UstarService/src/costmap/include/costmap/utils/cost_values.h
  /home/boocax/UstarService/src/costmap/include/costmap/utils/footprint.h
- /home/boocax/UstarService/src/planning/global_planner/include/global_planner/base_global_planner.h
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/dijkstra.h
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/expander.h
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/orientation_filter.h
@@ -162,6 +161,7 @@ planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/dijkstr
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/potential_calculator.h
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/traceback.h
  /home/boocax/UstarService/src/planning/global_planner/src/global_planner/dijkstra.cpp
+ /home/boocax/UstarService/src/planning/nav_core/include/nav_core/base_global_planner.h
  /opt/ros/kinetic/include/class_loader/./multi_library_class_loader.hpp
  /opt/ros/kinetic/include/class_loader/class_loader.h
  /opt/ros/kinetic/include/class_loader/class_loader.hpp
@@ -297,7 +297,6 @@ planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/gradien
  /home/boocax/UstarService/src/costmap/include/costmap/layers/layer.h
  /home/boocax/UstarService/src/costmap/include/costmap/utils/cost_values.h
  /home/boocax/UstarService/src/costmap/include/costmap/utils/footprint.h
- /home/boocax/UstarService/src/planning/global_planner/include/global_planner/base_global_planner.h
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/expander.h
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/gradient_path.h
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/orientation_filter.h
@@ -305,6 +304,7 @@ planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/gradien
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/potential_calculator.h
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/traceback.h
  /home/boocax/UstarService/src/planning/global_planner/src/global_planner/gradient_path.cpp
+ /home/boocax/UstarService/src/planning/nav_core/include/nav_core/base_global_planner.h
  /opt/ros/kinetic/include/class_loader/./multi_library_class_loader.hpp
  /opt/ros/kinetic/include/class_loader/class_loader.h
  /opt/ros/kinetic/include/class_loader/class_loader.hpp
@@ -499,7 +499,6 @@ planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/planner
  /home/boocax/UstarService/src/costmap/include/costmap/utils/cost_values.h
  /home/boocax/UstarService/src/costmap/include/costmap/utils/footprint.h
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/astar.h
- /home/boocax/UstarService/src/planning/global_planner/include/global_planner/base_global_planner.h
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/dijkstra.h
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/expander.h
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/gradient_path.h
@@ -510,6 +509,7 @@ planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/planner
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/quadratic_calculator.h
  /home/boocax/UstarService/src/planning/global_planner/include/global_planner/traceback.h
  /home/boocax/UstarService/src/planning/global_planner/src/global_planner/planner_core.cpp
+ /home/boocax/UstarService/src/planning/nav_core/include/nav_core/base_global_planner.h
  /opt/ros/kinetic/include/class_loader/./class_loader.hpp
  /opt/ros/kinetic/include/class_loader/./multi_library_class_loader.hpp
  /opt/ros/kinetic/include/class_loader/class_loader.h

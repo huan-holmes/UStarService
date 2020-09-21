@@ -110,29 +110,29 @@ geometry_msgs/Point.h
 sensor_msgs/PointCloud2.h
 -
 
-/home/boocax/UstarService/src/planning/local_planning/include/local_planner/costmap_model.h
-local_planner/world_model.h
-/home/boocax/UstarService/src/planning/local_planning/include/local_planner/local_planner/world_model.h
+/home/boocax/UstarService/src/planning/base_local_planner/include/base_local_planner/costmap_model.h
+base_local_planner/world_model.h
+-
 costmap/costmap_2d/costmap_2d.h
-/home/boocax/UstarService/src/planning/local_planning/include/local_planner/costmap/costmap_2d/costmap_2d.h
+-
 
-/home/boocax/UstarService/src/planning/local_planning/include/local_planner/planar_laser_scan.h
+/home/boocax/UstarService/src/planning/base_local_planner/include/base_local_planner/planar_laser_scan.h
 geometry_msgs/Point32.h
 -
 sensor_msgs/PointCloud.h
 -
 
-/home/boocax/UstarService/src/planning/local_planning/include/local_planner/world_model.h
+/home/boocax/UstarService/src/planning/base_local_planner/include/base_local_planner/world_model.h
 vector
 -
 costmap/utils/observation.h
-/home/boocax/UstarService/src/planning/local_planning/include/local_planner/costmap/utils/observation.h
+-
 costmap/utils/footprint.h
 -
 geometry_msgs/Point.h
 -
-local_planner/planar_laser_scan.h
-/home/boocax/UstarService/src/planning/local_planning/include/local_planner/local_planner/planar_laser_scan.h
+base_local_planner/planar_laser_scan.h
+-
 
 /home/boocax/UstarService/src/planning/nav_core/include/nav_core/parameter_magic.h
 
@@ -149,7 +149,7 @@ costmap/costmap_ros/costmap_2d_ros.h
 -
 tf2_ros/buffer.h
 -
-local_planner/costmap_model.h
+base_local_planner/costmap_model.h
 -
 string
 -

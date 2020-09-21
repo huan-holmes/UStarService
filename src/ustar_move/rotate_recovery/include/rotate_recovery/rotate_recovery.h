@@ -4,7 +4,7 @@
 #include <nav_core/recovery_behavior.h>
 #include <costmap/costmap_ros/costmap_2d_ros.h>
 #include <tf2_ros/buffer.h>
-#include <local_planner/costmap_model.h>
+#include <base_local_planner/costmap_model.h>
 #include <string>
 
 namespace rotate_recovery

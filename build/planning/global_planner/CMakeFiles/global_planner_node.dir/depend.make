@@ -13,13 +13,13 @@ planning/global_planner/CMakeFiles/global_planner_node.dir/src/plan_node.cpp.o: 
 planning/global_planner/CMakeFiles/global_planner_node.dir/src/plan_node.cpp.o: /home/boocax/UstarService/src/costmap/include/costmap/layers/layer.h
 planning/global_planner/CMakeFiles/global_planner_node.dir/src/plan_node.cpp.o: /home/boocax/UstarService/src/costmap/include/costmap/utils/cost_values.h
 planning/global_planner/CMakeFiles/global_planner_node.dir/src/plan_node.cpp.o: /home/boocax/UstarService/src/costmap/include/costmap/utils/footprint.h
-planning/global_planner/CMakeFiles/global_planner_node.dir/src/plan_node.cpp.o: /home/boocax/UstarService/src/planning/global_planner/include/global_planner/base_global_planner.h
 planning/global_planner/CMakeFiles/global_planner_node.dir/src/plan_node.cpp.o: /home/boocax/UstarService/src/planning/global_planner/include/global_planner/expander.h
 planning/global_planner/CMakeFiles/global_planner_node.dir/src/plan_node.cpp.o: /home/boocax/UstarService/src/planning/global_planner/include/global_planner/orientation_filter.h
 planning/global_planner/CMakeFiles/global_planner_node.dir/src/plan_node.cpp.o: /home/boocax/UstarService/src/planning/global_planner/include/global_planner/planner_core.h
 planning/global_planner/CMakeFiles/global_planner_node.dir/src/plan_node.cpp.o: /home/boocax/UstarService/src/planning/global_planner/include/global_planner/potential_calculator.h
 planning/global_planner/CMakeFiles/global_planner_node.dir/src/plan_node.cpp.o: /home/boocax/UstarService/src/planning/global_planner/include/global_planner/traceback.h
 planning/global_planner/CMakeFiles/global_planner_node.dir/src/plan_node.cpp.o: /home/boocax/UstarService/src/planning/global_planner/src/plan_node.cpp
+planning/global_planner/CMakeFiles/global_planner_node.dir/src/plan_node.cpp.o: /home/boocax/UstarService/src/planning/nav_core/include/nav_core/base_global_planner.h
 planning/global_planner/CMakeFiles/global_planner_node.dir/src/plan_node.cpp.o: /opt/ros/kinetic/include/class_loader/./multi_library_class_loader.hpp
 planning/global_planner/CMakeFiles/global_planner_node.dir/src/plan_node.cpp.o: /opt/ros/kinetic/include/class_loader/class_loader.h
 planning/global_planner/CMakeFiles/global_planner_node.dir/src/plan_node.cpp.o: /opt/ros/kinetic/include/class_loader/class_loader.hpp

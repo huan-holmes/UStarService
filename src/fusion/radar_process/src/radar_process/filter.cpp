@@ -4,8 +4,8 @@
 
 #include <iostream>
 #include "radar_process/filter.h"
-#define MIN_CLUSTER_SIZE 8
-#define MAX_CLUSTER_SIZE 60
+#define MIN_CLUSTER_SIZE 5
+#define MAX_CLUSTER_SIZE 40
 namespace UstarFusion
 {
 

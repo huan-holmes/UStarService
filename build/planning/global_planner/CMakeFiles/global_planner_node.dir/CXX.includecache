@@ -168,12 +168,6 @@ geometry_msgs/Point.h
 geometry_msgs/Point32.h
 -
 
-/home/boocax/UstarService/src/planning/global_planner/include/global_planner/base_global_planner.h
-geometry_msgs/PoseStamped.h
--
-costmap/costmap_ros/costmap_2d_ros.h
--
-
 /home/boocax/UstarService/src/planning/global_planner/include/global_planner/expander.h
 global_planner/potential_calculator.h
 /home/boocax/UstarService/src/planning/global_planner/include/global_planner/global_planner/potential_calculator.h
@@ -211,8 +205,8 @@ global_planner/orientation_filter.h
 /home/boocax/UstarService/src/planning/global_planner/include/global_planner/global_planner/orientation_filter.h
 global_planner/GlobalPlannerConfig.h
 /home/boocax/UstarService/src/planning/global_planner/include/global_planner/global_planner/GlobalPlannerConfig.h
-global_planner/base_global_planner.h
-/home/boocax/UstarService/src/planning/global_planner/include/global_planner/global_planner/base_global_planner.h
+nav_core/base_global_planner.h
+-
 
 /home/boocax/UstarService/src/planning/global_planner/include/global_planner/potential_calculator.h
 algorithm
@@ -234,6 +228,12 @@ boost/shared_ptr.hpp
 costmap/costmap_ros/costmap_2d_ros.h
 -
 tf2_ros/transform_listener.h
+-
+
+/home/boocax/UstarService/src/planning/nav_core/include/nav_core/base_global_planner.h
+geometry_msgs/PoseStamped.h
+-
+costmap/costmap_ros/costmap_2d_ros.h
 -
 
 /opt/ros/kinetic/include/class_loader/./multi_library_class_loader.hpp

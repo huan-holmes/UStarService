@@ -10,9 +10,9 @@ ustar_move/rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cp
 ustar_move/rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/costmap/include/costmap/utils/cost_values.h
 ustar_move/rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/costmap/include/costmap/utils/footprint.h
 ustar_move/rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/costmap/include/costmap/utils/observation.h
-ustar_move/rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/planning/local_planning/include/local_planner/costmap_model.h
-ustar_move/rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/planning/local_planning/include/local_planner/planar_laser_scan.h
-ustar_move/rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/planning/local_planning/include/local_planner/world_model.h
+ustar_move/rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/planning/base_local_planner/include/base_local_planner/costmap_model.h
+ustar_move/rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/planning/base_local_planner/include/base_local_planner/planar_laser_scan.h
+ustar_move/rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/planning/base_local_planner/include/base_local_planner/world_model.h
 ustar_move/rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/planning/nav_core/include/nav_core/parameter_magic.h
 ustar_move/rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/planning/nav_core/include/nav_core/recovery_behavior.h
 ustar_move/rotate_recovery/CMakeFiles/rotate_recovery.dir/src/rotate_recovery.cpp.o: /home/boocax/UstarService/src/ustar_move/rotate_recovery/include/rotate_recovery/rotate_recovery.h

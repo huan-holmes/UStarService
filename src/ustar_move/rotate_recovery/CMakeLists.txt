@@ -4,7 +4,7 @@ project(rotate_recovery)
 find_package(catkin REQUIRED
   COMPONENTS
     angles
-    local_planner
+    base_local_planner
     cmake_modules
     costmap
     geometry_msgs

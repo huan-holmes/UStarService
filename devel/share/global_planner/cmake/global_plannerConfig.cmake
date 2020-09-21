@@ -185,7 +185,7 @@ foreach(t ${global_planner_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "costmap;dynamic_reconfigure;geometry_msgs;navfn;nav_msgs;pluginlib;roscpp;tf2_ros")
+set(depends "costmap;nav_core;dynamic_reconfigure;geometry_msgs;navfn;nav_msgs;pluginlib;roscpp;tf2_ros")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

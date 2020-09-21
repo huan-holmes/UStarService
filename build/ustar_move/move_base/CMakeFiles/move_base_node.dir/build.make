@@ -94,7 +94,8 @@ move_base_node_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/move_base/move_base: /home/boocax/UstarService/devel/lib/libclear_costmap_recovery.so
 /home/boocax/UstarService/devel/lib/move_base/move_base: /home/boocax/UstarService/devel/lib/libnavfn.so
 /home/boocax/UstarService/devel/lib/move_base/move_base: /home/boocax/UstarService/devel/lib/librotate_recovery.so
-/home/boocax/UstarService/devel/lib/move_base/move_base: /home/boocax/UstarService/devel/lib/libdwa_local_planner.so
+/home/boocax/UstarService/devel/lib/move_base/move_base: /home/boocax/UstarService/devel/lib/libtrajectory_planner_ros.so
+/home/boocax/UstarService/devel/lib/move_base/move_base: /home/boocax/UstarService/devel/lib/libbase_local_planner.so
 /home/boocax/UstarService/devel/lib/move_base/move_base: /home/boocax/UstarService/devel/lib/liblayers.so
 /home/boocax/UstarService/devel/lib/move_base/move_base: /home/boocax/UstarService/devel/lib/libcostmap.so
 /home/boocax/UstarService/devel/lib/move_base/move_base: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so

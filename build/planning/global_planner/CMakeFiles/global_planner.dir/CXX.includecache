@@ -132,12 +132,6 @@ vector
 algorithm
 -
 
-/home/boocax/UstarService/src/planning/global_planner/include/global_planner/base_global_planner.h
-geometry_msgs/PoseStamped.h
--
-costmap/costmap_ros/costmap_2d_ros.h
--
-
 /home/boocax/UstarService/src/planning/global_planner/include/global_planner/dijkstra.h
 math.h
 -
@@ -203,8 +197,8 @@ global_planner/orientation_filter.h
 /home/boocax/UstarService/src/planning/global_planner/include/global_planner/global_planner/orientation_filter.h
 global_planner/GlobalPlannerConfig.h
 /home/boocax/UstarService/src/planning/global_planner/include/global_planner/global_planner/GlobalPlannerConfig.h
-global_planner/base_global_planner.h
-/home/boocax/UstarService/src/planning/global_planner/include/global_planner/global_planner/base_global_planner.h
+nav_core/base_global_planner.h
+-
 
 /home/boocax/UstarService/src/planning/global_planner/include/global_planner/potential_calculator.h
 algorithm
@@ -287,6 +281,12 @@ global_planner/quadratic_calculator.h
 /home/boocax/UstarService/src/planning/global_planner/src/global_planner/quadratic_calculator.cpp
 global_planner/quadratic_calculator.h
 /home/boocax/UstarService/src/planning/global_planner/src/global_planner/global_planner/quadratic_calculator.h
+
+/home/boocax/UstarService/src/planning/nav_core/include/nav_core/base_global_planner.h
+geometry_msgs/PoseStamped.h
+-
+costmap/costmap_ros/costmap_2d_ros.h
+-
 
 /opt/ros/kinetic/include/angles/angles.h
 algorithm

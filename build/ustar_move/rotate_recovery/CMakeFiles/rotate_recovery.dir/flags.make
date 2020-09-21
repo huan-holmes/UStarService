@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"rotate_recovery\" -Drotate_recovery_EXPORTS
 
-CXX_INCLUDES = -I/home/boocax/UstarService/src/ustar_move/rotate_recovery/include -I/home/boocax/UstarService/devel/include -I/home/boocax/UstarService/src/planning/local_planning/include -I/home/boocax/UstarService/src/costmap/include -I/home/boocax/UstarService/src/planning/nav_core/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/share/orocos_kdl/../../include -I/usr/include/eigen3 
+CXX_INCLUDES = -I/home/boocax/UstarService/src/ustar_move/rotate_recovery/include -I/home/boocax/UstarService/devel/include -I/home/boocax/UstarService/src/planning/base_local_planner/include -I/home/boocax/UstarService/src/costmap/include -I/home/boocax/UstarService/src/planning/nav_core/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/share/orocos_kdl/../../include -I/usr/include/eigen3 
 

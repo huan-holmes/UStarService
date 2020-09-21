@@ -14,7 +14,8 @@
 #include <global_planner/traceback.h>
 #include "global_planner/orientation_filter.h"
 #include "global_planner/GlobalPlannerConfig.h"
-#include "global_planner/base_global_planner.h"
+#include <nav_core/base_global_planner.h>
+
 
 namespace global_planner 
 {
@@ -27,7 +28,7 @@ class GridPath;
  * @brief Provides a ROS wrapper for the global_planner planner which runs a fast, interpolated navigation function on a costmap.
  */
 
-class GlobalPlanner : public BaseGlobalPlanner 
+class GlobalPlanner : public UstarPlanning::BaseGlobalPlanner 
 {
     public:
         /**

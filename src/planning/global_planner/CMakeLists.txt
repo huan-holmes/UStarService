@@ -9,6 +9,7 @@ find_package(catkin REQUIRED
     geometry_msgs
     navfn
     nav_msgs
+    nav_core
     pluginlib
     roscpp
     tf2_geometry_msgs
@@ -30,6 +31,7 @@ catkin_package(
   LIBRARIES ${PROJECT_NAME}
   CATKIN_DEPENDS
     costmap
+    nav_core
     dynamic_reconfigure
     geometry_msgs
     navfn

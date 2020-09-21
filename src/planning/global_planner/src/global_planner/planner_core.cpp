@@ -11,7 +11,7 @@
 #include "global_planner/quadratic_calculator.h"
 
 //register this planner as a BaseGlobalPlanner plugin
-PLUGINLIB_EXPORT_CLASS(global_planner::GlobalPlanner, global_planner::BaseGlobalPlanner)
+PLUGINLIB_EXPORT_CLASS(global_planner::GlobalPlanner, UstarPlanning::BaseGlobalPlanner)
 
 namespace global_planner {
 

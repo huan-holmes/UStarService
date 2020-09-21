@@ -131,7 +131,8 @@ move_base_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/libmove_base.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 /home/boocax/UstarService/devel/lib/libmove_base.so: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/boocax/UstarService/devel/lib/libmove_base.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/boocax/UstarService/devel/lib/libmove_base.so: /home/boocax/UstarService/devel/lib/libdwa_local_planner.so
+/home/boocax/UstarService/devel/lib/libmove_base.so: /home/boocax/UstarService/devel/lib/libtrajectory_planner_ros.so
+/home/boocax/UstarService/devel/lib/libmove_base.so: /home/boocax/UstarService/devel/lib/libbase_local_planner.so
 /home/boocax/UstarService/devel/lib/libmove_base.so: /home/boocax/UstarService/devel/lib/liblayers.so
 /home/boocax/UstarService/devel/lib/libmove_base.so: /home/boocax/UstarService/devel/lib/libcostmap.so
 /home/boocax/UstarService/devel/lib/libmove_base.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so

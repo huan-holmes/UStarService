@@ -287,6 +287,8 @@ list
 -
 string
 -
+ros/ros.h
+-
 
 /opt/ros/kinetic/include/actionlib/server/handle_tracker_deleter.h
 actionlib/action_definition.h
@@ -331,6 +333,8 @@ list
 -
 string
 -
+ros/console.h
+/opt/ros/kinetic/include/actionlib/server/ros/console.h
 
 /opt/ros/kinetic/include/actionlib/server/simple_action_server.h
 boost/thread/condition.hpp
@@ -347,6 +351,8 @@ actionlib/server/simple_action_server_imp.h
 -
 
 /opt/ros/kinetic/include/actionlib/server/simple_action_server_imp.h
+ros/ros.h
+-
 string
 -
 

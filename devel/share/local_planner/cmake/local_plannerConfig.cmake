@@ -67,7 +67,7 @@ set(local_planner_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(local_planner_SOURCE_PREFIX /home/boocax/UstarService/src/planning/local_planning)
+  set(local_planner_SOURCE_PREFIX /home/boocax/UstarService/src/planning/local_planner)
   set(local_planner_DEVEL_PREFIX /home/boocax/UstarService/devel)
   set(local_planner_INSTALL_PREFIX "")
   set(local_planner_PREFIX ${local_planner_DEVEL_PREFIX})
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(local_planner_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/boocax/UstarService/devel/include;/home/boocax/UstarService/src/planning/local_planning/include " STREQUAL " ")
+if(NOT "/home/boocax/UstarService/devel/include;/home/boocax/UstarService/src/planning/local_planner/include " STREQUAL " ")
   set(local_planner_INCLUDE_DIRS "")
-  set(_include_dirs "/home/boocax/UstarService/devel/include;/home/boocax/UstarService/src/planning/local_planning/include")
+  set(_include_dirs "/home/boocax/UstarService/devel/include;/home/boocax/UstarService/src/planning/local_planner/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,13 +110,13 @@ if(NOT "/home/boocax/UstarService/devel/include;/home/boocax/UstarService/src/pl
         message(FATAL_ERROR "Project 'local_planner' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'local_planner' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/boocax/UstarService/src/planning/local_planning/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'local_planner' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/boocax/UstarService/src/planning/local_planner/${idir}'.  ${_report}")
     endif()
     _list_append_unique(local_planner_INCLUDE_DIRS ${include})
   endforeach()
 endif()
 
-set(libraries "dwa_local_planner")
+set(libraries "local_planner")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -185,7 +185,7 @@ foreach(t ${local_planner_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "dynamic_reconfigure;nav_msgs;pluginlib;sensor_msgs;roscpp;tf2;tf2_ros")
+set(depends "dynamic_reconfigure;nav_msgs;pluginlib;sensor_msgs;nav_core;roscpp;tf2;tf2_ros")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
