@@ -41,6 +41,8 @@ namespace UstarFusion
         void pclCloudCallback(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &cloud);
         void pclCloudCallback1(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &cloud);
         void clusterSegment(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &in_pc, double in_max_cluster_distance, std::vector<Detected_Obj> &obj_list);
+        bool checkStaticObstacle(float min_x, float min_y, float max_x, float max_y, pcl::PointIndices local_indice, const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &in_pc);
+        double point2Line(float min_x, float min_y, float max_x, float max_y, pcl::PointXYZ point);
 
     private : ros::NodeHandle nh_;
         laser_geometry::LaserProjection projector_;
@@ -52,8 +54,8 @@ namespace UstarFusion
         //ros::Publisher pub_bounding_boxs_;
         //订阅 "/scan"
         ros::Subscriber scan_sub_;
-
         //订阅 "/cloud2" -> "PointCloud2"
         ros::Subscriber pclCloud_sub_;
+        bool curve_flag_;
     };
 } // namespace UstarFusion

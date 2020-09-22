@@ -4,12 +4,15 @@
 
 #include <iostream>
 #include "radar_process/filter.h"
-#define MIN_CLUSTER_SIZE 8
-#define MAX_CLUSTER_SIZE 40
+#define MIN_CLUSTER_SIZE 5
+#define MAX_CLUSTER_SIZE 60
 namespace UstarFusion
 {
 
-    LaserFilter::LaserFilter() {}
+    LaserFilter::LaserFilter() : curve_flag_(false)
+    {
+
+    }
 
     void LaserFilter::startFilter()
     {
@@ -118,7 +121,7 @@ namespace UstarFusion
     }
     void LaserFilter::pclCloudCallback(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &cloud)
     {
-        double in_max_cluster_distance = 0.1;
+        double in_max_cluster_distance = 0.2;
         std::vector<Detected_Obj> obj_list;
         clusterSegment(cloud, in_max_cluster_distance, obj_list);
         jsk_recognition_msgs::BoundingBoxArray bbox_array;
@@ -158,9 +161,10 @@ namespace UstarFusion
         euclid.setMaxClusterSize(MAX_CLUSTER_SIZE);
         euclid.setSearchMethod(tree);
         euclid.extract(local_indices);
-        ROS_INFO_STREAM(local_indices.size());
+        //ROS_INFO_STREAM(local_indices.size());
         for (size_t i = 0; i < local_indices.size(); i++)
         {
+            curve_flag_ = false;
             // the structure to save one detected object
             Detected_Obj obj_info;
 
@@ -181,7 +185,6 @@ namespace UstarFusion
                 p.x = in_pc->points[*point].x;
                 p.y = in_pc->points[*point].y;
                 p.z = in_pc->points[*point].z;
-
                 obj_info.centroid_.x += p.x;
                 obj_info.centroid_.y += p.y;
                 obj_info.centroid_.z += p.z;
@@ -198,9 +201,19 @@ namespace UstarFusion
                     max_y = p.y;
                 if (p.z > max_z)
                     max_z = p.z;
+                // if (!curve_flag_)
+                // {
+                //     double dist;
+                //     dist = point2Line(min_x, min_y, max_x, max_y, p);
+                //     if ( dist > 1)
+                //         curve_flag_ = true;
+                // }
             }
             //}
-
+            // if (!curve_flag_ && checkStaticObstacle(min_x, min_y, max_x, max_y, local_indices[i], in_pc))
+            //     continue;
+            if(checkStaticObstacle(min_x, min_y, max_x, max_y, local_indices[i], in_pc))
+                continue;
             //min, max points
             obj_info.min_point_.x = min_x;
             obj_info.min_point_.y = min_y;
@@ -240,5 +253,38 @@ namespace UstarFusion
             //boundingBox_pub_.publish(obj_info.bounding_box_);
             obj_list.push_back(obj_info);
         }
+    }
+    bool LaserFilter::checkStaticObstacle(float min_x, float min_y, float max_x, float max_y, pcl::PointIndices local_indice, const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &in_pc)
+    {
+        double dist;
+        pcl::PointXYZ p;
+        double max_dist = 0;
+        for (std::vector<int>::const_iterator point = local_indice.indices.begin(); point != local_indice.indices.end(); point++)
+        {
+            p.x = in_pc->points[*point].x;
+            p.y = in_pc->points[*point].y;
+            p.z = in_pc->points[*point].z;
+            dist = point2Line(min_x, min_y, max_x, max_y, p);
+            if (max_dist < dist)
+                max_dist = dist;
+           
+        }
+        if (max_dist < 0.5 || max_dist > 2.5)
+        {
+            return true;
+        }
+        ROS_INFO_STREAM(max_dist);
+        return false;
+    }
+    double LaserFilter::point2Line(float min_x, float min_y, float max_x, float max_y, pcl::PointXYZ point)
+    {
+        double dist;
+        double A, B, C;
+        A = -(max_y - min_y) / (max_x - min_x);
+        B = -1;
+        C = -A * min_x - min_y;
+        dist = abs(A * point.x + B * point.y + C) / sqrt(A * A + B * B);
+        
+        return dist;
     }
 } // namespace UstarFusion
