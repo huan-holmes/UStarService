@@ -43,6 +43,7 @@ namespace UstarFusion
         void clusterSegment(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &in_pc, double in_max_cluster_distance, std::vector<Detected_Obj> &obj_list);
         bool checkStaticObstacle(float min_x, float min_y, float max_x, float max_y, pcl::PointIndices local_indice, const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &in_pc);
         double point2Line(float min_x, float min_y, float max_x, float max_y, pcl::PointXYZ point);
+        bool checkStaticObstacle(float center_x, float center_y, pcl::PointIndices local_indice, const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &in_pc);
 
     private : ros::NodeHandle nh_;
         laser_geometry::LaserProjection projector_;

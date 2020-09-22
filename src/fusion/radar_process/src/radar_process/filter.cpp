@@ -5,7 +5,7 @@
 #include <iostream>
 #include "radar_process/filter.h"
 #define MIN_CLUSTER_SIZE 5
-#define MAX_CLUSTER_SIZE 60
+#define MAX_CLUSTER_SIZE 50
 namespace UstarFusion
 {
 
@@ -121,7 +121,7 @@ namespace UstarFusion
     }
     void LaserFilter::pclCloudCallback(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &cloud)
     {
-        double in_max_cluster_distance = 0.2;
+        double in_max_cluster_distance = 0.1;
         std::vector<Detected_Obj> obj_list;
         clusterSegment(cloud, in_max_cluster_distance, obj_list);
         jsk_recognition_msgs::BoundingBoxArray bbox_array;
@@ -212,8 +212,8 @@ namespace UstarFusion
             //}
             // if (!curve_flag_ && checkStaticObstacle(min_x, min_y, max_x, max_y, local_indices[i], in_pc))
             //     continue;
-            if(checkStaticObstacle(min_x, min_y, max_x, max_y, local_indices[i], in_pc))
-                continue;
+            // if(checkStaticObstacle(min_x, min_y, max_x, max_y, local_indices[i], in_pc))
+            //     continue;
             //min, max points
             obj_info.min_point_.x = min_x;
             obj_info.min_point_.y = min_y;
@@ -230,6 +230,8 @@ namespace UstarFusion
                 obj_info.centroid_.y /= local_indices[i].indices.size();
                 obj_info.centroid_.z /= local_indices[i].indices.size();
             }
+            if (checkStaticObstacle(obj_info.centroid_.x, obj_info.centroid_.y, local_indices[i], in_pc))
+                continue;
 
             //calculate bounding box
             double length_ = obj_info.max_point_.x - obj_info.min_point_.x;
@@ -269,12 +271,30 @@ namespace UstarFusion
                 max_dist = dist;
            
         }
-        if (max_dist < 0.5 || max_dist > 2.5)
+        if (max_dist < 0.5)
         {
             return true;
         }
         ROS_INFO_STREAM(max_dist);
         return false;
+    }
+    bool LaserFilter::checkStaticObstacle(float center_x, float center_y, pcl::PointIndices local_indice, const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &in_pc)
+    {
+        double max_dist = 0;
+        pcl::PointXYZ p;
+        for (std::vector<int>::const_iterator point = local_indice.indices.begin(); point != local_indice.indices.end(); point++)
+        {
+            p.x = in_pc->points[*point].x;
+            p.y = in_pc->points[*point].y;
+            p.z = in_pc->points[*point].z;
+            if (max_dist < sqrt((p.x - center_x) * (p.x-center_x) + (p.y - center_y) * (p.y - center_y)))
+                max_dist = sqrt((p.x - center_x) * (p.x-center_x) + (p.y - center_y) * (p.y - center_y));
+           
+        }
+        if (max_dist > 0.2)
+            return true;
+        else
+            return false;
     }
     double LaserFilter::point2Line(float min_x, float min_y, float max_x, float max_y, pcl::PointXYZ point)
     {
@@ -287,4 +307,5 @@ namespace UstarFusion
         
         return dist;
     }
+    
 } // namespace UstarFusion
