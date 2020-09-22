@@ -271,7 +271,7 @@ namespace UstarFusion
                 max_dist = dist;
            
         }
-        if (max_dist < 0.5)
+        if (max_dist < 0.05 || max_dist > 0.1)
         {
             return true;
         }
