@@ -201,6 +201,7 @@ namespace dwa_local_planner {
   }
 
   bool DWAPlanner::setPlan(const std::vector<geometry_msgs::PoseStamped>& orig_global_plan) {
+    ROS_INFO("----setPlan()----");
     oscillation_costs_.resetOscillationFlags();
     return planner_util_->setPlan(orig_global_plan);
   }
@@ -297,7 +298,6 @@ namespace dwa_local_planner {
 
     //make sure that our configuration doesn't change mid-run
     boost::mutex::scoped_lock l(configuration_mutex_);
-
     Eigen::Vector3f pos(global_pose.pose.position.x, global_pose.pose.position.y, tf2::getYaw(global_pose.pose.orientation));
     Eigen::Vector3f vel(global_vel.pose.position.x, global_vel.pose.position.y, tf2::getYaw(global_vel.pose.orientation));
     geometry_msgs::PoseStamped goal_pose = global_plan_.back();
@@ -366,7 +366,6 @@ namespace dwa_local_planner {
 
     // debrief stateful scoring functions
     oscillation_costs_.updateOscillationFlags(pos, &result_traj_, planner_util_->getCurrentLimits().min_vel_trans);
-
     //if we don't have a legal trajectory, we'll just command zero
     if (result_traj_.cost_ < 0) {
       drive_velocities.pose.position.x = 0;

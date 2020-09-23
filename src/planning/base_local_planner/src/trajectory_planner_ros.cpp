@@ -360,24 +360,20 @@ namespace base_local_planner {
       ROS_ERROR("This planner has not been initialized, please call initialize() before using this planner");
       return false;
     }
-
     std::vector<geometry_msgs::PoseStamped> local_plan;
     geometry_msgs::PoseStamped global_pose;
     if (!costmap_ros_->getRobotPose(global_pose)) {
       return false;
     }
-
     std::vector<geometry_msgs::PoseStamped> transformed_plan;
     //get the global plan in our frame
     if (!transformGlobalPlan(*tf_, global_plan_, global_pose, *costmap_, global_frame_, transformed_plan)) {
       ROS_WARN("Could not transform the global plan to the frame of the controller");
       return false;
     }
-
     //now we'll prune the plan based on the position of the robot
     if(prune_plan_)
       prunePlan(global_pose, transformed_plan, global_plan_);
-
     geometry_msgs::PoseStamped drive_cmds;
     drive_cmds.header.frame_id = robot_base_frame_;
 
@@ -470,12 +466,10 @@ namespace base_local_planner {
     t_diff = end_t - start_t;
     ROS_INFO("Cycle time: %.9f", t_diff);
     */
-
     //pass along drive commands
     cmd_vel.linear.x = drive_cmds.pose.position.x;
     cmd_vel.linear.y = drive_cmds.pose.position.y;
     cmd_vel.angular.z = tf2::getYaw(drive_cmds.pose.orientation);
-
     //if we cannot move... tell someone
     if (path.cost_ < 0) {
       ROS_DEBUG_NAMED("trajectory_planner_ros",
@@ -570,6 +564,7 @@ namespace base_local_planner {
   }
 
   bool TrajectoryPlannerROS::isGoalReached() {
+    ROS_INFO("---isGoalReached()----");
     if (! isInitialized()) {
       ROS_ERROR("This planner has not been initialized, please call initialize() before using this planner");
       return false;

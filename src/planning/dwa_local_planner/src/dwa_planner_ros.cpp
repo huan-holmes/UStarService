@@ -106,15 +106,11 @@ namespace dwa_local_planner {
       tf_ = tf;
       costmap_ros_ = costmap_ros;
       costmap_ros_->getRobotPose(current_pose_);
-
       // make sure to update the costmap we'll use for this cycle
       UstarCostmap::Costmap2D* costmap = costmap_ros_->getCostmap();
-
       planner_util_.initialize(tf, costmap, costmap_ros_->getGlobalFrameID());
-
       //create the actual planner that we'll use.. it'll configure itself from the parameter server
       dp_ = boost::shared_ptr<DWAPlanner>(new DWAPlanner(name, &planner_util_));
-
       if( private_nh.getParam( "odom_topic", odom_topic_ ))
       {
         odom_helper_.setOdomTopic( odom_topic_ );
@@ -187,6 +183,7 @@ namespace dwa_local_planner {
 
   bool DWAPlannerROS::dwaComputeVelocityCommands(geometry_msgs::PoseStamped &global_pose, geometry_msgs::Twist& cmd_vel) {
     // dynamic window sampling approach to get useful velocity commands
+    //ROS_INFO_STREAM(global_pose);
     if(! isInitialized()){
       ROS_ERROR("This planner has not been initialized, please call initialize() before using this planner");
       return false;
@@ -194,6 +191,7 @@ namespace dwa_local_planner {
 
     geometry_msgs::PoseStamped robot_vel;
     odom_helper_.getRobotVel(robot_vel);
+    //ROS_INFO_STREAM(robot_vel);
 
     /* For timing uncomment
     struct timeval start, end;
@@ -218,6 +216,7 @@ namespace dwa_local_planner {
     */
 
     //pass along drive commands
+    //ROS_INFO_STREAM(drive_cmds);
     cmd_vel.linear.x = drive_cmds.pose.position.x;
     cmd_vel.linear.y = drive_cmds.pose.position.y;
     cmd_vel.angular.z = tf2::getYaw(drive_cmds.pose.orientation);
@@ -262,28 +261,32 @@ namespace dwa_local_planner {
 
 
   bool DWAPlannerROS::computeVelocityCommands(geometry_msgs::Twist& cmd_vel) {
+    ROS_INFO("----DWAPlannerROS::computeVelocityCommands()----");
     // dispatches to either dwa sampling control or stop and rotate control, depending on whether we have been close enough to goal
     if ( ! costmap_ros_->getRobotPose(current_pose_)) {
       ROS_ERROR("Could not get robot pose");
       return false;
     }
+    //ROS_INFO_STREAM(current_pose_);
+    ROS_INFO_STREAM(1);
     std::vector<geometry_msgs::PoseStamped> transformed_plan;
     if ( ! planner_util_.getLocalPlan(current_pose_, transformed_plan)) {
       ROS_ERROR("Could not get local plan");
       return false;
     }
-
+    ROS_INFO_STREAM(2);
     //if the global plan passed in is empty... we won't do anything
     if(transformed_plan.empty()) {
       ROS_WARN_NAMED("dwa_local_planner", "Received an empty transformed plan.");
       return false;
     }
     ROS_DEBUG_NAMED("dwa_local_planner", "Received a transformed plan with %zu points.", transformed_plan.size());
-
+    ROS_INFO_STREAM(3);
     // update plan in dwa_planner even if we just stop and rotate, to allow checkTrajectory
     dp_->updatePlanAndLocalCosts(current_pose_, transformed_plan, costmap_ros_->getRobotFootprint());
 
     if (latchedStopRotateController_.isPositionReached(&planner_util_, current_pose_)) {
+      ROS_INFO_STREAM(4);
       //publish an empty plan because we've reached our goal position
       std::vector<geometry_msgs::PoseStamped> local_plan;
       std::vector<geometry_msgs::PoseStamped> transformed_plan;
@@ -299,7 +302,10 @@ namespace dwa_local_planner {
           current_pose_,
           boost::bind(&DWAPlanner::checkTrajectory, dp_, _1, _2, _3));
     } else {
+      ROS_INFO_STREAM(5);
+      //ROS_INFO_STREAM(current_pose_);
       bool isOk = dwaComputeVelocityCommands(current_pose_, cmd_vel);
+      //ROS_INFO_STREAM(cmd_vel);
       if (isOk) {
         publishGlobalPlan(transformed_plan);
       } else {

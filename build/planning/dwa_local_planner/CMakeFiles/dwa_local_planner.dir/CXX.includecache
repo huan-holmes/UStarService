@@ -271,6 +271,8 @@ base_local_planner/local_planner_limits.h
 -
 Eigen/Core
 -
+ros/ros.h
+-
 
 /home/boocax/UstarService/src/planning/base_local_planner/include/base_local_planner/trajectory.h
 vector

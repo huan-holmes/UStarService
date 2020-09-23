@@ -58,7 +58,6 @@ bool LocalPlannerUtil::setPlan(const std::vector<geometry_msgs::PoseStamped>& or
     ROS_ERROR("Planner utils have not been initialized, please call initialize() first");
     return false;
   }
-
   //reset the global plan
   global_plan_.clear();
 

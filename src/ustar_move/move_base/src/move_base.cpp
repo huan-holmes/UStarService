@@ -612,9 +612,8 @@ namespace move_base {
       as_->setAborted(move_base_msgs::MoveBaseResult(), "Aborting on goal because it was sent with an invalid quaternion");
       return;
     }
-
+    
     geometry_msgs::PoseStamped goal = goalToGlobalFrame(move_base_goal->target_pose);
-  
     publishZeroVelocity();
     //we have a goal so start the planner
     boost::unique_lock<boost::recursive_mutex> lock(planner_mutex_);
@@ -758,6 +757,7 @@ namespace move_base {
   }
 
   bool MoveBase::executeCycle(geometry_msgs::PoseStamped& goal){
+
     boost::recursive_mutex::scoped_lock ecl(configuration_mutex_);
     //we need to be able to publish velocity commands
     geometry_msgs::Twist cmd_vel;
@@ -826,6 +826,7 @@ namespace move_base {
     }
 
     //the move_base state machine, handles the control logic for navigation
+    
     switch(state_){
       //if we are in a planning state, then we'll attempt to make a plan
       case PLANNING:
@@ -839,6 +840,7 @@ namespace move_base {
 
       //if we're controlling, we'll attempt to find valid velocity commands
       case CONTROLLING:
+        
         ROS_DEBUG_NAMED("move_base","In controlling state.");
 
         //check to see if we've reached our goal
@@ -854,7 +856,7 @@ namespace move_base {
           as_->setSucceeded(move_base_msgs::MoveBaseResult(), "Goal reached.");
           return true;
         }
-
+        
         //check for an oscillation condition
         if(oscillation_timeout_ > 0.0 &&
             last_oscillation_reset_ + ros::Duration(oscillation_timeout_) < ros::Time::now())
@@ -872,6 +874,9 @@ namespace move_base {
                            cmd_vel.linear.x, cmd_vel.linear.y, cmd_vel.angular.z );
           last_valid_control_ = ros::Time::now();
           //make sure that we send the velocity command to the base
+          // cmd_vel.linear.x = 0.02;
+          // cmd_vel.linear.y = 0.02;
+          // ROS_INFO_STREAM(cmd_vel);
           vel_pub_.publish(cmd_vel);
           if(recovery_trigger_ == CONTROLLING_R)
             recovery_index_ = 0;

@@ -220,6 +220,7 @@ bool SimpleTrajectoryGenerator::generateTrajectory(
   traj.time_delta_ = dt;
 
   Eigen::Vector3f loop_vel;
+  
   if (continued_acceleration_) {
     // assuming the velocity of the first cycle is the one we want to store in the trajectory object
     loop_vel = computeNewVelocities(sample_target_vel, vel, limits_->getAccLimits(), dt);
@@ -233,7 +234,9 @@ bool SimpleTrajectoryGenerator::generateTrajectory(
     traj.yv_     = sample_target_vel[1];
     traj.thetav_ = sample_target_vel[2];
   }
-
+  
+  //ROS_INFO_STREAM(traj.xv_);
+  //ROS_INFO_STREAM(traj.yv_);
   //simulate the trajectory and check for collisions, updating costs along the way
   for (int i = 0; i < num_steps; ++i) {
 

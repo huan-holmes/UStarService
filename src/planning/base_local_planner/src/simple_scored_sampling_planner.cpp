@@ -73,12 +73,11 @@ namespace base_local_planner {
       }
       gen_id ++;
     }
-
-
     return traj_cost;
   }
 
   bool SimpleScoredSamplingPlanner::findBestTrajectory(Trajectory& traj, std::vector<Trajectory>* all_explored) {
+    ROS_INFO_STREAM("----simple_scored_sampling_planner()----");
     Trajectory loop_traj;
     Trajectory best_traj;
     double loop_traj_cost, best_traj_cost = -1;
@@ -91,6 +90,7 @@ namespace base_local_planner {
         return false;
       }
     }
+    ROS_INFO_STREAM(gen_list_.size() + 100);
 
     for (std::vector<TrajectorySampleGenerator*>::iterator loop_gen = gen_list_.begin(); loop_gen != gen_list_.end(); ++loop_gen) {
       count = 0;
@@ -98,21 +98,34 @@ namespace base_local_planner {
       TrajectorySampleGenerator* gen_ = *loop_gen;
       while (gen_->hasMoreTrajectories()) {
         gen_success = gen_->nextTrajectory(loop_traj);
+        
         if (gen_success == false) {
           // TODO use this for debugging
           continue;
         }
         loop_traj_cost = scoreTrajectory(loop_traj, best_traj_cost);
+        
         if (all_explored != NULL) {
           loop_traj.cost_ = loop_traj_cost;
           all_explored->push_back(loop_traj);
         }
-
+        // ROS_INFO_STREAM(loop_traj_cost);
+        // ROS_INFO_STREAM(best_traj_cost);
+        //   ROS_INFO_STREAM(loop_traj.xv_);
+        //   ROS_INFO_STREAM(loop_traj.yv_);
         if (loop_traj_cost >= 0) {
+          
           count_valid++;
           if (best_traj_cost < 0 || loop_traj_cost < best_traj_cost) {
             best_traj_cost = loop_traj_cost;
             best_traj = loop_traj;
+            // best_traj.xv_ = loop_traj.xv_;
+            // best_traj.yv_ = loop_traj.yv_;
+            // best_traj.thetav_ = loop_traj.thetav_;
+            // best_traj.cost_ = loop_traj.cost_;
+            // ROS_INFO_STREAM(best_traj.xv_);
+            // ROS_INFO_STREAM(best_traj.yv_);
+            
           }
         }
         count++;
@@ -120,7 +133,14 @@ namespace base_local_planner {
           break;
         }        
       }
+      // ROS_INFO_STREAM("best");
+      
+      // ROS_INFO_STREAM(loop_traj_cost);
+      // ROS_INFO_STREAM(best_traj.xv_);
+      // ROS_INFO_STREAM(best_traj.yv_);
       if (best_traj_cost >= 0) {
+        //ROS_INFO_STREAM(best_traj.xv_);
+        
         traj.xv_ = best_traj.xv_;
         traj.yv_ = best_traj.yv_;
         traj.thetav_ = best_traj.thetav_;

@@ -37,9 +37,13 @@ namespace UstarCostmap
     ros::NodeHandle g_nh;
 
     // get global and robot base frame names
+    
     private_nh.param("global_frame", global_frame_, std::string("map"));
+    
     private_nh.param("robot_base_frame", robot_base_frame_, std::string("base_link"));
-
+    ROS_INFO_STREAM(name);
+    ROS_INFO_STREAM(global_frame_);
+    ROS_INFO_STREAM(robot_base_frame_);
     ros::Time last_error = ros::Time::now();
     std::string tf_error;
     // we need to make sure that the transform between the robot base frame and the global frame is available
@@ -527,6 +531,7 @@ namespace UstarCostmap
 
   bool Costmap2DROS::getRobotPose(geometry_msgs::PoseStamped &global_pose) const
   {
+    //ROS_INFO("----costmap_2d_ros::getRobotPose()----");
     tf2::toMsg(tf2::Transform::getIdentity(), global_pose.pose);
     geometry_msgs::PoseStamped robot_pose;
     tf2::toMsg(tf2::Transform::getIdentity(), robot_pose.pose);
@@ -537,7 +542,9 @@ namespace UstarCostmap
     // get the global pose of the robot
     try
     {
+      
       tf_.transform(robot_pose, global_pose, global_frame_);
+      //ROS_INFO_STREAM(global_frame_);
     }
     catch (tf2::LookupException &ex)
     {
@@ -562,7 +569,7 @@ namespace UstarCostmap
                         current_time.toSec(), global_pose.header.stamp.toSec(), transform_tolerance_);
       return false;
     }
-
+    
     return true;
   }
 

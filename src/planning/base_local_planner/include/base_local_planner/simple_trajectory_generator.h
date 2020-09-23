@@ -41,6 +41,7 @@
 #include <base_local_planner/trajectory_sample_generator.h>
 #include <base_local_planner/local_planner_limits.h>
 #include <Eigen/Core>
+#include <ros/ros.h>
 
 namespace base_local_planner {
 
