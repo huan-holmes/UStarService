@@ -1,5 +1,6 @@
 #include "costmap/costmap_2d/costmap_2d.h"
 #include <cstdio>
+#include <ros/ros.h>
 
 using namespace std;
 
@@ -10,7 +11,6 @@ namespace UstarCostmap
                        origin_y_(origin_y), costmap_(NULL), default_value_(default_value)
   {
     access_ = new mutex_t();
-
     // create the costmap
     initMaps(size_x_, size_y_);
     resetMaps();

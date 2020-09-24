@@ -100,6 +100,7 @@ namespace UstarCostmap
   {
     // If we are using rolling costmap, the static map size is
     //   unrelated to the size of the layered costmap
+    ROS_INFO_STREAM("----staticLayer::matchSize()----");
     if (!layered_costmap_->isRolling()) 
     {
       Costmap2D *master = layered_costmap_->getCostmap();
@@ -131,7 +132,8 @@ namespace UstarCostmap
     ROS_DEBUG("Received a %d X %d map at %f m/pix", size_x, size_y, new_map->info.resolution);
 
     // resize costmap if size, resolution or origin do not match
-    Costmap2D *master = layered_costmap_->getCostmap();
+    Costmap2D *master = layered_costmap_->getCostmap(); 
+    
     if (!layered_costmap_->isRolling() &&
         (master->getSizeInCellsX() != size_x ||
          master->getSizeInCellsY() != size_y ||
@@ -155,7 +157,6 @@ namespace UstarCostmap
       resizeMap(size_x, size_y, new_map->info.resolution,
                 new_map->info.origin.position.x, new_map->info.origin.position.y);
     }
-
     unsigned int index = 0;
 
     // initialize the costmap with static data

@@ -261,32 +261,26 @@ namespace dwa_local_planner {
 
 
   bool DWAPlannerROS::computeVelocityCommands(geometry_msgs::Twist& cmd_vel) {
-    ROS_INFO("----DWAPlannerROS::computeVelocityCommands()----");
     // dispatches to either dwa sampling control or stop and rotate control, depending on whether we have been close enough to goal
     if ( ! costmap_ros_->getRobotPose(current_pose_)) {
       ROS_ERROR("Could not get robot pose");
       return false;
     }
-    //ROS_INFO_STREAM(current_pose_);
-    ROS_INFO_STREAM(1);
     std::vector<geometry_msgs::PoseStamped> transformed_plan;
     if ( ! planner_util_.getLocalPlan(current_pose_, transformed_plan)) {
       ROS_ERROR("Could not get local plan");
       return false;
     }
-    ROS_INFO_STREAM(2);
     //if the global plan passed in is empty... we won't do anything
     if(transformed_plan.empty()) {
       ROS_WARN_NAMED("dwa_local_planner", "Received an empty transformed plan.");
       return false;
     }
     ROS_DEBUG_NAMED("dwa_local_planner", "Received a transformed plan with %zu points.", transformed_plan.size());
-    ROS_INFO_STREAM(3);
     // update plan in dwa_planner even if we just stop and rotate, to allow checkTrajectory
     dp_->updatePlanAndLocalCosts(current_pose_, transformed_plan, costmap_ros_->getRobotFootprint());
 
     if (latchedStopRotateController_.isPositionReached(&planner_util_, current_pose_)) {
-      ROS_INFO_STREAM(4);
       //publish an empty plan because we've reached our goal position
       std::vector<geometry_msgs::PoseStamped> local_plan;
       std::vector<geometry_msgs::PoseStamped> transformed_plan;
@@ -302,7 +296,6 @@ namespace dwa_local_planner {
           current_pose_,
           boost::bind(&DWAPlanner::checkTrajectory, dp_, _1, _2, _3));
     } else {
-      ROS_INFO_STREAM(5);
       //ROS_INFO_STREAM(current_pose_);
       bool isOk = dwaComputeVelocityCommands(current_pose_, cmd_vel);
       //ROS_INFO_STREAM(cmd_vel);

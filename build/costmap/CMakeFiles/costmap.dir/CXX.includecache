@@ -157,6 +157,8 @@ costmap/costmap_2d/costmap_2d.h
 /home/boocax/UstarService/src/costmap/src/costmap/costmap_2d/costmap/costmap_2d/costmap_2d.h
 cstdio
 -
+ros/ros.h
+-
 
 /home/boocax/UstarService/src/costmap/src/costmap/costmap_ros/costmap_2d_publisher.cpp
 boost/bind.hpp

@@ -201,7 +201,6 @@ namespace dwa_local_planner {
   }
 
   bool DWAPlanner::setPlan(const std::vector<geometry_msgs::PoseStamped>& orig_global_plan) {
-    ROS_INFO("----setPlan()----");
     oscillation_costs_.resetOscillationFlags();
     return planner_util_->setPlan(orig_global_plan);
   }

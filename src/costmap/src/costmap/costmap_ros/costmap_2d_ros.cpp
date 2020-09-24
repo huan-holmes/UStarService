@@ -35,15 +35,9 @@ namespace UstarCostmap
 
     ros::NodeHandle private_nh("~/" + name); 
     ros::NodeHandle g_nh;
-
     // get global and robot base frame names
-    
     private_nh.param("global_frame", global_frame_, std::string("map"));
-    
     private_nh.param("robot_base_frame", robot_base_frame_, std::string("base_link"));
-    ROS_INFO_STREAM(name);
-    ROS_INFO_STREAM(global_frame_);
-    ROS_INFO_STREAM(robot_base_frame_);
     ros::Time last_error = ros::Time::now();
     std::string tf_error;
     // we need to make sure that the transform between the robot base frame and the global frame is available
@@ -69,7 +63,7 @@ namespace UstarCostmap
 
     layered_costmap_ = new LayeredCostmap(global_frame_, rolling_window, track_unknown_space);
 
-    if (!private_nh.hasParam("plugins"))
+    if (!private_nh.hasParam("plugins")) 
     {
       loadOldParameters(private_nh);
     }
