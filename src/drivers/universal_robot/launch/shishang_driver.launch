@@ -1,0 +1,15 @@
+<!-- -->
+<launch>
+  <rosparam file="$(find robot_pose_fusion)/param/setupshishang.yaml" command="load" />
+  <include file="$(find universal_robot)/launch/drive.launch"/>
+  <include file="$(find robooster_gnss)/launch/robooster_gnss.launch"/>
+  <include file="$(find robooster_imu)/launch/robooster_imu.launch"/>
+    <!--include file="$(find xsens_driver)/launch/xsens_driver-1.launch"/-->
+
+  <include file="$(find lslidar_c16_decoder)/launch/lslidar_c16.launch"/>
+  <!--include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch"/-->
+  <!--include file="$(find rslidar_pointcloud)/launch/rs_lidar_16.launch"/-->
+  <include file="$(find robot_pose_fusion)/launch/robot_pose_fusion.launch"/>
+
+
+</launch>

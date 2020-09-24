@@ -1,0 +1,8 @@
+prefix=/home/boocax/UstarService/devel
+
+Name: universal_robot
+Description: Description of universal_robot
+Version: 1.7.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: nav_msgs tf

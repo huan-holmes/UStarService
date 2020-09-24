@@ -92,7 +92,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"header\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -1778,6 +1778,32 @@ localization_node/fast:
 .PHONY : localization_node/fast
 
 #=============================================================================
+# Target rules for targets named universal_robot_lib
+
+# Build rule for target.
+universal_robot_lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 universal_robot_lib
+.PHONY : universal_robot_lib
+
+# fast build rule for target.
+universal_robot_lib/fast:
+	$(MAKE) -f drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/build.make drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/build
+.PHONY : universal_robot_lib/fast
+
+#=============================================================================
+# Target rules for targets named universal_robot
+
+# Build rule for target.
+universal_robot: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 universal_robot
+.PHONY : universal_robot
+
+# fast build rule for target.
+universal_robot/fast:
+	$(MAKE) -f drivers/universal_robot/CMakeFiles/universal_robot.dir/build.make drivers/universal_robot/CMakeFiles/universal_robot.dir/build
+.PHONY : universal_robot/fast
+
+#=============================================================================
 # Target rules for targets named usb_cam
 
 # Build rule for target.
@@ -3110,6 +3136,8 @@ help:
 	@echo "... localization_sensor"
 	@echo "... localization_gencfg"
 	@echo "... localization_node"
+	@echo "... universal_robot_lib"
+	@echo "... universal_robot"
 	@echo "... usb_cam"
 	@echo "... usb_cam_node"
 	@echo "... costmap_2d_node"

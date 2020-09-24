@@ -1,0 +1,7 @@
+
+<launch>
+
+  <include file="$(find universal_robot)/launch/universal_robot.launch"/>
+  <include file="$(find motion_ctrl)/launch/controler.launch"/>
+  <include file="$(find yocs_cmd_vel_mux)/launch/standalone.launch"/>
+</launch>
