@@ -425,7 +425,7 @@ InflationPluginConfig::GroupDescription<InflationPluginConfig::DEFAULT, Inflatio
 //#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.inflation_radius = 0.0;
 //#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.inflation_radius = 50.0;
+      __max__.inflation_radius = 1.0;
 //#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.inflation_radius = 0.55;
 //#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
