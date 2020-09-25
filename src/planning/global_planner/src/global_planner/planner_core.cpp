@@ -204,7 +204,6 @@ bool GlobalPlanner::makePlan(const geometry_msgs::PoseStamped& start, const geom
                 "The start pose passed to this planner must be in the %s frame.  It is instead in the %s frame.", global_frame.c_str(), start.header.frame_id.c_str());
         return false;
     }
-
     double wx = start.pose.position.x;
     double wy = start.pose.position.y;
 
