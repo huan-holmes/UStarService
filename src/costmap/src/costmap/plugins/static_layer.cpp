@@ -25,9 +25,7 @@ namespace UstarCostmap
   {
     ros::NodeHandle nh("~/" + name_), g_nh;
     current_ = true;
- 
     global_frame_ = layered_costmap_->getGlobalFrameID();
-
     std::string map_topic;
     nh.param("map_topic", map_topic, std::string("map"));
     nh.param("first_map_only", first_map_only_, false);
@@ -40,7 +38,6 @@ namespace UstarCostmap
     nh.param("lethal_cost_threshold", temp_lethal_threshold, int(100));
     nh.param("unknown_cost_value", temp_unknown_cost_value, int(-1));
     nh.param("trinary_costmap", trinary_costmap_, true);
-
     lethal_threshold_ = std::max(std::min(temp_lethal_threshold, 100), 0);
     unknown_cost_value_ = temp_unknown_cost_value;
 
@@ -98,9 +95,9 @@ namespace UstarCostmap
 
   void StaticLayer::matchSize()
   {
+    ROS_INFO_STREAM("sta::matchSize");
     // If we are using rolling costmap, the static map size is
     //   unrelated to the size of the layered costmap
-    ROS_INFO_STREAM("----staticLayer::matchSize()----");
     if (!layered_costmap_->isRolling()) 
     {
       Costmap2D *master = layered_costmap_->getCostmap();

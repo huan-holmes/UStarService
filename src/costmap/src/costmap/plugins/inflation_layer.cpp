@@ -66,8 +66,6 @@ namespace UstarCostmap
 
   void InflationLayer::matchSize()
   {
-    ROS_INFO_STREAM(name_);
-    ROS_INFO_STREAM("----InflationLayer::matchSize()----");
     boost::unique_lock<boost::recursive_mutex> lock(*inflation_access_);
     UstarCostmap::Costmap2D *costmap = layered_costmap_->getCostmap();
     resolution_ = costmap->getResolution();

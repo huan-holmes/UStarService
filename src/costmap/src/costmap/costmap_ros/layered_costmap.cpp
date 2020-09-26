@@ -28,10 +28,11 @@ namespace UstarCostmap
       plugins_.pop_back();
     }
   }
-
+ 
   void LayeredCostmap::resizeMap(unsigned int size_x, unsigned int size_y, double resolution, double origin_x,
                                  double origin_y, bool size_locked)
   {
+    ROS_INFO_STREAM("lay::resizeMap");
     boost::unique_lock<Costmap2D::mutex_t> lock(*(costmap_.getMutex()));
     size_locked_ = size_locked;
     costmap_.resizeMap(size_x, size_y, resolution, origin_x, origin_y);

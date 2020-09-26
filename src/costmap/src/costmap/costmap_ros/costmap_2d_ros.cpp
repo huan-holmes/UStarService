@@ -63,7 +63,7 @@ namespace UstarCostmap
 
     layered_costmap_ = new LayeredCostmap(global_frame_, rolling_window, track_unknown_space);
 
-    if (!private_nh.hasParam("plugins")) 
+    if (!private_nh.hasParam("plugins"))
     {
       loadOldParameters(private_nh);
     }
