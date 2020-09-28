@@ -923,7 +923,6 @@ namespace move_base {
           last_valid_plan_ = ros::Time::now();
           planning_retries_ = 0;
           state_ = PLANNING;
-
           //update the index of the next recovery behavior that we'll try
           recovery_index_++;
         }

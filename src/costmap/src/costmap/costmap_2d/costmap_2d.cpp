@@ -20,7 +20,7 @@ namespace UstarCostmap
   {
     // clean up data
     boost::unique_lock<mutex_t> lock(*access_);
-    delete[] costmap_;
+    delete[] costmap_; 
     costmap_ = NULL;
   }
 

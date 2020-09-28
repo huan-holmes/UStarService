@@ -27,7 +27,7 @@ float QuadraticCalculator::calculatePotential(float* potential, unsigned char co
     float hf = cost; // traversability factor
     float dc = tc - ta;        // relative cost between ta,tc
     if (dc < 0)         // tc is lowest
-            {
+    {
         dc = -dc;
         ta = tc;
     }

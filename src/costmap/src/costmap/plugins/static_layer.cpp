@@ -95,7 +95,6 @@ namespace UstarCostmap
 
   void StaticLayer::matchSize()
   {
-    ROS_INFO_STREAM("sta::matchSize");
     // If we are using rolling costmap, the static map size is
     //   unrelated to the size of the layered costmap
     if (!layered_costmap_->isRolling()) 
@@ -121,7 +120,7 @@ namespace UstarCostmap
     double scale = (double)value / lethal_threshold_;
     return scale * LETHAL_OBSTACLE;
   }
-
+ 
   void StaticLayer::incomingMap(const nav_msgs::OccupancyGridConstPtr &new_map)
   {
     unsigned int size_x = new_map->info.width, size_y = new_map->info.height;
