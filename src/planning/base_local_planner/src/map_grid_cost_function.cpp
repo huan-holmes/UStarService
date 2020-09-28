@@ -1,5 +1,3 @@
-
-
 #include <base_local_planner/map_grid_cost_function.h>
 
 namespace base_local_planner {

@@ -1,5 +1,3 @@
-
-
 #include <base_local_planner/footprint_helper.h>
 
 namespace base_local_planner {

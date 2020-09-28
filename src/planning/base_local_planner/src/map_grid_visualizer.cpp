@@ -1,4 +1,3 @@
-
 #include <base_local_planner/map_grid_visualizer.h>
 #include <base_local_planner/map_cell.h>
 #include <vector>

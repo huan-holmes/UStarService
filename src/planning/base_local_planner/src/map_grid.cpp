@@ -1,4 +1,3 @@
-
 #include <base_local_planner/map_grid.h>
 #include <costmap/utils/cost_values.h>
 using namespace std;

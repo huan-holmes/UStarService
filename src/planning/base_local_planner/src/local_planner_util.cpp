@@ -1,5 +1,3 @@
-
-
 #include <base_local_planner/local_planner_util.h>
 
 #include <base_local_planner/goal_functions.h>

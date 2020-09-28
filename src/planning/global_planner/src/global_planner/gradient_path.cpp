@@ -30,6 +30,7 @@ void GradientPath::setSize(int xs, int ys) {
 }
 
 bool GradientPath::getPath(float* potential, double start_x, double start_y, double goal_x, double goal_y, std::vector<std::pair<float, float> >& path) {
+    
     std::pair<float, float> current;
     int stc = getIndex(goal_x, goal_y);
 

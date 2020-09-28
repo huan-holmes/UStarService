@@ -1,5 +1,3 @@
-
-
 #include <base_local_planner/map_cell.h>
 
 namespace base_local_planner{
