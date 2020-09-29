@@ -26,7 +26,7 @@ namespace UstarCostmap
   bool ObservationBuffer::setGlobalFrame(const std::string new_global_frame)
   {
     ros::Time transform_time = ros::Time::now();
-    std::string tf_error;
+    std::string tf_error; 
 
     geometry_msgs::TransformStamped transformStamped;
     if (!tf2_buffer_.canTransform(new_global_frame, global_frame_, transform_time, ros::Duration(tf_tolerance_), &tf_error))
@@ -73,7 +73,7 @@ namespace UstarCostmap
     geometry_msgs::PointStamped global_origin;
 
     // create a new observation on the list to be populated
-    observation_list_.push_front(Observation());
+    observation_list_.push_front(Observation()); 
 
     // check whether the origin frame has been set explicitly or whether we should get it from the cloud
     string origin_frame = sensor_frame_ == "" ? cloud.header.frame_id : sensor_frame_;

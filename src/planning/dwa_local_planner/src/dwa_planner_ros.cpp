@@ -99,7 +99,7 @@ namespace dwa_local_planner {
   }
   
   bool DWAPlannerROS::setPlan(const std::vector<geometry_msgs::PoseStamped>& orig_global_plan) {
-    if (! isInitialized()) {
+    if (!isInitialized()) {
       ROS_ERROR("This planner has not been initialized, please call initialize() before using this planner");
       return false;
     }

@@ -29,7 +29,7 @@ namespace UstarCostmap
       CellData(double i, unsigned int x, unsigned int y, unsigned int sx, unsigned int sy) : index_(i), x_(x), y_(y), src_x_(sx), src_y_(sy)
       {
       }
-      unsigned int index_;
+      unsigned int index_; 
       unsigned int x_, y_;
       unsigned int src_x_, src_y_;
   };
@@ -75,7 +75,7 @@ namespace UstarCostmap
         // make sure cost falls off by Euclidean distance
         double euclidean_distance = distance * resolution_;
         double factor = exp(-1.0 * weight_ * (euclidean_distance - inscribed_radius_));
-        cost = (unsigned char)((INSCRIBED_INFLATED_OBSTACLE - 1) * factor);
+        cost = (unsigned char)((INSCRIBED_INFLATED_OBSTACLE - 1) * factor); 
       }
       return cost;
     }

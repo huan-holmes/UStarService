@@ -24,7 +24,7 @@ namespace UstarCostmap
     inflation_access_ = new boost::recursive_mutex();
   }
 
-  void InflationLayer::onInitialize()
+  void InflationLayer::onInitialize() 
   {
     {
       boost::unique_lock<boost::recursive_mutex> lock(*inflation_access_);

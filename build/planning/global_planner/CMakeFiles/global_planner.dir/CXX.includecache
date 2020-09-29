@@ -245,6 +245,8 @@ algorithm
 -
 stdio.h
 -
+ros/ros.h
+-
 
 /home/boocax/UstarService/src/planning/global_planner/src/global_planner/orientation_filter.cpp
 global_planner/orientation_filter.h

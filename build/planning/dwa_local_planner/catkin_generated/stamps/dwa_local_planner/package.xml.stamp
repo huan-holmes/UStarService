@@ -15,11 +15,8 @@
         BaseLocalPlanner interface specified in the <a href="http://wiki.ros.org/nav_core">nav_core</a> package.
 
     </description>
-    <author>Eitan Marder-Eppstein</author>
-    <author>contradict@gmail.com</author>
-    <maintainer email="davidvlu@gmail.com">David V. Lu!!</maintainer>
-    <maintainer email="mfergs7@gmail.com">Michael Ferguson</maintainer>
-    <maintainer email="ahoy@fetchrobotics.com">Aaron Hoy</maintainer>
+    <author>Huan Li</author>
+    <maintainer email="1124782663@qq.com">Huan Li</maintainer>
     <license>BSD</license>
     <url>http://wiki.ros.org/dwa_local_planner</url>
 

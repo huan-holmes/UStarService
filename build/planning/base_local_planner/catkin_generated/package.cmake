@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "base_local_planner")
 set(base_local_planner_VERSION "1.17.1")
-set(base_local_planner_MAINTAINER "Michael Ferguson <mfergs7@gmail.com>, David V. Lu!! <davidvlu@gmail.com>, Aaron Hoy <ahoy@fetchrobotics.com>")
+set(base_local_planner_MAINTAINER "Huan Li <1124782663@qq.com>")
 set(base_local_planner_PACKAGE_FORMAT "2")
 set(base_local_planner_BUILD_DEPENDS "cmake_modules" "message_generation" "tf2_geometry_msgs" "angles" "costmap" "dynamic_reconfigure" "eigen" "geometry_msgs" "nav_core" "nav_msgs" "pluginlib" "sensor_msgs" "std_msgs" "rosconsole" "roscpp" "rospy" "tf2" "tf2_ros" "visualization_msgs" "voxel_grid")
 set(base_local_planner_BUILD_EXPORT_DEPENDS "angles" "costmap" "dynamic_reconfigure" "eigen" "geometry_msgs" "nav_core" "nav_msgs" "pluginlib" "sensor_msgs" "std_msgs" "rosconsole" "roscpp" "rospy" "tf2" "tf2_ros" "visualization_msgs" "voxel_grid")
