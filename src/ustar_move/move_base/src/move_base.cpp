@@ -814,7 +814,7 @@ namespace move_base {
         //disable the planner thread
         lock.lock();
         runPlanner_ = false;
-        lock.unlock();
+        lock.unlock(); 
 
         as_->setAborted(move_base_msgs::MoveBaseResult(), "Failed to pass global plan to the controller.");
         return true;

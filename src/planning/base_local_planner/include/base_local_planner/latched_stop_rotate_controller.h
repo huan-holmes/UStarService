@@ -1,10 +1,3 @@
-/*
- * latched_stop_rotate_controller.h
- *
- *  Created on: Apr 16, 2012
- *      Author: tkruse
- */
-
 #ifndef LATCHED_STOP_ROTATE_CONTROLLER_H_
 #define LATCHED_STOP_ROTATE_CONTROLLER_H_
 

@@ -35,7 +35,7 @@ bool LatchedStopRotateController::isPositionReached(LocalPlannerUtil* planner_ut
 
   //we assume the global goal is the last point in the global plan
   geometry_msgs::PoseStamped goal_pose;
-  if ( ! planner_util->getGoal(goal_pose)) {
+  if (!planner_util->getGoal(goal_pose)) {
     return false;
   }
 
@@ -69,7 +69,7 @@ bool LatchedStopRotateController::isGoalReached(LocalPlannerUtil* planner_util,
 
   //we assume the global goal is the last point in the global plan
   geometry_msgs::PoseStamped goal_pose;
-  if ( ! planner_util->getGoal(goal_pose)) {
+  if (!planner_util->getGoal(goal_pose)) { 
     return false;
   }
 

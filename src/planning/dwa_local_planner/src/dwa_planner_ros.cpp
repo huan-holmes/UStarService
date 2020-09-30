@@ -105,17 +105,17 @@ namespace dwa_local_planner {
     }
     //when we get a new plan, we also want to clear any latch we may have on goal tolerances
     latchedStopRotateController_.resetLatching();
-
+ 
     ROS_INFO("Got new plan");
-    return dp_->setPlan(orig_global_plan);
+    return dp_->setPlan(orig_global_plan); 
   }
 
   bool DWAPlannerROS::isGoalReached() {
-    if (! isInitialized()) {
+    if (!isInitialized()) {
       ROS_ERROR("This planner has not been initialized, please call initialize() before using this planner");
       return false;
     }
-    if ( ! costmap_ros_->getRobotPose(current_pose_)) {
+    if (!costmap_ros_->getRobotPose(current_pose_)) {
       ROS_ERROR("Could not get robot pose");
       return false;
     }
@@ -147,7 +147,7 @@ namespace dwa_local_planner {
   bool DWAPlannerROS::dwaComputeVelocityCommands(geometry_msgs::PoseStamped &global_pose, geometry_msgs::Twist& cmd_vel) {
     // dynamic window sampling approach to get useful velocity commands
     //ROS_INFO_STREAM(global_pose);
-    if(! isInitialized()){
+    if(!isInitialized()){
       ROS_ERROR("This planner has not been initialized, please call initialize() before using this planner");
       return false;
     }
@@ -230,7 +230,7 @@ namespace dwa_local_planner {
       return false;
     }
     std::vector<geometry_msgs::PoseStamped> transformed_plan;
-    if ( ! planner_util_.getLocalPlan(current_pose_, transformed_plan)) {
+    if (!planner_util_.getLocalPlan(current_pose_, transformed_plan)) {
       ROS_ERROR("Could not get local plan");
       return false;
     }
