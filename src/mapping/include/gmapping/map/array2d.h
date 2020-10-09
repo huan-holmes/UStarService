@@ -1,5 +1,5 @@
-#ifndef ARRAY2D_H_
-#define ARRAY2D_H_
+#ifndef _ARRAY2D_H_
+#define _ARRAY2D_H_
 
 #include <assert.h>
 #include "gmapping/utils/point.h"
@@ -13,33 +13,33 @@ namespace UstarSlam
 	template <class Cell, const bool debug = false>
 	class Array2D
 	{
-	public:
-		Array2D(int xsize = 0, int ysize = 0);
-		Array2D &operator=(const Array2D &);
-		Array2D(const Array2D<Cell, debug> &);
-		~Array2D();
-		void clear();
-		void resize(int xmin, int ymin, int xmax, int ymax);
+		public:
+			Array2D(int xsize = 0, int ysize = 0);
+			Array2D &operator=(const Array2D &);
+			Array2D(const Array2D<Cell, debug> &);
+			~Array2D();
+			void clear();
+			void resize(int xmin, int ymin, int xmax, int ymax);
 
-		inline bool isInside(int x, int y) const;
-		inline const Cell &cell(int x, int y) const;
-		inline Cell &cell(int x, int y);
-		inline AccessibilityState cellState(int x, int y) const { return (AccessibilityState)(isInside(x, y) ? (Inside | Allocated) : Outside); }
+			inline bool isInside(int x, int y) const;
+			inline const Cell &cell(int x, int y) const;
+			inline Cell &cell(int x, int y);
+			inline AccessibilityState cellState(int x, int y) const { return (AccessibilityState)(isInside(x, y) ? (Inside | Allocated) : Outside); }
 
-		inline bool isInside(const IntPoint &p) const { return isInside(p.x, p.y); }
-		inline const Cell &cell(const IntPoint &p) const { return cell(p.x, p.y); }
-		inline Cell &cell(const IntPoint &p) { return cell(p.x, p.y); }
-		inline AccessibilityState cellState(const IntPoint &p) const { return cellState(p.x, p.y); }
+			inline bool isInside(const IntPoint &p) const { return isInside(p.x, p.y); }
+			inline const Cell &cell(const IntPoint &p) const { return cell(p.x, p.y); }
+			inline Cell &cell(const IntPoint &p) { return cell(p.x, p.y); }
+			inline AccessibilityState cellState(const IntPoint &p) const { return cellState(p.x, p.y); }
 
-		inline int getPatchSize() const { return 0; }
-		inline int getPatchMagnitude() const { return 0; }
-		inline int getXSize() const { return m_xsize; }
-		inline int getYSize() const { return m_ysize; }
-		inline Cell **cells() { return m_cells; }
-		Cell **m_cells;
+			inline int getPatchSize() const { return 0; }
+			inline int getPatchMagnitude() const { return 0; }
+			inline int getXSize() const { return m_xsize; }
+			inline int getYSize() const { return m_ysize; }
+			inline Cell **cells() { return m_cells; }
+			Cell **m_cells;
 
-	protected:
-		int m_xsize, m_ysize;
+		protected:
+			int m_xsize, m_ysize;
 	};  
 
 	template <class Cell, const bool debug>

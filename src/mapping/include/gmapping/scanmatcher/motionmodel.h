@@ -1,5 +1,5 @@
-#ifndef MOTIONMODEL_H_
-#define MOTIONMODEL_H_
+#ifndef _MOTIONMODEL_H_
+#define _MOTIONMODEL_H_
 
 #include "gmapping/utils/point.h"
 #include "gmapping/utils/stat.h"

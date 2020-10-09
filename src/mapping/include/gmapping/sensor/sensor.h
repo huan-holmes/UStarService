@@ -1,12 +1,11 @@
-#ifndef SENSOR_H_
-#define SENSOR_H_
+#ifndef _SENSOR_H_
+#define _SENSOR_H_
 
 #include <string>
 #include <map>
 
 namespace UstarSlam
 {
-
 	class Sensor
 	{
 		public:
@@ -14,7 +13,7 @@ namespace UstarSlam
 			virtual ~Sensor();
 			inline std::string getName() const { return m_name; }
 			inline void setName(const std::string &name) { m_name = name; }
-
+			
 		protected:
 			std::string m_name;
 	};

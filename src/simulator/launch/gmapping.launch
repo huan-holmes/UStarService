@@ -60,4 +60,5 @@
 
     <remap from="scan" to="$(arg scan_topic)"/>
   </node>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find simulator)/rviz/robot_mapping.rviz"/>
 </launch>

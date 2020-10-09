@@ -1,5 +1,5 @@
-#ifndef MAP_H_
-#define MAP_H_
+#ifndef _MAP_H_
+#define _MAP_H_
 #include "gmapping/utils/point.h"
 #include <assert.h>
 #include "accessstate.h"
@@ -16,95 +16,95 @@ The cells have to define (int) constructor;
 	template <class Cell, class Storage, const bool isClass = true>
 	class Map
 	{
-	public:
-		Map(int mapSizeX, int mapSizeY, double delta);
-		Map(const Point &center, double worldSizeX, double worldSizeY, double delta);
-		Map(const Point &center, double xmin, double ymin, double xmax, double ymax, double delta);
-		/* the standard implementation works filen in this case*/
-		//Map(const Map& g);
-		//Map& operator =(const Map& g);
-		void resize(double xmin, double ymin, double xmax, double ymax);
-		void grow(double xmin, double ymin, double xmax, double ymax);
-		inline IntPoint world2map(const Point &p) const;
-		inline Point map2world(const IntPoint &p) const;
-		inline IntPoint world2map(double x, double y) const
-		{
-			return world2map(Point(x, y));
-		}
-		inline Point map2world(int x, int y) const
-		{
-			return map2world(IntPoint(x, y));
-		}
+		public:
+			Map(int mapSizeX, int mapSizeY, double delta);
+			Map(const Point &center, double worldSizeX, double worldSizeY, double delta);
+			Map(const Point &center, double xmin, double ymin, double xmax, double ymax, double delta);
+			/* the standard implementation works filen in this case*/
+			//Map(const Map& g);
+			//Map& operator =(const Map& g);
+			void resize(double xmin, double ymin, double xmax, double ymax);
+			void grow(double xmin, double ymin, double xmax, double ymax);
+			inline IntPoint world2map(const Point &p) const;
+			inline Point map2world(const IntPoint &p) const;
+			inline IntPoint world2map(double x, double y) const
+			{
+				return world2map(Point(x, y));
+			}
+			inline Point map2world(int x, int y) const
+			{
+				return map2world(IntPoint(x, y));
+			}
 
-		inline Point getCenter() const { return m_center; }
-		inline double getWorldSizeX() const { return m_worldSizeX; }
-		inline double getWorldSizeY() const { return m_worldSizeY; }
-		inline int getMapSizeX() const { return m_mapSizeX; }
-		inline int getMapSizeY() const { return m_mapSizeY; }
-		inline double getDelta() const { return m_delta; }
-		inline double getMapResolution() const { return m_delta; }
-		inline double getResolution() const { return m_delta; }
-		inline void getSize(double &xmin, double &ymin, double &xmax, double &ymax) const
-		{
-			Point min = map2world(0, 0), max = map2world(IntPoint(m_mapSizeX - 1, m_mapSizeY - 1));
-			xmin = min.x, ymin = min.y, xmax = max.x, ymax = max.y;
-		}
+			inline Point getCenter() const { return m_center; }
+			inline double getWorldSizeX() const { return m_worldSizeX; }
+			inline double getWorldSizeY() const { return m_worldSizeY; }
+			inline int getMapSizeX() const { return m_mapSizeX; }
+			inline int getMapSizeY() const { return m_mapSizeY; }
+			inline double getDelta() const { return m_delta; }
+			inline double getMapResolution() const { return m_delta; }
+			inline double getResolution() const { return m_delta; }
+			inline void getSize(double &xmin, double &ymin, double &xmax, double &ymax) const
+			{
+				Point min = map2world(0, 0), max = map2world(IntPoint(m_mapSizeX - 1, m_mapSizeY - 1));
+				xmin = min.x, ymin = min.y, xmax = max.x, ymax = max.y;
+			}
 
-		inline Cell &cell(int x, int y)
-		{
-			return cell(IntPoint(x, y));
-		}
-		inline Cell &cell(const IntPoint &p);
+			inline Cell &cell(int x, int y)
+			{
+				return cell(IntPoint(x, y));
+			}
+			inline Cell &cell(const IntPoint &p);
 
-		inline const Cell &cell(int x, int y) const
-		{
-			return cell(IntPoint(x, y));
-		}
-		inline const Cell &cell(const IntPoint &p) const;
+			inline const Cell &cell(int x, int y) const
+			{
+				return cell(IntPoint(x, y));
+			}
+			inline const Cell &cell(const IntPoint &p) const;
 
-		inline Cell &cell(double x, double y)
-		{
-			return cell(Point(x, y));
-		}
-		inline Cell &cell(const Point &p);
+			inline Cell &cell(double x, double y)
+			{
+				return cell(Point(x, y));
+			}
+			inline Cell &cell(const Point &p);
 
-		inline const Cell &cell(double x, double y) const
-		{
-			return cell(Point(x, y));
-		}
+			inline const Cell &cell(double x, double y) const
+			{
+				return cell(Point(x, y));
+			}
 
-		inline bool isInside(int x, int y) const
-		{
-			return m_storage.cellState(IntPoint(x, y)) & Inside;
-		}
-		inline bool isInside(const IntPoint &p) const
-		{
-			return m_storage.cellState(p) & Inside;
-		}
+			inline bool isInside(int x, int y) const
+			{
+				return m_storage.cellState(IntPoint(x, y)) & Inside;
+			}
+			inline bool isInside(const IntPoint &p) const
+			{
+				return m_storage.cellState(p) & Inside;
+			}
 
-		inline bool isInside(double x, double y) const
-		{
-			return m_storage.cellState(world2map(x, y)) & Inside;
-		}
-		inline bool isInside(const Point &p) const
-		{
-			return m_storage.cellState(world2map(p)) & Inside;
-		}
+			inline bool isInside(double x, double y) const
+			{
+				return m_storage.cellState(world2map(x, y)) & Inside;
+			}
+			inline bool isInside(const Point &p) const
+			{
+				return m_storage.cellState(world2map(p)) & Inside;
+			}
 
-		inline const Cell &cell(const Point &p) const;
+			inline const Cell &cell(const Point &p) const;
 
-		inline Storage &storage() { return m_storage; }
-		inline const Storage &storage() const { return m_storage; }
-		DoubleArray2D *toDoubleArray() const;
-		Map<double, DoubleArray2D, false> *toDoubleMap() const;
+			inline Storage &storage() { return m_storage; }
+			inline const Storage &storage() const { return m_storage; }
+			DoubleArray2D *toDoubleArray() const;
+			Map<double, DoubleArray2D, false> *toDoubleMap() const;
 
-	protected:
-		Point m_center; 
-		double m_worldSizeX, m_worldSizeY, m_delta;
-		Storage m_storage;
-		int m_mapSizeX, m_mapSizeY;
-		int m_sizeX2, m_sizeY2;
-		static const Cell m_unknown;
+		protected:
+			Point m_center; 
+			double m_worldSizeX, m_worldSizeY, m_delta;
+			Storage m_storage;
+			int m_mapSizeX, m_mapSizeY;
+			int m_sizeX2, m_sizeY2;
+			static const Cell m_unknown;
 	};
 
 	typedef Map<double, DoubleArray2D, false> DoubleMap;

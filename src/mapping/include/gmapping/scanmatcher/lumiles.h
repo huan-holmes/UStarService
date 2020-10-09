@@ -1,5 +1,5 @@
-#ifndef LUMILESPROCESSOR_H_
-#define LUMILESPROCESSOR_H_
+#ifndef _LUMILESPROCESSOR_H_
+#define _LUMILESPROCESSOR_H_
 
 #include "gmapping/utils/point.h"
 

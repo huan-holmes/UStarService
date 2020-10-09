@@ -21,7 +21,6 @@ namespace UstarSlam
 
   MatchProcessor::MatchProcessor() : m_infoStream(cout)
   {
-
     period_ = 5.0;
     m_obsSigmaGain = 1;
     m_resampleThreshold = 0.5;

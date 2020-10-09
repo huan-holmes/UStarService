@@ -1,5 +1,5 @@
-#ifndef HARRAY2D_H_
-#define HARRAY2D_H_
+#ifndef _HARRAY2D_H_
+#define _HARRAY2D_H_
 #include <set>
 #include "gmapping/utils/point.h"
 #include "gmapping/utils/autoptr.h"

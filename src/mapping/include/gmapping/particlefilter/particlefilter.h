@@ -1,5 +1,5 @@
-#ifndef PARTICLEFILTER_H_
-#define PARTICLEFILTER_H_
+#ifndef _PARTICLEFILTER_H_
+#define _PARTICLEFILTER_H_
 #include <stdlib.h>
 #include <float.h>
 #include <sys/types.h>

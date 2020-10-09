@@ -1,5 +1,5 @@
-#ifndef SCANMATCHERPROCESSOR_H_
-#define SCANMATCHERPROCESSOR_H_
+#ifndef _SCANMATCHERPROCESSOR_H_
+#define _SCANMATCHERPROCESSOR_H_
 
 #include "gmapping/log/sensorlog.h"
 #include "gmapping/sensor/rangesensor.h"

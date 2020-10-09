@@ -1,9 +1,13 @@
 #include "gmapping/sensor/odometryreading.h"
 
-namespace UstarSlam{
+namespace UstarSlam
+{
 
-OdometryReading::OdometryReading(const OdometrySensor* odo, double time):
-	SensorReading(odo,time){}
+	OdometryReading::OdometryReading(const OdometrySensor* odo, double time):
+		SensorReading(odo,time)
+	{
+		
+	}
 
 };
 

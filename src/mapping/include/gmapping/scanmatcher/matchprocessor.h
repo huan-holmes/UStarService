@@ -1,5 +1,5 @@
-#ifndef MATCHPROCESSOR_H_
-#define MATCHPROCESSOR_H_
+#ifndef _MATCHPROCESSOR_H_
+#define _MATCHPROCESSOR_H_
 
 #include <climits>
 #include <limits>

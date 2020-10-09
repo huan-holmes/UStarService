@@ -1,16 +1,11 @@
 #include "gmapping/gmapping.h"
-
 #include <iostream>
-
 #include <time.h>
-
 #include "ros/ros.h"
 #include "ros/console.h"
 #include "nav_msgs/MapMetaData.h"
-
 #include "gmapping/sensor/rangesensor.h"
 #include "gmapping/sensor/odometrysensor.h"
-
 #include <rosbag/bag.h>
 #include <rosbag/view.h>
 #include <boost/foreach.hpp>
@@ -35,9 +30,10 @@ namespace UstarSlam
     init();
   } 
 
-  UstarGMapping::UstarGMapping(long unsigned int seed, long unsigned int max_duration_buffer) : map_to_odom_(tf::Transform(tf::createQuaternionFromRPY(0, 0, 0), tf::Point(0, 0, 0))),
-                                                                                                laser_count_(0), private_nh_("~"), scan_filter_sub_(NULL), scan_filter_(NULL), transform_thread_(NULL),
-                                                                                                seed_(seed), tf_(ros::Duration(max_duration_buffer))
+  UstarGMapping::UstarGMapping(long unsigned int seed, long unsigned int max_duration_buffer) : 
+                               map_to_odom_(tf::Transform(tf::createQuaternionFromRPY(0, 0, 0), tf::Point(0, 0, 0))),
+                               laser_count_(0), private_nh_("~"), scan_filter_sub_(NULL), scan_filter_(NULL), transform_thread_(NULL),
+                               seed_(seed), tf_(ros::Duration(max_duration_buffer))
   {
     init();
   }

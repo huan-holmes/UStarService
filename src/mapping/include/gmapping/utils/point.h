@@ -23,7 +23,7 @@ namespace UstarSlam
 	{
 		return point<T>(p1.x + p2.x, p1.y + p2.y);
 	}
-
+ 
 	template <class T>
 	inline point<T> operator-(const point<T> &p1, const point<T> &p2)
 	{

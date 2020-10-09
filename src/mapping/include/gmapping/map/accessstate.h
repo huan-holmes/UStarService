@@ -1,5 +1,5 @@
-#ifndef ACCESSSTATE_H_
-#define ACCESSSTATE_H_
+#ifndef _ACCESSSTATE_H_
+#define _ACCESSSTATE_H_
 
 namespace UstarSlam
 {

@@ -1,5 +1,5 @@
-#ifndef SMMAP_H_
-#define SMMAP_H_
+#ifndef _SMMAP_H_
+#define _SMMAP_H_
 #include "gmapping/map/map.h"
 #include "gmapping/map/harray2d.h"
 #include "gmapping/utils/point.h"

@@ -1,5 +1,5 @@
-#ifndef GRIDLINETRAVERSAL_H_
-#define GRIDLINETRAVERSAL_H_
+#ifndef _GRIDLINETRAVERSAL_H_
+#define _GRIDLINETRAVERSAL_H_
 
 #include <cstdlib>
 #include "gmapping/utils/point.h"
