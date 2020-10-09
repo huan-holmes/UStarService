@@ -7,6 +7,8 @@
 
 
     <node pkg="radar_process" type="my_pcl_node" name="my_pcl_node" output="screen" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find radar_process)/rviz/pcl_cluster.rviz"/>
+
 
     <!-- <node pkg="jsk_rviz_plugins" type="jsk_rviz_plugins", name="jsk_rviz_plugins" output="screen" /> -->
 </launch>
