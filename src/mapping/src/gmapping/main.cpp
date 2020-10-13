@@ -1,5 +1,3 @@
-
-
 #include <ros/ros.h>
 
 #include "gmapping/gmapping.h"

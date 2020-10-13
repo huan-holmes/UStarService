@@ -1,5 +1,5 @@
-#ifndef STAT_H_
-#define STAT_H_
+#ifndef _STAT_H_
+#define _STAT_H_
 #include "gmapping/utils/point.h"
 #include <vector>
 #include "gmapping/utils/gvalues.h"

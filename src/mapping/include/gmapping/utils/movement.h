@@ -1,5 +1,5 @@
-#ifndef FSRMOVEMENT_H
-#define FSRMOVEMENT_H
+#ifndef _FSRMOVEMENT_H
+#define _FSRMOVEMENT_H
 
 #include "gmapping/utils/point.h"
 

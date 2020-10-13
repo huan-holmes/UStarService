@@ -1,5 +1,5 @@
-#ifndef MACRO_PARAMS_H_
-#define MACRO_PARAMS_H_
+#ifndef _MACRO_PARAMS_H_
+#define _MACRO_PARAMS_H_
 
 #define PARAM_SET_GET(type, name, qualifier, setqualifier, getqualifier)\
 qualifier: type m_##name;\

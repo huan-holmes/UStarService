@@ -480,7 +480,6 @@ namespace UstarSlam
 
   void UstarGMapping::laserCallback(const sensor_msgs::LaserScan::ConstPtr &scan)
   {
-    ROS_INFO_STREAM("----laserCallback()----");
     laser_count_++;
     if ((laser_count_ % throttle_scans_) != 0)
       return;
@@ -547,7 +546,6 @@ namespace UstarSlam
   void UstarGMapping::updateMap(const sensor_msgs::LaserScan &scan)
   {
     ROS_DEBUG("Update map");
-    ROS_INFO_STREAM("----updateMap()----");
     boost::mutex::scoped_lock map_lock(map_mutex_);
     UstarSlam::ScanMatcher matcher;
 

@@ -1,5 +1,5 @@
-#ifndef RANGEREADING_H_
-#define RANGEREADING_H_
+#ifndef _RANGEREADING_H_
+#define _RANGEREADING_H_
 
 #include <vector>
 #include "sensorreading.h"

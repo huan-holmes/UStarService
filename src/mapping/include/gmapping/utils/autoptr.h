@@ -1,5 +1,5 @@
-#ifndef AUTOPTR_H_
-#define AUTOPTR_H_
+#ifndef _AUTOPTR_H_
+#define _AUTOPTR_H_
 #include <assert.h>
 
 namespace UstarSlam

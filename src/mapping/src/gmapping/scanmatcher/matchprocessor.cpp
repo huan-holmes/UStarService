@@ -253,8 +253,6 @@ namespace UstarSlam
 
   void MatchProcessor::setSensorMap(const SensorMap &smap)
   {
-    ROS_INFO_STREAM("----setSensorMap()----");
-
     /*
       Construct the angle table for the sensor
       

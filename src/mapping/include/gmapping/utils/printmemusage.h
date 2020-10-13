@@ -1,5 +1,5 @@
-#ifndef PRINTMEMUSAGE_H
-#define PRINTMEMUSAGE_H
+#ifndef _PRINTMEMUSAGE_H
+#define _PRINTMEMUSAGE_H
 #include <sys/types.h>
 #include <unistd.h>
 #include <iostream>

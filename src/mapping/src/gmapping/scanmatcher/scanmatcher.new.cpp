@@ -392,7 +392,6 @@ namespace UstarSlam
 
 	void ScanMatcher::setLaserParameters(unsigned int beams, double *angles, const OrientedPoint &lpose)
 	{
-		ROS_INFO_STREAM("----setLaserParameters()-----");
 		// if (m_laserAngles)
 		// 	delete[] m_laserAngles;
 		m_laserPose = lpose; 

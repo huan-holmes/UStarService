@@ -1,5 +1,5 @@
-#ifndef CARMENCONFIGURATION_H_
-#define CARMENCONFIGURATION_H_
+#ifndef _CARMENCONFIGURATION_H_
+#define _CARMENCONFIGURATION_H_
 
 #include <string>
 #include <map>
@@ -13,9 +13,9 @@ namespace UstarSlam
 
 	class CarmenConfiguration : public Configuration, public std::map<std::string, std::vector<std::string>>
 	{
-	public:
-		virtual std::istream &load(std::istream &is);
-		virtual SensorMap computeSensorMap() const;
+		public:
+			virtual std::istream &load(std::istream &is);
+			virtual SensorMap computeSensorMap() const;
 	};
 
 }; // namespace UstarSlam
