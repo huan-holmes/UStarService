@@ -1,5 +1,5 @@
-#ifndef PF_H_
-#define PF_H_
+#ifndef _PF_H_
+#define _PF_H_
 
 #include "localization/pf/pf_vector.h"
 #include "localization/pf/pf_kdtree.h"

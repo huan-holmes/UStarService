@@ -1,5 +1,5 @@
-#ifndef PF_KDTREE_H_
-#define PF_KDTREE_H_
+#ifndef _PF_KDTREE_H_
+#define _PF_KDTREE_H_
 
 #ifdef INCLUDE_RTKGUI
 #include "rtk.h"

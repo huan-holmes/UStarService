@@ -1,5 +1,5 @@
-#ifndef ODOMETRYSENSOR_H_
-#define ODOMETRYSENSOR_H_
+#ifndef _ODOMETRYSENSOR_H_
+#define _ODOMETRYSENSOR_H_
 
 #include "localization/sensor/sensor.h"
 #include "localization/pf/pf_pdf.h"

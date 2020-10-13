@@ -1,5 +1,5 @@
-#ifndef PF_VECTOR_H_
-#define PF_VECTOR_H_
+#ifndef _PF_VECTOR_H_
+#define _PF_VECTOR_H_
 
 #ifdef __cplusplus
 extern "C" {

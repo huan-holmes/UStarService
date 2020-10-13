@@ -1,5 +1,5 @@
-#ifndef LASERSENSOR_H_
-#define LASERSENSOR_H_
+#ifndef _LASERSENSOR_H_
+#define _LASERSENSOR_H_
 
 #include "localization/sensor/sensor.h"
 #include "localization/map/map.h"

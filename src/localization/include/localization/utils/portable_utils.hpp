@@ -1,5 +1,5 @@
-#ifndef PORTABLE_UTILS_H_
-#define PORTABLE_UTILS_H_
+#ifndef _PORTABLE_UTILS_H_
+#define _PORTABLE_UTILS_H_
 
 #include <stdlib.h>
 

@@ -1,5 +1,5 @@
-#ifndef PF_PDF_H_
-#define PF_PDF_H_
+#ifndef _PF_PDF_H_
+#define _PF_PDF_H_
 
 #include "localization/pf/pf_vector.h"
 

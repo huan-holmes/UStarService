@@ -1,5 +1,5 @@
-#ifndef SENSOR_H_
-#define SENSOR_H_
+#ifndef _SENSOR_H_
+#define _SENSOR_H_
 
 #include "localization/pf/pf.h"
 
