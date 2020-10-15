@@ -41,25 +41,9 @@ class MapGenerator
 
       fprintf(out, "P5\n# CREATOR: map_saver.cpp %.3f m/pix\n%d %d\n255\n",
               map->info.resolution, map->info.width, map->info.height);
-      // for(unsigned int y = 0; y < map->info.height; y++) {
-      //   for(unsigned int x = 0; x < map->info.width; x++) {
-      //     unsigned int i = x + (map->info.height - y - 1) * map->info.width;
-      //     if (map->data[i] < 0){
-      //       fputc(000, out);
-      //       continue;
-      //     }
-      //     if (map->data[i] >= 0 && map->data[i] <= threshold_free_) { // [0,free)
-      //       fputc(254, out);
-      //     } else if (map->data[i] >= threshold_occupied_) { // (occ,255]
-      //       fputc(000, out);
-      //     } else { //occ [0.25,0.65]
-      //       fputc(205, out);
-      //     }
-      //   }
-      // }
-      for(unsigned int x = 0; x < map->info.width; x++) {
-        for(unsigned int y = 0; y < map->info.height; y++) {
-          unsigned int i = x + y * map->info.width;
+      for(unsigned int y = 0; y < map->info.height; y++) {
+        for(unsigned int x = 0; x < map->info.width; x++) {
+          unsigned int i = x + (map->info.height - y - 1) * map->info.width;
           if (map->data[i] < 0){
             fputc(000, out);
             continue;
@@ -73,6 +57,22 @@ class MapGenerator
           }
         }
       }
+      // for(unsigned int x = 0; x < map->info.width; x++) {
+      //   for(unsigned int y = 0; y < map->info.height; y++) {
+      //     unsigned int i = x + y * map->info.width;
+      //     if (map->data[i] < 0){
+      //       fputc(000, out);
+      //       continue;
+      //     }
+      //     if (map->data[i] >= 0 && map->data[i] <= threshold_free_) { // [0,free)
+      //       fputc(254, out);
+      //     } else if (map->data[i] >= threshold_occupied_) { // (occ,255]
+      //       fputc(000, out);
+      //     } else { //occ [0.25,0.65]
+      //       fputc(205, out);
+      //     }
+      //   }
+      // }
 
       fclose(out);
 
