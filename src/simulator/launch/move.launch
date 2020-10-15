@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <launch>
-  <arg name="initial_pose_x" default="2.0"/>
-  <arg name="initial_pose_y" default="2.0"/>
+  <arg name="initial_pose_x" default="1.0"/>
+  <arg name="initial_pose_y" default="1.0"/>
   <arg name="initial_pose_a" default="0.0"/>
 
   <!--  ************** Navigation  ***************  -->
   <include file="$(find simulator)/launch/include/move_base.launch.xml"/>
 
   <!--  ****** Maps *****  -->
-  <arg name="map_file" default="$(find simulator)/map/map1.yaml"/>
+  <arg name="map_file" default="$(find simulator)/map/map3.yaml"/>
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)">
     <param name="frame_id" value="/map"/>
   </node>
