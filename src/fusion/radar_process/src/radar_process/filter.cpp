@@ -19,7 +19,7 @@ namespace UstarFusion
         //scan_sub_ = nh_.subscribe<sensor_msgs::LaserScan> ("/scan", 100, &LaserFilter::scanCallback, this);
 
         //订阅　"/scan"
-        scan_sub_ = nh_.subscribe<sensor_msgs::LaserScan>("/scan", 10, &LaserFilter::scanCallback_2, this);
+        scan_sub_ = nh_.subscribe<sensor_msgs::LaserScan>("/scan", 10, &LaserFilter::scanCallback, this);
 
         //发布LaserScan转换为PointCloud2的后的数据
         point_cloud_pub_ = nh_.advertise<sensor_msgs::PointCloud2>("/cloud2", 10, false);
@@ -34,8 +34,9 @@ namespace UstarFusion
 
     void LaserFilter::scanCallback(const sensor_msgs::LaserScan::ConstPtr &scan)
     {
+        // ROS_INFO_STREAM("----scanCallback()----");
         sensor_msgs::PointCloud2 cloud;
-        projector_.transformLaserScanToPointCloud("laser", *scan, cloud, tfListener_);
+        projector_.transformLaserScanToPointCloud(scan->header.frame_id  , *scan, cloud, tfListener_);
         point_cloud_pub_.publish(cloud);
     }
 
@@ -47,7 +48,7 @@ namespace UstarFusion
         //普通转换
         //projector_.projectLaser(*scan, cloud);
         //使用tf的转换
-        projector_.transformLaserScanToPointCloud("laser", *scan, cloud, tfListener_);
+        projector_.transformLaserScanToPointCloud("base_laser_link", *scan, cloud, tfListener_);
 
         int row_step = cloud.row_step;
         int height = cloud.height;
@@ -130,7 +131,7 @@ namespace UstarFusion
         {
             bbox_array.boxes.push_back(obj_list[i].bounding_box_);
         }
-        bbox_array.header.frame_id = "laser";
+        bbox_array.header.frame_id = "base_laser_link";
 
         box_array_pub_.publish(bbox_array);
     }
@@ -238,7 +239,7 @@ namespace UstarFusion
             double width_ = obj_info.max_point_.y - obj_info.min_point_.y;
             double height_ = obj_info.max_point_.z - obj_info.min_point_.z;
 
-            obj_info.bounding_box_.header.frame_id = "laser";
+            obj_info.bounding_box_.header.frame_id = "base_laser_link";
 
             obj_info.bounding_box_.pose.position.x = obj_info.min_point_.x + length_ / 2;
             obj_info.bounding_box_.pose.position.y = obj_info.min_point_.y + width_ / 2;
@@ -275,7 +276,7 @@ namespace UstarFusion
         {
             return true;
         }
-        ROS_INFO_STREAM(max_dist);
+        // ROS_INFO_STREAM(max_dist);
         return false;
     }
     bool LaserFilter::checkStaticObstacle(float center_x, float center_y, pcl::PointIndices local_indice, const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &in_pc)
