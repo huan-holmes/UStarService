@@ -12,7 +12,7 @@ else
 	echo "stage start falied"
 fi
 if [ $move -eq 1 ]; then
-	sleep 10
+	sleep 15
 	gnome-terminal --tab -e 'bash -c "rosrun rqt_reconfigure rqt_reconfigure"'
 	rqt=1
 else

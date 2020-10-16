@@ -9,8 +9,10 @@ Panels:
         - /TF1/Frames1
         - /TF1/Tree1
         - /Local Planning1
+        - /Local Planning1/Costmap1
         - /Global Planning1
         - /Global Planning1/Planner1
+        - /BoundingBoxArray1
       Splitter Ratio: 0.5
     Tree Height: 815
   - Class: rviz/Selection
@@ -610,6 +612,18 @@ Visualization Manager:
         {}
       Queue Size: 100
       Value: false
+    - Class: jsk_rviz_plugin/BoundingBoxArray
+      Enabled: true
+      Name: BoundingBoxArray
+      Topic: /detected_bounding_boxs
+      Unreliable: false
+      Value: true
+      alpha: 0.800000012
+      color: 25; 255; 0
+      coloring: Auto
+      line width: 0.00499999989
+      only edge: false
+      show coords: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -646,10 +660,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 1.52980006
+      Pitch: 1.51980007
       Target Frame: base_link
       Value: Orbit (rviz)
-      Yaw: 6.14821005
+      Yaw: 6.13820982
     Saved: ~
 Window Geometry:
   Displays:
