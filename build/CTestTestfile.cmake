@@ -7,6 +7,7 @@
 subdirs(gtest)
 subdirs(perception)
 subdirs(control)
+subdirs(map_server)
 subdirs(simulator)
 subdirs(drivers/ltme_node-master)
 subdirs(mapping)

@@ -19,10 +19,12 @@ typedef enum
 class OdometrySensorData : public SensorData
 {
   // Odometric pose
-  public: pf_vector_t pose;
+  public: 
+    pf_vector_t pose;
 
   // Change in odometric pose
-  public: pf_vector_t delta;
+  public: 
+    pf_vector_t delta;
 };
 
 

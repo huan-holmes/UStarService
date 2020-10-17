@@ -959,6 +959,214 @@ tf2_msgs_generate_messages_py/fast:
 .PHONY : tf2_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named run_tests_map_server_gtest_map_server_utest
+
+# Build rule for target.
+run_tests_map_server_gtest_map_server_utest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_map_server_gtest_map_server_utest
+.PHONY : run_tests_map_server_gtest_map_server_utest
+
+# fast build rule for target.
+run_tests_map_server_gtest_map_server_utest/fast:
+	$(MAKE) -f map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/build.make map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/build
+.PHONY : run_tests_map_server_gtest_map_server_utest/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_map_server_rostest
+
+# Build rule for target.
+_run_tests_map_server_rostest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_map_server_rostest
+.PHONY : _run_tests_map_server_rostest
+
+# fast build rule for target.
+_run_tests_map_server_rostest/fast:
+	$(MAKE) -f map_server/CMakeFiles/_run_tests_map_server_rostest.dir/build.make map_server/CMakeFiles/_run_tests_map_server_rostest.dir/build
+.PHONY : _run_tests_map_server_rostest/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_map_server_gtest
+
+# Build rule for target.
+_run_tests_map_server_gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_map_server_gtest
+.PHONY : _run_tests_map_server_gtest
+
+# fast build rule for target.
+_run_tests_map_server_gtest/fast:
+	$(MAKE) -f map_server/CMakeFiles/_run_tests_map_server_gtest.dir/build.make map_server/CMakeFiles/_run_tests_map_server_gtest.dir/build
+.PHONY : _run_tests_map_server_gtest/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_map_server_gtest_map_server_utest
+
+# Build rule for target.
+_run_tests_map_server_gtest_map_server_utest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_map_server_gtest_map_server_utest
+.PHONY : _run_tests_map_server_gtest_map_server_utest
+
+# fast build rule for target.
+_run_tests_map_server_gtest_map_server_utest/fast:
+	$(MAKE) -f map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/build.make map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/build
+.PHONY : _run_tests_map_server_gtest_map_server_utest/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_map_server_gtest
+
+# Build rule for target.
+run_tests_map_server_gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_map_server_gtest
+.PHONY : run_tests_map_server_gtest
+
+# fast build rule for target.
+run_tests_map_server_gtest/fast:
+	$(MAKE) -f map_server/CMakeFiles/run_tests_map_server_gtest.dir/build.make map_server/CMakeFiles/run_tests_map_server_gtest.dir/build
+.PHONY : run_tests_map_server_gtest/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_map_server
+
+# Build rule for target.
+run_tests_map_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_map_server
+.PHONY : run_tests_map_server
+
+# fast build rule for target.
+run_tests_map_server/fast:
+	$(MAKE) -f map_server/CMakeFiles/run_tests_map_server.dir/build.make map_server/CMakeFiles/run_tests_map_server.dir/build
+.PHONY : run_tests_map_server/fast
+
+#=============================================================================
+# Target rules for targets named map_server_image_loader
+
+# Build rule for target.
+map_server_image_loader: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 map_server_image_loader
+.PHONY : map_server_image_loader
+
+# fast build rule for target.
+map_server_image_loader/fast:
+	$(MAKE) -f map_server/CMakeFiles/map_server_image_loader.dir/build.make map_server/CMakeFiles/map_server_image_loader.dir/build
+.PHONY : map_server_image_loader/fast
+
+#=============================================================================
+# Target rules for targets named map_server
+
+# Build rule for target.
+map_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 map_server
+.PHONY : map_server
+
+# fast build rule for target.
+map_server/fast:
+	$(MAKE) -f map_server/CMakeFiles/map_server.dir/build.make map_server/CMakeFiles/map_server.dir/build
+.PHONY : map_server/fast
+
+#=============================================================================
+# Target rules for targets named map_server-map_saver
+
+# Build rule for target.
+map_server-map_saver: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 map_server-map_saver
+.PHONY : map_server-map_saver
+
+# fast build rule for target.
+map_server-map_saver/fast:
+	$(MAKE) -f map_server/CMakeFiles/map_server-map_saver.dir/build.make map_server/CMakeFiles/map_server-map_saver.dir/build
+.PHONY : map_server-map_saver/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_map_server
+
+# Build rule for target.
+_run_tests_map_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_map_server
+.PHONY : _run_tests_map_server
+
+# fast build rule for target.
+_run_tests_map_server/fast:
+	$(MAKE) -f map_server/CMakeFiles/_run_tests_map_server.dir/build.make map_server/CMakeFiles/_run_tests_map_server.dir/build
+.PHONY : _run_tests_map_server/fast
+
+#=============================================================================
+# Target rules for targets named map_server_utest
+
+# Build rule for target.
+map_server_utest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 map_server_utest
+.PHONY : map_server_utest
+
+# fast build rule for target.
+map_server_utest/fast:
+	$(MAKE) -f map_server/CMakeFiles/map_server_utest.dir/build.make map_server/CMakeFiles/map_server_utest.dir/build
+.PHONY : map_server_utest/fast
+
+#=============================================================================
+# Target rules for targets named clean_test_results_map_server
+
+# Build rule for target.
+clean_test_results_map_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results_map_server
+.PHONY : clean_test_results_map_server
+
+# fast build rule for target.
+clean_test_results_map_server/fast:
+	$(MAKE) -f map_server/CMakeFiles/clean_test_results_map_server.dir/build.make map_server/CMakeFiles/clean_test_results_map_server.dir/build
+.PHONY : clean_test_results_map_server/fast
+
+#=============================================================================
+# Target rules for targets named rtest
+
+# Build rule for target.
+rtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rtest
+.PHONY : rtest
+
+# fast build rule for target.
+rtest/fast:
+	$(MAKE) -f map_server/CMakeFiles/rtest.dir/build.make map_server/CMakeFiles/rtest.dir/build
+.PHONY : rtest/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_map_server_rostest_test_rtest.xml
+
+# Build rule for target.
+run_tests_map_server_rostest_test_rtest.xml: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_map_server_rostest_test_rtest.xml
+.PHONY : run_tests_map_server_rostest_test_rtest.xml
+
+# fast build rule for target.
+run_tests_map_server_rostest_test_rtest.xml/fast:
+	$(MAKE) -f map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/build.make map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/build
+.PHONY : run_tests_map_server_rostest_test_rtest.xml/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_map_server_rostest
+
+# Build rule for target.
+run_tests_map_server_rostest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_map_server_rostest
+.PHONY : run_tests_map_server_rostest
+
+# fast build rule for target.
+run_tests_map_server_rostest/fast:
+	$(MAKE) -f map_server/CMakeFiles/run_tests_map_server_rostest.dir/build.make map_server/CMakeFiles/run_tests_map_server_rostest.dir/build
+.PHONY : run_tests_map_server_rostest/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_map_server_rostest_test_rtest.xml
+
+# Build rule for target.
+_run_tests_map_server_rostest_test_rtest.xml: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_map_server_rostest_test_rtest.xml
+.PHONY : _run_tests_map_server_rostest_test_rtest.xml
+
+# fast build rule for target.
+_run_tests_map_server_rostest_test_rtest.xml/fast:
+	$(MAKE) -f map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/build.make map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/build
+.PHONY : _run_tests_map_server_rostest_test_rtest.xml/fast
+
+#=============================================================================
 # Target rules for targets named ltme_node
 
 # Build rule for target.
@@ -3073,6 +3281,22 @@ help:
 	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... actionlib_msgs_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_py"
+	@echo "... run_tests_map_server_gtest_map_server_utest"
+	@echo "... _run_tests_map_server_rostest"
+	@echo "... _run_tests_map_server_gtest"
+	@echo "... _run_tests_map_server_gtest_map_server_utest"
+	@echo "... run_tests_map_server_gtest"
+	@echo "... run_tests_map_server"
+	@echo "... map_server_image_loader"
+	@echo "... map_server"
+	@echo "... map_server-map_saver"
+	@echo "... _run_tests_map_server"
+	@echo "... map_server_utest"
+	@echo "... clean_test_results_map_server"
+	@echo "... rtest"
+	@echo "... run_tests_map_server_rostest_test_rtest.xml"
+	@echo "... run_tests_map_server_rostest"
+	@echo "... _run_tests_map_server_rostest_test_rtest.xml"
 	@echo "... ltme_node"
 	@echo "... ldcp_sdk"
 	@echo "... gmapping_node"

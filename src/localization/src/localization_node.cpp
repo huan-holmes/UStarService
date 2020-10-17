@@ -98,11 +98,10 @@ static const std::string scan_topic_ = "scan";
 /* This function is only useful to have the whole code work
  * with old rosbags that have trailing slashes for their frames
  */
-inline
-std::string stripSlash(const std::string& in)
+inline std::string stripSlash(const std::string& in)
 {
   std::string out = in;
-  if ( ( !in.empty() ) && (in[0] == '/') )
+  if ((!in.empty()) && (in[0] == '/'))
     out.erase(0,1);
   return out;
 }
@@ -165,9 +164,9 @@ class LocalizationNode
     // Pose-generating function used to uniformly distribute particles over
     // the map
     static pf_vector_t uniformPoseGenerator(void* arg);
-#if NEW_UNIFORM_SAMPLING
+    #if NEW_UNIFORM_SAMPLING
     static std::vector<std::pair<int,int> > free_space_indices;
-#endif
+    #endif
     //parameter for what odom to use
     std::string odom_frame_id_;
 
@@ -195,9 +194,9 @@ class LocalizationNode
     message_filters::Subscriber<sensor_msgs::LaserScan>* laser_scan_sub_;
     tf2_ros::MessageFilter<sensor_msgs::LaserScan>* laser_scan_filter_;
     ros::Subscriber initial_pose_sub_;
-    std::vector< LaserSensor* > lasers_;
-    std::vector< bool > lasers_update_;
-    std::map< std::string, int > frame_to_laser_;
+    std::vector<LaserSensor*> lasers_;
+    std::vector<bool> lasers_update_;
+    std::map<std::string, int> frame_to_laser_;
 
     // Particle filter
     pf_t *pf_; 
@@ -457,7 +456,7 @@ LocalizationNode::LocalizationNode() :
   pose_pub_ = nh_.advertise<geometry_msgs::PoseWithCovarianceStamped>("amcl_pose", 2, true);
   particlecloud_pub_ = nh_.advertise<geometry_msgs::PoseArray>("particlecloud", 2, true);
   global_loc_srv_ = nh_.advertiseService("global_localization", 
-					 &LocalizationNode::globalLocalizationCallback,
+					 &LocalizationNode::globalLocalizationCallback, 
                                          this);
   nomotion_update_srv_= nh_.advertiseService("request_nomotion_update", &LocalizationNode::nomotionUpdateCallback, this);
   set_map_srv_= nh_.advertiseService("set_map", &LocalizationNode::setMapCallback, this);
@@ -579,9 +578,9 @@ void LocalizationNode::reconfigureCB(localization::LOCALIZATIONConfig &config, u
   lasers_update_.clear();
   frame_to_laser_.clear();
 
-  if( pf_ != NULL )
+  if(pf_ != NULL)
   {
-    pf_free( pf_ );
+    pf_free( pf_);
     pf_ = NULL;
   }	
   pf_ = pf_alloc(min_particles_, max_particles_,
@@ -611,7 +610,7 @@ void LocalizationNode::reconfigureCB(localization::LOCALIZATIONConfig &config, u
   delete odom_;
   odom_ = new OdometrySensor();
   ROS_ASSERT(odom_);
-  odom_->SetModel( odom_model_type_, alpha1_, alpha2_, alpha3_, alpha4_, alpha5_ );
+  odom_->SetModel(odom_model_type_, alpha1_, alpha2_, alpha3_, alpha4_, alpha5_);
   // Laser
   delete laser_;
   laser_ = new LaserSensor(max_beams_, map_);
@@ -811,8 +810,7 @@ void LocalizationNode::updatePoseFromServer()
     ROS_WARN("ignoring NAN in initial covariance AA");	
 }
 
-void 
-LocalizationNode::checkLaserReceived(const ros::TimerEvent& event)
+void LocalizationNode::checkLaserReceived(const ros::TimerEvent& event)
 {
   ros::Duration d = ros::Time::now() - last_laser_received_ts_;
   if(d > laser_check_interval_)
@@ -823,13 +821,12 @@ LocalizationNode::checkLaserReceived(const ros::TimerEvent& event)
   }
 }
 
-void
-LocalizationNode::requestMap()
+void LocalizationNode::requestMap()
 {
   boost::recursive_mutex::scoped_lock ml(configuration_mutex_);
 
   // get map via RPC
-  nav_msgs::GetMap::Request  req;
+  nav_msgs::GetMap::Request req;
   nav_msgs::GetMap::Response resp;
   ROS_INFO("Requesting the map...");
   while(!ros::service::call("static_map", req, resp))
@@ -838,23 +835,21 @@ LocalizationNode::requestMap()
     ros::Duration d(0.5);
     d.sleep();
   }
-  handleMapMessage( resp.map );
+  handleMapMessage(resp.map);
 }
 
-void
-LocalizationNode::mapReceived(const nav_msgs::OccupancyGridConstPtr& msg)
+void LocalizationNode::mapReceived(const nav_msgs::OccupancyGridConstPtr& msg)
 {
-  if( first_map_only_ && first_map_received_ ) {
+  if(first_map_only_ && first_map_received_) {
     return;
   }
 
-  handleMapMessage( *msg );
+  handleMapMessage(*msg);
 
   first_map_received_ = true;
 }
 
-void
-LocalizationNode::handleMapMessage(const nav_msgs::OccupancyGrid& msg)
+void LocalizationNode::handleMapMessage(const nav_msgs::OccupancyGrid& msg)
 {
   boost::recursive_mutex::scoped_lock cfl(configuration_mutex_);
 
@@ -877,14 +872,14 @@ LocalizationNode::handleMapMessage(const nav_msgs::OccupancyGrid& msg)
 
   map_ = convertMap(msg);
 
-#if NEW_UNIFORM_SAMPLING
+  #if NEW_UNIFORM_SAMPLING
   // Index of free space
   free_space_indices.resize(0);
   for(int i = 0; i < map_->size_x; i++)
     for(int j = 0; j < map_->size_y; j++)
       if(map_->cells[MAP_INDEX(map_,i,j)].occ_state == -1)
         free_space_indices.push_back(std::make_pair(i,j));
-#endif
+  #endif
   // Create the particle filter
   pf_ = pf_alloc(min_particles_, max_particles_,
                  alpha_slow_, alpha_fast_,
@@ -912,7 +907,7 @@ LocalizationNode::handleMapMessage(const nav_msgs::OccupancyGrid& msg)
   delete odom_;
   odom_ = new OdometrySensor();
   ROS_ASSERT(odom_);
-  odom_->SetModel( odom_model_type_, alpha1_, alpha2_, alpha3_, alpha4_, alpha5_ );
+  odom_->SetModel(odom_model_type_, alpha1_, alpha2_, alpha3_, alpha4_, alpha5_);
   // Laser
   delete laser_;
   laser_ = new LaserSensor(max_beams_, map_);
@@ -934,7 +929,7 @@ LocalizationNode::handleMapMessage(const nav_msgs::OccupancyGrid& msg)
     laser_->SetModelLikelihoodField(z_hit_, z_rand_, sigma_hit_,
                                     laser_likelihood_max_dist_);
     ROS_INFO("Done initializing likelihood field model.");
-  }
+  } 
 
   // In case the initial pose message arrived before the first map,
   // try to apply the initial pose now that the map has arrived.
@@ -942,15 +937,14 @@ LocalizationNode::handleMapMessage(const nav_msgs::OccupancyGrid& msg)
 
 }
 
-void
-LocalizationNode::freeMapDependentMemory()
+void LocalizationNode::freeMapDependentMemory()
 {
-  if( map_ != NULL ) {
-    map_free( map_ );
+  if(map_ != NULL) {
+    map_free(map_);
     map_ = NULL;
   }
-  if( pf_ != NULL ) {
-    pf_free( pf_ );
+  if(pf_ != NULL) {
+    pf_free(pf_);
     pf_ = NULL;
   }
   delete odom_;
@@ -963,8 +957,7 @@ LocalizationNode::freeMapDependentMemory()
  * Convert an OccupancyGrid map message into the internal
  * representation.  This allocates a map_t and returns it.
  */
-map_t*
-LocalizationNode::convertMap( const nav_msgs::OccupancyGrid& map_msg )
+map_t* LocalizationNode::convertMap( const nav_msgs::OccupancyGrid& map_msg )
 {
   map_t* map = map_alloc();
   ROS_ASSERT(map);
@@ -986,7 +979,6 @@ LocalizationNode::convertMap( const nav_msgs::OccupancyGrid& map_msg )
     else
       map->cells[i].occ_state = 0;
   }
-
   return map;
 }
 
@@ -999,8 +991,7 @@ LocalizationNode::~LocalizationNode()
   // TODO: delete everything allocated in constructor
 }
 
-bool
-LocalizationNode::getOdomPose(geometry_msgs::PoseStamped& odom_pose,
+bool LocalizationNode::getOdomPose(geometry_msgs::PoseStamped& odom_pose,
                       double& x, double& y, double& yaw,
                       const ros::Time& t, const std::string& f)
 {
@@ -1026,8 +1017,7 @@ LocalizationNode::getOdomPose(geometry_msgs::PoseStamped& odom_pose,
 }
 
 
-pf_vector_t
-LocalizationNode::uniformPoseGenerator(void* arg)
+pf_vector_t LocalizationNode::uniformPoseGenerator(void* arg)
 {
   map_t* map = (map_t*)arg;
 #if NEW_UNIFORM_SAMPLING
@@ -1064,8 +1054,7 @@ LocalizationNode::uniformPoseGenerator(void* arg)
   return p;
 }
 
-bool
-LocalizationNode::globalLocalizationCallback(std_srvs::Empty::Request& req,
+bool LocalizationNode::globalLocalizationCallback(std_srvs::Empty::Request& req,
                                      std_srvs::Empty::Response& res)
 {
   if( map_ == NULL ) {
@@ -1081,8 +1070,7 @@ LocalizationNode::globalLocalizationCallback(std_srvs::Empty::Request& req,
 }
 
 // force nomotion updates (amcl updating without requiring motion)
-bool 
-LocalizationNode::nomotionUpdateCallback(std_srvs::Empty::Request& req,
+bool LocalizationNode::nomotionUpdateCallback(std_srvs::Empty::Request& req,
                                      std_srvs::Empty::Response& res)
 {
 	m_force_update = true;
@@ -1090,8 +1078,7 @@ LocalizationNode::nomotionUpdateCallback(std_srvs::Empty::Request& req,
 	return true;
 }
 
-bool
-LocalizationNode::setMapCallback(nav_msgs::SetMap::Request& req,
+bool LocalizationNode::setMapCallback(nav_msgs::SetMap::Request& req,
                          nav_msgs::SetMap::Response& res)
 {
   handleMapMessage(req.map);
@@ -1100,12 +1087,11 @@ LocalizationNode::setMapCallback(nav_msgs::SetMap::Request& req,
   return true;
 }
 
-void
-LocalizationNode::laserReceived(const sensor_msgs::LaserScanConstPtr& laser_scan)
+void LocalizationNode::laserReceived(const sensor_msgs::LaserScanConstPtr& laser_scan)
 {
   std::string laser_scan_frame_id = stripSlash(laser_scan->header.frame_id);
   last_laser_received_ts_ = ros::Time::now();
-  if( map_ == NULL ) {
+  if(map_ == NULL) {
     return;
   }
   boost::recursive_mutex::scoped_lock lr(configuration_mutex_);
@@ -1180,7 +1166,7 @@ LocalizationNode::laserReceived(const sensor_msgs::LaserScanConstPtr& laser_scan
                   fabs(delta.v[1]) > d_thresh_ ||
                   fabs(delta.v[2]) > a_thresh_;
     update = update || m_force_update;
-    m_force_update=false;
+    m_force_update = false;
 
     // Set the laser update flags
     if(update)
