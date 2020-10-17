@@ -253,7 +253,7 @@ namespace UstarLocalization
           z = self->map->cells[MAP_INDEX(self->map, mi, mj)].occ_dist;
         // Gaussian model
         // NOTE: this should have a normalization of 1/(sqrt(2pi)*sigma)
-        pz += self->z_hit * exp(-(z * z) / z_hit_denom);
+        pz += self->z_hit * sqrt(2 * M_PI) * self->sigma_hit * exp(-(z * z) / z_hit_denom);
         // Part 2: random measurements
         pz += self->z_rand * z_rand_mult;
 
