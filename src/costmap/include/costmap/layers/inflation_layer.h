@@ -68,13 +68,13 @@ namespace UstarCostmap
       unsigned char cost = 0;
       if (distance == 0)
         cost = LETHAL_OBSTACLE;
-      else if (distance * resolution_ <= inscribed_radius_)
+      else if (distance * resolution_ <= (inscribed_radius_ + 0.1))
         cost = INSCRIBED_INFLATED_OBSTACLE;
       else
       {
         // make sure cost falls off by Euclidean distance
         double euclidean_distance = distance * resolution_;
-        double factor = exp(-1.0 * weight_ * (euclidean_distance - inscribed_radius_));
+        double factor = exp(-1.0 * weight_ * (euclidean_distance - inscribed_radius_ - 0.1));
         cost = (unsigned char)((INSCRIBED_INFLATED_OBSTACLE - 1) * factor); 
       }
       return cost;
