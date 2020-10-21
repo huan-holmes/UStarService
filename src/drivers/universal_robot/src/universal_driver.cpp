@@ -339,7 +339,7 @@ UniversalNode::UniversalNode() {
             sleep(1);
         }
     } else {
-        odom_dev_ = "/dev/ttyUSB0";
+        odom_dev_ = "/dev/ttyS0";
     }
     nh.param<float>("robooster_slow_down", kinematic_.slow_down, 1.0);
     nh.param<float>("robooster_wheel_radius", kinematic_.wheel_radius, 0.225);
@@ -369,7 +369,7 @@ void UniversalNode::Run() {
         drive_.DataGet();
 
         if(abs(drive_.info_.stamp - last_mseconds) > 40){
-            std::cout << " odom time out 1" << std::endl;
+            std::cout << " odom data: time delayed!" << std::endl;
             last_mseconds = drive_.info_.stamp ;
             loop_rate.sleep();
             continue;
@@ -379,7 +379,7 @@ void UniversalNode::Run() {
             ++num;
             if(num>10){
                 odom_is_update_ = false;
-                std::cout << " odom time out" << std::endl;
+                std::cout << " odom data: time repeated!" << std::endl;
                 last_mseconds = drive_.info_.stamp ;
                 loop_rate.sleep();
                 continue;
@@ -397,6 +397,7 @@ void UniversalNode::Run() {
 
 void UniversalNode::PublicOdom(const double v, const double distance) {
     //数据填充发布
+    //ROS_INFO_STREAM("----publicOdom()----");
     static double theta = 0;
     static double odom_x = 0;
     static double odom_y = 0;
