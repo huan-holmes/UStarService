@@ -1,6 +1,6 @@
 <launch>
     <!-- <param name="use_sim_time" value="true"/> -->
-    <node pkg="tf" type="static_transform_publisher" name="laser_to_base" args="0.184000000358 0.0 0.0 0.0 0.0 0.0 1.0 /base_link /laser 40" />
+    <node pkg="tf" type="static_transform_publisher" name="laser_to_base" args="0.184000000358 0.0 0.0 0.0 0.0 0.0 1.0 /base_link /laser 100" />
     <!-- <node pkg="tf" type="static_transform_publisher" name="map_to_odom" args="0.0 0.0 0.0 0.0 0.0 0.0 0.0 /odom /map 10" />  -->
     <node pkg="mapping" type="gmapping_node" name="gmapping_node" output="screen">
       <!-- <remap from="scan" to="base_scan"/> -->
@@ -33,4 +33,4 @@
       <param name="lasamplerange" value="0.005"/>
       <param name="lasamplestep" value="0.005"/>
     </node>
-</launch>
+</launch> 
