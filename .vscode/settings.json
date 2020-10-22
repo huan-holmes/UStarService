@@ -65,6 +65,8 @@
         "core": "cpp",
         "numericaldiff": "cpp",
         "random": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "polynomials": "cpp",
+        "*.txx": "cpp"
     }
 }

@@ -7,8 +7,8 @@ float QuadraticCalculator::calculatePotential(float* potential, unsigned char co
     float u, d, l, r;
     l = potential[n - 1];
     r = potential[n + 1];
-    u = potential[n - nx_];
-    d = potential[n + nx_];
+    u = potential[n - nx_ * 1];
+    d = potential[n + nx_ * 1];
     //  ROS_INFO("[Update] c: %f  l: %f  r: %f  u: %f  d: %f\n",
     //     potential[n], l, r, u, d);
     //  ROS_INFO("[Update] cost: %d\n", costs[n]);
