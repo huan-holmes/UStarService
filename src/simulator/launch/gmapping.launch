@@ -22,7 +22,7 @@
     <param name="astep" value="0.05"/>
     <param name="iterations" value="5"/>
     <param name="lsigma" value="0.075"/>
-    <param name="ogain" value="3.0"/>
+    <param name="ogain" value="5.0"/>
     <param name="minimumScore" value="200.0"/>
     <!-- Number of beams to skip in each scan. -->
     <param name="lskip" value="0"/>
@@ -42,7 +42,7 @@
     <param name="resampleThreshold" value="0.5"/>
 
     <!-- Number of particles in the filter. default 30        -->
-    <param name="particles" value="30"/>
+    <param name="particles" value="50"/>
 
 <!-- Initial map size  -->
     <param name="xmin" value="-50"/>
