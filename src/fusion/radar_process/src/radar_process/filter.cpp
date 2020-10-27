@@ -5,7 +5,7 @@
 #include <iostream>
 #include "radar_process/filter.h"
 #define MIN_CLUSTER_SIZE 5
-#define MAX_CLUSTER_SIZE 50
+#define MAX_CLUSTER_SIZE 5000
 namespace UstarFusion
 {
 
@@ -122,7 +122,7 @@ namespace UstarFusion
     }
     void LaserFilter::pclCloudCallback(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &cloud)
     {
-        double in_max_cluster_distance = 0.1;
+        double in_max_cluster_distance = 0.3;
         std::vector<Detected_Obj> obj_list;
         clusterSegment(cloud, in_max_cluster_distance, obj_list);
         jsk_recognition_msgs::BoundingBoxArray bbox_array;
@@ -231,8 +231,8 @@ namespace UstarFusion
                 obj_info.centroid_.y /= local_indices[i].indices.size();
                 obj_info.centroid_.z /= local_indices[i].indices.size();
             }
-            if (checkStaticObstacle(obj_info.centroid_.x, obj_info.centroid_.y, local_indices[i], in_pc))
-                continue;
+            // if (checkStaticObstacle(obj_info.centroid_.x, obj_info.centroid_.y, local_indices[i], in_pc))
+            //     continue;
 
             //calculate bounding box
             double length_ = obj_info.max_point_.x - obj_info.min_point_.x;
