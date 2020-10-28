@@ -624,6 +624,14 @@ Visualization Manager:
       line width: 0.00499999989
       only edge: false
       show coords: false
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /visualization_marker_array
+      Name: MarkerArray
+      Namespaces:
+        sim_obstacle_node: true
+      Queue Size: 100
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
