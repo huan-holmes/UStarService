@@ -5,11 +5,11 @@ bfbadb99d5f0172a50153028714e8009 /home/boocax/UstarService/devel/include/base_lo
 6b547ff6787f3c853a5e611cbadde5a3 /home/boocax/UstarService/devel/include/costmap/GenericPluginConfig.h
 05ce926fb15f91512925cca745957334 /home/boocax/UstarService/devel/include/costmap/InflationPluginConfig.h
 a889805bffcf321fb563792942def7b3 /home/boocax/UstarService/devel/include/costmap/ObstaclePluginConfig.h
+ca40a99a1ecba3b6cbe630950bd7610f /home/boocax/UstarService/devel/include/costmap/SimulatorPluginConfig.h
 354ac5ca063125ebb9bc54b38a44913f /home/boocax/UstarService/devel/include/costmap/VoxelGrid.h
 5edf2f81fcbe3395a98e602c5a99822a /home/boocax/UstarService/devel/include/costmap/VoxelPluginConfig.h
 e84e09a1595733cad082819f85c07773 /home/boocax/UstarService/devel/include/dwa_local_planner/DWAPlannerConfig.h
 4a8cd9a58e409a6a6cd930258a2dbcfb /home/boocax/UstarService/devel/include/global_planner/GlobalPlannerConfig.h
-4c74a17a094a61b223fc570c7aaafd68 /home/boocax/UstarService/devel/include/local_planner/DWAPlannerConfig.h
 d40db8ce67e875b9baa47200b69c7858 /home/boocax/UstarService/devel/include/localization/LOCALIZATIONConfig.h
 5c0ad5685a67f5249a74f64616fffb1f /home/boocax/UstarService/devel/include/move_base/MoveBaseConfig.h
 bf196c7d78e7017c6232203a46a86be0 /home/boocax/UstarService/devel/include/navfn/MakeNavPlan.h

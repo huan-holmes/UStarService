@@ -561,18 +561,6 @@ ldcp_sdk_SOURCE_DIR:STATIC=/home/boocax/UstarService/src/drivers/ltme_node-maste
 lib:FILEPATH=/opt/ros/kinetic/lib/libvoxel_grid.so
 
 //Value Computed by CMake
-local_planner_BINARY_DIR:STATIC=/home/boocax/UstarService/build/planning/local_planner
-
-//The directory containing a CMake configuration file for local_planner.
-local_planner_DIR:PATH=/home/boocax/UstarService/devel/share/local_planner/cmake
-
-//Dependencies for the target
-local_planner_LIB_DEPENDS:STATIC=general;costmap;general;layers;general;/opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/kinetic/lib/liblaser_geometry.so;general;/opt/ros/kinetic/lib/libtf.so;general;/opt/ros/kinetic/lib/libvoxel_grid.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/kinetic/lib/liborocos-kdl.so;general;/opt/ros/kinetic/lib/liborocos-kdl.so.1.3.2;general;/opt/ros/kinetic/lib/libtf2_ros.so;general;/opt/ros/kinetic/lib/libactionlib.so;general;/opt/ros/kinetic/lib/libmessage_filters.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libtf2.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
-
-//Value Computed by CMake
-local_planner_SOURCE_DIR:STATIC=/home/boocax/UstarService/src/planning/local_planner
-
-//Value Computed by CMake
 localization_BINARY_DIR:STATIC=/home/boocax/UstarService/build/localization
 
 //Value Computed by CMake
@@ -1157,7 +1145,7 @@ avcodec_libavcodec_INCLUDEDIR:INTERNAL=
 avcodec_libavcodec_LIBDIR:INTERNAL=
 avcodec_libavcodec_PREFIX:INTERNAL=
 avcodec_libavcodec_VERSION:INTERNAL=
-prefix_result:INTERNAL=
+prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu
 swscale_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu
 swscale_CFLAGS_I:INTERNAL=
 swscale_CFLAGS_OTHER:INTERNAL=

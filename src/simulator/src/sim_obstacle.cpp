@@ -14,7 +14,7 @@ using namespace Simulation;
 UstarSimulation::UstarSimulation() : s_xmin_(-100), s_ymin_(-100), s_xmax_(100), s_ymax_(100), marker_ptr_(NULL),
                                      count_(0), r_(1), num_(3), shape_(visualization_msgs::Marker::CUBE), got_map_(false)
 {
-}
+} 
 
 UstarSimulation::~UstarSimulation()
 {
@@ -40,7 +40,7 @@ void UstarSimulation::markerPublish()
     {
         count_++;
         visualization_msgs::Marker marker;
-        marker.header.frame_id = "/map";
+        marker.header.frame_id = "map";
         marker.header.stamp = ros::Time::now();
         marker.ns = "sim_obstacle_node";
         marker.id = i;

@@ -1,8 +1,0 @@
-prefix=/home/boocax/UstarService/install
-
-Name: local_planner
-Description: Description of local_planner
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -llocal_planner
-Requires: dynamic_reconfigure nav_msgs pluginlib sensor_msgs nav_core roscpp tf2 tf2_ros

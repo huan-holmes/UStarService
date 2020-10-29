@@ -339,7 +339,7 @@ UniversalNode::UniversalNode() {
             sleep(1);
         }
     } else {
-        odom_dev_ = "/dev/ttyUSB0";
+        odom_dev_ = "/dev/ttyS0";
     }
     nh.param<float>("robooster_slow_down", kinematic_.slow_down, 1.0);
     nh.param<float>("robooster_wheel_radius", kinematic_.wheel_radius, 0.225);

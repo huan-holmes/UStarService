@@ -12,6 +12,9 @@
     <class type="UstarCostmap::VoxelLayer"     base_class_type="UstarCostmap::Layer">
       <description>Similar to obstacle costmap, but uses 3D voxel grid to store data.</description>
     </class>
+    <class type="UstarCostmap::SimulatorLayer"     base_class_type="UstarCostmap::Layer">
+      <description>add simulator obstalces to costmap.</description>
+    </class>
   </library>
 </class_libraries>
 

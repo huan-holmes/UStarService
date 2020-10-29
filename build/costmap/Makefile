@@ -801,6 +801,33 @@ src/costmap/plugins/obstacle_layer.cpp.s:
 	cd /home/boocax/UstarService/build && $(MAKE) -f costmap/CMakeFiles/layers.dir/build.make costmap/CMakeFiles/layers.dir/src/costmap/plugins/obstacle_layer.cpp.s
 .PHONY : src/costmap/plugins/obstacle_layer.cpp.s
 
+src/costmap/plugins/simulator_layer.o: src/costmap/plugins/simulator_layer.cpp.o
+
+.PHONY : src/costmap/plugins/simulator_layer.o
+
+# target to build an object file
+src/costmap/plugins/simulator_layer.cpp.o:
+	cd /home/boocax/UstarService/build && $(MAKE) -f costmap/CMakeFiles/layers.dir/build.make costmap/CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.o
+.PHONY : src/costmap/plugins/simulator_layer.cpp.o
+
+src/costmap/plugins/simulator_layer.i: src/costmap/plugins/simulator_layer.cpp.i
+
+.PHONY : src/costmap/plugins/simulator_layer.i
+
+# target to preprocess a source file
+src/costmap/plugins/simulator_layer.cpp.i:
+	cd /home/boocax/UstarService/build && $(MAKE) -f costmap/CMakeFiles/layers.dir/build.make costmap/CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.i
+.PHONY : src/costmap/plugins/simulator_layer.cpp.i
+
+src/costmap/plugins/simulator_layer.s: src/costmap/plugins/simulator_layer.cpp.s
+
+.PHONY : src/costmap/plugins/simulator_layer.s
+
+# target to generate assembly for a file
+src/costmap/plugins/simulator_layer.cpp.s:
+	cd /home/boocax/UstarService/build && $(MAKE) -f costmap/CMakeFiles/layers.dir/build.make costmap/CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.s
+.PHONY : src/costmap/plugins/simulator_layer.cpp.s
+
 src/costmap/plugins/static_layer.o: src/costmap/plugins/static_layer.cpp.o
 
 .PHONY : src/costmap/plugins/static_layer.o
@@ -1112,6 +1139,9 @@ help:
 	@echo "... src/costmap/plugins/obstacle_layer.o"
 	@echo "... src/costmap/plugins/obstacle_layer.i"
 	@echo "... src/costmap/plugins/obstacle_layer.s"
+	@echo "... src/costmap/plugins/simulator_layer.o"
+	@echo "... src/costmap/plugins/simulator_layer.i"
+	@echo "... src/costmap/plugins/simulator_layer.s"
 	@echo "... src/costmap/plugins/static_layer.o"
 	@echo "... src/costmap/plugins/static_layer.i"
 	@echo "... src/costmap/plugins/static_layer.s"

@@ -55,6 +55,7 @@ generate_dynamic_reconfigure_options(
   cfg/GenericPlugin.cfg
   cfg/InflationPlugin.cfg
   cfg/VoxelPlugin.cfg
+  cfg/SimulatorPlugin.cfg
 )
 
 
@@ -110,6 +111,7 @@ add_library(layers
   src/costmap/plugins/static_layer.cpp
   src/costmap/plugins/voxel_layer.cpp
   src/costmap/utils/observation_buffer.cpp
+  src/costmap/plugins/simulator_layer.cpp
 )
 add_dependencies(layers ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(layers

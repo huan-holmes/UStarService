@@ -177,13 +177,38 @@ costmap/CMakeFiles/layers.dir/src/costmap/utils/observation_buffer.cpp.o.provide
 costmap/CMakeFiles/layers.dir/src/costmap/utils/observation_buffer.cpp.o.provides.build: costmap/CMakeFiles/layers.dir/src/costmap/utils/observation_buffer.cpp.o
 
 
+costmap/CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.o: costmap/CMakeFiles/layers.dir/flags.make
+costmap/CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.o: /home/boocax/UstarService/src/costmap/src/costmap/plugins/simulator_layer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object costmap/CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.o"
+	cd /home/boocax/UstarService/build/costmap && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.o -c /home/boocax/UstarService/src/costmap/src/costmap/plugins/simulator_layer.cpp
+
+costmap/CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.i"
+	cd /home/boocax/UstarService/build/costmap && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/boocax/UstarService/src/costmap/src/costmap/plugins/simulator_layer.cpp > CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.i
+
+costmap/CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.s"
+	cd /home/boocax/UstarService/build/costmap && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/boocax/UstarService/src/costmap/src/costmap/plugins/simulator_layer.cpp -o CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.s
+
+costmap/CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.o.requires:
+
+.PHONY : costmap/CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.o.requires
+
+costmap/CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.o.provides: costmap/CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.o.requires
+	$(MAKE) -f costmap/CMakeFiles/layers.dir/build.make costmap/CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.o.provides.build
+.PHONY : costmap/CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.o.provides
+
+costmap/CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.o.provides.build: costmap/CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.o
+
+
 # Object files for target layers
 layers_OBJECTS = \
 "CMakeFiles/layers.dir/src/costmap/plugins/inflation_layer.cpp.o" \
 "CMakeFiles/layers.dir/src/costmap/plugins/obstacle_layer.cpp.o" \
 "CMakeFiles/layers.dir/src/costmap/plugins/static_layer.cpp.o" \
 "CMakeFiles/layers.dir/src/costmap/plugins/voxel_layer.cpp.o" \
-"CMakeFiles/layers.dir/src/costmap/utils/observation_buffer.cpp.o"
+"CMakeFiles/layers.dir/src/costmap/utils/observation_buffer.cpp.o" \
+"CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.o"
 
 # External object files for target layers
 layers_EXTERNAL_OBJECTS =
@@ -193,6 +218,7 @@ layers_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/liblayers.so: costmap/CMakeFiles/layers.dir/src/costmap/plugins/static_layer.cpp.o
 /home/boocax/UstarService/devel/lib/liblayers.so: costmap/CMakeFiles/layers.dir/src/costmap/plugins/voxel_layer.cpp.o
 /home/boocax/UstarService/devel/lib/liblayers.so: costmap/CMakeFiles/layers.dir/src/costmap/utils/observation_buffer.cpp.o
+/home/boocax/UstarService/devel/lib/liblayers.so: costmap/CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.o
 /home/boocax/UstarService/devel/lib/liblayers.so: costmap/CMakeFiles/layers.dir/build.make
 /home/boocax/UstarService/devel/lib/liblayers.so: /home/boocax/UstarService/devel/lib/libcostmap.so
 /home/boocax/UstarService/devel/lib/liblayers.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
@@ -271,7 +297,7 @@ layers_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/liblayers.so: /opt/ros/kinetic/lib/libcpp_common.so
 /home/boocax/UstarService/devel/lib/liblayers.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
 /home/boocax/UstarService/devel/lib/liblayers.so: costmap/CMakeFiles/layers.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library /home/boocax/UstarService/devel/lib/liblayers.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library /home/boocax/UstarService/devel/lib/liblayers.so"
 	cd /home/boocax/UstarService/build/costmap && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/layers.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -284,6 +310,7 @@ costmap/CMakeFiles/layers.dir/requires: costmap/CMakeFiles/layers.dir/src/costma
 costmap/CMakeFiles/layers.dir/requires: costmap/CMakeFiles/layers.dir/src/costmap/plugins/static_layer.cpp.o.requires
 costmap/CMakeFiles/layers.dir/requires: costmap/CMakeFiles/layers.dir/src/costmap/plugins/voxel_layer.cpp.o.requires
 costmap/CMakeFiles/layers.dir/requires: costmap/CMakeFiles/layers.dir/src/costmap/utils/observation_buffer.cpp.o.requires
+costmap/CMakeFiles/layers.dir/requires: costmap/CMakeFiles/layers.dir/src/costmap/plugins/simulator_layer.cpp.o.requires
 
 .PHONY : costmap/CMakeFiles/layers.dir/requires
 

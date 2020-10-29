@@ -14,3 +14,4 @@ local_costmap:
    plugins:
     - {name: obstacle_layer,      type: "UstarCostmap::VoxelLayer"}
     - {name: inflation_layer,     type: "UstarCostmap::InflationLayer"}
+    - {name: simulator_layer,     type: "UstarCostmap::SimulatorLayer"}

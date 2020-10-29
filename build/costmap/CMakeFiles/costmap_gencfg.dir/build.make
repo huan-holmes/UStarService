@@ -63,6 +63,8 @@ costmap/CMakeFiles/costmap_gencfg: /home/boocax/UstarService/devel/include/costm
 costmap/CMakeFiles/costmap_gencfg: /home/boocax/UstarService/devel/lib/python2.7/dist-packages/costmap/cfg/InflationPluginConfig.py
 costmap/CMakeFiles/costmap_gencfg: /home/boocax/UstarService/devel/include/costmap/VoxelPluginConfig.h
 costmap/CMakeFiles/costmap_gencfg: /home/boocax/UstarService/devel/lib/python2.7/dist-packages/costmap/cfg/VoxelPluginConfig.py
+costmap/CMakeFiles/costmap_gencfg: /home/boocax/UstarService/devel/include/costmap/SimulatorPluginConfig.h
+costmap/CMakeFiles/costmap_gencfg: /home/boocax/UstarService/devel/lib/python2.7/dist-packages/costmap/cfg/SimulatorPluginConfig.py
 
 
 /home/boocax/UstarService/devel/include/costmap/Costmap2DConfig.h: /home/boocax/UstarService/src/costmap/cfg/Costmap2D.cfg
@@ -155,6 +157,24 @@ costmap/CMakeFiles/costmap_gencfg: /home/boocax/UstarService/devel/lib/python2.7
 /home/boocax/UstarService/devel/share/costmap/docs/VoxelPluginConfig.wikidoc: /home/boocax/UstarService/devel/include/costmap/VoxelPluginConfig.h
 	@$(CMAKE_COMMAND) -E touch_nocreate /home/boocax/UstarService/devel/share/costmap/docs/VoxelPluginConfig.wikidoc
 
+/home/boocax/UstarService/devel/include/costmap/SimulatorPluginConfig.h: /home/boocax/UstarService/src/costmap/cfg/SimulatorPlugin.cfg
+/home/boocax/UstarService/devel/include/costmap/SimulatorPluginConfig.h: /opt/ros/kinetic/share/dynamic_reconfigure/templates/ConfigType.py.template
+/home/boocax/UstarService/devel/include/costmap/SimulatorPluginConfig.h: /opt/ros/kinetic/share/dynamic_reconfigure/templates/ConfigType.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating dynamic reconfigure files from cfg/SimulatorPlugin.cfg: /home/boocax/UstarService/devel/include/costmap/SimulatorPluginConfig.h /home/boocax/UstarService/devel/lib/python2.7/dist-packages/costmap/cfg/SimulatorPluginConfig.py"
+	cd /home/boocax/UstarService/build/costmap && ../catkin_generated/env_cached.sh /home/boocax/UstarService/build/costmap/setup_custom_pythonpath.sh /home/boocax/UstarService/src/costmap/cfg/SimulatorPlugin.cfg /opt/ros/kinetic/share/dynamic_reconfigure/cmake/.. /home/boocax/UstarService/devel/share/costmap /home/boocax/UstarService/devel/include/costmap /home/boocax/UstarService/devel/lib/python2.7/dist-packages/costmap
+
+/home/boocax/UstarService/devel/share/costmap/docs/SimulatorPluginConfig.dox: /home/boocax/UstarService/devel/include/costmap/SimulatorPluginConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/boocax/UstarService/devel/share/costmap/docs/SimulatorPluginConfig.dox
+
+/home/boocax/UstarService/devel/share/costmap/docs/SimulatorPluginConfig-usage.dox: /home/boocax/UstarService/devel/include/costmap/SimulatorPluginConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/boocax/UstarService/devel/share/costmap/docs/SimulatorPluginConfig-usage.dox
+
+/home/boocax/UstarService/devel/lib/python2.7/dist-packages/costmap/cfg/SimulatorPluginConfig.py: /home/boocax/UstarService/devel/include/costmap/SimulatorPluginConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/boocax/UstarService/devel/lib/python2.7/dist-packages/costmap/cfg/SimulatorPluginConfig.py
+
+/home/boocax/UstarService/devel/share/costmap/docs/SimulatorPluginConfig.wikidoc: /home/boocax/UstarService/devel/include/costmap/SimulatorPluginConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/boocax/UstarService/devel/share/costmap/docs/SimulatorPluginConfig.wikidoc
+
 costmap_gencfg: costmap/CMakeFiles/costmap_gencfg
 costmap_gencfg: /home/boocax/UstarService/devel/include/costmap/Costmap2DConfig.h
 costmap_gencfg: /home/boocax/UstarService/devel/share/costmap/docs/Costmap2DConfig.dox
@@ -181,6 +201,11 @@ costmap_gencfg: /home/boocax/UstarService/devel/share/costmap/docs/VoxelPluginCo
 costmap_gencfg: /home/boocax/UstarService/devel/share/costmap/docs/VoxelPluginConfig-usage.dox
 costmap_gencfg: /home/boocax/UstarService/devel/lib/python2.7/dist-packages/costmap/cfg/VoxelPluginConfig.py
 costmap_gencfg: /home/boocax/UstarService/devel/share/costmap/docs/VoxelPluginConfig.wikidoc
+costmap_gencfg: /home/boocax/UstarService/devel/include/costmap/SimulatorPluginConfig.h
+costmap_gencfg: /home/boocax/UstarService/devel/share/costmap/docs/SimulatorPluginConfig.dox
+costmap_gencfg: /home/boocax/UstarService/devel/share/costmap/docs/SimulatorPluginConfig-usage.dox
+costmap_gencfg: /home/boocax/UstarService/devel/lib/python2.7/dist-packages/costmap/cfg/SimulatorPluginConfig.py
+costmap_gencfg: /home/boocax/UstarService/devel/share/costmap/docs/SimulatorPluginConfig.wikidoc
 costmap_gencfg: costmap/CMakeFiles/costmap_gencfg.dir/build.make
 
 .PHONY : costmap_gencfg

@@ -1,6 +1,0 @@
-set(local_planner_SETUP_PY_VERSION "0.0.0")
-set(local_planner_SETUP_PY_SCRIPTS "")
-set(local_planner_SETUP_PY_PACKAGES "local_planner_limits")
-set(local_planner_SETUP_PY_PACKAGE_DIRS "src/local_planner/local_planner_limits")
-set(local_planner_SETUP_PY_MODULES "")
-set(local_planner_SETUP_PY_MODULE_DIRS "")

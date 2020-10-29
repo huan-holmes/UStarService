@@ -25,6 +25,11 @@ file(REMOVE_RECURSE
   "/home/boocax/UstarService/devel/share/costmap/docs/VoxelPluginConfig-usage.dox"
   "/home/boocax/UstarService/devel/lib/python2.7/dist-packages/costmap/cfg/VoxelPluginConfig.py"
   "/home/boocax/UstarService/devel/share/costmap/docs/VoxelPluginConfig.wikidoc"
+  "/home/boocax/UstarService/devel/include/costmap/SimulatorPluginConfig.h"
+  "/home/boocax/UstarService/devel/share/costmap/docs/SimulatorPluginConfig.dox"
+  "/home/boocax/UstarService/devel/share/costmap/docs/SimulatorPluginConfig-usage.dox"
+  "/home/boocax/UstarService/devel/lib/python2.7/dist-packages/costmap/cfg/SimulatorPluginConfig.py"
+  "/home/boocax/UstarService/devel/share/costmap/docs/SimulatorPluginConfig.wikidoc"
 )
 
 # Per-language clean rules from dependency scanning.
