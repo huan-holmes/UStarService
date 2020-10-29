@@ -75,7 +75,6 @@ namespace UstarCostmap
                 ROS_ERROR_THROTTLE(1.0, "No Transform available Error looking up robot pose: %s\n", ex.what());
                 return;
             }
-            ROS_INFO_STREAM(new_pose);
             unsigned int mx;
             unsigned int my;
             master_grid.worldToMap(new_pose.pose.position.x, new_pose.pose.position.y, mx, my);
