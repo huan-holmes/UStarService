@@ -15,7 +15,7 @@ namespace UstarCostmap
         SimulatorLayer();
 
         virtual void onInitialize();
-        virtual void updateBounds(double origin_x, double origin_y, double origin_yaw, double *min_x, double *min_y, double *max_x,
+        virtual void updateBounds(double robot_x, double robot_y, double robot_yaw, double *min_x, double *min_y, double *max_x,
                                   double *max_y);
         virtual void updateCosts(UstarCostmap::Costmap2D &master_grid, int min_i, int min_j, int max_i, int max_j);
         void obstacleArrayCallback(const visualization_msgs::MarkerArray::ConstPtr& msg);
