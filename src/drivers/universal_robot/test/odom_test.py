@@ -21,7 +21,7 @@ def velocity_publisher():
     	vel_msg.linear.x = 0.0
     	vel_msg.linear.y = 0.0
     	vel_msg.angular.z = 0.0
-		vel_info_pub.publish(vel_msg)
+        vel_info_pub.publish(vel_msg)
         rospy.loginfo("Publsh vel message[%s, %d, %d]", vel_msg.linear.x, vel_msg.linear.y, vel_msg.angular.z)
 
 		# 按照循环频率延时
@@ -29,7 +29,7 @@ def velocity_publisher():
 
 def odomInfoCallback(msg):
     rospy.loginfo("Subcribe vel Info: x:%s  y:%d  z:%d", 
-			 msg.linear.x, msg.linear.y, msg.angular.z)
+			 msg.twist.twist.linear.x, msg.twist.twist.linear.y, msg.twist.twist.linear.z)
 
 def odom_subscriber():
 	# ROS节点初始化
