@@ -4,43 +4,44 @@
 import rospy
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Twist
+from queue import Queue
 
-def velocity_publisher():
-	# ROS节点初始化
-    rospy.init_node('vel_publisher', anonymous=True)
+cmd_velx_q = Queue()
+cmd_angle_q = Queue()
+odom_velx_q = Queue()
+odom_angle_q = Queue()
 
-	# 创建一个Publisher，发布名为/person_info的topic，消息类型为learning_topic::Person，队列长度10
-    vel_info_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
-
-	#设置循环的频率
-    rate = rospy.Rate(10) 
-
-    while not rospy.is_shutdown():
-		# 初始化learning_topic::Person类型的消息
-    	vel_msg = Twist()
-    	vel_msg.linear.x = 0.0
-    	vel_msg.linear.y = 0.0
-    	vel_msg.angular.z = 0.0
-        vel_info_pub.publish(vel_msg)
-        rospy.loginfo("Publsh vel message[%s, %d, %d]", vel_msg.linear.x, vel_msg.linear.y, vel_msg.angular.z)
-
-		# 按照循环频率延时
-        rate.sleep()
+def velocityInfoPublisher(vel_info_pub, rate):
+        while not rospy.is_shutdown():
+                vel_msg = Twist()
+                vel_msg.linear.x = 0.0
+                vel_msg.linear.y = 0.0
+                vel_msg.angular.z = 0.0
+                cmd_velx_q.put(vel_msg.linear.x)
+                cmd_angle_q.put(vel_msg.angular.z)
+                vel_info_pub.publish(vel_msg)
+                if (cmd_velx_q.qsize() >= 10):
+                        cmd_velx_q.get()
+                        cmd_angle_q.get()
+                rospy.loginfo("Publish vel message[%s, %d, %d]", vel_msg.linear.x, vel_msg.linear.y, vel_msg.angular.z)
+                rate.sleep()
 
 def odomInfoCallback(msg):
-    rospy.loginfo("Subcribe vel Info: x:%s  y:%d  z:%d", 
-			 msg.twist.twist.linear.x, msg.twist.twist.linear.y, msg.twist.twist.linear.z)
+    rospy.loginfo("Subscribe vel Info: x:%s  y:%d  z:%d", msg.twist.twist.linear.x, msg.twist.twist.linear.y, msg.twist.twist.linear.z)
+    odom_velx_q.put(msg.twist.twist.linear.x)
+    odom_angle_q.put(msg.twist.twist.angular)
+    if (odom_velx_q.qsize() >= 10):
+        odom_velx_q.get()
+        odom_angle_q.get()
 
-def odom_subscriber():
-	# ROS节点初始化
-    rospy.init_node('odom_subscriber', anonymous=True)
+def main():
+        odom_node = rospy.init_node("odom_test_node", anonymous=True)
+        odom_info_sub = rospy.Subscriber("/odom", Odometry, odomInfoCallback)
+        #rospy.spin()
 
-	# 创建一个Subscriber，订阅名为/person_info的topic，注册回调函数personInfoCallback
-    rospy.Subscriber("/odom", Odometry, odomInfoCallback)
-
-	# 循环等待回调函数
-    rospy.spin()
-
+        vel_info_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
+        rate = rospy.Rate(10)
+        velocityInfoPublisher(vel_info_pub, rate)
 
 if __name__ == '__main__':
-    odom_subscriber()
+    main()
