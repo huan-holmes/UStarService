@@ -89,7 +89,6 @@ namespace UstarCostmap
       local_origin.point.z = 0;
       tf2_buffer_.transform(local_origin, global_origin, global_frame_);
       tf2::convert(global_origin.point, observation_list_.front().origin_);
-
       // make sure to pass on the raytrace/obstacle range of the observation buffer to the observations
       observation_list_.front().raytrace_range_ = raytrace_range_;
       observation_list_.front().obstacle_range_ = obstacle_range_;

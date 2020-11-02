@@ -43,21 +43,7 @@ namespace UstarCostmap
             updateOrigin(robot_x - getSizeInMetersX() / 2, robot_y - getSizeInMetersY() / 2);
         if (!enabled_)
             return;
-
-        mark_x_ = *min_x;
-        mark_y_ = *min_x;
-
-        *min_x = std::min(*min_x, mark_x_);
-        *min_y = std::min(*min_y, mark_y_);
-        *max_x = std::max(*max_x, mark_x_);
-        *max_y = std::max(*max_y, mark_y_);
-    }
-
-    void SimulatorLayer::updateCosts(UstarCostmap::Costmap2D &master_grid, int min_i, int min_j, int max_i,
-                                     int max_j)
-    {
-        if (!enabled_)
-            return;
+        useExtraBounds(min_x, min_y, max_x, max_y);
         for (int i = 0; i < marker_array_.markers.size(); i++)
         {
             geometry_msgs::PoseStamped new_pose;
@@ -77,9 +63,20 @@ namespace UstarCostmap
             }
             unsigned int mx;
             unsigned int my;
-            master_grid.worldToMap(new_pose.pose.position.x, new_pose.pose.position.y, mx, my);
-            master_grid.setCost(mx, my, LETHAL_OBSTACLE);   
+            worldToMap(new_pose.pose.position.x, new_pose.pose.position.y, mx, my);
+            unsigned int index = getIndex(mx, my);
+            costmap_[index] = LETHAL_OBSTACLE; 
+            touch(new_pose.pose.position.x, new_pose.pose.position.y, min_x, min_y, max_x, max_y);  
         }
+        
+    }
+
+    void SimulatorLayer::updateCosts(UstarCostmap::Costmap2D &master_grid, int min_i, int min_j, int max_i,
+                                     int max_j)
+    {
+        if (!enabled_)
+            return;
+        
         
     
     }

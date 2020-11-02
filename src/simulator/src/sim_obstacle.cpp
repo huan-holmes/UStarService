@@ -58,7 +58,7 @@ void UstarSimulation::markerPublish()
 
         marker.scale.x = 0.5;
         marker.scale.y = 0.5;
-        marker.scale.z = 1.5;
+        marker.scale.z = 0.3;
 
         marker.color.r = 0.0f;
         marker.color.g = 1.0f;

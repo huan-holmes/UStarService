@@ -543,7 +543,8 @@ namespace UstarSlam
     return -entropy;
   }
 
-  void UstarGMapping::updateMap(const sensor_msgs::LaserScan &scan)
+  void UstarGMapping::
+  updateMap(const sensor_msgs::LaserScan &scan)
   {
     ROS_DEBUG("Update map");
     boost::mutex::scoped_lock map_lock(map_mutex_);

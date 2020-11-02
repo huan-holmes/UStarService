@@ -342,9 +342,9 @@ UniversalNode::UniversalNode() {
         odom_dev_ = "/dev/ttyS0";
     }
     nh.param<float>("robooster_slow_down", kinematic_.slow_down, 1.0);
-    nh.param<float>("robooster_wheel_radius", kinematic_.wheel_radius, 0.225);
+    nh.param<float>("robooster_wheel_radius", kinematic_.wheel_radius, 0.083);
     nh.param<float>("robooster_encoder_lines", kinematic_.encoder_lines, 1024);
-    nh.param<float>("robooster_wheel_gauge", kinematic_.wheel_gauge, 0.3);
+    nh.param<float>("robooster_wheel_gauge", kinematic_.wheel_gauge, 0.13313);
     std::cout << "-----------------------------------------------------------------" << std::endl;
     std::cout << "read_from_rosparam " << read_from_rosparam << ",robooster_odom_dev " << odom_dev_ << std::endl;
     std::cout << "robooster_slow_down " << kinematic_.slow_down << "robooster_wheel_radius " << kinematic_.wheel_radius <<
