@@ -18,14 +18,11 @@ def velocity_publisher():
     while not rospy.is_shutdown():
 		# 初始化learning_topic::Person类型的消息
     	vel_msg = Twist()
-    	vel_msg.linear.x = 0.0;
-    	vel_msg.linear.y = 0.0;
-    	vel_msg.angular.z = 0.0;
-
-		# 发布消息
-        vel_info_pub.publish(vel_msg)
-    	rospy.loginfo("Publsh vel message[%s, %d, %d]", 
-				vel_msg.linear.x, vel_msg.linear.y, vel_msg.angular.z)
+    	vel_msg.linear.x = 0.0
+    	vel_msg.linear.y = 0.0
+    	vel_msg.angular.z = 0.0
+		vel_info_pub.publish(vel_msg)
+        rospy.loginfo("Publsh vel message[%s, %d, %d]", vel_msg.linear.x, vel_msg.linear.y, vel_msg.angular.z)
 
 		# 按照循环频率延时
         rate.sleep()
@@ -34,7 +31,7 @@ def odomInfoCallback(msg):
     rospy.loginfo("Subcribe vel Info: x:%s  y:%d  z:%d", 
 			 msg.linear.x, msg.linear.y, msg.angular.z)
 
-def person_subscriber():
+def odom_subscriber():
 	# ROS节点初始化
     rospy.init_node('odom_subscriber', anonymous=True)
 
@@ -46,3 +43,4 @@ def person_subscriber():
 
 
 if __name__ == '__main__':
+    odom_subscriber()
