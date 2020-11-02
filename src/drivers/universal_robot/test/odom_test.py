@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import rospy
-from nav_msgs import Odometry
-from geometry_msgs import Twist
+from nav_msgs.msg import Odometry
+from geometry_msgs.msg import Twist
 
 def velocity_publisher():
 	# ROS节点初始化
