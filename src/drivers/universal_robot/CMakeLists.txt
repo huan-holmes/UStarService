@@ -54,7 +54,8 @@ target_link_libraries(universal_robot
   #${CMAKE_CURRENT_SOURCE_DIR}/lib${PROJECT_NAME}_lib.so
 
 )
-
+add_executable(cmd_test_node test/cmd_test.cpp)
+target_link_libraries(cmd_test_node ${catkin_LIBRARIES})
 #-------------------------------------- -安装项目---------------------------------------
 install( TARGETS
 universal_robot  ${PROJECT_NAME}_lib

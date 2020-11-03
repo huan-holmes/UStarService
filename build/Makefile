@@ -2025,6 +2025,19 @@ universal_robot/fast:
 .PHONY : universal_robot/fast
 
 #=============================================================================
+# Target rules for targets named cmd_test_node
+
+# Build rule for target.
+cmd_test_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cmd_test_node
+.PHONY : cmd_test_node
+
+# fast build rule for target.
+cmd_test_node/fast:
+	$(MAKE) -f drivers/universal_robot/CMakeFiles/cmd_test_node.dir/build.make drivers/universal_robot/CMakeFiles/cmd_test_node.dir/build
+.PHONY : cmd_test_node/fast
+
+#=============================================================================
 # Target rules for targets named usb_cam
 
 # Build rule for target.
@@ -3376,6 +3389,7 @@ help:
 	@echo "... localization_node"
 	@echo "... universal_robot_lib"
 	@echo "... universal_robot"
+	@echo "... cmd_test_node"
 	@echo "... usb_cam"
 	@echo "... usb_cam_node"
 	@echo "... costmap_2d_node"
