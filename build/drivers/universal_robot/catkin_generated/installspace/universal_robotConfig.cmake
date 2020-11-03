@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(universal_robot_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "include " STREQUAL " ")
   set(universal_robot_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -177,7 +177,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(universal_robot_EXPORTED_TARGETS "")
+set(universal_robot_EXPORTED_TARGETS "universal_robot_gencfg")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${universal_robot_EXPORTED_TARGETS})
   if(NOT TARGET ${t})

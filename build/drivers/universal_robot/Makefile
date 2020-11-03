@@ -56,38 +56,6 @@ CMAKE_BINARY_DIR = /home/boocax/UstarService/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"header\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -111,16 +79,15 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"header\""
+.PHONY : list_install_components
 
-# Special rule for the target install/local
-install/local/fast: install/local
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : install/local/fast
+.PHONY : list_install_components/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -132,6 +99,39 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,19 +166,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/rule
-.PHONY : drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/rule
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/rule
+.PHONY : drivers/universal_robot/CMakeFiles/cmd_test_node.dir/rule
 
 # Convenience name for target.
-universal_robot_lib: drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/rule
+cmd_test_node: drivers/universal_robot/CMakeFiles/cmd_test_node.dir/rule
 
-.PHONY : universal_robot_lib
+.PHONY : cmd_test_node
 
 # fast build rule for target.
-universal_robot_lib/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/build.make drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/build
-.PHONY : universal_robot_lib/fast
+cmd_test_node/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f drivers/universal_robot/CMakeFiles/cmd_test_node.dir/build.make drivers/universal_robot/CMakeFiles/cmd_test_node.dir/build
+.PHONY : cmd_test_node/fast
 
 # Convenience name for target.
 drivers/universal_robot/CMakeFiles/universal_robot.dir/rule:
@@ -196,19 +196,34 @@ universal_robot/fast:
 .PHONY : universal_robot/fast
 
 # Convenience name for target.
-drivers/universal_robot/CMakeFiles/cmd_test_node.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/rule
-.PHONY : drivers/universal_robot/CMakeFiles/cmd_test_node.dir/rule
+drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/rule
+.PHONY : drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/rule
 
 # Convenience name for target.
-cmd_test_node: drivers/universal_robot/CMakeFiles/cmd_test_node.dir/rule
+universal_robot_lib: drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/rule
 
-.PHONY : cmd_test_node
+.PHONY : universal_robot_lib
 
 # fast build rule for target.
-cmd_test_node/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f drivers/universal_robot/CMakeFiles/cmd_test_node.dir/build.make drivers/universal_robot/CMakeFiles/cmd_test_node.dir/build
-.PHONY : cmd_test_node/fast
+universal_robot_lib/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/build.make drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/build
+.PHONY : universal_robot_lib/fast
+
+# Convenience name for target.
+drivers/universal_robot/CMakeFiles/universal_robot_gencfg.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 drivers/universal_robot/CMakeFiles/universal_robot_gencfg.dir/rule
+.PHONY : drivers/universal_robot/CMakeFiles/universal_robot_gencfg.dir/rule
+
+# Convenience name for target.
+universal_robot_gencfg: drivers/universal_robot/CMakeFiles/universal_robot_gencfg.dir/rule
+
+.PHONY : universal_robot_gencfg
+
+# fast build rule for target.
+universal_robot_gencfg/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f drivers/universal_robot/CMakeFiles/universal_robot_gencfg.dir/build.make drivers/universal_robot/CMakeFiles/universal_robot_gencfg.dir/build
+.PHONY : universal_robot_gencfg/fast
 
 main.o: main.cpp.o
 
@@ -243,8 +258,8 @@ src/universal_driver.o: src/universal_driver.cpp.o
 
 # target to build an object file
 src/universal_driver.cpp.o:
-	cd /home/boocax/UstarService/build && $(MAKE) -f drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/build.make drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/src/universal_driver.cpp.o
 	cd /home/boocax/UstarService/build && $(MAKE) -f drivers/universal_robot/CMakeFiles/universal_robot.dir/build.make drivers/universal_robot/CMakeFiles/universal_robot.dir/src/universal_driver.cpp.o
+	cd /home/boocax/UstarService/build && $(MAKE) -f drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/build.make drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/src/universal_driver.cpp.o
 .PHONY : src/universal_driver.cpp.o
 
 src/universal_driver.i: src/universal_driver.cpp.i
@@ -253,8 +268,8 @@ src/universal_driver.i: src/universal_driver.cpp.i
 
 # target to preprocess a source file
 src/universal_driver.cpp.i:
-	cd /home/boocax/UstarService/build && $(MAKE) -f drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/build.make drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/src/universal_driver.cpp.i
 	cd /home/boocax/UstarService/build && $(MAKE) -f drivers/universal_robot/CMakeFiles/universal_robot.dir/build.make drivers/universal_robot/CMakeFiles/universal_robot.dir/src/universal_driver.cpp.i
+	cd /home/boocax/UstarService/build && $(MAKE) -f drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/build.make drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/src/universal_driver.cpp.i
 .PHONY : src/universal_driver.cpp.i
 
 src/universal_driver.s: src/universal_driver.cpp.s
@@ -263,8 +278,8 @@ src/universal_driver.s: src/universal_driver.cpp.s
 
 # target to generate assembly for a file
 src/universal_driver.cpp.s:
-	cd /home/boocax/UstarService/build && $(MAKE) -f drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/build.make drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/src/universal_driver.cpp.s
 	cd /home/boocax/UstarService/build && $(MAKE) -f drivers/universal_robot/CMakeFiles/universal_robot.dir/build.make drivers/universal_robot/CMakeFiles/universal_robot.dir/src/universal_driver.cpp.s
+	cd /home/boocax/UstarService/build && $(MAKE) -f drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/build.make drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/src/universal_driver.cpp.s
 .PHONY : src/universal_driver.cpp.s
 
 test/cmd_test.o: test/cmd_test.cpp.o
@@ -300,16 +315,17 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... test"
-	@echo "... list_install_components"
 	@echo "... install"
-	@echo "... universal_robot_lib"
-	@echo "... edit_cache"
-	@echo "... universal_robot"
 	@echo "... cmd_test_node"
-	@echo "... install/local"
+	@echo "... universal_robot"
+	@echo "... edit_cache"
+	@echo "... list_install_components"
 	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... test"
+	@echo "... universal_robot_lib"
+	@echo "... universal_robot_gencfg"
+	@echo "... rebuild_cache"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -99,12 +99,13 @@ universal_robot_lib_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/libuniversal_robot_lib.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
 /home/boocax/UstarService/devel/lib/libuniversal_robot_lib.so: /opt/ros/kinetic/lib/libxmlrpcpp.so
 /home/boocax/UstarService/devel/lib/libuniversal_robot_lib.so: /opt/ros/kinetic/lib/libtf2.so
-/home/boocax/UstarService/devel/lib/libuniversal_robot_lib.so: /opt/ros/kinetic/lib/libroscpp_serialization.so
 /home/boocax/UstarService/devel/lib/libuniversal_robot_lib.so: /opt/ros/kinetic/lib/librosconsole.so
 /home/boocax/UstarService/devel/lib/libuniversal_robot_lib.so: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
 /home/boocax/UstarService/devel/lib/libuniversal_robot_lib.so: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
 /home/boocax/UstarService/devel/lib/libuniversal_robot_lib.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
 /home/boocax/UstarService/devel/lib/libuniversal_robot_lib.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/boocax/UstarService/devel/lib/libuniversal_robot_lib.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/boocax/UstarService/devel/lib/libuniversal_robot_lib.so: /opt/ros/kinetic/lib/libroscpp_serialization.so
 /home/boocax/UstarService/devel/lib/libuniversal_robot_lib.so: /opt/ros/kinetic/lib/librostime.so
 /home/boocax/UstarService/devel/lib/libuniversal_robot_lib.so: /opt/ros/kinetic/lib/libcpp_common.so
 /home/boocax/UstarService/devel/lib/libuniversal_robot_lib.so: /usr/lib/x86_64-linux-gnu/libboost_system.so

@@ -1999,17 +1999,17 @@ localization_node/fast:
 .PHONY : localization_node/fast
 
 #=============================================================================
-# Target rules for targets named universal_robot_lib
+# Target rules for targets named cmd_test_node
 
 # Build rule for target.
-universal_robot_lib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 universal_robot_lib
-.PHONY : universal_robot_lib
+cmd_test_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cmd_test_node
+.PHONY : cmd_test_node
 
 # fast build rule for target.
-universal_robot_lib/fast:
-	$(MAKE) -f drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/build.make drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/build
-.PHONY : universal_robot_lib/fast
+cmd_test_node/fast:
+	$(MAKE) -f drivers/universal_robot/CMakeFiles/cmd_test_node.dir/build.make drivers/universal_robot/CMakeFiles/cmd_test_node.dir/build
+.PHONY : cmd_test_node/fast
 
 #=============================================================================
 # Target rules for targets named universal_robot
@@ -2025,17 +2025,30 @@ universal_robot/fast:
 .PHONY : universal_robot/fast
 
 #=============================================================================
-# Target rules for targets named cmd_test_node
+# Target rules for targets named universal_robot_lib
 
 # Build rule for target.
-cmd_test_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cmd_test_node
-.PHONY : cmd_test_node
+universal_robot_lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 universal_robot_lib
+.PHONY : universal_robot_lib
 
 # fast build rule for target.
-cmd_test_node/fast:
-	$(MAKE) -f drivers/universal_robot/CMakeFiles/cmd_test_node.dir/build.make drivers/universal_robot/CMakeFiles/cmd_test_node.dir/build
-.PHONY : cmd_test_node/fast
+universal_robot_lib/fast:
+	$(MAKE) -f drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/build.make drivers/universal_robot/CMakeFiles/universal_robot_lib.dir/build
+.PHONY : universal_robot_lib/fast
+
+#=============================================================================
+# Target rules for targets named universal_robot_gencfg
+
+# Build rule for target.
+universal_robot_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 universal_robot_gencfg
+.PHONY : universal_robot_gencfg
+
+# fast build rule for target.
+universal_robot_gencfg/fast:
+	$(MAKE) -f drivers/universal_robot/CMakeFiles/universal_robot_gencfg.dir/build.make drivers/universal_robot/CMakeFiles/universal_robot_gencfg.dir/build
+.PHONY : universal_robot_gencfg/fast
 
 #=============================================================================
 # Target rules for targets named usb_cam
@@ -3387,9 +3400,10 @@ help:
 	@echo "... localization_sensor"
 	@echo "... localization_gencfg"
 	@echo "... localization_node"
-	@echo "... universal_robot_lib"
-	@echo "... universal_robot"
 	@echo "... cmd_test_node"
+	@echo "... universal_robot"
+	@echo "... universal_robot_lib"
+	@echo "... universal_robot_gencfg"
 	@echo "... usb_cam"
 	@echo "... usb_cam_node"
 	@echo "... costmap_2d_node"

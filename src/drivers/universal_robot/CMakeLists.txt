@@ -19,15 +19,18 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   nav_msgs
   tf
-
+  dynamic_reconfigure
 )
-
+ generate_dynamic_reconfigure_options(
+   cfg/CmdTest.cfg
+ )
 catkin_package(
   CATKIN_DEPENDS
   nav_msgs
   tf
 
 )
+
 
 ###########
 ## Build ##

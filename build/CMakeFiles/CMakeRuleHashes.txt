@@ -14,6 +14,7 @@ d40db8ce67e875b9baa47200b69c7858 /home/boocax/UstarService/devel/include/localiz
 5c0ad5685a67f5249a74f64616fffb1f /home/boocax/UstarService/devel/include/move_base/MoveBaseConfig.h
 bf196c7d78e7017c6232203a46a86be0 /home/boocax/UstarService/devel/include/navfn/MakeNavPlan.h
 be648341ae26b6344d5e85092833f44e /home/boocax/UstarService/devel/include/navfn/SetCostmap.h
+83ddf8f4111a4b89342c97d58c30b7bb /home/boocax/UstarService/devel/include/universal_robot/CmdTestConfig.h
 65ceaae0ee2ba7f98804d1f5b71b0254 /home/boocax/UstarService/devel/lib/python2.7/dist-packages/base_local_planner/msg/_Position2DInt.py
 a6f2b3d31b3f1b91b8a85011883404fd /home/boocax/UstarService/devel/lib/python2.7/dist-packages/base_local_planner/msg/__init__.py
 3ca49ee9c01665e98aaecd5afa83160d /home/boocax/UstarService/devel/lib/python2.7/dist-packages/costmap/msg/_VoxelGrid.py
@@ -44,6 +45,7 @@ fa2462f57f22bc797638fe4d411b6160 costmap/CMakeFiles/costmap_generate_messages_eu
 fa2462f57f22bc797638fe4d411b6160 costmap/CMakeFiles/costmap_generate_messages_lisp
 fa2462f57f22bc797638fe4d411b6160 costmap/CMakeFiles/costmap_generate_messages_nodejs
 fa2462f57f22bc797638fe4d411b6160 costmap/CMakeFiles/costmap_generate_messages_py
+a1061e5b817c662a05dbbc6d5977eea4 drivers/universal_robot/CMakeFiles/universal_robot_gencfg
 3ca671e9857021998bdec171cd67efe4 localization/CMakeFiles/localization_gencfg
 41b9d2cccd6a265a6f66df467cbcf033 map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest
 926328856d62d01df61f1d130b9bc72b map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml

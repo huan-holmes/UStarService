@@ -1,6 +1,7 @@
 #include "ros/ros.h"
 #include <geometry_msgs/Twist.h>
-
+#include <dynamic_reconfigure/server.h>
+#include <universal_robot/CmdTestConfig.h>
 class PublishVelocity
 {
     public:
@@ -8,13 +9,16 @@ class PublishVelocity
         ~PublishVelocity();
         void velocityInfoPublisher();
         void run();
+        void reconfigureCB(universal_robot::CmdTestConfig &config, uint32_t level);
 
     private:
         ros::NodeHandle nh_;
         ros::Publisher cmd_vel_pub_;
         ros::Rate rate_;
-
         geometry_msgs::Twist cmd_vel_;
+
+        dynamic_reconfigure::Server<universal_robot::CmdTestConfig> *dsrv_;
+        
 
 
         double vel_x_;
@@ -47,10 +51,21 @@ PublishVelocity::~PublishVelocity()
 
 }
 
+void PublishVelocity::reconfigureCB(universal_robot::CmdTestConfig &config, uint32_t level)
+{
+    vel_x_ = config.velocity_x;
+    vel_y_ = config.velocity_y;
+    angle_z_ = config.angle_z;
+}
+
 void PublishVelocity::run()
 {
+    
     cmd_vel_pub_ = nh_.advertise<geometry_msgs::Twist>("cmd_test_topic", 10);
     velocityInfoPublisher();
+    dsrv_ = new dynamic_reconfigure::Server<universal_robot::CmdTestConfig>;
+    dynamic_reconfigure::Server<universal_robot::CmdTestConfig>::CallbackType cb = boost::bind(&PublishVelocity::reconfigureCB, this, _1, _2);
+    dsrv_->setCallback(cb);
 }
 
 void PublishVelocity::velocityInfoPublisher()
