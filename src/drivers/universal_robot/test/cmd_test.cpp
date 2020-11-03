@@ -32,6 +32,7 @@ int main(int argc, char **argv)
 {
     ros::init(argc, argv, "cmd_test_node");
     PublishVelocity velpub;
+    
     while (ros::ok())
     {
         velpub.run();
@@ -43,7 +44,9 @@ int main(int argc, char **argv)
 
 PublishVelocity::PublishVelocity() : rate_(10), vel_x_(0.2), vel_y_(0.0), angle_z_(0.0)
 {
-
+    dsrv_ = new dynamic_reconfigure::Server<universal_robot::CmdTestConfig>;
+    dynamic_reconfigure::Server<universal_robot::CmdTestConfig>::CallbackType cb = boost::bind(&PublishVelocity::reconfigureCB, this, _1, _2);
+    dsrv_->setCallback(cb);
 }
 
 PublishVelocity::~PublishVelocity()
@@ -63,9 +66,7 @@ void PublishVelocity::run()
     
     cmd_vel_pub_ = nh_.advertise<geometry_msgs::Twist>("cmd_test_topic", 10);
     velocityInfoPublisher();
-    dsrv_ = new dynamic_reconfigure::Server<universal_robot::CmdTestConfig>;
-    dynamic_reconfigure::Server<universal_robot::CmdTestConfig>::CallbackType cb = boost::bind(&PublishVelocity::reconfigureCB, this, _1, _2);
-    dsrv_->setCallback(cb);
+    
 }
 
 void PublishVelocity::velocityInfoPublisher()
