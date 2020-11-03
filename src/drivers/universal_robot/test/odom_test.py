@@ -35,7 +35,7 @@ def odomInfoCallback(msg):
         global cmd_vel_x_, cmd_angle_, cmd_pos_x_, cmd_pos_y_, cmd_distance_ 
         global odom_vel_x_, odom_angle_, odom_pos_x_, odom_pos_y_, odom_distance_
         rospy.loginfo("Subscribe vel Info: x:%s  y:%d  z:%d", msg.twist.twist.linear.x, msg.twist.twist.linear.y, msg.twist.twist.linear.z)
-        (r, p, y) = tf2.transformations.euler_from_quaternion([msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w])
+        (r, p, y) = tf.transformations.euler_from_quaternion([msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w])
         odom_angle_ = y
         odom_vel_x_ = msg.twist.twist.linear.x
         odom_pos_x_ = msg.pose.pose.position.x
@@ -49,7 +49,7 @@ def odomInfoCallback(msg):
 def main():
         odom_node = rospy.init_node("odom_test_node", anonymous=True)
         odom_info_sub = rospy.Subscriber("/odom", Odometry, odomInfoCallback)
-        vel_info_sub = rospy.Subscriber("/cmd_test_topic", Twist, velocityInfoCallback)
+        vel_info_sub = rospy.Subscriber("/cmd_vel", Twist, velocityInfoCallback)
         rospy.spin()
         file_open.close()
 
