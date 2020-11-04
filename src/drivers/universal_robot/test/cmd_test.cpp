@@ -3,6 +3,8 @@
 #include <dynamic_reconfigure/server.h>
 #include <universal_robot/CmdTestConfig.h>
 #include <nav_msgs/Odometry.h>
+#include "tf/transform_datatypes.h"
+#include "tf/LinearMath/Matrix3x3.h"
 class PublishVelocity
 {
     public:
@@ -17,7 +19,9 @@ class PublishVelocity
         ros::Publisher cmd_vel_pub_;
 
         ros::Subscriber odom_sub_;
-     
+        double theta_;
+        double distance_;
+        
         geometry_msgs::Twist cmd_vel_;
 
         dynamic_reconfigure::Server<universal_robot::CmdTestConfig> *dsrv_;
@@ -45,7 +49,7 @@ int main(int argc, char **argv)
     return(0);
 }
 
-PublishVelocity::PublishVelocity() : vel_x_(0.2), vel_y_(0.0), angle_z_(0.0)
+PublishVelocity::PublishVelocity() : vel_x_(0.2), vel_y_(0.0), angle_z_(0.1)
 {
     cmd_vel_pub_ = nh_.advertise<geometry_msgs::Twist>("cmd_vel", 10);
     odom_sub_ = nh_.subscribe("odom", 1, &PublishVelocity::odomCallback, this);
@@ -60,7 +64,17 @@ PublishVelocity::~PublishVelocity()
 }
 void PublishVelocity::odomCallback(const nav_msgs::Odometry &msg)
 {
-    if (sqrt(msg.pose.pose.position.x * msg.pose.pose.position.x + msg.pose.pose.position.y * msg.pose.pose.position.y) > 1) {
+    tf::Quaternion quat;
+    tf::quaternionMsgToTF(msg.pose.pose.orientation, quat);
+ 
+    // the tf::Quaternion has a method to acess roll pitch and yaw
+    double roll, pitch, yaw;
+    tf::Matrix3x3(quat).getRPY(roll, pitch, yaw);
+    theta_ = atan2(sin(yaw), cos(yaw));
+    distance_ = sqrt(msg.pose.pose.position.x * msg.pose.pose.position.x + msg.pose.pose.position.y * msg.pose.pose.position.y);
+    ROS_INFO_STREAM(theta_);
+    ROS_INFO_STREAM(distance_);
+    if (distance_ > 1) {
         vel_x_ = 0.0;
     }
 }

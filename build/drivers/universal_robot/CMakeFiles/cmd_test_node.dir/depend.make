@@ -19,12 +19,18 @@ drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/r
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/dynamic_reconfigure/config_tools.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/dynamic_reconfigure/server.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Point.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseWithCovariance.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/QuaternionStamped.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Transform.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/TransformStamped.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Twist.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/TwistWithCovariance.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3Stamped.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/nav_msgs/Odometry.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/advertise_options.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/advertise_service_options.h
@@ -83,6 +89,14 @@ drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/r
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/wall_timer_options.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/rosconsole/macros_generated.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/std_msgs/Header.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Matrix3x3.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/MinMax.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/QuadWord.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Quaternion.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Scalar.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Transform.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Vector3.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/transform_datatypes.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
 
