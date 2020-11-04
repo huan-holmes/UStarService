@@ -44,6 +44,7 @@ def velocityInfoCallback(msg):
                 cmd_distance_ += t * msg.linear.x
                 cmd_pos_x_ += t * msg.linear.x * math.cos(mag.angular.z)
                 cmd_pos_y_ += t * msg.linear.x * math.sin(msg.angular.z)
+                cmd_angle_ += msg.angular.z
         cmd_vel_x_ = msg.linear.x
         last_vel_time_ =  now_time
         
