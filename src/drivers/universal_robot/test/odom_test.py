@@ -7,6 +7,8 @@ from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Twist
 import csv
 import time
+import datetime
+import math
 now_time = time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime(time.time()))
 file_name = "/home/boocax/UstarService/src/drivers/universal_robot/data/"
 head = ["cmd_vel_x", "cmd_angle", "cmd_pos_x", "cmd_pos_y", "cmd_distance", 
@@ -25,11 +27,26 @@ odom_angle_ = 0.0
 odom_pos_x_ = 0.0
 odom_pos_y_ = 0.0
 odom_distance_ = 0.0
+
+last_vel_time_ = 0
+
+cmd_origin_x_ = 0.0
+cmd_origin_y_ = 0.0
+
 def velocityInfoCallback(msg):
-        global cmd_vel_x_
         rospy.loginfo("Subscribe vel Info: x:%s z:%d", msg.linear.x, msg.angular.z)
+        global cmd_vel_x_
+        global last_vel_time_
+        global cmd_distance_
+        now_time = datetime.datetime.now()
+        if (last_vel_time_ != 0):
+                t = (now_time - last_vel_time_).seconds
+                cmd_distance_ += t * msg.linear.x
+                cmd_pos_x_ += t * msg.linear.x * math.cos(mag.angular.z)
+                cmd_pos_y_ += t * msg.linear.x * math.sin(msg.angular.z)
         cmd_vel_x_ = msg.linear.x
-       
+        last_vel_time_ =  now_time
+        
 
 def odomInfoCallback(msg):
         global cmd_vel_x_, cmd_angle_, cmd_pos_x_, cmd_pos_y_, cmd_distance_ 
