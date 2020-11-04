@@ -38,6 +38,9 @@ def velocityInfoCallback(msg):
         global cmd_vel_x_
         global last_vel_time_
         global cmd_distance_
+        global cmd_pos_x_
+        global cmd_pos_y_
+        global cmd_angle_
         now_time = datetime.datetime.now()
         if (last_vel_time_ != 0):
                 t = (now_time - last_vel_time_).seconds
