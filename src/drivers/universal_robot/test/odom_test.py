@@ -43,10 +43,10 @@ def velocityInfoCallback(msg):
         global cmd_angle_
         now_time = datetime.datetime.now()
         if (last_vel_time_ != 0):
-                t = (now_time - last_vel_time_).seconds
-                cmd_distance_ += t * msg.linear.x
-                cmd_pos_x_ += t * msg.linear.x * math.cos(msg.angular.z)
-                cmd_pos_y_ += t * msg.linear.x * math.sin(msg.angular.z)
+                t = (now_time - last_vel_time_).microseconds
+                cmd_distance_ += t * msg.linear.x / 1000
+                cmd_pos_x_ += t * msg.linear.x * math.cos(msg.angular.z) / 1000
+                cmd_pos_y_ += t * msg.linear.x * math.sin(msg.angular.z) / 1000
                 cmd_angle_ += msg.angular.z
         cmd_vel_x_ = msg.linear.x
         last_vel_time_ =  now_time
