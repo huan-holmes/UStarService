@@ -70,12 +70,12 @@ void PublishVelocity::odomCallback(const nav_msgs::Odometry &msg)
     // the tf::Quaternion has a method to acess roll pitch and yaw
     double roll, pitch, yaw;
     tf::Matrix3x3(quat).getRPY(roll, pitch, yaw);
-    //theta_ = atan2(sin(yaw), cos(yaw));
+    theta_ = atan2(sin(yaw), cos(yaw));
     distance_ = sqrt(msg.pose.pose.position.x * msg.pose.pose.position.x + msg.pose.pose.position.y * msg.pose.pose.position.y);
-    ROS_INFO_STREAM(msg.pose.pose.orientation);
     ROS_INFO_STREAM(yaw);
-    ROS_INFO_STREAM(distance_);
+    
     if (distance_ >= 1.0) {
+        ROS_INFO_STREAM(distance_);
         vel_x_ = 0.0;
     }
 }
