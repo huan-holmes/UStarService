@@ -94,6 +94,8 @@ void PublishVelocity::run()
 
 void PublishVelocity::velocityInfoPublisher()
 {
+    ROS_INFO_STREAM("---velocityInfoPubliser()----");
+    ROS_INFO_STREAM(angle_z_);
     cmd_vel_.linear.x = vel_x_;
     cmd_vel_.linear.y = vel_y_;
     cmd_vel_.angular.z = angle_z_;

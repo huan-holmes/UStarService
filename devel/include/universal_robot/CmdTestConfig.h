@@ -423,7 +423,7 @@ CmdTestConfig::GroupDescription<CmdTestConfig::DEFAULT, CmdTestConfig> Default("
 //#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.angle_z = 5.0;
 //#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.angle_z = 0.0;
+      __default__.angle_z = 0.4;
 //#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(CmdTestConfig::AbstractParamDescriptionConstPtr(new CmdTestConfig::ParamDescription<double>("angle_z", "double", 0, "double parameter", "", &CmdTestConfig::angle_z)));
 //#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"

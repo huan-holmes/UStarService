@@ -4,5 +4,5 @@ Reads and maintains the following parameters on the ROS server
 
 - \b "~velocity_x" : \b [double] double parameter min: 0.0, default: 0.2, max: 0.5
 - \b "~velocity_y" : \b [double] double parameter min: 0.0, default: 0.0, max: 0.0
-- \b "~angle_z" : \b [double] double parameter min: 0.0, default: 0.0, max: 5.0
+- \b "~angle_z" : \b [double] double parameter min: 0.0, default: 0.4, max: 5.0
 

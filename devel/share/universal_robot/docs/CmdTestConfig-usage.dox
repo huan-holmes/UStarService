@@ -3,7 +3,7 @@
 <node name="universal_robot" pkg="universal_robot" type="universal_robot">
   <param name="velocity_x" type="double" value="0.2" />
   <param name="velocity_y" type="double" value="0.0" />
-  <param name="angle_z" type="double" value="0.0" />
+  <param name="angle_z" type="double" value="0.4" />
 </node>
 \endverbatim
 
