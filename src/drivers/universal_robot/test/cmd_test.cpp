@@ -49,7 +49,7 @@ int main(int argc, char **argv)
     return(0);
 }
 
-PublishVelocity::PublishVelocity() : vel_x_(0.2), vel_y_(0.0), angle_z_(0.1)
+PublishVelocity::PublishVelocity() : vel_x_(0.2), vel_y_(0.0), angle_z_(0.4)
 {
     cmd_vel_pub_ = nh_.advertise<geometry_msgs::Twist>("cmd_vel", 10);
     odom_sub_ = nh_.subscribe("odom", 1, &PublishVelocity::odomCallback, this);
@@ -70,7 +70,7 @@ void PublishVelocity::odomCallback(const nav_msgs::Odometry &msg)
     // the tf::Quaternion has a method to acess roll pitch and yaw
     double roll, pitch, yaw;
     tf::Matrix3x3(quat).getRPY(roll, pitch, yaw);
-    theta_ = atan2(sin(yaw), cos(yaw));
+    //theta_ = atan2(sin(yaw), cos(yaw));
     distance_ = sqrt(msg.pose.pose.position.x * msg.pose.pose.position.x + msg.pose.pose.position.y * msg.pose.pose.position.y);
     ROS_INFO_STREAM(yaw);
     ROS_INFO_STREAM(distance_);
