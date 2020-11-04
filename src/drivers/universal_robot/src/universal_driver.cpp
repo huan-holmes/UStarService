@@ -403,7 +403,9 @@ void UniversalNode::PublicOdom(const double v, const double distance) {
     static double odom_y = 0;
     //theta = angles::normalize_angle(theta + GetDtheta()); //imu
     theta = angles::normalize_angle(theta + drive_.info_.d_w);// odom
-
+    
+    ROS_INFO_STREAM(drive_.info_.d_w);
+    ROS_INFO_STREAM(theta);
     geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(theta);
     odom_x += distance  * cos(theta);
     odom_y += distance * sin(theta);
@@ -436,7 +438,7 @@ void UniversalNode::PublicOdom(const double v, const double distance) {
     odom_broadcaster.sendTransform(odom_trans);
     odom_pub.publish(odom_msg);
 }
-
+ 
 
 
 double UniversalNode::GetDtheta() {
@@ -447,6 +449,8 @@ double UniversalNode::GetDtheta() {
 }
 
 void UniversalNode::control_vel(const geometry_msgs::Twist cmd_vel) {
+    ROS_INFO_STREAM("cmd: angular_z");
+    ROS_INFO_STREAM(cmd_vel.angular.z);
     drive_.SentRpm(cmd_vel);
 }
 
