@@ -2,6 +2,7 @@
 #include <geometry_msgs/Twist.h>
 #include <dynamic_reconfigure/server.h>
 #include <universal_robot/CmdTestConfig.h>
+#include <nav_msgs/Odometry.h>
 class PublishVelocity
 {
     public:
@@ -10,10 +11,12 @@ class PublishVelocity
         void velocityInfoPublisher();
         void run();
         void reconfigureCB(universal_robot::CmdTestConfig &config, uint32_t level);
-
+        void odomCallback(const nav_msgs::Odometry &msg);
     private:
         ros::NodeHandle nh_;
         ros::Publisher cmd_vel_pub_;
+
+        ros::Subscriber odom_sub_;
      
         geometry_msgs::Twist cmd_vel_;
 
@@ -45,6 +48,7 @@ int main(int argc, char **argv)
 PublishVelocity::PublishVelocity() : vel_x_(0.2), vel_y_(0.0), angle_z_(0.0)
 {
     cmd_vel_pub_ = nh_.advertise<geometry_msgs::Twist>("cmd_vel", 10);
+    odom_sub_ = nh_.subscribe("odom", 1, &PublishVelocity::odomCallback, this);
     dsrv_ = new dynamic_reconfigure::Server<universal_robot::CmdTestConfig>;
     dynamic_reconfigure::Server<universal_robot::CmdTestConfig>::CallbackType cb = boost::bind(&PublishVelocity::reconfigureCB, this, _1, _2);
     dsrv_->setCallback(cb);
@@ -53,6 +57,12 @@ PublishVelocity::PublishVelocity() : vel_x_(0.2), vel_y_(0.0), angle_z_(0.0)
 PublishVelocity::~PublishVelocity()
 {
 
+}
+void PublishVelocity::odomCallback(const nav_msgs::Odometry &msg)
+{
+    if (sqrt(msg.pose.pose.position.x * msg.pose.pose.position.x + msg.pose.pose.position.y * msg.pose.pose.position.y) > 1) {
+        vel_x_ = 0.0;
+    }
 }
 
 void PublishVelocity::reconfigureCB(universal_robot::CmdTestConfig &config, uint32_t level)
