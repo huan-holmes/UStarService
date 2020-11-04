@@ -72,7 +72,7 @@ void PublishVelocity::odomCallback(const nav_msgs::Odometry &msg)
     tf::Matrix3x3(quat).getRPY(roll, pitch, yaw);
     theta_ = atan2(sin(yaw), cos(yaw));
     distance_ = sqrt(msg.pose.pose.position.x * msg.pose.pose.position.x + msg.pose.pose.position.y * msg.pose.pose.position.y);
-    ROS_INFO_STREAM(yaw);
+    ROS_INFO_STREAM(theta_);
     
     if (distance_ >= 1.0) {
         ROS_INFO_STREAM(distance_);
