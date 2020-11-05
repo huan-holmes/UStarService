@@ -112,7 +112,7 @@ void PublishVelocity::velocityInfoPublisher()
     catch(tf::TransformException &ex)
     {
         ROS_ERROR("%s",ex.what());
-        ros::Duration(1.0).sleep();
+        
         return;
     }
     distance_ = sqrt(pow(transform.getOrigin().x(), 2) + pow(transform.getOrigin().y(), 2));
@@ -124,6 +124,7 @@ void PublishVelocity::velocityInfoPublisher()
         cmd_vel_.linear.x = 0.0;
         cmd_vel_.linear.y = 0.0;
         cmd_vel_.angular.z = 0.0;
+        ros::Duration(1.0).sleep();
     } 
     else
     {
