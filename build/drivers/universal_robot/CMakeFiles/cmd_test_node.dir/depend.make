@@ -19,6 +19,7 @@ drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/r
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/dynamic_reconfigure/config_tools.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/dynamic_reconfigure/server.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Point.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Point32.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
@@ -28,6 +29,7 @@ drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/r
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Transform.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/TransformStamped.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Twist.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/TwistStamped.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/TwistWithCovariance.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3Stamped.h
@@ -36,6 +38,8 @@ drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/r
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/advertise_service_options.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/assert.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/builtin_message_traits.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/callback_queue.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/callback_queue_interface.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/common.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/console.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/console_backend.h
@@ -45,6 +49,7 @@ drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/r
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/exceptions.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/forwards.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/init.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/internal/condition_variable.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/macros.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/master.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/message.h
@@ -88,7 +93,13 @@ drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/r
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/wall_timer.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/ros/wall_timer_options.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/rosconsole/macros_generated.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/sensor_msgs/ChannelFloat32.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/sensor_msgs/PointCloud.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/std_msgs/Empty.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/std_msgs/Header.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/FrameGraph.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/FrameGraphRequest.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/FrameGraphResponse.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Matrix3x3.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/MinMax.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/QuadWord.h
@@ -96,7 +107,27 @@ drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/r
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Scalar.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Transform.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Vector3.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/exceptions.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/tf.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/tfMessage.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/time_cache.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/transform_datatypes.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf/transform_listener.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf2/LinearMath/Quaternion.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf2/LinearMath/Vector3.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf2/buffer_core.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf2/convert.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf2/exceptions.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf2/impl/convert.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf2/transform_datatypes.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf2/transform_storage.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf2_msgs/FrameGraph.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf2_msgs/FrameGraphRequest.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf2_msgs/FrameGraphResponse.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf2_msgs/TFMessage.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf2_ros/buffer.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf2_ros/buffer_interface.h
+drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/tf2_ros/transform_listener.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
 drivers/universal_robot/CMakeFiles/cmd_test_node.dir/test/cmd_test.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
 

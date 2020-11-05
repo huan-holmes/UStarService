@@ -5,6 +5,7 @@
 #include <nav_msgs/Odometry.h>
 #include "tf/transform_datatypes.h"
 #include "tf/LinearMath/Matrix3x3.h"
+#include <tf/transform_listener.h>
 class PublishVelocity
 {
     public:
@@ -16,11 +17,18 @@ class PublishVelocity
         void odomCallback(const nav_msgs::Odometry &msg);
     private:
         ros::NodeHandle nh_;
+        tf::TransformListener tf_listener_;
         ros::Publisher cmd_vel_pub_;
 
         ros::Subscriber odom_sub_;
         double theta_;
         double distance_;
+
+        std::string base_frame_;
+        std::string odom_frame_;
+
+        double dest_distance_;
+        double tolerance_distance_;
         
         geometry_msgs::Twist cmd_vel_;
 
@@ -49,10 +57,12 @@ int main(int argc, char **argv)
     return(0);
 }
 
-PublishVelocity::PublishVelocity() : vel_x_(0.2), vel_y_(0.0), angle_z_(0.4)
+PublishVelocity::PublishVelocity() : vel_x_(0.2), vel_y_(0.0), angle_z_(0.4), dest_distance_(1.0), tolerance_distance_(0.01)
 {
+    base_frame_ = "base_link";
+    odom_frame_ = "odom";
     cmd_vel_pub_ = nh_.advertise<geometry_msgs::Twist>("cmd_vel", 10);
-    odom_sub_ = nh_.subscribe("odom", 1, &PublishVelocity::odomCallback, this);
+    //odom_sub_ = nh_.subscribe("odom", 1, &PublishVelocity::odomCallback, this);
     dsrv_ = new dynamic_reconfigure::Server<universal_robot::CmdTestConfig>;
     dynamic_reconfigure::Server<universal_robot::CmdTestConfig>::CallbackType cb = boost::bind(&PublishVelocity::reconfigureCB, this, _1, _2);
     dsrv_->setCallback(cb);
@@ -94,11 +104,30 @@ void PublishVelocity::run()
 
 void PublishVelocity::velocityInfoPublisher()
 {
-    ROS_INFO_STREAM("---velocityInfoPubliser()----");
-    ROS_INFO_STREAM(angle_z_);
-    cmd_vel_.linear.x = vel_x_;
-    cmd_vel_.linear.y = vel_y_;
-    cmd_vel_.angular.z = angle_z_;
+    tf::StampedTransform transform;
+    try
+    {
+        tf_listener_.lookupTransform(odom_frame_, base_frame_, ros::Time(0), transform);
+    }
+    catch(tf::TransformException &ex)
+    {
+        ROS_ERROR("%s",ex.what());
+        ros::Duration(1.0).sleep();
+        return;
+    }
+    distance_ = sqrt(pow(transform.getOrigin().x(), 2) + pow(transform.getOrigin().y(), 2));
+    if (abs(distance_ - dest_distance_) < tolerance_distance_) 
+    {
+        ROS_INFO("x: %.3lf y: %.3lf distance: %.3lf", transform.getOrigin().x(), transform.getOrigin().y(), distance_);
+        cmd_vel_.linear.x = 0.0;
+        cmd_vel_.linear.y = 0.0;
+        cmd_vel_.angular.z = 0.0;
+    } 
+    else
+    {
+        cmd_vel_.linear.x = vel_x_;
+        cmd_vel_.linear.y = vel_y_;
+        cmd_vel_.angular.z = angle_z_; 
+    }
     cmd_vel_pub_.publish(cmd_vel_);
-    
 }
