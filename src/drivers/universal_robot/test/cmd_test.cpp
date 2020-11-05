@@ -128,7 +128,7 @@ void PublishVelocity::velocityInfoPublisher()
     } 
     else
     {
-        cmd_vel_.linear.x = 0.0;
+        cmd_vel_.linear.x = vel_x_;
         cmd_vel_.linear.y = 0.0;
         cmd_vel_.angular.z = 0.0; 
     }
