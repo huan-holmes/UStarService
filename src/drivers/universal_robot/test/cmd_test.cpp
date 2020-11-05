@@ -118,7 +118,8 @@ void PublishVelocity::velocityInfoPublisher()
     distance_ = sqrt(pow(transform.getOrigin().x(), 2) + pow(transform.getOrigin().y(), 2));
     if (abs(distance_ - dest_distance_) < tolerance_distance_) 
     {
-        ROS_INFO("x: %.3lf y: %.3lf distance: %.3lf", transform.getOrigin().x(), transform.getOrigin().y(), distance_);
+        ROS_INFO("x: %.3lf y: %.3lf distance: %.3lf dest_distance_: %.3lf tolerance_distance: %.3lf", 
+        transform.getOrigin().x(), transform.getOrigin().y(), distance_, dest_distance_, tolerance_distance_);
         cmd_vel_.linear.x = 0.0;
         cmd_vel_.linear.y = 0.0;
         cmd_vel_.angular.z = 0.0;
@@ -127,7 +128,7 @@ void PublishVelocity::velocityInfoPublisher()
     {
         cmd_vel_.linear.x = vel_x_;
         cmd_vel_.linear.y = vel_y_;
-        cmd_vel_.angular.z = angle_z_; 
+        cmd_vel_.angular.z = 0.0; 
     }
     cmd_vel_pub_.publish(cmd_vel_);
 }
