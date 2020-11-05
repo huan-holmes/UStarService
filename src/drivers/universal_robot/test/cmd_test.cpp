@@ -116,9 +116,9 @@ void PublishVelocity::velocityInfoPublisher()
         return;
     }
     distance_ = sqrt(pow(transform.getOrigin().x(), 2) + pow(transform.getOrigin().y(), 2));
-    cmd_vel_.linear.x = 0.0;
+    cmd_vel_.linear.x = 0.2;
     cmd_vel_.linear.y = 0.0;
-    cmd_vel_.angular.z = -0.4; 
+    cmd_vel_.angular.z = 0.0; 
     // if (fabs(distance_ - dest_distance_) < tolerance_distance_) 
     // {
     //     ROS_INFO_STREAM(fabs(distance_ - dest_distance_));
