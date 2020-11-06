@@ -165,6 +165,7 @@ void UniversalDrive::SentRpm(const geometry_msgs::Twist cmd_vel) {
                                  (2 * kinematic_.wheel_radius * 2 * M_PI); //rpm
         four_whell.left_front = (2 * cmd_vel.linear.x - cmd_vel.angular.z * kinematic_.wheel_gauge) * kinematic_.slow_down * 60 /
                                 (2 * kinematic_.wheel_radius * 2 * M_PI); //RPM
+        ROS_INFO_STREAM(cmd_vel.angular.z);
         four_whell.right_back = four_whell.right_front;
         four_whell.left_back = four_whell.left_front;
         memcpy(&buffer[4], &four_whell, sizeof(FourWheel));
