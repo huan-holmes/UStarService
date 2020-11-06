@@ -160,7 +160,7 @@ namespace UstarSlam
 		unsigned int skip = 0;
 		double freeDelta = map.getDelta() * m_freeCellRatio;
 		for (const double *r = readings + m_initialBeamsSkip; r < readings + m_laserBeams; r++, angle++)
-		{
+		{　
 			skip++;
 			skip = skip > m_likelihoodSkip ? 0 : skip;
 			if (skip || *r > m_usableRange || *r == 0.0)

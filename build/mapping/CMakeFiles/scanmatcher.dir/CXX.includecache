@@ -155,6 +155,10 @@ iostream
 -
 gmapping/utils/gvalues.h
 /home/boocax/UstarService/src/mapping/include/gmapping/scanmatcher/gmapping/utils/gvalues.h
+ros/ros.h
+/home/boocax/UstarService/src/mapping/include/gmapping/scanmatcher/ros/ros.h
+iostream
+-
 
 /home/boocax/UstarService/src/mapping/include/gmapping/sensor/odometryreading.h
 string.h
