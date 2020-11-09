@@ -14,7 +14,8 @@
     <!-- <param name="maxUrange" value="20.0"/> -->
 
     <!-- The maximum range of the sensor. If regions with no obstacles within the range of the sensor should appear as free space in the map, set maxUrange < maximum range of the real sensor <= maxRange -->
-    <param name="maxRange" value="10.0"/>
+    <param name="maxRange" value="20.0"/>
+    <param name="maxUrange" value="16.0"/>
 
     <param name="sigma" value="0.05"/>
     <param name="kernelSize" value="1"/>

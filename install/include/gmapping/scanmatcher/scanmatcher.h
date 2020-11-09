@@ -170,8 +170,10 @@ namespace UstarSlam
 			phit.y += *r * sin(lp.theta + *angle);
 			IntPoint iphit = map.world2map(phit);
 			Point pfree = lp;
-			pfree.x += (*r - map.getDelta() * freeDelta) * cos(lp.theta + *angle);
-			pfree.y += (*r - map.getDelta() * freeDelta) * sin(lp.theta + *angle);
+			//pfree.x += (*r - map.getDelta() * freeDelta) * cos(lp.theta + *angle);
+			//pfree.y += (*r - map.getDelta() * freeDelta) * sin(lp.theta + *angle);
+			pfree.x += (*r - freeDelta) * cos(lp.theta + *angle);
+			pfree.y += (*r - freeDelta) * sin(lp.theta + *angle);
 			pfree = pfree - phit;
 			IntPoint ipfree = map.world2map(pfree);
 			bool found = false;
