@@ -73,13 +73,12 @@ void UniversalDrive::CheckData() {
         if (four_wheel.type) {
             info_.vel = (four_wheel.left_front + four_wheel.right_front)
                         * kinematic_.wheel_radius * 2 * M_PI / (2 * kinematic_.slow_down * 60);
-            info_.w = (four_wheel.right_front + 1 - four_wheel.left_front) * kinematic_.wheel_radius * 2 * M_PI / (kinematic_.wheel_gauge * kinematic_.slow_down * 60);
+            info_.w = (four_wheel.right_front - four_wheel.left_front) * kinematic_.wheel_radius * 2 * M_PI / (kinematic_.wheel_gauge * kinematic_.slow_down * 60);
             info_.distance = fabs(four_wheel.stamp - last_time) * info_.vel / 1000;
             info_.d_w = fabs(four_wheel.stamp - last_time) * info_.w / 1000;
         } else {
         }
-        ROS_INFO_STREAM(four_wheel.right_front);
-        ROS_INFO_STREAM(four_wheel.left_front);
+        ROS_INFO("right: %d, left: %d", four_wheel.right_front, four_wheel.left_front);
         last_time = four_wheel.stamp;
         //std::cout << four_wheel.stamp<< " "<< four_wheel.type<< " "<< four_wheel.left_back
          //         << " "<< four_wheel.left_front<< " "<< four_wheel.right_back<< " "<< four_wheel.right_front<<std::endl;
