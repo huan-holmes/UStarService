@@ -78,6 +78,8 @@ void UniversalDrive::CheckData() {
             info_.d_w = fabs(four_wheel.stamp - last_time) * info_.w / 1000;
         } else {
         }
+        ROS_INFO_STREAM(four_wheel.right_front);
+        ROS_INFO_STREAM(four_wheel.left_front);
         last_time = four_wheel.stamp;
         //std::cout << four_wheel.stamp<< " "<< four_wheel.type<< " "<< four_wheel.left_back
          //         << " "<< four_wheel.left_front<< " "<< four_wheel.right_back<< " "<< four_wheel.right_front<<std::endl;
@@ -165,8 +167,8 @@ void UniversalDrive::SentRpm(const geometry_msgs::Twist cmd_vel) {
                                  (2 * kinematic_.wheel_radius * 2 * M_PI); //rpm
         four_whell.left_front = (2 * cmd_vel.linear.x + cmd_vel.angular.z * kinematic_.wheel_gauge) * kinematic_.slow_down * 60 /
                                 (2 * kinematic_.wheel_radius * 2 * M_PI); //RPM
-        ROS_INFO_STREAM(four_whell.right_front);
-        ROS_INFO_STREAM(four_whell.left_front);
+        // ROS_INFO_STREAM(four_whell.right_front);
+        // ROS_INFO_STREAM(four_whell.left_front);
         four_whell.right_back = four_whell.right_front;
         four_whell.left_back = four_whell.left_front;
         memcpy(&buffer[4], &four_whell, sizeof(FourWheel));
@@ -179,7 +181,7 @@ void UniversalDrive::SentRpm(const geometry_msgs::Twist cmd_vel) {
         uint8_t  buffer[size] ;
         buffer[0] = Head1;
         buffer[1] = Head2;
-        buffer[2] = size - 4;
+        buffer[2] = size - 4; 
         buffer[3] = AckerManNormallFlag;
         buffer[size - 2] = End1;
         buffer[size - 1] = End2;
