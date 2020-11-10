@@ -84,7 +84,7 @@ void UniversalDrive::CheckData() {
             info_.d_w = fabs(four_wheel.stamp - last_time) * info_.w / 1000;
         } else {
         }
-        ROS_INFO("right: %d, left: %d", four_wheel.right_front, four_wheel.left_front);
+        //ROS_INFO("right: %d, left: %d", four_wheel.right_front, four_wheel.left_front);
         ROS_INFO("right: %d, left: %d", four_wheel.right_front + 1, four_wheel.left_front);
         last_time = four_wheel.stamp;
         //std::cout << four_wheel.stamp<< " "<< four_wheel.type<< " "<< four_wheel.left_back
