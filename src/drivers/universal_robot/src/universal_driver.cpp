@@ -161,9 +161,9 @@ void UniversalDrive::SentRpm(const geometry_msgs::Twist cmd_vel) {
         buffer[size - 1] = End2;
         four_whell.type = 1;
         four_whell.stamp = ros::Time::now().toSec() * 1000;
-        four_whell.right_front = (2 * cmd_vel.linear.x + cmd_vel.angular.z * kinematic_.wheel_gauge) * kinematic_.slow_down * 60 /
+        four_whell.right_front = (2 * cmd_vel.linear.x - cmd_vel.angular.z * kinematic_.wheel_gauge) * kinematic_.slow_down * 60 /
                                  (2 * kinematic_.wheel_radius * 2 * M_PI); //rpm
-        four_whell.left_front = (2 * cmd_vel.linear.x - cmd_vel.angular.z * kinematic_.wheel_gauge) * kinematic_.slow_down * 60 /
+        four_whell.left_front = (2 * cmd_vel.linear.x + cmd_vel.angular.z * kinematic_.wheel_gauge) * kinematic_.slow_down * 60 /
                                 (2 * kinematic_.wheel_radius * 2 * M_PI); //RPM
         ROS_INFO_STREAM(four_whell.right_front);
         ROS_INFO_STREAM(four_whell.left_front);
