@@ -75,9 +75,15 @@ void UniversalDrive::CheckData() {
                         * kinematic_.wheel_radius * 2 * M_PI / (2 * kinematic_.slow_down * 60);
             //if (four_wheel.right_front > 0)
             if (four_wheel.right_front != four_wheel.left_front)
+            {
                 info_.w = (four_wheel.right_front + 1 - four_wheel.left_front) * kinematic_.wheel_radius * 2 * M_PI / (kinematic_.wheel_gauge * kinematic_.slow_down * 60);
+                ROS_INFO("right+1: %d, left: %d", four_wheel.right_front + 1, four_wheel.left_front);
+            }
             else
+            {
                 info_.w = (four_wheel.right_front - four_wheel.left_front) * kinematic_.wheel_radius * 2 * M_PI / (kinematic_.wheel_gauge * kinematic_.slow_down * 60);
+                ROS_INFO("right: %d, left: %d", four_wheel.right_front, four_wheel.left_front);
+            }
             // if (four_wheel.right_front < 0)
             //     info_.w = (four_wheel.right_front + 1 - four_wheel.left_front) * kinematic_.wheel_radius * 2 * M_PI / (kinematic_.wheel_gauge * kinematic_.slow_down * 60);
             info_.distance = fabs(four_wheel.stamp - last_time) * info_.vel / 1000;
