@@ -57,4 +57,31 @@ target_link_libraries(gmapping_node
   ${catkin_LIBRARIES}
 )
 
+#############
+## Install ##
+#############
 
+## Install excutable python script
+install(
+    PROGRAMS
+      scripts/cmd_keyboard_control.py
+    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+install(TARGETS gmapping_node
+   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+ )
+
+## Install project namespaced headers
+install(DIRECTORY include/gmapping/
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+  FILES_MATCHING PATTERN "*.h"
+  PATTERN ".svn" EXCLUDE)
+
+install(DIRECTORY launch
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
+install(DIRECTORY rviz
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
