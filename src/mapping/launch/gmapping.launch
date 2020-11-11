@@ -9,7 +9,7 @@
       <param name="map_frame" value="map"/>
       <param name="odom_frame" value="odom"/>
       <param name="base_frame" value="base_link"/>
-      <param name="map_update_interval" value="5.0"/>
+      <param name="map_update_interval" value="1.0"/>
       <param name="maxRange" value="20.0"/>
       <param name="maxUrange" value="16.0"/>
       <param name="sigma" value="0.05"/>
@@ -28,7 +28,7 @@
       <param name="linearUpdate" value="0.5"/>
       <param name="angularUpdate" value="0.0436"/>
       <param name="temporalUpdate" value="-1.0"/>
-      <param name="resampleThreshold" value="0.5"/>
+      <param name="resampleThreshold" value="0.7"/>
       <param name="particles" value="80"/>
       <param name="xmin" value="-50.0"/>
       <param name="ymin" value="-50.0"/>
