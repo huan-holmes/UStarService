@@ -65,6 +65,7 @@ namespace UstarSlam
 		IntPoint p0 = map.world2map(lp);
 		const double *angle = m_laserAngles;
 		for (const double *r = readings; r < readings + m_laserBeams; r++, angle++)
+		{
 			if (m_generateMap)
 			{
 				double d = *r;
@@ -108,6 +109,7 @@ namespace UstarSlam
 				assert(cp.x >= 0 && cp.y >= 0);
 				activeArea.insert(cp);
 			}
+		}	
 		//this allocates the unallocated cells in the active area of the map
 		//cout << "activeArea::size() " << activeArea.size() << endl;
 		map.storage().setActiveArea(activeArea, true);
