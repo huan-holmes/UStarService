@@ -39,11 +39,6 @@ add_library(sensor
 add_library(utils
   src/gmapping/utils/stat.cpp
 )
-install(DIRECTORY include/gmapping
-  DESTINATION ${CATKIN_GLOBAL_INCLUDE_DESTINATION}
-  FILES_MATCHING PATTERN "*.h*"
-  PATTERN ".svn" EXCLUDE
-)
 
 add_executable(gmapping_node src/gmapping/main.cpp src/gmapping/gmapping.cpp)
 
