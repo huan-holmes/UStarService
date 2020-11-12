@@ -73,16 +73,17 @@ void UniversalDrive::CheckData() {
         if (four_wheel.type) {
             info_.vel = (four_wheel.left_front + four_wheel.right_front)
                         * kinematic_.wheel_radius * 2 * M_PI / (2 * kinematic_.slow_down * 60);
+            //info_.w = (four_wheel.right_front - four_wheel.left_front) * kinematic_.wheel_radius * 2 * M_PI / (kinematic_.wheel_gauge * kinematic_.slow_down * 60);
             //if (four_wheel.right_front > 0)
             if (four_wheel.right_front != four_wheel.left_front)
             {
                 info_.w = (four_wheel.right_front + 1 - four_wheel.left_front) * kinematic_.wheel_radius * 2 * M_PI / (kinematic_.wheel_gauge * kinematic_.slow_down * 60);
-                ROS_INFO("right+1: %d, left: %d", four_wheel.right_front + 1, four_wheel.left_front);
+                //ROS_INFO("right+1: %d, left: %d", four_wheel.right_front + 1, four_wheel.left_front);
             }
             else
             {
                 info_.w = (four_wheel.right_front - four_wheel.left_front) * kinematic_.wheel_radius * 2 * M_PI / (kinematic_.wheel_gauge * kinematic_.slow_down * 60);
-                ROS_INFO("right: %d, left: %d", four_wheel.right_front, four_wheel.left_front);
+                //ROS_INFO("right: %d, left: %d", four_wheel.right_front, four_wheel.left_front);
             }
             // if (four_wheel.right_front < 0)
             //     info_.w = (four_wheel.right_front + 1 - four_wheel.left_front) * kinematic_.wheel_radius * 2 * M_PI / (kinematic_.wheel_gauge * kinematic_.slow_down * 60);
@@ -358,9 +359,12 @@ UniversalNode::UniversalNode() {
         odom_dev_ = "/dev/ttyS0";
     }
     nh.param<float>("robooster_slow_down", kinematic_.slow_down, 1.0);
-    nh.param<float>("robooster_wheel_radius", kinematic_.wheel_radius, 0.083);
+    nh.param<float>("robooster_wheel_radius", kinematic_.wheel_radius, 0.080);
+    // nh.param<float>("robooster_wheel_radius", kinematic_.wheel_radius, 0.040);
+
     nh.param<float>("robooster_encoder_lines", kinematic_.encoder_lines, 1024);
-    nh.param<float>("robooster_wheel_gauge", kinematic_.wheel_gauge, 0.26627);
+    //nh.param<float>("robooster_wheel_gauge", kinematic_.wheel_gauge, 0.26627);
+    nh.param<float>("robooster_wheel_gauge", kinematic_.wheel_gauge, 0.30000);
     std::cout << "-----------------------------------------------------------------" << std::endl;
     std::cout << "read_from_rosparam " << read_from_rosparam << ",robooster_odom_dev " << odom_dev_ << std::endl;
     std::cout << "robooster_slow_down " << kinematic_.slow_down << "robooster_wheel_radius " << kinematic_.wheel_radius <<
