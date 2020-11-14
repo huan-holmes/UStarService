@@ -359,11 +359,10 @@ namespace UstarCostmap
   {
     // don't allow configuration to happen while this check occurs
     // boost::recursive_mutex::scoped_lock mcl(configuration_mutex_);
-
     geometry_msgs::PoseStamped new_pose;
-
     if (!getRobotPose(new_pose))
     {
+
       ROS_WARN_THROTTLE(1.0, "Could not get robot pose, cancelling reconfiguration");
       robot_stopped_ = false;
     }
@@ -532,11 +531,9 @@ namespace UstarCostmap
     robot_pose.header.frame_id = robot_base_frame_;
     robot_pose.header.stamp = ros::Time();
     ros::Time current_time = ros::Time::now(); // save time for checking tf delay later
-
     // get the global pose of the robot
     try
     {
-      
       tf_.transform(robot_pose, global_pose, global_frame_);
       //ROS_INFO_STREAM(global_frame_);
     }
@@ -555,6 +552,7 @@ namespace UstarCostmap
       ROS_ERROR_THROTTLE(1.0, "Extrapolation Error looking up robot pose: %s\n", ex.what());
       return false;
     }
+    global_pose.header.stamp = ros::Time::now();
     // check global_pose timeout
     if (current_time.toSec() - global_pose.header.stamp.toSec() > transform_tolerance_)
     {

@@ -832,7 +832,7 @@ void LocalizationNode::requestMap()
   while(!ros::service::call("static_map", req, resp))
   {
     ROS_WARN("Request for map failed; trying again...");
-    ros::Duration d(0.5);
+    ros::Duration d(2.0);
     d.sleep();
   }
   handleMapMessage(resp.map);
@@ -1090,7 +1090,7 @@ bool LocalizationNode::setMapCallback(nav_msgs::SetMap::Request& req,
 void LocalizationNode::laserReceived(const sensor_msgs::LaserScanConstPtr& laser_scan)
 {
   std::string laser_scan_frame_id = stripSlash(laser_scan->header.frame_id);
-  last_laser_received_ts_ = ros::Time::now();
+  last_laser_received_ts_ = ros::Time();
   if(map_ == NULL) {
     return;
   }
@@ -1300,7 +1300,7 @@ void LocalizationNode::laserReceived(const sensor_msgs::LaserScanConstPtr& laser
     if (!m_force_update)
     {
       geometry_msgs::PoseArray cloud_msg;
-      cloud_msg.header.stamp = ros::Time::now();
+      cloud_msg.header.stamp = ros::Time();
       cloud_msg.header.frame_id = global_frame_id_;
       cloud_msg.poses.resize(set->sample_count);
       for(int i=0;i<set->sample_count;i++)

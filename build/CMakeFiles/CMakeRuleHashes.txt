@@ -10,7 +10,7 @@ ca40a99a1ecba3b6cbe630950bd7610f /home/boocax/UstarService/devel/include/costmap
 5edf2f81fcbe3395a98e602c5a99822a /home/boocax/UstarService/devel/include/costmap/VoxelPluginConfig.h
 e84e09a1595733cad082819f85c07773 /home/boocax/UstarService/devel/include/dwa_local_planner/DWAPlannerConfig.h
 4a8cd9a58e409a6a6cd930258a2dbcfb /home/boocax/UstarService/devel/include/global_planner/GlobalPlannerConfig.h
-d40db8ce67e875b9baa47200b69c7858 /home/boocax/UstarService/devel/include/localization/LOCALIZATIONConfig.h
+d2539596acdcbe0ece10e3b7c7582c24 /home/boocax/UstarService/devel/include/localization/LOCALIZATIONConfig.h
 5c0ad5685a67f5249a74f64616fffb1f /home/boocax/UstarService/devel/include/move_base/MoveBaseConfig.h
 bf196c7d78e7017c6232203a46a86be0 /home/boocax/UstarService/devel/include/navfn/MakeNavPlan.h
 be648341ae26b6344d5e85092833f44e /home/boocax/UstarService/devel/include/navfn/SetCostmap.h

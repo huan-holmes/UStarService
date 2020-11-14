@@ -120,6 +120,7 @@ namespace UstarCostmap
       std::vector<unsigned char>::iterator iter_obs = observation_cloud.data.begin();
       for (; iter_global != iter_global_end; ++iter_z, iter_global += global_frame_cloud.point_step)
       {
+        
         if ((*iter_z) <= max_obstacle_height_ && (*iter_z) >= min_obstacle_height_)
         {
           std::copy(iter_global, iter_global + global_frame_cloud.point_step, iter_obs);

@@ -278,7 +278,7 @@ namespace dwa_local_planner {
     // find best trajectory by sampling and scoring the samples
     std::vector<base_local_planner::Trajectory> all_explored;
     scored_sampling_planner_.findBestTrajectory(result_traj_, &all_explored);
-
+    ROS_INFO_STREAM(result_traj_.cost_);
     if(publish_traj_pc_)
     {
         sensor_msgs::PointCloud2 traj_cloud;

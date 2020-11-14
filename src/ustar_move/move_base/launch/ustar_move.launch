@@ -1,0 +1,39 @@
+<launch>
+	<node pkg="tf" type="static_transform_publisher" name="laser_to_base" args="0.06940396164 0.0 0.032 0.0 0.0 0.0 1.0 /base_link /laser 100" />
+    <node pkg="tf" type="static_transform_publisher" name="footprint_to_base" args="-0.10118504895 0.0 0.44322 0.0 0.0 0.0 1.0 /base_link /base_footprint 100" />
+	<arg name="map_file" default="$(find move_base)/map/map4.yaml"/>
+  	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)">
+    	<param name="frame_id" value="/map"/>
+  	</node>
+	<include file="$(find localization)/launch/amcl_diff.launch" />
+	<arg name="odom_frame_id"   default="odom"/>
+  	<arg name="base_frame_id"   default="base_link"/>
+ 	<arg name="global_frame_id" default="map"/>
+	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+		<rosparam file="$(find costmap)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
+		<rosparam file="$(find costmap)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
+		<rosparam file="$(find costmap)/param/local_costmap_params.yaml" command="load" />
+		<rosparam file="$(find costmap)/param/global_costmap_params.yaml" command="load" />
+		<rosparam file="$(find costmap)/param/dwa_local_planner_params.yaml" command="load" />
+		<rosparam file="$(find costmap)/param/global_planner_params.yaml" command="load" />
+		<rosparam file="$(find costmap)/param/move_base_params.yaml" command="load" />
+		<!-- <rosparam file="$(find costmap)/param/navfn_global_planner_params.yaml" command="load" /> -->
+		<param name="global_costmap/global_frame" value="$(arg global_frame_id)"/>
+   		<param name="global_costmap/robot_base_frame" value="$(arg base_frame_id)"/>
+    	<param name="local_costmap/global_frame" value="$(arg odom_frame_id)"/>
+    	<param name="local_costmap/robot_base_frame" value="$(arg base_frame_id)"/>
+    	<param name="DWAPlannerROS/global_frame_id" value="$(arg odom_frame_id)"/>
+	</node>
+	<arg name="base"       default="$(optenv TURTLEBOT_BASE kobuki)"/>  <!-- create, rhoomba -->
+    <arg name="stacks"     default="$(optenv TURTLEBOT_STACKS hexagons)"/>  <!-- circles, hexagons -->
+    <arg name="3d_sensor"  default="$(optenv TURTLEBOT_3D_SENSOR kinect)"/>  <!-- kinect, asus_xtion_pro -->
+    <include file="$(find turtlebot_bringup)/launch/includes/robot.launch.xml">
+      <arg name="base" value="$(arg base)" />
+      <arg name="stacks" value="$(arg stacks)" />
+      <arg name="3d_sensor" value="$(arg 3d_sensor)"/>
+    </include>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+      <param name="use_gui" value="true"/>
+    </node>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find move_base)/rviz/ustar_move.rviz"/>
+</launch>

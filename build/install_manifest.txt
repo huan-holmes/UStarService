@@ -105,11 +105,9 @@
 /home/boocax/UstarService/install/share/localization/launch/amcl_omni.launch
 /home/boocax/UstarService/install/include/universal_robot/CmdTestConfig.h
 /home/boocax/UstarService/install/lib/python2.7/dist-packages/universal_robot/__init__.py
-/home/boocax/UstarService/install/lib/python2.7/dist-packages/universal_robot/cfg/Cmd_test_Config.py
 /home/boocax/UstarService/install/lib/python2.7/dist-packages/universal_robot/cfg/CmdTestConfig.pyc
 /home/boocax/UstarService/install/lib/python2.7/dist-packages/universal_robot/cfg/CmdTestConfig.py
 /home/boocax/UstarService/install/lib/python2.7/dist-packages/universal_robot/cfg/__init__.py
-/home/boocax/UstarService/install/lib/python2.7/dist-packages/universal_robot/cfg/Cmd_test_Config.pyc
 /home/boocax/UstarService/install/lib/python2.7/dist-packages/universal_robot/cfg/__init__.pyc
 /home/boocax/UstarService/install/lib/pkgconfig/universal_robot.pc
 /home/boocax/UstarService/install/share/universal_robot/cmake/universal_robotConfig.cmake

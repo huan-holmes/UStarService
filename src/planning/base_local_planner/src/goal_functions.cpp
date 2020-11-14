@@ -74,7 +74,7 @@ namespace base_local_planner {
     const geometry_msgs::PoseStamped& plan_pose = global_plan[0];
     try {
       // get plan_to_global_transform from plan frame to global_frame
-      geometry_msgs::TransformStamped plan_to_global_transform = tf.lookupTransform(global_frame, ros::Time(),
+      geometry_msgs::TransformStamped plan_to_global_transform = tf.lookupTransform(global_frame, ros::Time::now(),
           plan_pose.header.frame_id, plan_pose.header.stamp, plan_pose.header.frame_id, ros::Duration(0.5));
 
       //let's get the pose of the robot in the frame of the plan
@@ -146,7 +146,7 @@ namespace base_local_planner {
 
     const geometry_msgs::PoseStamped& plan_goal_pose = global_plan.back();
     try{
-      geometry_msgs::TransformStamped transform = tf.lookupTransform(global_frame, ros::Time(),
+      geometry_msgs::TransformStamped transform = tf.lookupTransform(global_frame, ros::Time::now(),
                          plan_goal_pose.header.frame_id, plan_goal_pose.header.stamp,
                          plan_goal_pose.header.frame_id, ros::Duration(0.5));
 
