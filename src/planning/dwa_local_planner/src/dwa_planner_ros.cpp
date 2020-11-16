@@ -143,7 +143,6 @@ namespace dwa_local_planner {
 
 
   bool DWAPlannerROS::dwaComputeVelocityCommands(geometry_msgs::PoseStamped &global_pose, geometry_msgs::Twist& cmd_vel) {
-    ROS_INFO_STREAM("----dwaComputeVelocityCommands()----");
     // dynamic window sampling approach to get useful velocity commands
     //ROS_INFO_STREAM(global_pose);
     if(!isInitialized()){
@@ -180,7 +179,6 @@ namespace dwa_local_planner {
     cmd_vel.linear.x = drive_cmds.pose.position.x;
     cmd_vel.linear.y = drive_cmds.pose.position.y;
     cmd_vel.angular.z = tf2::getYaw(drive_cmds.pose.orientation);
-    ROS_INFO_STREAM(cmd_vel);
     //if we cannot move... tell someone
     std::vector<geometry_msgs::PoseStamped> local_plan;
     if(path.cost_ < 0) {
@@ -216,10 +214,6 @@ namespace dwa_local_planner {
     publishLocalPlan(local_plan);
     return true;
   }
-
-
-
-
   bool DWAPlannerROS::computeVelocityCommands(geometry_msgs::Twist& cmd_vel) {
     // dispatches to either dwa sampling control or stop and rotate control, depending on whether we have been close enough to goal
     if ( ! costmap_ros_->getRobotPose(current_pose_)) {
@@ -267,6 +261,4 @@ namespace dwa_local_planner {
       return isOk;
     }
   }
-
-
 };

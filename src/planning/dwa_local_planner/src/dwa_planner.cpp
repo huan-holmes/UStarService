@@ -109,7 +109,6 @@ namespace dwa_local_planner {
       }
     }
     ROS_INFO("Sim period is set to %.2f", sim_period_);
-
     oscillation_costs_.resetOscillationFlags();
 
     bool sum_scores;
@@ -141,7 +140,6 @@ namespace dwa_local_planner {
     generator_list.push_back(&generator_);
 
     scored_sampling_planner_ = base_local_planner::SimpleScoredSamplingPlanner(generator_list, critics);
-
     private_nh.param("cheat_factor", cheat_factor_, 1.0);
   }
 
@@ -266,7 +264,6 @@ namespace dwa_local_planner {
     geometry_msgs::PoseStamped goal_pose = global_plan_.back();
     Eigen::Vector3f goal(goal_pose.pose.position.x, goal_pose.pose.position.y, tf2::getYaw(goal_pose.pose.orientation));
     base_local_planner::LocalPlannerLimits limits = planner_util_->getCurrentLimits();
-
     // prepare cost functions and generators for this run
     generator_.initialise(pos,
         vel,
@@ -278,7 +275,6 @@ namespace dwa_local_planner {
     // find best trajectory by sampling and scoring the samples
     std::vector<base_local_planner::Trajectory> all_explored;
     scored_sampling_planner_.findBestTrajectory(result_traj_, &all_explored);
-    ROS_INFO_STREAM(result_traj_.cost_);
     if(publish_traj_pc_)
     {
         sensor_msgs::PointCloud2 traj_cloud;

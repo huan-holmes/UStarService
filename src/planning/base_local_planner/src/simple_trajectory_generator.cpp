@@ -150,7 +150,6 @@ bool SimpleTrajectoryGenerator::generateTrajectory(
   traj.cost_   = -1.0; // placed here in case we return early
   //trajectory might be reused so we'll make sure to reset it
   traj.resetPoints();
-
   // make sure that the robot would at least be moving with one of
   // the required minimum velocities for translation and rotation (if set)
   if ((limits_->min_vel_trans >= 0 && vmag + eps < limits_->min_vel_trans) &&
@@ -173,7 +172,6 @@ bool SimpleTrajectoryGenerator::generateTrajectory(
         ceil(std::max(sim_time_distance / sim_granularity_,
             sim_time_angle    / angular_sim_granularity_));
   }
-
   if (num_steps == 0) {
     return false;
   }
@@ -181,7 +179,7 @@ bool SimpleTrajectoryGenerator::generateTrajectory(
   //compute a timestep
   double dt = sim_time_ / num_steps;
   traj.time_delta_ = dt;
-
+  
   Eigen::Vector3f loop_vel;
   
   if (continued_acceleration_) {

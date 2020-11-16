@@ -52,13 +52,13 @@ namespace base_local_planner {
         return false;
       }
     }
-    for (std::vector<TrajectorySampleGenerator*>::iterator loop_gen = gen_list_.begin(); loop_gen != gen_list_.end(); ++loop_gen) {
+    for (std::vector<TrajectorySampleGenerator*>::iterator loop_gen = gen_list_.begin(); loop_gen != gen_list_.end(); ++loop_gen) 
+    {
       count = 0;
       count_valid = 0;
       TrajectorySampleGenerator* gen_ = *loop_gen;
       while (gen_->hasMoreTrajectories()) {
         gen_success = gen_->nextTrajectory(loop_traj);
-        
         if (gen_success == false) {
           // TODO use this for debugging
           continue;
