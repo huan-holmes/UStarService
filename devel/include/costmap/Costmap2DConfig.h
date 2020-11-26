@@ -525,7 +525,7 @@ Costmap2DConfig::GroupDescription<Costmap2DConfig::DEFAULT, Costmap2DConfig> Def
 //#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.robot_radius = 10.0;
 //#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.robot_radius = 0.46;
+      __default__.robot_radius = 0.2552;
 //#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(Costmap2DConfig::AbstractParamDescriptionConstPtr(new Costmap2DConfig::ParamDescription<double>("robot_radius", "double", 0, "The radius of the robot in meters, this parameter should only be set for circular robots, all others should use the footprint parameter described above.", "", &Costmap2DConfig::robot_radius)));
 //#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"

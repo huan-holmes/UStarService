@@ -8,7 +8,7 @@
 
 #include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 
-namespace move_base {
+namespace move_base { 
 
   MoveBase::MoveBase(tf2_ros::Buffer& tf):
                      tf_(tf), as_(NULL), planner_costmap_ros_(NULL), controller_costmap_ros_(NULL), bgp_loader_("nav_core", "UstarPlanning::BaseGlobalPlanner"),
@@ -542,7 +542,6 @@ namespace move_base {
       //time to plan! get a copy of the goal and unlock the mutex
       geometry_msgs::PoseStamped temp_goal = planner_goal_;
       lock.unlock();
-      ROS_DEBUG_NAMED("move_base_plan_thread","Planning...");
 
       //run planner
       planner_plan_->clear();
@@ -611,13 +610,13 @@ namespace move_base {
       as_->setAborted(move_base_msgs::MoveBaseResult(), "Aborting on goal because it was sent with an invalid quaternion");
       return;
     }
-    
     geometry_msgs::PoseStamped goal = goalToGlobalFrame(move_base_goal->target_pose);
     publishZeroVelocity();
     //we have a goal so start the planner
     boost::unique_lock<boost::recursive_mutex> lock(planner_mutex_);
     planner_goal_ = goal;
     runPlanner_ = true;
+    ROS_INFO("move_base:1 %d", runPlanner_);
     planner_cond_.notify_one();
     lock.unlock();
 
@@ -909,11 +908,12 @@ namespace move_base {
       //we'll try to clear out space with any user-provided recovery behaviors
       case CLEARING:
         ROS_DEBUG_NAMED("move_base","In clearing/recovery state");
+        ROS_INFO_STREAM(recovery_behaviors_.size());
         //we'll invoke whatever recovery behavior we're currently on if they're enabled
         if(recovery_behavior_enabled_ && recovery_index_ < recovery_behaviors_.size()){
           ROS_DEBUG_NAMED("move_base_recovery","Executing behavior %u of %zu", recovery_index_, recovery_behaviors_.size());
-          recovery_behaviors_[recovery_index_]->runBehavior();
-
+          //recovery_behaviors_[recovery_index_]->runBehavior();
+          publishZeroVelocity();
           //we at least want to give the robot some time to stop oscillating after executing the behavior
           last_oscillation_reset_ = ros::Time::now();
 
