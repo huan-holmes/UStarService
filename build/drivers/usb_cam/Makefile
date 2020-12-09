@@ -100,17 +100,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -122,16 +111,16 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
+# Special rule for the target test
+test/fast: test
 
-.PHONY : install/strip/fast
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -180,6 +169,11 @@ usb_cam/fast:
 	cd /home/boocax/UstarService/build && $(MAKE) -f drivers/usb_cam/CMakeFiles/usb_cam.dir/build.make drivers/usb_cam/CMakeFiles/usb_cam.dir/build
 .PHONY : usb_cam/fast
 
+# Manual pre-install relink rule for target.
+usb_cam/preinstall:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 drivers/usb_cam/CMakeFiles/usb_cam.dir/preinstall
+.PHONY : usb_cam/preinstall
+
 # Convenience name for target.
 drivers/usb_cam/CMakeFiles/usb_cam_node.dir/rule:
 	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 drivers/usb_cam/CMakeFiles/usb_cam_node.dir/rule
@@ -194,6 +188,11 @@ usb_cam_node: drivers/usb_cam/CMakeFiles/usb_cam_node.dir/rule
 usb_cam_node/fast:
 	cd /home/boocax/UstarService/build && $(MAKE) -f drivers/usb_cam/CMakeFiles/usb_cam_node.dir/build.make drivers/usb_cam/CMakeFiles/usb_cam_node.dir/build
 .PHONY : usb_cam_node/fast
+
+# Manual pre-install relink rule for target.
+usb_cam_node/preinstall:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 drivers/usb_cam/CMakeFiles/usb_cam_node.dir/preinstall
+.PHONY : usb_cam_node/preinstall
 
 nodes/usb_cam_node.o: nodes/usb_cam_node.cpp.o
 
@@ -259,11 +258,10 @@ help:
 	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test"
 	@echo "... usb_cam"
-	@echo "... usb_cam_node"
 	@echo "... install/local"
-	@echo "... install/strip"
+	@echo "... usb_cam_node"
+	@echo "... test"
 	@echo "... nodes/usb_cam_node.o"
 	@echo "... nodes/usb_cam_node.i"
 	@echo "... nodes/usb_cam_node.s"

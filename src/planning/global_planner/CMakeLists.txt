@@ -42,9 +42,12 @@ catkin_package(
 )
 add_library(global_planner
   src/global_planner/quadratic_calculator.cpp
+  src/global_planner/tquadratic_calculator.cpp
   src/global_planner/dijkstra.cpp
   src/global_planner/astar.cpp
+  src/global_planner/tastar.cpp
   src/global_planner/grid_path.cpp
+  src/global_planner/tgrid_path.cpp
   src/global_planner/gradient_path.cpp
   src/global_planner/orientation_filter.cpp
   src/global_planner/planner_core.cpp

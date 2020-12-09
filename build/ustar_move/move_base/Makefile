@@ -56,6 +56,16 @@ CMAKE_BINARY_DIR = /home/boocax/UstarService/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"header\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -90,38 +100,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"header\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -132,6 +110,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -211,21 +200,6 @@ move_base_msgs_generate_messages_lisp/fast:
 .PHONY : move_base_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
-.PHONY : ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-move_base_msgs_generate_messages_eus: ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
-
-.PHONY : move_base_msgs_generate_messages_eus
-
-# fast build rule for target.
-move_base_msgs_generate_messages_eus/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build.make ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build
-.PHONY : move_base_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
 ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule:
 	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
 .PHONY : ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
@@ -255,6 +229,11 @@ move_base/fast:
 	cd /home/boocax/UstarService/build && $(MAKE) -f ustar_move/move_base/CMakeFiles/move_base.dir/build.make ustar_move/move_base/CMakeFiles/move_base.dir/build
 .PHONY : move_base/fast
 
+# Manual pre-install relink rule for target.
+move_base/preinstall:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 ustar_move/move_base/CMakeFiles/move_base.dir/preinstall
+.PHONY : move_base/preinstall
+
 # Convenience name for target.
 ustar_move/move_base/CMakeFiles/move_base_node.dir/rule:
 	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 ustar_move/move_base/CMakeFiles/move_base_node.dir/rule
@@ -269,6 +248,26 @@ move_base_node: ustar_move/move_base/CMakeFiles/move_base_node.dir/rule
 move_base_node/fast:
 	cd /home/boocax/UstarService/build && $(MAKE) -f ustar_move/move_base/CMakeFiles/move_base_node.dir/build.make ustar_move/move_base/CMakeFiles/move_base_node.dir/build
 .PHONY : move_base_node/fast
+
+# Manual pre-install relink rule for target.
+move_base_node/preinstall:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 ustar_move/move_base/CMakeFiles/move_base_node.dir/preinstall
+.PHONY : move_base_node/preinstall
+
+# Convenience name for target.
+ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
+.PHONY : ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+move_base_msgs_generate_messages_eus: ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
+
+.PHONY : move_base_msgs_generate_messages_eus
+
+# fast build rule for target.
+move_base_msgs_generate_messages_eus/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build.make ustar_move/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build
+.PHONY : move_base_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 ustar_move/move_base/CMakeFiles/move_base_gencfg.dir/rule:
@@ -345,20 +344,19 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... move_base_msgs_generate_messages_nodejs"
 	@echo "... move_base_msgs_generate_messages_py"
 	@echo "... move_base_msgs_generate_messages_lisp"
-	@echo "... test"
-	@echo "... move_base_msgs_generate_messages_eus"
-	@echo "... list_install_components"
-	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... move_base_msgs_generate_messages_cpp"
 	@echo "... move_base"
 	@echo "... move_base_node"
+	@echo "... move_base_msgs_generate_messages_eus"
+	@echo "... test"
 	@echo "... move_base_gencfg"
 	@echo "... src/move_base.o"
 	@echo "... src/move_base.i"

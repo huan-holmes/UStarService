@@ -100,17 +100,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -122,16 +111,16 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
+# Special rule for the target test
+test/fast: test
 
-.PHONY : install/strip/fast
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -195,6 +184,11 @@ global_planner/fast:
 	cd /home/boocax/UstarService/build && $(MAKE) -f planning/global_planner/CMakeFiles/global_planner.dir/build.make planning/global_planner/CMakeFiles/global_planner.dir/build
 .PHONY : global_planner/fast
 
+# Manual pre-install relink rule for target.
+global_planner/preinstall:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 planning/global_planner/CMakeFiles/global_planner.dir/preinstall
+.PHONY : global_planner/preinstall
+
 # Convenience name for target.
 planning/global_planner/CMakeFiles/global_planner_node.dir/rule:
 	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 planning/global_planner/CMakeFiles/global_planner_node.dir/rule
@@ -209,6 +203,11 @@ global_planner_node: planning/global_planner/CMakeFiles/global_planner_node.dir/
 global_planner_node/fast:
 	cd /home/boocax/UstarService/build && $(MAKE) -f planning/global_planner/CMakeFiles/global_planner_node.dir/build.make planning/global_planner/CMakeFiles/global_planner_node.dir/build
 .PHONY : global_planner_node/fast
+
+# Manual pre-install relink rule for target.
+global_planner_node/preinstall:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 planning/global_planner/CMakeFiles/global_planner_node.dir/preinstall
+.PHONY : global_planner_node/preinstall
 
 src/global_planner/astar.o: src/global_planner/astar.cpp.o
 
@@ -399,6 +398,87 @@ src/global_planner/quadratic_calculator.cpp.s:
 	cd /home/boocax/UstarService/build && $(MAKE) -f planning/global_planner/CMakeFiles/global_planner.dir/build.make planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/quadratic_calculator.cpp.s
 .PHONY : src/global_planner/quadratic_calculator.cpp.s
 
+src/global_planner/tastar.o: src/global_planner/tastar.cpp.o
+
+.PHONY : src/global_planner/tastar.o
+
+# target to build an object file
+src/global_planner/tastar.cpp.o:
+	cd /home/boocax/UstarService/build && $(MAKE) -f planning/global_planner/CMakeFiles/global_planner.dir/build.make planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.o
+.PHONY : src/global_planner/tastar.cpp.o
+
+src/global_planner/tastar.i: src/global_planner/tastar.cpp.i
+
+.PHONY : src/global_planner/tastar.i
+
+# target to preprocess a source file
+src/global_planner/tastar.cpp.i:
+	cd /home/boocax/UstarService/build && $(MAKE) -f planning/global_planner/CMakeFiles/global_planner.dir/build.make planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.i
+.PHONY : src/global_planner/tastar.cpp.i
+
+src/global_planner/tastar.s: src/global_planner/tastar.cpp.s
+
+.PHONY : src/global_planner/tastar.s
+
+# target to generate assembly for a file
+src/global_planner/tastar.cpp.s:
+	cd /home/boocax/UstarService/build && $(MAKE) -f planning/global_planner/CMakeFiles/global_planner.dir/build.make planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.s
+.PHONY : src/global_planner/tastar.cpp.s
+
+src/global_planner/tgrid_path.o: src/global_planner/tgrid_path.cpp.o
+
+.PHONY : src/global_planner/tgrid_path.o
+
+# target to build an object file
+src/global_planner/tgrid_path.cpp.o:
+	cd /home/boocax/UstarService/build && $(MAKE) -f planning/global_planner/CMakeFiles/global_planner.dir/build.make planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.o
+.PHONY : src/global_planner/tgrid_path.cpp.o
+
+src/global_planner/tgrid_path.i: src/global_planner/tgrid_path.cpp.i
+
+.PHONY : src/global_planner/tgrid_path.i
+
+# target to preprocess a source file
+src/global_planner/tgrid_path.cpp.i:
+	cd /home/boocax/UstarService/build && $(MAKE) -f planning/global_planner/CMakeFiles/global_planner.dir/build.make planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.i
+.PHONY : src/global_planner/tgrid_path.cpp.i
+
+src/global_planner/tgrid_path.s: src/global_planner/tgrid_path.cpp.s
+
+.PHONY : src/global_planner/tgrid_path.s
+
+# target to generate assembly for a file
+src/global_planner/tgrid_path.cpp.s:
+	cd /home/boocax/UstarService/build && $(MAKE) -f planning/global_planner/CMakeFiles/global_planner.dir/build.make planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.s
+.PHONY : src/global_planner/tgrid_path.cpp.s
+
+src/global_planner/tquadratic_calculator.o: src/global_planner/tquadratic_calculator.cpp.o
+
+.PHONY : src/global_planner/tquadratic_calculator.o
+
+# target to build an object file
+src/global_planner/tquadratic_calculator.cpp.o:
+	cd /home/boocax/UstarService/build && $(MAKE) -f planning/global_planner/CMakeFiles/global_planner.dir/build.make planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.o
+.PHONY : src/global_planner/tquadratic_calculator.cpp.o
+
+src/global_planner/tquadratic_calculator.i: src/global_planner/tquadratic_calculator.cpp.i
+
+.PHONY : src/global_planner/tquadratic_calculator.i
+
+# target to preprocess a source file
+src/global_planner/tquadratic_calculator.cpp.i:
+	cd /home/boocax/UstarService/build && $(MAKE) -f planning/global_planner/CMakeFiles/global_planner.dir/build.make planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.i
+.PHONY : src/global_planner/tquadratic_calculator.cpp.i
+
+src/global_planner/tquadratic_calculator.s: src/global_planner/tquadratic_calculator.cpp.s
+
+.PHONY : src/global_planner/tquadratic_calculator.s
+
+# target to generate assembly for a file
+src/global_planner/tquadratic_calculator.cpp.s:
+	cd /home/boocax/UstarService/build && $(MAKE) -f planning/global_planner/CMakeFiles/global_planner.dir/build.make planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.s
+.PHONY : src/global_planner/tquadratic_calculator.cpp.s
+
 src/plan_node.o: src/plan_node.cpp.o
 
 .PHONY : src/plan_node.o
@@ -436,12 +516,11 @@ help:
 	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... install/local"
 	@echo "... global_planner_gencfg"
 	@echo "... global_planner"
 	@echo "... test"
 	@echo "... global_planner_node"
-	@echo "... install/local"
-	@echo "... install/strip"
 	@echo "... src/global_planner/astar.o"
 	@echo "... src/global_planner/astar.i"
 	@echo "... src/global_planner/astar.s"
@@ -463,6 +542,15 @@ help:
 	@echo "... src/global_planner/quadratic_calculator.o"
 	@echo "... src/global_planner/quadratic_calculator.i"
 	@echo "... src/global_planner/quadratic_calculator.s"
+	@echo "... src/global_planner/tastar.o"
+	@echo "... src/global_planner/tastar.i"
+	@echo "... src/global_planner/tastar.s"
+	@echo "... src/global_planner/tgrid_path.o"
+	@echo "... src/global_planner/tgrid_path.i"
+	@echo "... src/global_planner/tgrid_path.s"
+	@echo "... src/global_planner/tquadratic_calculator.o"
+	@echo "... src/global_planner/tquadratic_calculator.i"
+	@echo "... src/global_planner/tquadratic_calculator.s"
 	@echo "... src/plan_node.o"
 	@echo "... src/plan_node.i"
 	@echo "... src/plan_node.s"

@@ -348,6 +348,8 @@
 /home/boocax/UstarService/install/include/global_planner/grid_path.h
 /home/boocax/UstarService/install/include/global_planner/orientation_filter.h
 /home/boocax/UstarService/install/include/global_planner/gradient_path.h
+/home/boocax/UstarService/install/include/global_planner/tastar.h
+/home/boocax/UstarService/install/include/global_planner/tquadratic_calculator.h
 /home/boocax/UstarService/install/include/global_planner/quadratic_calculator.h
 /home/boocax/UstarService/install/include/global_planner/planner_core.h
 /home/boocax/UstarService/install/include/global_planner/traceback.h
@@ -355,6 +357,7 @@
 /home/boocax/UstarService/install/include/global_planner/astar.h
 /home/boocax/UstarService/install/include/global_planner/dijkstra.h
 /home/boocax/UstarService/install/include/global_planner/expander.h
+/home/boocax/UstarService/install/include/global_planner/tgrid_path.h
 /home/boocax/UstarService/install/share/global_planner/bgp_plugin.xml
 /home/boocax/UstarService/install/lib/pkgconfig/rotate_recovery.pc
 /home/boocax/UstarService/install/share/rotate_recovery/cmake/rotate_recoveryConfig.cmake

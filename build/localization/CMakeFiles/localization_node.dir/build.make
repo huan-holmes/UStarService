@@ -134,6 +134,59 @@ localization/CMakeFiles/localization_node.dir/build: /home/boocax/UstarService/d
 
 .PHONY : localization/CMakeFiles/localization_node.dir/build
 
+# Object files for target localization_node
+localization_node_OBJECTS = \
+"CMakeFiles/localization_node.dir/src/localization_node.cpp.o"
+
+# External object files for target localization_node
+localization_node_EXTERNAL_OBJECTS =
+
+localization/CMakeFiles/CMakeRelink.dir/localization_node: localization/CMakeFiles/localization_node.dir/src/localization_node.cpp.o
+localization/CMakeFiles/CMakeRelink.dir/localization_node: localization/CMakeFiles/localization_node.dir/build.make
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /home/boocax/UstarService/devel/lib/liblocalization_sensor.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /home/boocax/UstarService/devel/lib/liblocalization_map.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /home/boocax/UstarService/devel/lib/liblocalization_pf.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /opt/ros/kinetic/lib/librosbag.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /opt/ros/kinetic/lib/librosbag_storage.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /opt/ros/kinetic/lib/libroslz4.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /usr/lib/x86_64-linux-gnu/liblz4.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /opt/ros/kinetic/lib/libtopic_tools.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /opt/ros/kinetic/lib/liborocos-kdl.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /opt/ros/kinetic/lib/liborocos-kdl.so.1.3.2
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /opt/ros/kinetic/lib/libtf2_ros.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /opt/ros/kinetic/lib/libactionlib.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /opt/ros/kinetic/lib/libmessage_filters.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /opt/ros/kinetic/lib/libroscpp.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /opt/ros/kinetic/lib/librosconsole.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /opt/ros/kinetic/lib/libxmlrpcpp.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /opt/ros/kinetic/lib/libtf2.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /opt/ros/kinetic/lib/libroscpp_serialization.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /opt/ros/kinetic/lib/librostime.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /opt/ros/kinetic/lib/libcpp_common.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /usr/lib/x86_64-linux-gnu/libboost_system.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /usr/lib/x86_64-linux-gnu/libpthread.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+localization/CMakeFiles/CMakeRelink.dir/localization_node: localization/CMakeFiles/localization_node.dir/relink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CMakeFiles/CMakeRelink.dir/localization_node"
+	cd /home/boocax/UstarService/build/localization && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/localization_node.dir/relink.txt --verbose=$(VERBOSE)
+
+# Rule to relink during preinstall.
+localization/CMakeFiles/localization_node.dir/preinstall: localization/CMakeFiles/CMakeRelink.dir/localization_node
+
+.PHONY : localization/CMakeFiles/localization_node.dir/preinstall
+
 localization/CMakeFiles/localization_node.dir/requires: localization/CMakeFiles/localization_node.dir/src/localization_node.cpp.o.requires
 
 .PHONY : localization/CMakeFiles/localization_node.dir/requires

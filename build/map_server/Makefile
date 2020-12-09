@@ -56,27 +56,37 @@ CMAKE_BINARY_DIR = /home/boocax/UstarService/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"header\""
+.PHONY : list_install_components
 
-# Special rule for the target install/local
-install/local/fast: install/local
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : install/local/fast
+.PHONY : list_install_components/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target test
-test/fast: test
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : test/fast
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -90,48 +100,27 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"header\""
-.PHONY : list_install_components
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target test
+test/fast: test
 
-.PHONY : list_install_components/fast
+.PHONY : test/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
+# Special rule for the target install/local
+install/local/fast: install/local
 
-.PHONY : install/strip/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,214 +155,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/rule
-.PHONY : map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/rule
+map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/rule
+.PHONY : map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/rule
 
 # Convenience name for target.
-run_tests_map_server_gtest_map_server_utest: map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/rule
+_run_tests_map_server_rostest_test_rtest.xml: map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/rule
 
-.PHONY : run_tests_map_server_gtest_map_server_utest
+.PHONY : _run_tests_map_server_rostest_test_rtest.xml
 
 # fast build rule for target.
-run_tests_map_server_gtest_map_server_utest/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/build.make map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/build
-.PHONY : run_tests_map_server_gtest_map_server_utest/fast
-
-# Convenience name for target.
-map_server/CMakeFiles/_run_tests_map_server_rostest.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/_run_tests_map_server_rostest.dir/rule
-.PHONY : map_server/CMakeFiles/_run_tests_map_server_rostest.dir/rule
-
-# Convenience name for target.
-_run_tests_map_server_rostest: map_server/CMakeFiles/_run_tests_map_server_rostest.dir/rule
-
-.PHONY : _run_tests_map_server_rostest
-
-# fast build rule for target.
-_run_tests_map_server_rostest/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/_run_tests_map_server_rostest.dir/build.make map_server/CMakeFiles/_run_tests_map_server_rostest.dir/build
-.PHONY : _run_tests_map_server_rostest/fast
-
-# Convenience name for target.
-map_server/CMakeFiles/_run_tests_map_server_gtest.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/_run_tests_map_server_gtest.dir/rule
-.PHONY : map_server/CMakeFiles/_run_tests_map_server_gtest.dir/rule
-
-# Convenience name for target.
-_run_tests_map_server_gtest: map_server/CMakeFiles/_run_tests_map_server_gtest.dir/rule
-
-.PHONY : _run_tests_map_server_gtest
-
-# fast build rule for target.
-_run_tests_map_server_gtest/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/_run_tests_map_server_gtest.dir/build.make map_server/CMakeFiles/_run_tests_map_server_gtest.dir/build
-.PHONY : _run_tests_map_server_gtest/fast
-
-# Convenience name for target.
-map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/rule
-.PHONY : map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/rule
-
-# Convenience name for target.
-_run_tests_map_server_gtest_map_server_utest: map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/rule
-
-.PHONY : _run_tests_map_server_gtest_map_server_utest
-
-# fast build rule for target.
-_run_tests_map_server_gtest_map_server_utest/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/build.make map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/build
-.PHONY : _run_tests_map_server_gtest_map_server_utest/fast
-
-# Convenience name for target.
-map_server/CMakeFiles/run_tests_map_server_gtest.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/run_tests_map_server_gtest.dir/rule
-.PHONY : map_server/CMakeFiles/run_tests_map_server_gtest.dir/rule
-
-# Convenience name for target.
-run_tests_map_server_gtest: map_server/CMakeFiles/run_tests_map_server_gtest.dir/rule
-
-.PHONY : run_tests_map_server_gtest
-
-# fast build rule for target.
-run_tests_map_server_gtest/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/run_tests_map_server_gtest.dir/build.make map_server/CMakeFiles/run_tests_map_server_gtest.dir/build
-.PHONY : run_tests_map_server_gtest/fast
-
-# Convenience name for target.
-map_server/CMakeFiles/run_tests_map_server.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/run_tests_map_server.dir/rule
-.PHONY : map_server/CMakeFiles/run_tests_map_server.dir/rule
-
-# Convenience name for target.
-run_tests_map_server: map_server/CMakeFiles/run_tests_map_server.dir/rule
-
-.PHONY : run_tests_map_server
-
-# fast build rule for target.
-run_tests_map_server/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/run_tests_map_server.dir/build.make map_server/CMakeFiles/run_tests_map_server.dir/build
-.PHONY : run_tests_map_server/fast
-
-# Convenience name for target.
-map_server/CMakeFiles/map_server_image_loader.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/map_server_image_loader.dir/rule
-.PHONY : map_server/CMakeFiles/map_server_image_loader.dir/rule
-
-# Convenience name for target.
-map_server_image_loader: map_server/CMakeFiles/map_server_image_loader.dir/rule
-
-.PHONY : map_server_image_loader
-
-# fast build rule for target.
-map_server_image_loader/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/map_server_image_loader.dir/build.make map_server/CMakeFiles/map_server_image_loader.dir/build
-.PHONY : map_server_image_loader/fast
-
-# Convenience name for target.
-map_server/CMakeFiles/map_server.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/map_server.dir/rule
-.PHONY : map_server/CMakeFiles/map_server.dir/rule
-
-# Convenience name for target.
-map_server: map_server/CMakeFiles/map_server.dir/rule
-
-.PHONY : map_server
-
-# fast build rule for target.
-map_server/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/map_server.dir/build.make map_server/CMakeFiles/map_server.dir/build
-.PHONY : map_server/fast
-
-# Convenience name for target.
-map_server/CMakeFiles/map_server-map_saver.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/map_server-map_saver.dir/rule
-.PHONY : map_server/CMakeFiles/map_server-map_saver.dir/rule
-
-# Convenience name for target.
-map_server-map_saver: map_server/CMakeFiles/map_server-map_saver.dir/rule
-
-.PHONY : map_server-map_saver
-
-# fast build rule for target.
-map_server-map_saver/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/map_server-map_saver.dir/build.make map_server/CMakeFiles/map_server-map_saver.dir/build
-.PHONY : map_server-map_saver/fast
-
-# Convenience name for target.
-map_server/CMakeFiles/_run_tests_map_server.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/_run_tests_map_server.dir/rule
-.PHONY : map_server/CMakeFiles/_run_tests_map_server.dir/rule
-
-# Convenience name for target.
-_run_tests_map_server: map_server/CMakeFiles/_run_tests_map_server.dir/rule
-
-.PHONY : _run_tests_map_server
-
-# fast build rule for target.
-_run_tests_map_server/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/_run_tests_map_server.dir/build.make map_server/CMakeFiles/_run_tests_map_server.dir/build
-.PHONY : _run_tests_map_server/fast
-
-# Convenience name for target.
-map_server/CMakeFiles/map_server_utest.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/map_server_utest.dir/rule
-.PHONY : map_server/CMakeFiles/map_server_utest.dir/rule
-
-# Convenience name for target.
-map_server_utest: map_server/CMakeFiles/map_server_utest.dir/rule
-
-.PHONY : map_server_utest
-
-# fast build rule for target.
-map_server_utest/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/map_server_utest.dir/build.make map_server/CMakeFiles/map_server_utest.dir/build
-.PHONY : map_server_utest/fast
-
-# Convenience name for target.
-map_server/CMakeFiles/clean_test_results_map_server.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/clean_test_results_map_server.dir/rule
-.PHONY : map_server/CMakeFiles/clean_test_results_map_server.dir/rule
-
-# Convenience name for target.
-clean_test_results_map_server: map_server/CMakeFiles/clean_test_results_map_server.dir/rule
-
-.PHONY : clean_test_results_map_server
-
-# fast build rule for target.
-clean_test_results_map_server/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/clean_test_results_map_server.dir/build.make map_server/CMakeFiles/clean_test_results_map_server.dir/build
-.PHONY : clean_test_results_map_server/fast
-
-# Convenience name for target.
-map_server/CMakeFiles/rtest.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/rtest.dir/rule
-.PHONY : map_server/CMakeFiles/rtest.dir/rule
-
-# Convenience name for target.
-rtest: map_server/CMakeFiles/rtest.dir/rule
-
-.PHONY : rtest
-
-# fast build rule for target.
-rtest/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/rtest.dir/build.make map_server/CMakeFiles/rtest.dir/build
-.PHONY : rtest/fast
-
-# Convenience name for target.
-map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/rule
-.PHONY : map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/rule
-
-# Convenience name for target.
-run_tests_map_server_rostest_test_rtest.xml: map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/rule
-
-.PHONY : run_tests_map_server_rostest_test_rtest.xml
-
-# fast build rule for target.
-run_tests_map_server_rostest_test_rtest.xml/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/build.make map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/build
-.PHONY : run_tests_map_server_rostest_test_rtest.xml/fast
+_run_tests_map_server_rostest_test_rtest.xml/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/build.make map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/build
+.PHONY : _run_tests_map_server_rostest_test_rtest.xml/fast
 
 # Convenience name for target.
 map_server/CMakeFiles/run_tests_map_server_rostest.dir/rule:
@@ -391,19 +185,229 @@ run_tests_map_server_rostest/fast:
 .PHONY : run_tests_map_server_rostest/fast
 
 # Convenience name for target.
-map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/rule
-.PHONY : map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/rule
+map_server/CMakeFiles/rtest.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/rtest.dir/rule
+.PHONY : map_server/CMakeFiles/rtest.dir/rule
 
 # Convenience name for target.
-_run_tests_map_server_rostest_test_rtest.xml: map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/rule
+rtest: map_server/CMakeFiles/rtest.dir/rule
 
-.PHONY : _run_tests_map_server_rostest_test_rtest.xml
+.PHONY : rtest
 
 # fast build rule for target.
-_run_tests_map_server_rostest_test_rtest.xml/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/build.make map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/build
-.PHONY : _run_tests_map_server_rostest_test_rtest.xml/fast
+rtest/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/rtest.dir/build.make map_server/CMakeFiles/rtest.dir/build
+.PHONY : rtest/fast
+
+# Convenience name for target.
+map_server/CMakeFiles/clean_test_results_map_server.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/clean_test_results_map_server.dir/rule
+.PHONY : map_server/CMakeFiles/clean_test_results_map_server.dir/rule
+
+# Convenience name for target.
+clean_test_results_map_server: map_server/CMakeFiles/clean_test_results_map_server.dir/rule
+
+.PHONY : clean_test_results_map_server
+
+# fast build rule for target.
+clean_test_results_map_server/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/clean_test_results_map_server.dir/build.make map_server/CMakeFiles/clean_test_results_map_server.dir/build
+.PHONY : clean_test_results_map_server/fast
+
+# Convenience name for target.
+map_server/CMakeFiles/map_server_utest.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/map_server_utest.dir/rule
+.PHONY : map_server/CMakeFiles/map_server_utest.dir/rule
+
+# Convenience name for target.
+map_server_utest: map_server/CMakeFiles/map_server_utest.dir/rule
+
+.PHONY : map_server_utest
+
+# fast build rule for target.
+map_server_utest/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/map_server_utest.dir/build.make map_server/CMakeFiles/map_server_utest.dir/build
+.PHONY : map_server_utest/fast
+
+# Convenience name for target.
+map_server/CMakeFiles/_run_tests_map_server.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/_run_tests_map_server.dir/rule
+.PHONY : map_server/CMakeFiles/_run_tests_map_server.dir/rule
+
+# Convenience name for target.
+_run_tests_map_server: map_server/CMakeFiles/_run_tests_map_server.dir/rule
+
+.PHONY : _run_tests_map_server
+
+# fast build rule for target.
+_run_tests_map_server/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/_run_tests_map_server.dir/build.make map_server/CMakeFiles/_run_tests_map_server.dir/build
+.PHONY : _run_tests_map_server/fast
+
+# Convenience name for target.
+map_server/CMakeFiles/map_server-map_saver.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/map_server-map_saver.dir/rule
+.PHONY : map_server/CMakeFiles/map_server-map_saver.dir/rule
+
+# Convenience name for target.
+map_server-map_saver: map_server/CMakeFiles/map_server-map_saver.dir/rule
+
+.PHONY : map_server-map_saver
+
+# fast build rule for target.
+map_server-map_saver/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/map_server-map_saver.dir/build.make map_server/CMakeFiles/map_server-map_saver.dir/build
+.PHONY : map_server-map_saver/fast
+
+# Manual pre-install relink rule for target.
+map_server-map_saver/preinstall:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/map_server-map_saver.dir/preinstall
+.PHONY : map_server-map_saver/preinstall
+
+# Convenience name for target.
+map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/rule
+.PHONY : map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/rule
+
+# Convenience name for target.
+run_tests_map_server_rostest_test_rtest.xml: map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/rule
+
+.PHONY : run_tests_map_server_rostest_test_rtest.xml
+
+# fast build rule for target.
+run_tests_map_server_rostest_test_rtest.xml/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/build.make map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/build
+.PHONY : run_tests_map_server_rostest_test_rtest.xml/fast
+
+# Convenience name for target.
+map_server/CMakeFiles/map_server.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/map_server.dir/rule
+.PHONY : map_server/CMakeFiles/map_server.dir/rule
+
+# Convenience name for target.
+map_server: map_server/CMakeFiles/map_server.dir/rule
+
+.PHONY : map_server
+
+# fast build rule for target.
+map_server/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/map_server.dir/build.make map_server/CMakeFiles/map_server.dir/build
+.PHONY : map_server/fast
+
+# Manual pre-install relink rule for target.
+map_server/preinstall:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/map_server.dir/preinstall
+.PHONY : map_server/preinstall
+
+# Convenience name for target.
+map_server/CMakeFiles/map_server_image_loader.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/map_server_image_loader.dir/rule
+.PHONY : map_server/CMakeFiles/map_server_image_loader.dir/rule
+
+# Convenience name for target.
+map_server_image_loader: map_server/CMakeFiles/map_server_image_loader.dir/rule
+
+.PHONY : map_server_image_loader
+
+# fast build rule for target.
+map_server_image_loader/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/map_server_image_loader.dir/build.make map_server/CMakeFiles/map_server_image_loader.dir/build
+.PHONY : map_server_image_loader/fast
+
+# Manual pre-install relink rule for target.
+map_server_image_loader/preinstall:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/map_server_image_loader.dir/preinstall
+.PHONY : map_server_image_loader/preinstall
+
+# Convenience name for target.
+map_server/CMakeFiles/run_tests_map_server.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/run_tests_map_server.dir/rule
+.PHONY : map_server/CMakeFiles/run_tests_map_server.dir/rule
+
+# Convenience name for target.
+run_tests_map_server: map_server/CMakeFiles/run_tests_map_server.dir/rule
+
+.PHONY : run_tests_map_server
+
+# fast build rule for target.
+run_tests_map_server/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/run_tests_map_server.dir/build.make map_server/CMakeFiles/run_tests_map_server.dir/build
+.PHONY : run_tests_map_server/fast
+
+# Convenience name for target.
+map_server/CMakeFiles/run_tests_map_server_gtest.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/run_tests_map_server_gtest.dir/rule
+.PHONY : map_server/CMakeFiles/run_tests_map_server_gtest.dir/rule
+
+# Convenience name for target.
+run_tests_map_server_gtest: map_server/CMakeFiles/run_tests_map_server_gtest.dir/rule
+
+.PHONY : run_tests_map_server_gtest
+
+# fast build rule for target.
+run_tests_map_server_gtest/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/run_tests_map_server_gtest.dir/build.make map_server/CMakeFiles/run_tests_map_server_gtest.dir/build
+.PHONY : run_tests_map_server_gtest/fast
+
+# Convenience name for target.
+map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/rule
+.PHONY : map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/rule
+
+# Convenience name for target.
+_run_tests_map_server_gtest_map_server_utest: map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/rule
+
+.PHONY : _run_tests_map_server_gtest_map_server_utest
+
+# fast build rule for target.
+_run_tests_map_server_gtest_map_server_utest/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/build.make map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/build
+.PHONY : _run_tests_map_server_gtest_map_server_utest/fast
+
+# Convenience name for target.
+map_server/CMakeFiles/_run_tests_map_server_gtest.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/_run_tests_map_server_gtest.dir/rule
+.PHONY : map_server/CMakeFiles/_run_tests_map_server_gtest.dir/rule
+
+# Convenience name for target.
+_run_tests_map_server_gtest: map_server/CMakeFiles/_run_tests_map_server_gtest.dir/rule
+
+.PHONY : _run_tests_map_server_gtest
+
+# fast build rule for target.
+_run_tests_map_server_gtest/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/_run_tests_map_server_gtest.dir/build.make map_server/CMakeFiles/_run_tests_map_server_gtest.dir/build
+.PHONY : _run_tests_map_server_gtest/fast
+
+# Convenience name for target.
+map_server/CMakeFiles/_run_tests_map_server_rostest.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/_run_tests_map_server_rostest.dir/rule
+.PHONY : map_server/CMakeFiles/_run_tests_map_server_rostest.dir/rule
+
+# Convenience name for target.
+_run_tests_map_server_rostest: map_server/CMakeFiles/_run_tests_map_server_rostest.dir/rule
+
+.PHONY : _run_tests_map_server_rostest
+
+# fast build rule for target.
+_run_tests_map_server_rostest/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/_run_tests_map_server_rostest.dir/build.make map_server/CMakeFiles/_run_tests_map_server_rostest.dir/build
+.PHONY : _run_tests_map_server_rostest/fast
+
+# Convenience name for target.
+map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/rule
+.PHONY : map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/rule
+
+# Convenience name for target.
+run_tests_map_server_gtest_map_server_utest: map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/rule
+
+.PHONY : run_tests_map_server_gtest_map_server_utest
+
+# fast build rule for target.
+run_tests_map_server_gtest_map_server_utest/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/build.make map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/build
+.PHONY : run_tests_map_server_gtest_map_server_utest/fast
 
 src/image_loader.o: src/image_loader.cpp.o
 
@@ -519,8 +523,8 @@ test/test_constants.o: test/test_constants.cpp.o
 
 # target to build an object file
 test/test_constants.cpp.o:
-	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/map_server_utest.dir/build.make map_server/CMakeFiles/map_server_utest.dir/test/test_constants.cpp.o
 	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/rtest.dir/build.make map_server/CMakeFiles/rtest.dir/test/test_constants.cpp.o
+	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/map_server_utest.dir/build.make map_server/CMakeFiles/map_server_utest.dir/test/test_constants.cpp.o
 .PHONY : test/test_constants.cpp.o
 
 test/test_constants.i: test/test_constants.cpp.i
@@ -529,8 +533,8 @@ test/test_constants.i: test/test_constants.cpp.i
 
 # target to preprocess a source file
 test/test_constants.cpp.i:
-	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/map_server_utest.dir/build.make map_server/CMakeFiles/map_server_utest.dir/test/test_constants.cpp.i
 	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/rtest.dir/build.make map_server/CMakeFiles/rtest.dir/test/test_constants.cpp.i
+	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/map_server_utest.dir/build.make map_server/CMakeFiles/map_server_utest.dir/test/test_constants.cpp.i
 .PHONY : test/test_constants.cpp.i
 
 test/test_constants.s: test/test_constants.cpp.s
@@ -539,8 +543,8 @@ test/test_constants.s: test/test_constants.cpp.s
 
 # target to generate assembly for a file
 test/test_constants.cpp.s:
-	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/map_server_utest.dir/build.make map_server/CMakeFiles/map_server_utest.dir/test/test_constants.cpp.s
 	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/rtest.dir/build.make map_server/CMakeFiles/rtest.dir/test/test_constants.cpp.s
+	cd /home/boocax/UstarService/build && $(MAKE) -f map_server/CMakeFiles/map_server_utest.dir/build.make map_server/CMakeFiles/map_server_utest.dir/test/test_constants.cpp.s
 .PHONY : test/test_constants.cpp.s
 
 test/utest.o: test/utest.cpp.o
@@ -576,29 +580,28 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... run_tests_map_server_gtest_map_server_utest"
-	@echo "... _run_tests_map_server_rostest"
-	@echo "... _run_tests_map_server_gtest"
-	@echo "... _run_tests_map_server_gtest_map_server_utest"
-	@echo "... run_tests_map_server_gtest"
-	@echo "... install/local"
-	@echo "... run_tests_map_server"
-	@echo "... map_server_image_loader"
-	@echo "... map_server"
-	@echo "... map_server-map_saver"
-	@echo "... _run_tests_map_server"
-	@echo "... test"
-	@echo "... map_server_utest"
-	@echo "... clean_test_results_map_server"
-	@echo "... rtest"
-	@echo "... run_tests_map_server_rostest_test_rtest.xml"
-	@echo "... install"
-	@echo "... run_tests_map_server_rostest"
 	@echo "... list_install_components"
-	@echo "... _run_tests_map_server_rostest_test_rtest.xml"
-	@echo "... install/strip"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... _run_tests_map_server_rostest_test_rtest.xml"
+	@echo "... run_tests_map_server_rostest"
+	@echo "... install"
+	@echo "... rtest"
+	@echo "... clean_test_results_map_server"
+	@echo "... map_server_utest"
+	@echo "... test"
+	@echo "... _run_tests_map_server"
+	@echo "... map_server-map_saver"
+	@echo "... run_tests_map_server_rostest_test_rtest.xml"
+	@echo "... map_server"
+	@echo "... map_server_image_loader"
+	@echo "... run_tests_map_server"
+	@echo "... install/local"
+	@echo "... run_tests_map_server_gtest"
+	@echo "... _run_tests_map_server_gtest_map_server_utest"
+	@echo "... _run_tests_map_server_gtest"
+	@echo "... _run_tests_map_server_rostest"
+	@echo "... run_tests_map_server_gtest_map_server_utest"
 	@echo "... src/image_loader.o"
 	@echo "... src/image_loader.i"
 	@echo "... src/image_loader.s"

@@ -5,10 +5,13 @@
 #include <costmap/costmap_2d/costmap_2d.h>
 
 #include "global_planner/dijkstra.h"
+#include "global_planner/tastar.h"
 #include "global_planner/astar.h"
 #include "global_planner/grid_path.h"
+#include "global_planner/tgrid_path.h"
 #include "global_planner/gradient_path.h"
 #include "global_planner/quadratic_calculator.h"
+#include "global_planner/tquadratic_calculator.h"
 
 //register this planner as a BaseGlobalPlanner plugin
 PLUGINLIB_EXPORT_CLASS(global_planner::GlobalPlanner, UstarPlanning::BaseGlobalPlanner)
@@ -86,12 +89,12 @@ void GlobalPlanner::initialize(std::string name, UstarCostmap::Costmap2D* costma
             planner_ = de;
         }
         else
-            planner_ = new AStarExpansion(p_calc_, cx, cy);
+            planner_ = new TAStarExpansion(p_calc_, cx, cy);
 
         bool use_grid_path;
         private_nh.param("use_grid_path", use_grid_path, false);
         if (use_grid_path)
-            path_maker_ = new GridPath(p_calc_);
+            path_maker_ = new TGridPath(p_calc_);
         else
             path_maker_ = new GradientPath(p_calc_);
 

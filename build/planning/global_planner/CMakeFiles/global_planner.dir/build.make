@@ -81,9 +81,33 @@ planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/quadrat
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/quadratic_calculator.cpp.o.provides.build: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/quadratic_calculator.cpp.o
 
 
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.o: planning/global_planner/CMakeFiles/global_planner.dir/flags.make
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.o: /home/boocax/UstarService/src/planning/global_planner/src/global_planner/tquadratic_calculator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.o"
+	cd /home/boocax/UstarService/build/planning/global_planner && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.o -c /home/boocax/UstarService/src/planning/global_planner/src/global_planner/tquadratic_calculator.cpp
+
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.i"
+	cd /home/boocax/UstarService/build/planning/global_planner && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/boocax/UstarService/src/planning/global_planner/src/global_planner/tquadratic_calculator.cpp > CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.i
+
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.s"
+	cd /home/boocax/UstarService/build/planning/global_planner && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/boocax/UstarService/src/planning/global_planner/src/global_planner/tquadratic_calculator.cpp -o CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.s
+
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.o.requires:
+
+.PHONY : planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.o.requires
+
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.o.provides: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.o.requires
+	$(MAKE) -f planning/global_planner/CMakeFiles/global_planner.dir/build.make planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.o.provides.build
+.PHONY : planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.o.provides
+
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.o.provides.build: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.o
+
+
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/dijkstra.cpp.o: planning/global_planner/CMakeFiles/global_planner.dir/flags.make
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/dijkstra.cpp.o: /home/boocax/UstarService/src/planning/global_planner/src/global_planner/dijkstra.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/dijkstra.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/dijkstra.cpp.o"
 	cd /home/boocax/UstarService/build/planning/global_planner && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/global_planner.dir/src/global_planner/dijkstra.cpp.o -c /home/boocax/UstarService/src/planning/global_planner/src/global_planner/dijkstra.cpp
 
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/dijkstra.cpp.i: cmake_force
@@ -107,7 +131,7 @@ planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/dijkstr
 
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/astar.cpp.o: planning/global_planner/CMakeFiles/global_planner.dir/flags.make
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/astar.cpp.o: /home/boocax/UstarService/src/planning/global_planner/src/global_planner/astar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/astar.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/astar.cpp.o"
 	cd /home/boocax/UstarService/build/planning/global_planner && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/global_planner.dir/src/global_planner/astar.cpp.o -c /home/boocax/UstarService/src/planning/global_planner/src/global_planner/astar.cpp
 
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/astar.cpp.i: cmake_force
@@ -129,9 +153,33 @@ planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/astar.c
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/astar.cpp.o.provides.build: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/astar.cpp.o
 
 
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.o: planning/global_planner/CMakeFiles/global_planner.dir/flags.make
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.o: /home/boocax/UstarService/src/planning/global_planner/src/global_planner/tastar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.o"
+	cd /home/boocax/UstarService/build/planning/global_planner && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.o -c /home/boocax/UstarService/src/planning/global_planner/src/global_planner/tastar.cpp
+
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.i"
+	cd /home/boocax/UstarService/build/planning/global_planner && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/boocax/UstarService/src/planning/global_planner/src/global_planner/tastar.cpp > CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.i
+
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.s"
+	cd /home/boocax/UstarService/build/planning/global_planner && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/boocax/UstarService/src/planning/global_planner/src/global_planner/tastar.cpp -o CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.s
+
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.o.requires:
+
+.PHONY : planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.o.requires
+
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.o.provides: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.o.requires
+	$(MAKE) -f planning/global_planner/CMakeFiles/global_planner.dir/build.make planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.o.provides.build
+.PHONY : planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.o.provides
+
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.o.provides.build: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.o
+
+
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/grid_path.cpp.o: planning/global_planner/CMakeFiles/global_planner.dir/flags.make
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/grid_path.cpp.o: /home/boocax/UstarService/src/planning/global_planner/src/global_planner/grid_path.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/grid_path.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/grid_path.cpp.o"
 	cd /home/boocax/UstarService/build/planning/global_planner && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/global_planner.dir/src/global_planner/grid_path.cpp.o -c /home/boocax/UstarService/src/planning/global_planner/src/global_planner/grid_path.cpp
 
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/grid_path.cpp.i: cmake_force
@@ -153,9 +201,33 @@ planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/grid_pa
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/grid_path.cpp.o.provides.build: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/grid_path.cpp.o
 
 
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.o: planning/global_planner/CMakeFiles/global_planner.dir/flags.make
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.o: /home/boocax/UstarService/src/planning/global_planner/src/global_planner/tgrid_path.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.o"
+	cd /home/boocax/UstarService/build/planning/global_planner && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.o -c /home/boocax/UstarService/src/planning/global_planner/src/global_planner/tgrid_path.cpp
+
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.i"
+	cd /home/boocax/UstarService/build/planning/global_planner && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/boocax/UstarService/src/planning/global_planner/src/global_planner/tgrid_path.cpp > CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.i
+
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.s"
+	cd /home/boocax/UstarService/build/planning/global_planner && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/boocax/UstarService/src/planning/global_planner/src/global_planner/tgrid_path.cpp -o CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.s
+
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.o.requires:
+
+.PHONY : planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.o.requires
+
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.o.provides: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.o.requires
+	$(MAKE) -f planning/global_planner/CMakeFiles/global_planner.dir/build.make planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.o.provides.build
+.PHONY : planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.o.provides
+
+planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.o.provides.build: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.o
+
+
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/gradient_path.cpp.o: planning/global_planner/CMakeFiles/global_planner.dir/flags.make
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/gradient_path.cpp.o: /home/boocax/UstarService/src/planning/global_planner/src/global_planner/gradient_path.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/gradient_path.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/gradient_path.cpp.o"
 	cd /home/boocax/UstarService/build/planning/global_planner && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/global_planner.dir/src/global_planner/gradient_path.cpp.o -c /home/boocax/UstarService/src/planning/global_planner/src/global_planner/gradient_path.cpp
 
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/gradient_path.cpp.i: cmake_force
@@ -179,7 +251,7 @@ planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/gradien
 
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/orientation_filter.cpp.o: planning/global_planner/CMakeFiles/global_planner.dir/flags.make
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/orientation_filter.cpp.o: /home/boocax/UstarService/src/planning/global_planner/src/global_planner/orientation_filter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/orientation_filter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/orientation_filter.cpp.o"
 	cd /home/boocax/UstarService/build/planning/global_planner && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/global_planner.dir/src/global_planner/orientation_filter.cpp.o -c /home/boocax/UstarService/src/planning/global_planner/src/global_planner/orientation_filter.cpp
 
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/orientation_filter.cpp.i: cmake_force
@@ -203,7 +275,7 @@ planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/orienta
 
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/planner_core.cpp.o: planning/global_planner/CMakeFiles/global_planner.dir/flags.make
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/planner_core.cpp.o: /home/boocax/UstarService/src/planning/global_planner/src/global_planner/planner_core.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/planner_core.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/planner_core.cpp.o"
 	cd /home/boocax/UstarService/build/planning/global_planner && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/global_planner.dir/src/global_planner/planner_core.cpp.o -c /home/boocax/UstarService/src/planning/global_planner/src/global_planner/planner_core.cpp
 
 planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/planner_core.cpp.i: cmake_force
@@ -228,9 +300,12 @@ planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/planner
 # Object files for target global_planner
 global_planner_OBJECTS = \
 "CMakeFiles/global_planner.dir/src/global_planner/quadratic_calculator.cpp.o" \
+"CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.o" \
 "CMakeFiles/global_planner.dir/src/global_planner/dijkstra.cpp.o" \
 "CMakeFiles/global_planner.dir/src/global_planner/astar.cpp.o" \
+"CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.o" \
 "CMakeFiles/global_planner.dir/src/global_planner/grid_path.cpp.o" \
+"CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.o" \
 "CMakeFiles/global_planner.dir/src/global_planner/gradient_path.cpp.o" \
 "CMakeFiles/global_planner.dir/src/global_planner/orientation_filter.cpp.o" \
 "CMakeFiles/global_planner.dir/src/global_planner/planner_core.cpp.o"
@@ -239,9 +314,12 @@ global_planner_OBJECTS = \
 global_planner_EXTERNAL_OBJECTS =
 
 /home/boocax/UstarService/devel/lib/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/quadratic_calculator.cpp.o
+/home/boocax/UstarService/devel/lib/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.o
 /home/boocax/UstarService/devel/lib/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/dijkstra.cpp.o
 /home/boocax/UstarService/devel/lib/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/astar.cpp.o
+/home/boocax/UstarService/devel/lib/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.o
 /home/boocax/UstarService/devel/lib/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/grid_path.cpp.o
+/home/boocax/UstarService/devel/lib/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.o
 /home/boocax/UstarService/devel/lib/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/gradient_path.cpp.o
 /home/boocax/UstarService/devel/lib/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/orientation_filter.cpp.o
 /home/boocax/UstarService/devel/lib/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/planner_core.cpp.o
@@ -326,7 +404,7 @@ global_planner_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/boocax/UstarService/devel/lib/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
 /home/boocax/UstarService/devel/lib/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library /home/boocax/UstarService/devel/lib/libglobal_planner.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX shared library /home/boocax/UstarService/devel/lib/libglobal_planner.so"
 	cd /home/boocax/UstarService/build/planning/global_planner && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/global_planner.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -334,10 +412,128 @@ planning/global_planner/CMakeFiles/global_planner.dir/build: /home/boocax/UstarS
 
 .PHONY : planning/global_planner/CMakeFiles/global_planner.dir/build
 
+# Object files for target global_planner
+global_planner_OBJECTS = \
+"CMakeFiles/global_planner.dir/src/global_planner/quadratic_calculator.cpp.o" \
+"CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.o" \
+"CMakeFiles/global_planner.dir/src/global_planner/dijkstra.cpp.o" \
+"CMakeFiles/global_planner.dir/src/global_planner/astar.cpp.o" \
+"CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.o" \
+"CMakeFiles/global_planner.dir/src/global_planner/grid_path.cpp.o" \
+"CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.o" \
+"CMakeFiles/global_planner.dir/src/global_planner/gradient_path.cpp.o" \
+"CMakeFiles/global_planner.dir/src/global_planner/orientation_filter.cpp.o" \
+"CMakeFiles/global_planner.dir/src/global_planner/planner_core.cpp.o"
+
+# External object files for target global_planner
+global_planner_EXTERNAL_OBJECTS =
+
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/quadratic_calculator.cpp.o
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.o
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/dijkstra.cpp.o
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/astar.cpp.o
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.o
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/grid_path.cpp.o
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.o
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/gradient_path.cpp.o
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/orientation_filter.cpp.o
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/planner_core.cpp.o
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/build.make
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /home/boocax/UstarService/devel/lib/libnavfn.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /home/boocax/UstarService/devel/lib/liblayers.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/liblaser_geometry.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libtf.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libvoxel_grid.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libclass_loader.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/libPocoFoundation.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libdl.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libroslib.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/librospack.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/liborocos-kdl.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/liborocos-kdl.so.1.3.2
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libtf2_ros.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libactionlib.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libmessage_filters.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libroscpp.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/librosconsole.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libxmlrpcpp.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libtf2.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libroscpp_serialization.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/librostime.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libcpp_common.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /home/boocax/UstarService/devel/lib/libcostmap.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/liborocos-kdl.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/liborocos-kdl.so.1.3.2
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/liblaser_geometry.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libtf.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libvoxel_grid.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libclass_loader.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/libPocoFoundation.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libdl.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libroslib.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/librospack.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libtf2_ros.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libactionlib.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libmessage_filters.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libroscpp.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/librosconsole.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libxmlrpcpp.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libtf2.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libroscpp_serialization.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/librostime.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /opt/ros/kinetic/lib/libcpp_common.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so: planning/global_planner/CMakeFiles/global_planner.dir/relink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library CMakeFiles/CMakeRelink.dir/libglobal_planner.so"
+	cd /home/boocax/UstarService/build/planning/global_planner && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/global_planner.dir/relink.txt --verbose=$(VERBOSE)
+
+# Rule to relink during preinstall.
+planning/global_planner/CMakeFiles/global_planner.dir/preinstall: planning/global_planner/CMakeFiles/CMakeRelink.dir/libglobal_planner.so
+
+.PHONY : planning/global_planner/CMakeFiles/global_planner.dir/preinstall
+
 planning/global_planner/CMakeFiles/global_planner.dir/requires: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/quadratic_calculator.cpp.o.requires
+planning/global_planner/CMakeFiles/global_planner.dir/requires: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.o.requires
 planning/global_planner/CMakeFiles/global_planner.dir/requires: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/dijkstra.cpp.o.requires
 planning/global_planner/CMakeFiles/global_planner.dir/requires: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/astar.cpp.o.requires
+planning/global_planner/CMakeFiles/global_planner.dir/requires: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.o.requires
 planning/global_planner/CMakeFiles/global_planner.dir/requires: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/grid_path.cpp.o.requires
+planning/global_planner/CMakeFiles/global_planner.dir/requires: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.o.requires
 planning/global_planner/CMakeFiles/global_planner.dir/requires: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/gradient_path.cpp.o.requires
 planning/global_planner/CMakeFiles/global_planner.dir/requires: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/orientation_filter.cpp.o.requires
 planning/global_planner/CMakeFiles/global_planner.dir/requires: planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/planner_core.cpp.o.requires

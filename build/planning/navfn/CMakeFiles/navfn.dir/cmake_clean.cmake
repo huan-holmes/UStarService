@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/navfn.dir/src/navfn_ros.cpp.o"
   "/home/boocax/UstarService/devel/lib/libnavfn.pdb"
   "/home/boocax/UstarService/devel/lib/libnavfn.so"
+  "/home/boocax/UstarService/devel/lib/libnavfn.pdb"
+  "CMakeFiles/CMakeRelink.dir/libnavfn.so"
 )
 
 # Per-language clean rules from dependency scanning.

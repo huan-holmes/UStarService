@@ -6,6 +6,8 @@ global_costmap:
    publish_frequency: 0.5
    static_map: true
    transform_tolerance: 0.5
+   inscribed_radius: 0.2552
+   circumscribed_radius: 0.2852
    plugins:
      - {name: static_layer,            type: "UstarCostmap::StaticLayer"}
      - {name: obstacle_layer,          type: "UstarCostmap::VoxelLayer"}

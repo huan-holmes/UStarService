@@ -205,6 +205,106 @@ planning/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/build: /home/boocax/
 
 .PHONY : planning/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/build
 
+# Object files for target dwa_local_planner
+dwa_local_planner_OBJECTS = \
+"CMakeFiles/dwa_local_planner.dir/src/dwa_planner.cpp.o" \
+"CMakeFiles/dwa_local_planner.dir/src/dwa_planner_ros.cpp.o"
+
+# External object files for target dwa_local_planner
+dwa_local_planner_EXTERNAL_OBJECTS =
+
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: planning/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/src/dwa_planner.cpp.o
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: planning/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/src/dwa_planner_ros.cpp.o
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: planning/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/build.make
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /home/boocax/UstarService/devel/lib/libtrajectory_planner_ros.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/liblaser_geometry.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libtf.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libvoxel_grid.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libclass_loader.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/libPocoFoundation.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libdl.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libroslib.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/librospack.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/liborocos-kdl.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/liborocos-kdl.so.1.3.2
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libtf2_ros.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libactionlib.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libmessage_filters.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libroscpp.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/librosconsole.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libxmlrpcpp.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libtf2.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libroscpp_serialization.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/librostime.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libcpp_common.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /home/boocax/UstarService/devel/lib/libbase_local_planner.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /home/boocax/UstarService/devel/lib/liblayers.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /home/boocax/UstarService/devel/lib/libcostmap.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/liblaser_geometry.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libtf.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libvoxel_grid.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libclass_loader.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/libPocoFoundation.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libdl.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libroslib.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/librospack.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/liborocos-kdl.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/liborocos-kdl.so.1.3.2
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libtf2_ros.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libactionlib.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libmessage_filters.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libroscpp.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/librosconsole.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libxmlrpcpp.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libtf2.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libroscpp_serialization.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/librostime.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /opt/ros/kinetic/lib/libcpp_common.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so: planning/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/relink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so"
+	cd /home/boocax/UstarService/build/planning/dwa_local_planner && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dwa_local_planner.dir/relink.txt --verbose=$(VERBOSE)
+
+# Rule to relink during preinstall.
+planning/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/preinstall: planning/dwa_local_planner/CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so
+
+.PHONY : planning/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/preinstall
+
 planning/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/requires: planning/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/src/dwa_planner.cpp.o.requires
 planning/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/requires: planning/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/src/dwa_planner_ros.cpp.o.requires
 

@@ -11,6 +11,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/boocax/UstarService/src/planning/global_planner/src/global_planner/orientation_filter.cpp" "/home/boocax/UstarService/build/planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/orientation_filter.cpp.o"
   "/home/boocax/UstarService/src/planning/global_planner/src/global_planner/planner_core.cpp" "/home/boocax/UstarService/build/planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/planner_core.cpp.o"
   "/home/boocax/UstarService/src/planning/global_planner/src/global_planner/quadratic_calculator.cpp" "/home/boocax/UstarService/build/planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/quadratic_calculator.cpp.o"
+  "/home/boocax/UstarService/src/planning/global_planner/src/global_planner/tastar.cpp" "/home/boocax/UstarService/build/planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tastar.cpp.o"
+  "/home/boocax/UstarService/src/planning/global_planner/src/global_planner/tgrid_path.cpp" "/home/boocax/UstarService/build/planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tgrid_path.cpp.o"
+  "/home/boocax/UstarService/src/planning/global_planner/src/global_planner/tquadratic_calculator.cpp" "/home/boocax/UstarService/build/planning/global_planner/CMakeFiles/global_planner.dir/src/global_planner/tquadratic_calculator.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

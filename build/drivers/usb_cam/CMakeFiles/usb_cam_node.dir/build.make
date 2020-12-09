@@ -132,6 +132,57 @@ drivers/usb_cam/CMakeFiles/usb_cam_node.dir/build: /home/boocax/UstarService/dev
 
 .PHONY : drivers/usb_cam/CMakeFiles/usb_cam_node.dir/build
 
+# Object files for target usb_cam_node
+usb_cam_node_OBJECTS = \
+"CMakeFiles/usb_cam_node.dir/nodes/usb_cam_node.cpp.o"
+
+# External object files for target usb_cam_node
+usb_cam_node_EXTERNAL_OBJECTS =
+
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: drivers/usb_cam/CMakeFiles/usb_cam_node.dir/nodes/usb_cam_node.cpp.o
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: drivers/usb_cam/CMakeFiles/usb_cam_node.dir/build.make
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /home/boocax/UstarService/devel/lib/libusb_cam.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /opt/ros/kinetic/lib/libimage_transport.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /opt/ros/kinetic/lib/libmessage_filters.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /opt/ros/kinetic/lib/libclass_loader.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /usr/lib/libPocoFoundation.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /usr/lib/x86_64-linux-gnu/libdl.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /opt/ros/kinetic/lib/libroslib.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /opt/ros/kinetic/lib/librospack.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /usr/lib/x86_64-linux-gnu/libtinyxml.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /opt/ros/kinetic/lib/libcamera_info_manager.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /opt/ros/kinetic/lib/libcamera_calibration_parsers.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /opt/ros/kinetic/lib/libroscpp.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /opt/ros/kinetic/lib/librosconsole.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /opt/ros/kinetic/lib/libxmlrpcpp.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /opt/ros/kinetic/lib/libroscpp_serialization.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /opt/ros/kinetic/lib/librostime.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /opt/ros/kinetic/lib/libcpp_common.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /usr/lib/x86_64-linux-gnu/libboost_system.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /usr/lib/x86_64-linux-gnu/libpthread.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node: drivers/usb_cam/CMakeFiles/usb_cam_node.dir/relink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CMakeFiles/CMakeRelink.dir/usb_cam_node"
+	cd /home/boocax/UstarService/build/drivers/usb_cam && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/usb_cam_node.dir/relink.txt --verbose=$(VERBOSE)
+
+# Rule to relink during preinstall.
+drivers/usb_cam/CMakeFiles/usb_cam_node.dir/preinstall: drivers/usb_cam/CMakeFiles/CMakeRelink.dir/usb_cam_node
+
+.PHONY : drivers/usb_cam/CMakeFiles/usb_cam_node.dir/preinstall
+
 drivers/usb_cam/CMakeFiles/usb_cam_node.dir/requires: drivers/usb_cam/CMakeFiles/usb_cam_node.dir/nodes/usb_cam_node.cpp.o.requires
 
 .PHONY : drivers/usb_cam/CMakeFiles/usb_cam_node.dir/requires

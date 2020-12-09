@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.o"
   "/home/boocax/UstarService/devel/lib/libtrajectory_planner_ros.pdb"
   "/home/boocax/UstarService/devel/lib/libtrajectory_planner_ros.so"
+  "/home/boocax/UstarService/devel/lib/libtrajectory_planner_ros.pdb"
+  "CMakeFiles/CMakeRelink.dir/libtrajectory_planner_ros.so"
 )
 
 # Per-language clean rules from dependency scanning.

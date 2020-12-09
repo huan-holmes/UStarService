@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/dwa_local_planner.dir/src/dwa_planner_ros.cpp.o"
   "/home/boocax/UstarService/devel/lib/libdwa_local_planner.pdb"
   "/home/boocax/UstarService/devel/lib/libdwa_local_planner.so"
+  "/home/boocax/UstarService/devel/lib/libdwa_local_planner.pdb"
+  "CMakeFiles/CMakeRelink.dir/libdwa_local_planner.so"
 )
 
 # Per-language clean rules from dependency scanning.

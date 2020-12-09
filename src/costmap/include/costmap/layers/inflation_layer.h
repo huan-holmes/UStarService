@@ -65,6 +65,7 @@ namespace UstarCostmap
      * @return A cost value for the distance */
     virtual inline unsigned char computeCost(double distance) const
     {
+      //ROS_INFO_STREAM(inscribed_radius_);
       unsigned char cost = 0;
       if (distance == 0)
         cost = LETHAL_OBSTACLE;

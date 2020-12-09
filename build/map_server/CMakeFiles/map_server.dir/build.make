@@ -147,6 +147,72 @@ map_server/CMakeFiles/map_server.dir/build: /home/boocax/UstarService/devel/lib/
 
 .PHONY : map_server/CMakeFiles/map_server.dir/build
 
+# Object files for target map_server
+map_server_OBJECTS = \
+"CMakeFiles/map_server.dir/src/main.cpp.o"
+
+# External object files for target map_server
+map_server_EXTERNAL_OBJECTS =
+
+map_server/CMakeFiles/CMakeRelink.dir/map_server: map_server/CMakeFiles/map_server.dir/src/main.cpp.o
+map_server/CMakeFiles/CMakeRelink.dir/map_server: map_server/CMakeFiles/map_server.dir/build.make
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /home/boocax/UstarService/devel/lib/libmap_server_image_loader.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /opt/ros/kinetic/lib/libroscpp.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /opt/ros/kinetic/lib/librosconsole.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /opt/ros/kinetic/lib/libxmlrpcpp.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /opt/ros/kinetic/lib/libtf2.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /opt/ros/kinetic/lib/libroscpp_serialization.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /opt/ros/kinetic/lib/librostime.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /opt/ros/kinetic/lib/libcpp_common.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libboost_system.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libpthread.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libBulletDynamics.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libBulletCollision.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libLinearMath.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libBulletSoftBody.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libSDLmain.a
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libSDL.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libSDL_image.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /opt/ros/kinetic/lib/libroscpp.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /opt/ros/kinetic/lib/librosconsole.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /opt/ros/kinetic/lib/libxmlrpcpp.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /opt/ros/kinetic/lib/libtf2.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /opt/ros/kinetic/lib/libroscpp_serialization.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /opt/ros/kinetic/lib/librostime.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /opt/ros/kinetic/lib/libcpp_common.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libboost_system.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libpthread.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+map_server/CMakeFiles/CMakeRelink.dir/map_server: map_server/CMakeFiles/map_server.dir/relink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CMakeFiles/CMakeRelink.dir/map_server"
+	cd /home/boocax/UstarService/build/map_server && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/map_server.dir/relink.txt --verbose=$(VERBOSE)
+
+# Rule to relink during preinstall.
+map_server/CMakeFiles/map_server.dir/preinstall: map_server/CMakeFiles/CMakeRelink.dir/map_server
+
+.PHONY : map_server/CMakeFiles/map_server.dir/preinstall
+
 map_server/CMakeFiles/map_server.dir/requires: map_server/CMakeFiles/map_server.dir/src/main.cpp.o.requires
 
 .PHONY : map_server/CMakeFiles/map_server.dir/requires
