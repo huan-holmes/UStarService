@@ -616,7 +616,6 @@ namespace move_base {
     boost::unique_lock<boost::recursive_mutex> lock(planner_mutex_);
     planner_goal_ = goal;
     runPlanner_ = true;
-    ROS_INFO("move_base:1 %d", runPlanner_);
     planner_cond_.notify_one();
     lock.unlock();
 
