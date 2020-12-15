@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/boocax/UstarService/src/fusion/radar_process/include/radar_process/filter.h
+/home/boocax/UstarService/src/fusion/radar_process/include/lidar_process/filter.h
 iostream
 -
 ros/ros.h
@@ -32,7 +32,7 @@ pcl/point_types.h
 pcl/io/pcd_io.h
 -
 
-/home/boocax/UstarService/src/fusion/radar_process/src/radar_process/filter.cpp
+/home/boocax/UstarService/src/fusion/radar_process/src/lidar_process/filter.cpp
 pcl/io/pcd_io.h
 -
 pcl/segmentation/extract_clusters.h
@@ -41,8 +41,8 @@ jsk_recognition_msgs/BoundingBoxArray.h
 -
 iostream
 -
-radar_process/filter.h
-/home/boocax/UstarService/src/fusion/radar_process/src/radar_process/radar_process/filter.h
+lidar_process/filter.h
+/home/boocax/UstarService/src/fusion/radar_process/src/lidar_process/lidar_process/filter.h
 
 /opt/ros/kinetic/include/geometry_msgs/Point.h
 string

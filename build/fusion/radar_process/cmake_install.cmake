@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/boocax/UstarService/build/fusion/radar_process/catkin_generated/installspace/radar_process.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/boocax/UstarService/build/fusion/radar_process/catkin_generated/installspace/lidar_process.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/radar_process/cmake" TYPE FILE FILES
-    "/home/boocax/UstarService/build/fusion/radar_process/catkin_generated/installspace/radar_processConfig.cmake"
-    "/home/boocax/UstarService/build/fusion/radar_process/catkin_generated/installspace/radar_processConfig-version.cmake"
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lidar_process/cmake" TYPE FILE FILES
+    "/home/boocax/UstarService/build/fusion/radar_process/catkin_generated/installspace/lidar_processConfig.cmake"
+    "/home/boocax/UstarService/build/fusion/radar_process/catkin_generated/installspace/lidar_processConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/radar_process" TYPE FILE FILES "/home/boocax/UstarService/src/fusion/radar_process/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lidar_process" TYPE FILE FILES "/home/boocax/UstarService/src/fusion/radar_process/package.xml")
 endif()
 

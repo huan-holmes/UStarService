@@ -68,9 +68,9 @@ void TAStarExpansion::add(unsigned char* costs, float* potential, int i, int nex
     int x = next_i % nx_, y = next_i / nx_;
 
     if (direction_ == INCREASE && x >= x_prev && y_prev <= end_y)
-        neutral_cost_ = 1;
+        neutral_cost_ = 20;
     if (direction_ == DECREASE && x <= x_prev && y_prev >= end_y)
-        neutral_cost_ = 1;
+        neutral_cost_ = 20;
     
     //ROS_INFO("direction: %d, prev_x: %d, prev_y: %d, x: %d, y: %d, end_y: %d, cost: %d", direction_, x_prev, y_prev, x, y, end_y, int(neutral_cost_));
     potential[next_i] = p_calc_->calculatePotential(potential, costs[next_i] + neutral_cost_, next_i, prev_potential);

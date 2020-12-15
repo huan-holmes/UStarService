@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/boocax/UstarService/src/fusion/radar_process/src/radar_process/filter.cpp" "/home/boocax/UstarService/build/fusion/radar_process/CMakeFiles/test_pcl.dir/src/radar_process/filter.cpp.o"
+  "/home/boocax/UstarService/src/fusion/radar_process/src/lidar_process/filter.cpp" "/home/boocax/UstarService/build/fusion/radar_process/CMakeFiles/test_pcl.dir/src/lidar_process/filter.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -12,7 +12,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "ROSCONSOLE_BACKEND_LOG4CXX"
   "ROS_BUILD_SHARED_LIBS=1"
-  "ROS_PACKAGE_NAME=\"radar_process\""
+  "ROS_PACKAGE_NAME=\"lidar_process\""
   )
 
 # The include file search paths:

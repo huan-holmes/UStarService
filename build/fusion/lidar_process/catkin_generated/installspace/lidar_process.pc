@@ -1,0 +1,8 @@
+prefix=/home/boocax/UstarService/install
+
+Name: lidar_process
+Description: Description of lidar_process
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -llidar_process
+Requires: sensor_msgs roscpp rospy

@@ -380,21 +380,6 @@ jsk_recognition_msgs_generate_messages_py/fast:
 .PHONY : jsk_recognition_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-fusion/radar_process/CMakeFiles/test_cluster.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 fusion/radar_process/CMakeFiles/test_cluster.dir/rule
-.PHONY : fusion/radar_process/CMakeFiles/test_cluster.dir/rule
-
-# Convenience name for target.
-test_cluster: fusion/radar_process/CMakeFiles/test_cluster.dir/rule
-
-.PHONY : test_cluster
-
-# fast build rule for target.
-test_cluster/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/test_cluster.dir/build.make fusion/radar_process/CMakeFiles/test_cluster.dir/build
-.PHONY : test_cluster/fast
-
-# Convenience name for target.
 fusion/radar_process/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule:
 	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 fusion/radar_process/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
 .PHONY : fusion/radar_process/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
@@ -438,21 +423,6 @@ nodelet_generate_messages_lisp: fusion/radar_process/CMakeFiles/nodelet_generate
 nodelet_generate_messages_lisp/fast:
 	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make fusion/radar_process/CMakeFiles/nodelet_generate_messages_lisp.dir/build
 .PHONY : nodelet_generate_messages_lisp/fast
-
-# Convenience name for target.
-fusion/radar_process/CMakeFiles/test_cluster_node.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 fusion/radar_process/CMakeFiles/test_cluster_node.dir/rule
-.PHONY : fusion/radar_process/CMakeFiles/test_cluster_node.dir/rule
-
-# Convenience name for target.
-test_cluster_node: fusion/radar_process/CMakeFiles/test_cluster_node.dir/rule
-
-.PHONY : test_cluster_node
-
-# fast build rule for target.
-test_cluster_node/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/test_cluster_node.dir/build.make fusion/radar_process/CMakeFiles/test_cluster_node.dir/build
-.PHONY : test_cluster_node/fast
 
 # Convenience name for target.
 fusion/radar_process/CMakeFiles/bond_generate_messages_nodejs.dir/rule:
@@ -619,86 +589,32 @@ jsk_recognition_msgs_generate_messages_lisp/fast:
 	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/jsk_recognition_msgs_generate_messages_lisp.dir/build.make fusion/radar_process/CMakeFiles/jsk_recognition_msgs_generate_messages_lisp.dir/build
 .PHONY : jsk_recognition_msgs_generate_messages_lisp/fast
 
-src/radar_process/filter.o: src/radar_process/filter.cpp.o
+src/lidar_process/filter.o: src/lidar_process/filter.cpp.o
 
-.PHONY : src/radar_process/filter.o
-
-# target to build an object file
-src/radar_process/filter.cpp.o:
-	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/test_pcl.dir/build.make fusion/radar_process/CMakeFiles/test_pcl.dir/src/radar_process/filter.cpp.o
-.PHONY : src/radar_process/filter.cpp.o
-
-src/radar_process/filter.i: src/radar_process/filter.cpp.i
-
-.PHONY : src/radar_process/filter.i
-
-# target to preprocess a source file
-src/radar_process/filter.cpp.i:
-	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/test_pcl.dir/build.make fusion/radar_process/CMakeFiles/test_pcl.dir/src/radar_process/filter.cpp.i
-.PHONY : src/radar_process/filter.cpp.i
-
-src/radar_process/filter.s: src/radar_process/filter.cpp.s
-
-.PHONY : src/radar_process/filter.s
-
-# target to generate assembly for a file
-src/radar_process/filter.cpp.s:
-	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/test_pcl.dir/build.make fusion/radar_process/CMakeFiles/test_pcl.dir/src/radar_process/filter.cpp.s
-.PHONY : src/radar_process/filter.cpp.s
-
-src/radar_process/kd_tree.o: src/radar_process/kd_tree.c.o
-
-.PHONY : src/radar_process/kd_tree.o
+.PHONY : src/lidar_process/filter.o
 
 # target to build an object file
-src/radar_process/kd_tree.c.o:
-	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/test_cluster.dir/build.make fusion/radar_process/CMakeFiles/test_cluster.dir/src/radar_process/kd_tree.c.o
-.PHONY : src/radar_process/kd_tree.c.o
+src/lidar_process/filter.cpp.o:
+	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/test_pcl.dir/build.make fusion/radar_process/CMakeFiles/test_pcl.dir/src/lidar_process/filter.cpp.o
+.PHONY : src/lidar_process/filter.cpp.o
 
-src/radar_process/kd_tree.i: src/radar_process/kd_tree.c.i
+src/lidar_process/filter.i: src/lidar_process/filter.cpp.i
 
-.PHONY : src/radar_process/kd_tree.i
-
-# target to preprocess a source file
-src/radar_process/kd_tree.c.i:
-	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/test_cluster.dir/build.make fusion/radar_process/CMakeFiles/test_cluster.dir/src/radar_process/kd_tree.c.i
-.PHONY : src/radar_process/kd_tree.c.i
-
-src/radar_process/kd_tree.s: src/radar_process/kd_tree.c.s
-
-.PHONY : src/radar_process/kd_tree.s
-
-# target to generate assembly for a file
-src/radar_process/kd_tree.c.s:
-	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/test_cluster.dir/build.make fusion/radar_process/CMakeFiles/test_cluster.dir/src/radar_process/kd_tree.c.s
-.PHONY : src/radar_process/kd_tree.c.s
-
-test/test_cluster.o: test/test_cluster.cpp.o
-
-.PHONY : test/test_cluster.o
-
-# target to build an object file
-test/test_cluster.cpp.o:
-	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/test_cluster_node.dir/build.make fusion/radar_process/CMakeFiles/test_cluster_node.dir/test/test_cluster.cpp.o
-.PHONY : test/test_cluster.cpp.o
-
-test/test_cluster.i: test/test_cluster.cpp.i
-
-.PHONY : test/test_cluster.i
+.PHONY : src/lidar_process/filter.i
 
 # target to preprocess a source file
-test/test_cluster.cpp.i:
-	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/test_cluster_node.dir/build.make fusion/radar_process/CMakeFiles/test_cluster_node.dir/test/test_cluster.cpp.i
-.PHONY : test/test_cluster.cpp.i
+src/lidar_process/filter.cpp.i:
+	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/test_pcl.dir/build.make fusion/radar_process/CMakeFiles/test_pcl.dir/src/lidar_process/filter.cpp.i
+.PHONY : src/lidar_process/filter.cpp.i
 
-test/test_cluster.s: test/test_cluster.cpp.s
+src/lidar_process/filter.s: src/lidar_process/filter.cpp.s
 
-.PHONY : test/test_cluster.s
+.PHONY : src/lidar_process/filter.s
 
 # target to generate assembly for a file
-test/test_cluster.cpp.s:
-	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/test_cluster_node.dir/build.make fusion/radar_process/CMakeFiles/test_cluster_node.dir/test/test_cluster.cpp.s
-.PHONY : test/test_cluster.cpp.s
+src/lidar_process/filter.cpp.s:
+	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/radar_process/CMakeFiles/test_pcl.dir/build.make fusion/radar_process/CMakeFiles/test_pcl.dir/src/lidar_process/filter.cpp.s
+.PHONY : src/lidar_process/filter.cpp.s
 
 test/test_pcl.o: test/test_pcl.cpp.o
 
@@ -754,11 +670,9 @@ help:
 	@echo "... pcl_msgs_generate_messages_eus"
 	@echo "... pcl_msgs_generate_messages_py"
 	@echo "... jsk_recognition_msgs_generate_messages_py"
-	@echo "... test_cluster"
 	@echo "... pcl_msgs_generate_messages_lisp"
 	@echo "... jsk_recognition_msgs_generate_messages_nodejs"
 	@echo "... nodelet_generate_messages_lisp"
-	@echo "... test_cluster_node"
 	@echo "... bond_generate_messages_nodejs"
 	@echo "... jsk_recognition_msgs_generate_messages_cpp"
 	@echo "... nodelet_generate_messages_py"
@@ -770,15 +684,9 @@ help:
 	@echo "... jsk_recognition_msgs_generate_messages_eus"
 	@echo "... pcl_ros_gencfg"
 	@echo "... jsk_recognition_msgs_generate_messages_lisp"
-	@echo "... src/radar_process/filter.o"
-	@echo "... src/radar_process/filter.i"
-	@echo "... src/radar_process/filter.s"
-	@echo "... src/radar_process/kd_tree.o"
-	@echo "... src/radar_process/kd_tree.i"
-	@echo "... src/radar_process/kd_tree.s"
-	@echo "... test/test_cluster.o"
-	@echo "... test/test_cluster.i"
-	@echo "... test/test_cluster.s"
+	@echo "... src/lidar_process/filter.o"
+	@echo "... src/lidar_process/filter.i"
+	@echo "... src/lidar_process/filter.s"
 	@echo "... test/test_pcl.o"
 	@echo "... test/test_pcl.i"
 	@echo "... test/test_pcl.s"

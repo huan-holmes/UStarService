@@ -10,7 +10,7 @@ class Expander
 {
     public:
         Expander(PotentialCalculator* p_calc, int nx, int ny) :
-                unknown_(true), lethal_cost_(253), neutral_cost_(80), factor_(3.0), p_calc_(p_calc) 
+                unknown_(true), lethal_cost_(253), neutral_cost_(50), factor_(3.0), p_calc_(p_calc) 
         {
 
             setSize(nx, ny);

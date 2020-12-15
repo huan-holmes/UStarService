@@ -6,21 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/boocax/UstarService/src/fusion/radar_process/include/radar_process/cluster.h
-
-/home/boocax/UstarService/src/fusion/radar_process/include/radar_process/kd_tree.h
-radar_process/cluster.h
-/home/boocax/UstarService/src/fusion/radar_process/include/radar_process/radar_process/cluster.h
-
-/home/boocax/UstarService/src/fusion/radar_process/src/radar_process/kd_tree.c
-assert.h
--
-math.h
--
-stdlib.h
--
-string.h
--
-radar_process/kd_tree.h
-/home/boocax/UstarService/src/fusion/radar_process/src/radar_process/radar_process/kd_tree.h
-
