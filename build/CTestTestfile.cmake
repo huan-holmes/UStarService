@@ -5,11 +5,11 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
-subdirs(perception)
 subdirs(control)
 subdirs(map_server)
 subdirs(simulator)
 subdirs(drivers/ltme_node-master)
+subdirs(perception)
 subdirs(mapping)
 subdirs(fusion/lidar_process)
 subdirs(robot_pose_ekf)
