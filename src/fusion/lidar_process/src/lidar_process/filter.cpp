@@ -4,8 +4,8 @@
 
 #include <iostream>
 #include "lidar_process/filter.h"
-#define MIN_CLUSTER_SIZE 2
-#define MAX_CLUSTER_SIZE 50
+#define MIN_CLUSTER_SIZE 10
+#define MAX_CLUSTER_SIZE 100
 namespace UstarFusion
 {
 
@@ -131,7 +131,7 @@ namespace UstarFusion
         {
             bbox_array.boxes.push_back(obj_list[i].bounding_box_);
         }
-        bbox_array.header.frame_id = "base_laser_link";
+        bbox_array.header.frame_id = "base_link";
 
         box_array_pub_.publish(bbox_array);
     }
@@ -239,11 +239,14 @@ namespace UstarFusion
             double width_ = obj_info.max_point_.y - obj_info.min_point_.y;
             double height_ = obj_info.max_point_.z - obj_info.min_point_.z;
 
-            obj_info.bounding_box_.header.frame_id = "base_laser_link";
+            obj_info.bounding_box_.header.frame_id = "base_link";
 
             obj_info.bounding_box_.pose.position.x = obj_info.min_point_.x + length_ / 2;
             obj_info.bounding_box_.pose.position.y = obj_info.min_point_.y + width_ / 2;
             obj_info.bounding_box_.pose.position.z = obj_info.min_point_.z + height_ / 2;
+            // obj_info.bounding_box_.pose.position.x = obj_info.min_point_.x;
+            // obj_info.bounding_box_.pose.position.y = obj_info.min_point_.y;
+            // obj_info.bounding_box_.pose.position.z = obj_info.min_point_.z;
 
             // obj_info.bounding_box_.pose.position.x = obj_info.centroid_.x;
             // obj_info.bounding_box_.pose.position.y = obj_info.centroid_.x;

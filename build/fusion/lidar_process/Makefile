@@ -155,6 +155,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+fusion/lidar_process/CMakeFiles/sensor_fusion.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 fusion/lidar_process/CMakeFiles/sensor_fusion.dir/rule
+.PHONY : fusion/lidar_process/CMakeFiles/sensor_fusion.dir/rule
+
+# Convenience name for target.
+sensor_fusion: fusion/lidar_process/CMakeFiles/sensor_fusion.dir/rule
+
+.PHONY : sensor_fusion
+
+# fast build rule for target.
+sensor_fusion/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/lidar_process/CMakeFiles/sensor_fusion.dir/build.make fusion/lidar_process/CMakeFiles/sensor_fusion.dir/build
+.PHONY : sensor_fusion/fast
+
+# Convenience name for target.
 fusion/lidar_process/CMakeFiles/test_pcl.dir/rule:
 	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 fusion/lidar_process/CMakeFiles/test_pcl.dir/rule
 .PHONY : fusion/lidar_process/CMakeFiles/test_pcl.dir/rule
@@ -213,6 +228,21 @@ jsk_footstep_msgs_generate_messages_nodejs: fusion/lidar_process/CMakeFiles/jsk_
 jsk_footstep_msgs_generate_messages_nodejs/fast:
 	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/lidar_process/CMakeFiles/jsk_footstep_msgs_generate_messages_nodejs.dir/build.make fusion/lidar_process/CMakeFiles/jsk_footstep_msgs_generate_messages_nodejs.dir/build
 .PHONY : jsk_footstep_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+fusion/lidar_process/CMakeFiles/sensor_fusion_node.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 fusion/lidar_process/CMakeFiles/sensor_fusion_node.dir/rule
+.PHONY : fusion/lidar_process/CMakeFiles/sensor_fusion_node.dir/rule
+
+# Convenience name for target.
+sensor_fusion_node: fusion/lidar_process/CMakeFiles/sensor_fusion_node.dir/rule
+
+.PHONY : sensor_fusion_node
+
+# fast build rule for target.
+sensor_fusion_node/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/lidar_process/CMakeFiles/sensor_fusion_node.dir/build.make fusion/lidar_process/CMakeFiles/sensor_fusion_node.dir/build
+.PHONY : sensor_fusion_node/fast
 
 # Convenience name for target.
 fusion/lidar_process/CMakeFiles/jsk_footstep_msgs_generate_messages_lisp.dir/rule:
@@ -616,6 +646,87 @@ src/lidar_process/filter.cpp.s:
 	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/lidar_process/CMakeFiles/test_pcl.dir/build.make fusion/lidar_process/CMakeFiles/test_pcl.dir/src/lidar_process/filter.cpp.s
 .PHONY : src/lidar_process/filter.cpp.s
 
+src/lidar_process/kalman_filter.o: src/lidar_process/kalman_filter.cpp.o
+
+.PHONY : src/lidar_process/kalman_filter.o
+
+# target to build an object file
+src/lidar_process/kalman_filter.cpp.o:
+	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/lidar_process/CMakeFiles/sensor_fusion.dir/build.make fusion/lidar_process/CMakeFiles/sensor_fusion.dir/src/lidar_process/kalman_filter.cpp.o
+.PHONY : src/lidar_process/kalman_filter.cpp.o
+
+src/lidar_process/kalman_filter.i: src/lidar_process/kalman_filter.cpp.i
+
+.PHONY : src/lidar_process/kalman_filter.i
+
+# target to preprocess a source file
+src/lidar_process/kalman_filter.cpp.i:
+	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/lidar_process/CMakeFiles/sensor_fusion.dir/build.make fusion/lidar_process/CMakeFiles/sensor_fusion.dir/src/lidar_process/kalman_filter.cpp.i
+.PHONY : src/lidar_process/kalman_filter.cpp.i
+
+src/lidar_process/kalman_filter.s: src/lidar_process/kalman_filter.cpp.s
+
+.PHONY : src/lidar_process/kalman_filter.s
+
+# target to generate assembly for a file
+src/lidar_process/kalman_filter.cpp.s:
+	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/lidar_process/CMakeFiles/sensor_fusion.dir/build.make fusion/lidar_process/CMakeFiles/sensor_fusion.dir/src/lidar_process/kalman_filter.cpp.s
+.PHONY : src/lidar_process/kalman_filter.cpp.s
+
+src/lidar_process/sensor_fusion.o: src/lidar_process/sensor_fusion.cpp.o
+
+.PHONY : src/lidar_process/sensor_fusion.o
+
+# target to build an object file
+src/lidar_process/sensor_fusion.cpp.o:
+	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/lidar_process/CMakeFiles/sensor_fusion.dir/build.make fusion/lidar_process/CMakeFiles/sensor_fusion.dir/src/lidar_process/sensor_fusion.cpp.o
+.PHONY : src/lidar_process/sensor_fusion.cpp.o
+
+src/lidar_process/sensor_fusion.i: src/lidar_process/sensor_fusion.cpp.i
+
+.PHONY : src/lidar_process/sensor_fusion.i
+
+# target to preprocess a source file
+src/lidar_process/sensor_fusion.cpp.i:
+	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/lidar_process/CMakeFiles/sensor_fusion.dir/build.make fusion/lidar_process/CMakeFiles/sensor_fusion.dir/src/lidar_process/sensor_fusion.cpp.i
+.PHONY : src/lidar_process/sensor_fusion.cpp.i
+
+src/lidar_process/sensor_fusion.s: src/lidar_process/sensor_fusion.cpp.s
+
+.PHONY : src/lidar_process/sensor_fusion.s
+
+# target to generate assembly for a file
+src/lidar_process/sensor_fusion.cpp.s:
+	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/lidar_process/CMakeFiles/sensor_fusion.dir/build.make fusion/lidar_process/CMakeFiles/sensor_fusion.dir/src/lidar_process/sensor_fusion.cpp.s
+.PHONY : src/lidar_process/sensor_fusion.cpp.s
+
+src/lidar_process/sensor_fusion_node.o: src/lidar_process/sensor_fusion_node.cpp.o
+
+.PHONY : src/lidar_process/sensor_fusion_node.o
+
+# target to build an object file
+src/lidar_process/sensor_fusion_node.cpp.o:
+	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/lidar_process/CMakeFiles/sensor_fusion_node.dir/build.make fusion/lidar_process/CMakeFiles/sensor_fusion_node.dir/src/lidar_process/sensor_fusion_node.cpp.o
+.PHONY : src/lidar_process/sensor_fusion_node.cpp.o
+
+src/lidar_process/sensor_fusion_node.i: src/lidar_process/sensor_fusion_node.cpp.i
+
+.PHONY : src/lidar_process/sensor_fusion_node.i
+
+# target to preprocess a source file
+src/lidar_process/sensor_fusion_node.cpp.i:
+	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/lidar_process/CMakeFiles/sensor_fusion_node.dir/build.make fusion/lidar_process/CMakeFiles/sensor_fusion_node.dir/src/lidar_process/sensor_fusion_node.cpp.i
+.PHONY : src/lidar_process/sensor_fusion_node.cpp.i
+
+src/lidar_process/sensor_fusion_node.s: src/lidar_process/sensor_fusion_node.cpp.s
+
+.PHONY : src/lidar_process/sensor_fusion_node.s
+
+# target to generate assembly for a file
+src/lidar_process/sensor_fusion_node.cpp.s:
+	cd /home/boocax/UstarService/build && $(MAKE) -f fusion/lidar_process/CMakeFiles/sensor_fusion_node.dir/build.make fusion/lidar_process/CMakeFiles/sensor_fusion_node.dir/src/lidar_process/sensor_fusion_node.cpp.s
+.PHONY : src/lidar_process/sensor_fusion_node.cpp.s
+
 test/test_pcl.o: test/test_pcl.cpp.o
 
 .PHONY : test/test_pcl.o
@@ -653,10 +764,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... sensor_fusion"
 	@echo "... test_pcl"
 	@echo "... my_pcl_node"
 	@echo "... jsk_footstep_msgs_generate_messages_py"
 	@echo "... jsk_footstep_msgs_generate_messages_nodejs"
+	@echo "... sensor_fusion_node"
 	@echo "... jsk_footstep_msgs_generate_messages_lisp"
 	@echo "... install/local"
 	@echo "... jsk_footstep_msgs_generate_messages_eus"
@@ -687,6 +800,15 @@ help:
 	@echo "... src/lidar_process/filter.o"
 	@echo "... src/lidar_process/filter.i"
 	@echo "... src/lidar_process/filter.s"
+	@echo "... src/lidar_process/kalman_filter.o"
+	@echo "... src/lidar_process/kalman_filter.i"
+	@echo "... src/lidar_process/kalman_filter.s"
+	@echo "... src/lidar_process/sensor_fusion.o"
+	@echo "... src/lidar_process/sensor_fusion.i"
+	@echo "... src/lidar_process/sensor_fusion.s"
+	@echo "... src/lidar_process/sensor_fusion_node.o"
+	@echo "... src/lidar_process/sensor_fusion_node.i"
+	@echo "... src/lidar_process/sensor_fusion_node.s"
 	@echo "... test/test_pcl.o"
 	@echo "... test/test_pcl.i"
 	@echo "... test/test_pcl.s"

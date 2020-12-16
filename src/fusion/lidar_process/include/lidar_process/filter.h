@@ -47,7 +47,8 @@ namespace UstarFusion
         double point2Line(float min_x, float min_y, float max_x, float max_y, pcl::PointXYZ point);
         bool checkStaticObstacle(float center_x, float center_y, pcl::PointIndices local_indice, const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &in_pc);
 
-    private : ros::NodeHandle nh_;
+    private: 
+        ros::NodeHandle nh_;
         laser_geometry::LaserProjection projector_;
         tf::TransformListener tfListener_;
 

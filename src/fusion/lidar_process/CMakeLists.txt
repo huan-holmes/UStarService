@@ -39,6 +39,13 @@ include_directories(
 
 add_library(test_pcl
   src/lidar_process/filter.cpp
+  
 )
+add_library(sensor_fusion
+  src/lidar_process/sensor_fusion.cpp
+  src/lidar_process/kalman_filter.cpp
+)
+add_executable(sensor_fusion_node src/lidar_process/sensor_fusion_node.cpp)
+target_link_libraries(sensor_fusion_node sensor_fusion ${catkin_LIBRARIES})
 add_executable(my_pcl_node test/test_pcl.cpp)
 target_link_libraries(my_pcl_node test_pcl ${catkin_LIBRARIES})

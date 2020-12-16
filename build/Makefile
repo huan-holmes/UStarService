@@ -1480,6 +1480,19 @@ topic_tools_generate_messages_py/fast:
 .PHONY : topic_tools_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named sensor_fusion
+
+# Build rule for target.
+sensor_fusion: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_fusion
+.PHONY : sensor_fusion
+
+# fast build rule for target.
+sensor_fusion/fast:
+	$(MAKE) -f fusion/lidar_process/CMakeFiles/sensor_fusion.dir/build.make fusion/lidar_process/CMakeFiles/sensor_fusion.dir/build
+.PHONY : sensor_fusion/fast
+
+#=============================================================================
 # Target rules for targets named test_pcl
 
 # Build rule for target.
@@ -1530,6 +1543,19 @@ jsk_footstep_msgs_generate_messages_nodejs: cmake_check_build_system
 jsk_footstep_msgs_generate_messages_nodejs/fast:
 	$(MAKE) -f fusion/lidar_process/CMakeFiles/jsk_footstep_msgs_generate_messages_nodejs.dir/build.make fusion/lidar_process/CMakeFiles/jsk_footstep_msgs_generate_messages_nodejs.dir/build
 .PHONY : jsk_footstep_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named sensor_fusion_node
+
+# Build rule for target.
+sensor_fusion_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_fusion_node
+.PHONY : sensor_fusion_node
+
+# fast build rule for target.
+sensor_fusion_node/fast:
+	$(MAKE) -f fusion/lidar_process/CMakeFiles/sensor_fusion_node.dir/build.make fusion/lidar_process/CMakeFiles/sensor_fusion_node.dir/build
+.PHONY : sensor_fusion_node/fast
 
 #=============================================================================
 # Target rules for targets named jsk_footstep_msgs_generate_messages_lisp
@@ -3769,10 +3795,12 @@ help:
 	@echo "... topic_tools_generate_messages_eus"
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_py"
+	@echo "... sensor_fusion"
 	@echo "... test_pcl"
 	@echo "... my_pcl_node"
 	@echo "... jsk_footstep_msgs_generate_messages_py"
 	@echo "... jsk_footstep_msgs_generate_messages_nodejs"
+	@echo "... sensor_fusion_node"
 	@echo "... jsk_footstep_msgs_generate_messages_lisp"
 	@echo "... jsk_footstep_msgs_generate_messages_eus"
 	@echo "... nodelet_generate_messages_eus"

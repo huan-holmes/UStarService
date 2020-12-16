@@ -162,10 +162,12 @@
 /home/boocax/UstarService/build/fusion/lidar_process/CMakeFiles/rebuild_cache.dir
 /home/boocax/UstarService/build/fusion/lidar_process/CMakeFiles/edit_cache.dir
 /home/boocax/UstarService/build/fusion/lidar_process/CMakeFiles/test.dir
+/home/boocax/UstarService/build/fusion/lidar_process/CMakeFiles/sensor_fusion.dir
 /home/boocax/UstarService/build/fusion/lidar_process/CMakeFiles/test_pcl.dir
 /home/boocax/UstarService/build/fusion/lidar_process/CMakeFiles/my_pcl_node.dir
 /home/boocax/UstarService/build/fusion/lidar_process/CMakeFiles/jsk_footstep_msgs_generate_messages_py.dir
 /home/boocax/UstarService/build/fusion/lidar_process/CMakeFiles/jsk_footstep_msgs_generate_messages_nodejs.dir
+/home/boocax/UstarService/build/fusion/lidar_process/CMakeFiles/sensor_fusion_node.dir
 /home/boocax/UstarService/build/fusion/lidar_process/CMakeFiles/jsk_footstep_msgs_generate_messages_lisp.dir
 /home/boocax/UstarService/build/fusion/lidar_process/CMakeFiles/install/local.dir
 /home/boocax/UstarService/build/fusion/lidar_process/CMakeFiles/jsk_footstep_msgs_generate_messages_eus.dir

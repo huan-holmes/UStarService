@@ -20,7 +20,7 @@ else
 fi
 if [ $rqt -eq 1 ]; then
 	sleep 3
-	gnome-terminal --tab -e 'bash -c "roslaunch radar_process test_pcl.launch"'
+	gnome-terminal --tab -e 'bash -c "roslaunch lidar_process test_pcl.launch"'
 else
 	echo "cluster faliled"
 fi

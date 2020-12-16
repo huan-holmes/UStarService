@@ -4,7 +4,7 @@
 
    
 
-
+    <node pkg="tf" type="static_transform_publisher" name="base_to_laser" args="0.0 0.0 0.0 0.0 0.0 0.0 /base_link /laser 100" />
 
     <node pkg="lidar_process" type="my_pcl_node" name="my_pcl_node" output="screen">
         
