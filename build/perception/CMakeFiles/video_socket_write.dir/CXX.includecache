@@ -6,9 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/boocax/UstarService/src/perception/src/video_socket_write.cpp
-ros/ros.h
--
+/home/boocax/UstarService/src/perception/src/test.cpp
 image_transport/image_transport.h
 -
 cv_bridge/cv_bridge.h
@@ -23,29 +21,25 @@ opencv-3.3.1-dev/opencv2/core.hpp
 -
 opencv-3.3.1-dev/opencv2/opencv.hpp
 -
-std_msgs/UInt8.h
+stdio.h
 -
-sys/types.h
+ros/ros.h
 -
 sys/socket.h
 -
-unistd.h
--
-netdb.h
--
-netinet/in.h
--
-arpa/inet.h
--
-stdio.h
--
-stdlib.h
+sys/types.h
 -
 string.h
 -
-vector
+netinet/in.h
 -
-sys/ioctl.h
+unistd.h
+-
+stdlib.h
+-
+arpa/inet.h
+-
+signal.h
 -
 
 /opt/ros/kinetic/include/cv_bridge/cv_bridge.h
@@ -2191,22 +2185,6 @@ string
 -
 
 /opt/ros/kinetic/include/std_msgs/Header.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-
-/opt/ros/kinetic/include/std_msgs/UInt8.h
 string
 -
 vector

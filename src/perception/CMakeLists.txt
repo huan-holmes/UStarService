@@ -20,7 +20,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 catkin_package()
 
-add_executable(video_socket_write src/video_socket_write.cpp)
+add_executable(video_socket_write src/test.cpp)
 target_link_libraries(video_socket_write
   ${catkin_LIBRARIES}
   ${OpenCV_LIBRARIES}

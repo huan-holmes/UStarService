@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.o"
+  "CMakeFiles/video_socket_write.dir/src/test.cpp.o"
   "/home/boocax/UstarService/devel/lib/perception/video_socket_write.pdb"
   "/home/boocax/UstarService/devel/lib/perception/video_socket_write"
 )

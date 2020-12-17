@@ -169,32 +169,32 @@ video_socket_write/fast:
 	cd /home/boocax/UstarService/build && $(MAKE) -f perception/CMakeFiles/video_socket_write.dir/build.make perception/CMakeFiles/video_socket_write.dir/build
 .PHONY : video_socket_write/fast
 
-src/video_socket_write.o: src/video_socket_write.cpp.o
+src/test.o: src/test.cpp.o
 
-.PHONY : src/video_socket_write.o
+.PHONY : src/test.o
 
 # target to build an object file
-src/video_socket_write.cpp.o:
-	cd /home/boocax/UstarService/build && $(MAKE) -f perception/CMakeFiles/video_socket_write.dir/build.make perception/CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.o
-.PHONY : src/video_socket_write.cpp.o
+src/test.cpp.o:
+	cd /home/boocax/UstarService/build && $(MAKE) -f perception/CMakeFiles/video_socket_write.dir/build.make perception/CMakeFiles/video_socket_write.dir/src/test.cpp.o
+.PHONY : src/test.cpp.o
 
-src/video_socket_write.i: src/video_socket_write.cpp.i
+src/test.i: src/test.cpp.i
 
-.PHONY : src/video_socket_write.i
+.PHONY : src/test.i
 
 # target to preprocess a source file
-src/video_socket_write.cpp.i:
-	cd /home/boocax/UstarService/build && $(MAKE) -f perception/CMakeFiles/video_socket_write.dir/build.make perception/CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.i
-.PHONY : src/video_socket_write.cpp.i
+src/test.cpp.i:
+	cd /home/boocax/UstarService/build && $(MAKE) -f perception/CMakeFiles/video_socket_write.dir/build.make perception/CMakeFiles/video_socket_write.dir/src/test.cpp.i
+.PHONY : src/test.cpp.i
 
-src/video_socket_write.s: src/video_socket_write.cpp.s
+src/test.s: src/test.cpp.s
 
-.PHONY : src/video_socket_write.s
+.PHONY : src/test.s
 
 # target to generate assembly for a file
-src/video_socket_write.cpp.s:
-	cd /home/boocax/UstarService/build && $(MAKE) -f perception/CMakeFiles/video_socket_write.dir/build.make perception/CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.s
-.PHONY : src/video_socket_write.cpp.s
+src/test.cpp.s:
+	cd /home/boocax/UstarService/build && $(MAKE) -f perception/CMakeFiles/video_socket_write.dir/build.make perception/CMakeFiles/video_socket_write.dir/src/test.cpp.s
+.PHONY : src/test.cpp.s
 
 # Help Target
 help:
@@ -209,9 +209,9 @@ help:
 	@echo "... test"
 	@echo "... video_socket_write"
 	@echo "... edit_cache"
-	@echo "... src/video_socket_write.o"
-	@echo "... src/video_socket_write.i"
-	@echo "... src/video_socket_write.s"
+	@echo "... src/test.o"
+	@echo "... src/test.i"
+	@echo "... src/test.s"
 .PHONY : help
 
 

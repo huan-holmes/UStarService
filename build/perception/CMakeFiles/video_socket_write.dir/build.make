@@ -57,38 +57,38 @@ include perception/CMakeFiles/video_socket_write.dir/progress.make
 # Include the compile flags for this target's objects.
 include perception/CMakeFiles/video_socket_write.dir/flags.make
 
-perception/CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.o: perception/CMakeFiles/video_socket_write.dir/flags.make
-perception/CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.o: /home/boocax/UstarService/src/perception/src/video_socket_write.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object perception/CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.o"
-	cd /home/boocax/UstarService/build/perception && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.o -c /home/boocax/UstarService/src/perception/src/video_socket_write.cpp
+perception/CMakeFiles/video_socket_write.dir/src/test.cpp.o: perception/CMakeFiles/video_socket_write.dir/flags.make
+perception/CMakeFiles/video_socket_write.dir/src/test.cpp.o: /home/boocax/UstarService/src/perception/src/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boocax/UstarService/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object perception/CMakeFiles/video_socket_write.dir/src/test.cpp.o"
+	cd /home/boocax/UstarService/build/perception && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/video_socket_write.dir/src/test.cpp.o -c /home/boocax/UstarService/src/perception/src/test.cpp
 
-perception/CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.i"
-	cd /home/boocax/UstarService/build/perception && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/boocax/UstarService/src/perception/src/video_socket_write.cpp > CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.i
+perception/CMakeFiles/video_socket_write.dir/src/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/video_socket_write.dir/src/test.cpp.i"
+	cd /home/boocax/UstarService/build/perception && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/boocax/UstarService/src/perception/src/test.cpp > CMakeFiles/video_socket_write.dir/src/test.cpp.i
 
-perception/CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.s"
-	cd /home/boocax/UstarService/build/perception && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/boocax/UstarService/src/perception/src/video_socket_write.cpp -o CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.s
+perception/CMakeFiles/video_socket_write.dir/src/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/video_socket_write.dir/src/test.cpp.s"
+	cd /home/boocax/UstarService/build/perception && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/boocax/UstarService/src/perception/src/test.cpp -o CMakeFiles/video_socket_write.dir/src/test.cpp.s
 
-perception/CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.o.requires:
+perception/CMakeFiles/video_socket_write.dir/src/test.cpp.o.requires:
 
-.PHONY : perception/CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.o.requires
+.PHONY : perception/CMakeFiles/video_socket_write.dir/src/test.cpp.o.requires
 
-perception/CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.o.provides: perception/CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.o.requires
-	$(MAKE) -f perception/CMakeFiles/video_socket_write.dir/build.make perception/CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.o.provides.build
-.PHONY : perception/CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.o.provides
+perception/CMakeFiles/video_socket_write.dir/src/test.cpp.o.provides: perception/CMakeFiles/video_socket_write.dir/src/test.cpp.o.requires
+	$(MAKE) -f perception/CMakeFiles/video_socket_write.dir/build.make perception/CMakeFiles/video_socket_write.dir/src/test.cpp.o.provides.build
+.PHONY : perception/CMakeFiles/video_socket_write.dir/src/test.cpp.o.provides
 
-perception/CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.o.provides.build: perception/CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.o
+perception/CMakeFiles/video_socket_write.dir/src/test.cpp.o.provides.build: perception/CMakeFiles/video_socket_write.dir/src/test.cpp.o
 
 
 # Object files for target video_socket_write
 video_socket_write_OBJECTS = \
-"CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.o"
+"CMakeFiles/video_socket_write.dir/src/test.cpp.o"
 
 # External object files for target video_socket_write
 video_socket_write_EXTERNAL_OBJECTS =
 
-/home/boocax/UstarService/devel/lib/perception/video_socket_write: perception/CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.o
+/home/boocax/UstarService/devel/lib/perception/video_socket_write: perception/CMakeFiles/video_socket_write.dir/src/test.cpp.o
 /home/boocax/UstarService/devel/lib/perception/video_socket_write: perception/CMakeFiles/video_socket_write.dir/build.make
 /home/boocax/UstarService/devel/lib/perception/video_socket_write: /opt/ros/kinetic/lib/libcv_bridge.so
 /home/boocax/UstarService/devel/lib/perception/video_socket_write: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1
@@ -178,7 +178,7 @@ perception/CMakeFiles/video_socket_write.dir/build: /home/boocax/UstarService/de
 
 .PHONY : perception/CMakeFiles/video_socket_write.dir/build
 
-perception/CMakeFiles/video_socket_write.dir/requires: perception/CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.o.requires
+perception/CMakeFiles/video_socket_write.dir/requires: perception/CMakeFiles/video_socket_write.dir/src/test.cpp.o.requires
 
 .PHONY : perception/CMakeFiles/video_socket_write.dir/requires
 

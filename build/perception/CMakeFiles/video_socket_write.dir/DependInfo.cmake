@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/boocax/UstarService/src/perception/src/video_socket_write.cpp" "/home/boocax/UstarService/build/perception/CMakeFiles/video_socket_write.dir/src/video_socket_write.cpp.o"
+  "/home/boocax/UstarService/src/perception/src/test.cpp" "/home/boocax/UstarService/build/perception/CMakeFiles/video_socket_write.dir/src/test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
