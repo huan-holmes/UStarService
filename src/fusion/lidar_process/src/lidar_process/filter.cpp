@@ -132,7 +132,7 @@ namespace UstarFusion
             bbox_array.boxes.push_back(obj_list[i].bounding_box_);
         }
         bbox_array.header.frame_id = "base_link";
-
+        bbox_array.header.stamp = ros::Time::now();
         box_array_pub_.publish(bbox_array);
     }
     void LaserFilter::clusterSegment(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &in_pc, double in_max_cluster_distance, std::vector<Detected_Obj> &obj_list)

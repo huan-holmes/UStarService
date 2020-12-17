@@ -5,7 +5,12 @@ int main(int argc, char** argv)
 {
     ros::init(argc, argv, "sensor_fusion_node");
     SensorFusion sf;
-    sf.run();
-    ros::spin();
+    
+    while (ros::ok())
+    {
+        sf.run();
+        ros::spinOnce();
+        //ros::Rate(10).sleep();
+    }
     return 0;
 }
