@@ -7,6 +7,8 @@ namespace UstarFusion
     {
         Eigen::VectorXd raw_data;
         long timestamp;
+        int obstacle_id;
+        int lose_count;
     };
     
 }

@@ -265,7 +265,10 @@ fusion/lidar_process/CMakeFiles/sensor_fusion.dir/src/lidar_process/sensor_fusio
 fusion/lidar_process/CMakeFiles/sensor_fusion.dir/src/lidar_process/sensor_fusion.cpp.o: /opt/ros/kinetic/include/ros/wall_timer.h
 fusion/lidar_process/CMakeFiles/sensor_fusion.dir/src/lidar_process/sensor_fusion.cpp.o: /opt/ros/kinetic/include/ros/wall_timer_options.h
 fusion/lidar_process/CMakeFiles/sensor_fusion.dir/src/lidar_process/sensor_fusion.cpp.o: /opt/ros/kinetic/include/rosconsole/macros_generated.h
+fusion/lidar_process/CMakeFiles/sensor_fusion.dir/src/lidar_process/sensor_fusion.cpp.o: /opt/ros/kinetic/include/std_msgs/ColorRGBA.h
 fusion/lidar_process/CMakeFiles/sensor_fusion.dir/src/lidar_process/sensor_fusion.cpp.o: /opt/ros/kinetic/include/std_msgs/Header.h
+fusion/lidar_process/CMakeFiles/sensor_fusion.dir/src/lidar_process/sensor_fusion.cpp.o: /opt/ros/kinetic/include/visualization_msgs/Marker.h
+fusion/lidar_process/CMakeFiles/sensor_fusion.dir/src/lidar_process/sensor_fusion.cpp.o: /opt/ros/kinetic/include/visualization_msgs/MarkerArray.h
 fusion/lidar_process/CMakeFiles/sensor_fusion.dir/src/lidar_process/sensor_fusion.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
 fusion/lidar_process/CMakeFiles/sensor_fusion.dir/src/lidar_process/sensor_fusion.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
 fusion/lidar_process/CMakeFiles/sensor_fusion.dir/src/lidar_process/sensor_fusion.cpp.o: /usr/include/eigen3/Eigen/Cholesky
