@@ -32,7 +32,7 @@ namespace UstarFusion
                 y = array->boxes[i].pose.position.y;
                 raw_cluster_data.raw_data << x, y;
                 obstacle_array_.push_back(raw_cluster_data);
-                ROS_INFO_STREAM(obstacle_array_.size());
+               
             }
         }
     }
