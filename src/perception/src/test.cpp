@@ -31,8 +31,8 @@ int main(int argc, char **argv)
     ROS_INFO("-----------------test");
     int sockfd;
     struct sockaddr_in serv_addr, client;
-    //创建socket 
-    bzero(&serv_addr,sizeof(serv_addr));
+    //创建socket
+    bzero(&serv_addr, sizeof(serv_addr));
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
     serv_addr.sin_port = htons(PORT);
@@ -42,7 +42,8 @@ int main(int argc, char **argv)
         perror("Socket failed!\n");
         exit(1);
     }
-    if(bind(sockfd,(struct sockaddr*)&serv_addr,sizeof(serv_addr))==-1){
+    if (bind(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) == -1)
+    {
         perror("bind serv_addr ");
         exit(1);
     }
@@ -52,11 +53,11 @@ int main(int argc, char **argv)
     }
     else
     {
-        printf("listening:...");
+        printf("listening:...\n");
     }
-    
+
     socklen_t sin_size = sizeof(struct sockaddr_in);
-    if((sockfd=accept(sockfd,(struct sockaddr *)&client,&sin_size))==-1)
+    if ((sockfd = accept(sockfd, (struct sockaddr *)&client, &sin_size)) == -1)
     {
         perror("accept:");
         return -1;
@@ -66,24 +67,34 @@ int main(int argc, char **argv)
         printf("accept successful!\r\n");
     }
     int recLen = 0;
-   // Mat image = cv::imread(argv[1],CV_LOAD_IMAGE_COLOR);
+    Mat image = cv::imread(argv[1], CV_LOAD_IMAGE_COLOR);
     char buffer[BUFFER_SIZE] = {0};
-    while(1)
+    while (1)
     {
-        memset(buffer,0,sizeof(buffer));
-        if((recLen = recv(sockfd,buffer,BUFFER_SIZE,0))==-1)
+        memset(buffer, 0, sizeof(buffer));
+        if ((recLen = recv(sockfd, buffer, BUFFER_SIZE, 0)) == -1)
         {
             perror("recv:");
         }
         else
         {
-            if(recLen>0)
+            if (recLen > 0)
             {
                 recLen = 0;
-                printf("Receive a message:%s\r\n",buffer);
+                printf("Receive a message:%s\r\n", buffer);
+                vector<uchar> data_encode;
+                vector<int> quality = vector<int>(2);
+                quality[0] = CV_IMWRITE_JPEG_QUALITY;
+                quality[1] = 50;
+                imencode(".jpg", image, data_encode, quality); //将图像编码
+                //char encodeImg[655350];
+                int nSize = data_encode.size();
+                std::cout << "图像的数据： " << nSize << endl;
+                // write(sockfd, reinterpret_cast<uchar*>(&nSize), sizeof(int));
+                sendto(sockfd, &data_encode[0], nSize, 0, (struct sockaddr *)&serv_addr, sizeof(serv_addr));
             }
         }
-    }    
+    }
     close(sockfd);
     ROS_INFO("No error.");
     return 0;
