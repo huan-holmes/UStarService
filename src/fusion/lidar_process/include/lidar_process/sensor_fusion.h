@@ -36,6 +36,7 @@ namespace UstarFusion
         double obstacle_vel_;
         double match_distance_;
         int obstacle_count_;
+        int delay_time_;
 
         bool is_initialized_;
 

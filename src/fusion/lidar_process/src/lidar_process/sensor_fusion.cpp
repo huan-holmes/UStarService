@@ -3,7 +3,7 @@
 namespace UstarFusion
 {
     SensorFusion::SensorFusion() : is_initialized_(false), is_kalman_initialized_(false), last_timestamp_(0.0),
-                                   obstacle_vel_(1.2), match_distance_(0.0), obstacle_count_(0), rate_(10),
+                                   obstacle_vel_(1.2), match_distance_(0.0), obstacle_count_(0), rate_(10), delay_time_(20),
                                    shape_(visualization_msgs::Marker::CUBE)
     {
         H_lidar_ = Eigen::MatrixXd(2, 4);
@@ -112,7 +112,7 @@ namespace UstarFusion
             if (index_update[i])
                 continue;
             obstacle_vector_[i - count].lose_count++;
-            if (obstacle_vector_[i - count].lose_count > 10)
+            if (obstacle_vector_[i - count].lose_count > delay_time_)
             {
                 obstacle_vector_.erase(obstacle_vector_.begin() + i - count);
                 count++;
