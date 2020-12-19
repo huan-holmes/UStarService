@@ -11,8 +11,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/global_planner.dir/src/global_planner/planner_core.cpp.o"
   "/home/boocax/UstarService/devel/lib/libglobal_planner.pdb"
   "/home/boocax/UstarService/devel/lib/libglobal_planner.so"
-  "/home/boocax/UstarService/devel/lib/libglobal_planner.pdb"
-  "CMakeFiles/CMakeRelink.dir/libglobal_planner.so"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -79,16 +79,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"header\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -99,6 +89,27 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"header\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -200,21 +211,6 @@ sim_obstacle_node/fast:
 .PHONY : sim_obstacle_node/fast
 
 # Convenience name for target.
-simulator/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 simulator/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : simulator/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: simulator/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_cpp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f simulator/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make simulator/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
-
-# Convenience name for target.
 simulator/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
 	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 simulator/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
 .PHONY : simulator/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
@@ -243,6 +239,21 @@ dynamic_reconfigure_gencfg: simulator/CMakeFiles/dynamic_reconfigure_gencfg.dir/
 dynamic_reconfigure_gencfg/fast:
 	cd /home/boocax/UstarService/build && $(MAKE) -f simulator/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make simulator/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
 .PHONY : dynamic_reconfigure_gencfg/fast
+
+# Convenience name for target.
+simulator/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 simulator/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+.PHONY : simulator/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_cpp: simulator/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_cpp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_cpp/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f simulator/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make simulator/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
 
 # Convenience name for target.
 simulator/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
@@ -294,14 +305,15 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... dynamic_reconfigure_generate_messages_lisp"
 	@echo "... dynamic_reconfigure_generate_messages_eus"
 	@echo "... sim_obstacle_node"
-	@echo "... list_install_components"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
-	@echo "... edit_cache"
 	@echo "... dynamic_reconfigure_generate_messages_py"
 	@echo "... dynamic_reconfigure_gencfg"
+	@echo "... list_install_components"
+	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... dynamic_reconfigure_generate_messages_nodejs"
 	@echo "... test"

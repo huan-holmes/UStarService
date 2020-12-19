@@ -111,6 +111,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -303,11 +314,6 @@ localization_node: localization/CMakeFiles/localization_node.dir/rule
 localization_node/fast:
 	cd /home/boocax/UstarService/build && $(MAKE) -f localization/CMakeFiles/localization_node.dir/build.make localization/CMakeFiles/localization_node.dir/build
 .PHONY : localization_node/fast
-
-# Manual pre-install relink rule for target.
-localization_node/preinstall:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 localization/CMakeFiles/localization_node.dir/preinstall
-.PHONY : localization_node/preinstall
 
 src/localization/map/map.o: src/localization/map/map.c.o
 
@@ -730,6 +736,7 @@ help:
 	@echo "... diagnostic_msgs_generate_messages_py"
 	@echo "... localization_pf"
 	@echo "... list_install_components"
+	@echo "... install/strip"
 	@echo "... diagnostic_msgs_generate_messages_lisp"
 	@echo "... localization_map"
 	@echo "... rebuild_cache"

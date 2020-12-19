@@ -1,1 +1,0 @@
-/usr/bin/cc  -fPIC   -shared -Wl,-soname,libtest_cluster.so -o /home/boocax/UstarService/devel/lib/libtest_cluster.so CMakeFiles/test_cluster.dir/src/radar_process/kd_tree.c.o 

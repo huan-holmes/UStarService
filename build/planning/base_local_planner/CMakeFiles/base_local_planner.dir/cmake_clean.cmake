@@ -20,8 +20,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/base_local_planner.dir/src/voxel_grid_model.cpp.o"
   "/home/boocax/UstarService/devel/lib/libbase_local_planner.pdb"
   "/home/boocax/UstarService/devel/lib/libbase_local_planner.so"
-  "/home/boocax/UstarService/devel/lib/libbase_local_planner.pdb"
-  "CMakeFiles/CMakeRelink.dir/libbase_local_planner.so"
 )
 
 # Per-language clean rules from dependency scanning.

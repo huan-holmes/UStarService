@@ -100,6 +100,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -111,16 +122,16 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target test
-test/fast: test
+# Special rule for the target install/strip
+install/strip/fast: install/strip
 
-.PHONY : test/fast
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -184,11 +195,6 @@ global_planner/fast:
 	cd /home/boocax/UstarService/build && $(MAKE) -f planning/global_planner/CMakeFiles/global_planner.dir/build.make planning/global_planner/CMakeFiles/global_planner.dir/build
 .PHONY : global_planner/fast
 
-# Manual pre-install relink rule for target.
-global_planner/preinstall:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 planning/global_planner/CMakeFiles/global_planner.dir/preinstall
-.PHONY : global_planner/preinstall
-
 # Convenience name for target.
 planning/global_planner/CMakeFiles/global_planner_node.dir/rule:
 	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 planning/global_planner/CMakeFiles/global_planner_node.dir/rule
@@ -203,11 +209,6 @@ global_planner_node: planning/global_planner/CMakeFiles/global_planner_node.dir/
 global_planner_node/fast:
 	cd /home/boocax/UstarService/build && $(MAKE) -f planning/global_planner/CMakeFiles/global_planner_node.dir/build.make planning/global_planner/CMakeFiles/global_planner_node.dir/build
 .PHONY : global_planner_node/fast
-
-# Manual pre-install relink rule for target.
-global_planner_node/preinstall:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 planning/global_planner/CMakeFiles/global_planner_node.dir/preinstall
-.PHONY : global_planner_node/preinstall
 
 src/global_planner/astar.o: src/global_planner/astar.cpp.o
 
@@ -516,11 +517,12 @@ help:
 	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... install/local"
 	@echo "... global_planner_gencfg"
 	@echo "... global_planner"
 	@echo "... test"
 	@echo "... global_planner_node"
+	@echo "... install/local"
+	@echo "... install/strip"
 	@echo "... src/global_planner/astar.o"
 	@echo "... src/global_planner/astar.i"
 	@echo "... src/global_planner/astar.s"

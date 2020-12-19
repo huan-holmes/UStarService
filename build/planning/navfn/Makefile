@@ -110,6 +110,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -169,11 +180,6 @@ navfn_node/fast:
 	cd /home/boocax/UstarService/build && $(MAKE) -f planning/navfn/CMakeFiles/navfn_node.dir/build.make planning/navfn/CMakeFiles/navfn_node.dir/build
 .PHONY : navfn_node/fast
 
-# Manual pre-install relink rule for target.
-navfn_node/preinstall:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 planning/navfn/CMakeFiles/navfn_node.dir/preinstall
-.PHONY : navfn_node/preinstall
-
 # Convenience name for target.
 planning/navfn/CMakeFiles/navfn.dir/rule:
 	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 planning/navfn/CMakeFiles/navfn.dir/rule
@@ -188,11 +194,6 @@ navfn: planning/navfn/CMakeFiles/navfn.dir/rule
 navfn/fast:
 	cd /home/boocax/UstarService/build && $(MAKE) -f planning/navfn/CMakeFiles/navfn.dir/build.make planning/navfn/CMakeFiles/navfn.dir/build
 .PHONY : navfn/fast
-
-# Manual pre-install relink rule for target.
-navfn/preinstall:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 planning/navfn/CMakeFiles/navfn.dir/preinstall
-.PHONY : navfn/preinstall
 
 # Convenience name for target.
 planning/navfn/CMakeFiles/navfn_genpy.dir/rule:
@@ -488,6 +489,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... _navfn_generate_messages_check_deps_SetCostmap"
 	@echo "... list_install_components"
+	@echo "... install/strip"
 	@echo "... _navfn_generate_messages_check_deps_MakeNavPlan"
 	@echo "... navfn_generate_messages"
 	@echo "... install"

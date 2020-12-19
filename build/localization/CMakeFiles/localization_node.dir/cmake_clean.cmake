@@ -2,8 +2,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/localization_node.dir/src/localization_node.cpp.o"
   "/home/boocax/UstarService/devel/lib/localization/localization_node.pdb"
   "/home/boocax/UstarService/devel/lib/localization/localization_node"
-  "/home/boocax/UstarService/devel/lib/localization/localization_node.pdb"
-  "CMakeFiles/CMakeRelink.dir/localization_node"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -3,8 +3,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/gmapping_node.dir/src/gmapping/gmapping.cpp.o"
   "/home/boocax/UstarService/devel/lib/mapping/gmapping_node.pdb"
   "/home/boocax/UstarService/devel/lib/mapping/gmapping_node"
-  "/home/boocax/UstarService/devel/lib/mapping/gmapping_node.pdb"
-  "CMakeFiles/CMakeRelink.dir/gmapping_node"
 )
 
 # Per-language clean rules from dependency scanning.

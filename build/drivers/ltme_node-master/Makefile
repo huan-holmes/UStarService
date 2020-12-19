@@ -78,6 +78,17 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -89,16 +100,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
+# Special rule for the target install/strip
+install/strip/fast: install/strip
 
-.PHONY : edit_cache/fast
+.PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -169,11 +180,6 @@ ltme_node/fast:
 	cd /home/boocax/UstarService/build && $(MAKE) -f drivers/ltme_node-master/CMakeFiles/ltme_node.dir/build.make drivers/ltme_node-master/CMakeFiles/ltme_node.dir/build
 .PHONY : ltme_node/fast
 
-# Manual pre-install relink rule for target.
-ltme_node/preinstall:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 drivers/ltme_node-master/CMakeFiles/ltme_node.dir/preinstall
-.PHONY : ltme_node/preinstall
-
 src/ltme_node.o: src/ltme_node.cpp.o
 
 .PHONY : src/ltme_node.o
@@ -209,9 +215,10 @@ help:
 	@echo "... depend"
 	@echo "... list_install_components"
 	@echo "... install"
+	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ltme_node"
-	@echo "... edit_cache"
+	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... test"
 	@echo "... src/ltme_node.o"

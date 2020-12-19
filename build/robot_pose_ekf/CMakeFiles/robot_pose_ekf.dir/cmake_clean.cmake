@@ -4,8 +4,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/robot_pose_ekf.dir/src/odom_estimation_node.cpp.o"
   "/home/boocax/UstarService/devel/lib/robot_pose_ekf/robot_pose_ekf.pdb"
   "/home/boocax/UstarService/devel/lib/robot_pose_ekf/robot_pose_ekf"
-  "/home/boocax/UstarService/devel/lib/robot_pose_ekf/robot_pose_ekf.pdb"
-  "CMakeFiles/CMakeRelink.dir/robot_pose_ekf"
 )
 
 # Per-language clean rules from dependency scanning.

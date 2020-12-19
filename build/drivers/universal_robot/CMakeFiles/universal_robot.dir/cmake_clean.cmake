@@ -3,8 +3,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/universal_robot.dir/main.cpp.o"
   "/home/boocax/UstarService/devel/lib/universal_robot/universal_robot.pdb"
   "/home/boocax/UstarService/devel/lib/universal_robot/universal_robot"
-  "/home/boocax/UstarService/devel/lib/universal_robot/universal_robot.pdb"
-  "CMakeFiles/CMakeRelink.dir/universal_robot"
 )
 
 # Per-language clean rules from dependency scanning.
