@@ -3,7 +3,7 @@
 namespace UstarFusion
 {
     SensorFusion::SensorFusion() : is_initialized_(false), is_kalman_initialized_(false), last_timestamp_(0.0),
-                                   obstacle_vel_(1), match_distance_(0.0), obstacle_count_(0), rate_(10),
+                                   obstacle_vel_(1.2), match_distance_(0.0), obstacle_count_(0), rate_(10),
                                    shape_(visualization_msgs::Marker::CUBE)
     {
         H_lidar_ = Eigen::MatrixXd(2, 4);
@@ -22,8 +22,6 @@ namespace UstarFusion
     }
     void SensorFusion::markerPublish()
     {
-        //ROS_INFO_STREAM("----SensorFusion::markerPublish()----");
-        ROS_INFO_STREAM(obstacle_vector_.size());
         marker_array_.markers.clear();
         for (int i = 0; i < obstacle_vector_.size(); i++)
         {
@@ -125,7 +123,6 @@ namespace UstarFusion
     {
         int size = obstacle_array_.size();
         std::vector<int> index_update;
-        //memset(index_update, 0, obstacle_vector_.size());
         for (int i = 0; i < obstacle_vector_.size(); i++)
             index_update.push_back(0);
         for (int i = 0; i < size; i++)
