@@ -20,64 +20,7 @@ namespace UstarFusion
         box_array_sub_ = nh_.subscribe("detected_bounding_boxs", 10, &SensorFusion::obstacleBoxCallback, this);
         markerPublish();
     }
-    void SensorFusion::markerPublish()
-    {
-        marker_array_.markers.clear();
-        for (int i = 0; i < obstacle_vector_.size(); i++)
-        {
-            visualization_msgs::Marker marker;
-            marker.header.frame_id = "base_link";
-            marker.header.stamp = ros::Time::now();
-            marker.ns = "sensor_fusion_node";
-            marker.id = obstacle_vector_[i].obstacle_id;
-            marker.type = shape_;
-            marker.action = visualization_msgs::Marker::ADD;
 
-            marker.pose.position.x = obstacle_vector_[i].raw_data[0];
-            marker.pose.position.y = obstacle_vector_[i].raw_data[1];
-            marker.pose.position.z = 0;
-            marker.pose.orientation.x = 0.0;
-            marker.pose.orientation.y = 0.0;
-            marker.pose.orientation.z = 0.0;
-            marker.pose.orientation.w = 1.0;
-
-            marker.scale.x = 0.5;
-            marker.scale.y = 0.5;
-            marker.scale.z = 0.3;
-
-            marker.color.r = 0;
-            marker.color.g = 0;
-            marker.color.b = 0;
-            marker.color.a = 1;
- 
-
-            marker.lifetime = ros::Duration(0.1);
-
-            marker_array_.markers.push_back(marker);
-
-            marker.id = obstacle_vector_[i].obstacle_id + 1000;
-            marker.type = visualization_msgs::Marker::TEXT_VIEW_FACING;
-            marker.scale.x = 0.3;
-            marker.scale.y = 0.3;
-            marker.scale.z = 0.3;
-            marker.pose.position.x = obstacle_vector_[i].raw_data[0];
-            marker.pose.position.y = obstacle_vector_[i].raw_data[1];
-            marker.pose.position.z = 0.5;
-            marker.pose.orientation.x = 0.0;
-            marker.pose.orientation.y = 0.0;
-            marker.pose.orientation.z = 0.0;
-            marker.pose.orientation.w = 1.0;
-            marker.scale.z = 0.1;
-            marker.color.g = 1.0f;
-            marker.color.a = 1;
-            std::ostringstream str;
-            str << obstacle_vector_[i].obstacle_id;
-            marker.text = str.str();
-            marker_array_.markers.push_back(marker);
-        }
-        markerArr_pub_.publish(marker_array_);
-        rate_.sleep();
-    }
     void SensorFusion::obstacleBoxCallback(const jsk_recognition_msgs::BoundingBoxArray::ConstPtr &array)
     {
 
@@ -225,4 +168,61 @@ namespace UstarFusion
         kf_.KFUpdate(lidar_data.raw_data);
     }
 
+    void SensorFusion::markerPublish()
+    {
+        marker_array_.markers.clear();
+        for (int i = 0; i < obstacle_vector_.size(); i++)
+        {
+            visualization_msgs::Marker marker;
+            marker.header.frame_id = "base_link";
+            marker.header.stamp = ros::Time::now();
+            marker.ns = "sensor_fusion_node";
+            marker.id = obstacle_vector_[i].obstacle_id;
+            marker.type = shape_;
+            marker.action = visualization_msgs::Marker::ADD;
+
+            marker.pose.position.x = obstacle_vector_[i].raw_data[0];
+            marker.pose.position.y = obstacle_vector_[i].raw_data[1];
+            marker.pose.position.z = 0;
+            marker.pose.orientation.x = 0.0;
+            marker.pose.orientation.y = 0.0;
+            marker.pose.orientation.z = 0.0;
+            marker.pose.orientation.w = 1.0;
+
+            marker.scale.x = 0.5;
+            marker.scale.y = 0.5;
+            marker.scale.z = 0.3;
+
+            marker.color.r = 0;
+            marker.color.g = 0;
+            marker.color.b = 0;
+            marker.color.a = 1;
+
+            marker.lifetime = ros::Duration(0.1);
+
+            marker_array_.markers.push_back(marker);
+
+            marker.id = obstacle_vector_[i].obstacle_id + 1000;
+            marker.type = visualization_msgs::Marker::TEXT_VIEW_FACING;
+            marker.scale.x = 0.3;
+            marker.scale.y = 0.3;
+            marker.scale.z = 0.3;
+            marker.pose.position.x = obstacle_vector_[i].raw_data[0];
+            marker.pose.position.y = obstacle_vector_[i].raw_data[1];
+            marker.pose.position.z = 0.5;
+            marker.pose.orientation.x = 0.0;
+            marker.pose.orientation.y = 0.0;
+            marker.pose.orientation.z = 0.0;
+            marker.pose.orientation.w = 1.0;
+            marker.scale.z = 0.1;
+            marker.color.g = 1.0f;
+            marker.color.a = 1;
+            std::ostringstream str;
+            str << obstacle_vector_[i].obstacle_id;
+            marker.text = str.str();
+            marker_array_.markers.push_back(marker);
+        }
+        markerArr_pub_.publish(marker_array_);
+        rate_.sleep();
+    }
 } // namespace UstarFusion
