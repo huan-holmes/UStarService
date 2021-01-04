@@ -25,6 +25,7 @@
 
 #define DiffFlag 0x03
 
+#define ImuFlag 0x04
 
 
 //数据格式 头（2） + 长度码（1）+ 功能码（1） +结构体 +crc(2) +尾（2）
@@ -64,6 +65,16 @@ struct Diff {
     int32_t right;
 };
 
+struct Imu {
+    uint32_t type;
+    uint32_t stamp;
+    float gro_x;
+    float gro_y;
+    float gro_z;
+    float acc_x;
+    float acc_y;
+    float acc_z;
+};
 
 /* CRC 高位字节值表 */
 const static unsigned char auchCRCHi[] = {

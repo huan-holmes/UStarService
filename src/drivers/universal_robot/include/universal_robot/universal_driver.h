@@ -24,6 +24,7 @@ struct ModuleType{
     uint8_t safe_sensor_ = 0;
     uint8_t battery_ = 0;
     uint8_t safe_sensor_ex_ = 0;
+    uint8_t imu_msg = 0;
 };
 
 struct KinematicInfo {
@@ -57,6 +58,9 @@ public:
     KinematicParam kinematic_;
     void SentRpm(geometry_msgs::Twist cmd_vel);
     void Test();
+
+public:
+    sensor_msgs::Imu imu_msgs_;
 private:
 
 
@@ -64,6 +68,7 @@ private:
     void CheckData();
     int fd_;
     std::vector<uint8_t> packet_;
+    
     unsigned short CRC16(unsigned char *puchMsg, unsigned short usDataLen);
     void SenCmdVel(uint8_t *buffer, const uint8_t size);
 };

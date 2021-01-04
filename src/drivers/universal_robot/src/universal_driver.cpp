@@ -131,7 +131,26 @@ void UniversalDrive::CheckData() {
         last_time = diff.stamp;
         return;
     }
-
+    if (ImuFlag == packet_[1])
+    {
+        static Imu imu;
+        memcpy(&imu, &packet_[2], sizeof(Imu));
+        static double last_time = imu.stamp;
+       // imu_msgs_.header.stamp = imu.stamp;
+        module_type_.imu_msg = 1;
+        imu_msgs_.angular_velocity.x = imu.gro_x;
+        imu_msgs_.angular_velocity.y = imu.gro_y;
+        imu_msgs_.angular_velocity.z = imu.gro_z;
+        imu_msgs_.linear_acceleration.x = imu.acc_x;
+        imu_msgs_.linear_acceleration.y = imu.acc_y;
+        imu_msgs_.linear_acceleration.z = imu.acc_z;
+        if (imu.type)
+        {
+            info_.d_w = fabs(imu.stamp - last_time) * imu_msgs_.angular_velocity.z / 1000;
+        }
+        last_time = imu.stamp;
+        return;
+    }
 
 
     if ((module_type_.four_wheel + module_type_.ackerMan_normal + module_type_.diff_) > 1) {
@@ -435,7 +454,7 @@ void UniversalNode::PublicOdom(const double v, const double distance) {
     odom_msg.twist.twist.linear.x = v;
     odom_msg.twist.twist.linear.y = 0;
     odom_msg.twist.twist.linear.z = 0;
-    odom_msg.twist.twist.angular = imu_msgs_.angular_velocity;
+    odom_msg.twist.twist.angular = drive_.imu_msgs_.angular_velocity;
     odom_msg.pose.pose.orientation = odom_quat;
     odom_msg.pose.covariance[0] = 1e-3;
     odom_msg.pose.covariance[7] = 1e-3;
