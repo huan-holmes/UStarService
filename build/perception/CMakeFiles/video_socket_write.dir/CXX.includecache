@@ -41,6 +41,12 @@ arpa/inet.h
 -
 signal.h
 -
+fstream
+-
+dirent.h
+-
+sstream
+-
 
 /opt/ros/kinetic/include/cv_bridge/cv_bridge.h
 sensor_msgs/Image.h
