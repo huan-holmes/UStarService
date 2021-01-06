@@ -87,9 +87,8 @@ void UniversalDrive::CheckData() {
             }
             // if (four_wheel.right_front < 0)
             //     info_.w = (four_wheel.right_front + 1 - four_wheel.left_front) * kinematic_.wheel_radius * 2 * M_PI / (kinematic_.wheel_gauge * kinematic_.slow_down * 60);
-            info_.distance = fabs(four_wheel.stamp - last_time) * info_.vel / 1000;
-            info_.d_w = fabs(four_wheel.stamp - last_time) * info_.w / 1000;
-        } else {
+            info_.distance = fabs(four_wheel.stamp - last_time) * info_.vel / 1000 * 5;
+            //info_.d_w = fabs(four_wheel.stamp - last_time) * info_.w / 1000 * 5;
         }
         last_time = four_wheel.stamp;
         //std::cout << four_wheel.stamp<< " "<< four_wheel.type<< " "<< four_wheel.left_back
@@ -135,8 +134,7 @@ void UniversalDrive::CheckData() {
     {
         static Imu imu;
         memcpy(&imu, &packet_[2], sizeof(Imu));
-        static double last_time = imu.stamp;
-       // imu_msgs_.header.stamp = imu.stamp;
+        static double last_time_imu = imu.stamp;
         module_type_.imu_msg = 1;
         imu_msgs_.angular_velocity.x = imu.gro_x;
         imu_msgs_.angular_velocity.y = imu.gro_y;
@@ -146,9 +144,9 @@ void UniversalDrive::CheckData() {
         imu_msgs_.linear_acceleration.z = imu.acc_z;
         if (imu.type)
         {
-            info_.d_w = fabs(imu.stamp - last_time) * imu_msgs_.angular_velocity.z / 1000;
+            info_.d_w = fabs(imu.stamp - last_time_imu) * imu_msgs_.angular_velocity.z / 1000 * 5;
         }
-        last_time = imu.stamp;
+        last_time_imu = imu.stamp;
         return;
     }
 
