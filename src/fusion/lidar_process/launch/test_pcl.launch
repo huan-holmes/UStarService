@@ -10,7 +10,7 @@
         
     </node>
     <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find lidar_process)/rviz/pcl_cluster.rviz"/> -->
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find lidar_process)/rviz/fusion.rviz"/>
-
+   <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find lidar_process)/rviz/fusion.rviz"/>
+   -->
     <!-- <node pkg="jsk_rviz_plugins" type="jsk_rviz_plugins", name="jsk_rviz_plugins" output="screen" /> -->
 </launch>
