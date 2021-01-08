@@ -135,6 +135,8 @@ void UniversalDrive::CheckData() {
         static Imu imu;
         memcpy(&imu, &packet_[2], sizeof(Imu));
         static double last_time_imu = imu.stamp;
+       // static ros::Time last_time_i = ros::Time::now();
+        now_time_ = ros::Time::now();
         module_type_.imu_msg = 1;
         imu_msgs_.angular_velocity.x = imu.gro_x;
         imu_msgs_.angular_velocity.y = imu.gro_y;
@@ -144,9 +146,12 @@ void UniversalDrive::CheckData() {
         imu_msgs_.linear_acceleration.z = imu.acc_z;
         if (imu.type)
         {
-            info_.d_w = fabs(imu.stamp - last_time_imu) * imu_msgs_.angular_velocity.z / 1000 * 5;
+            //info_.d_w = fabs((now_time_ - last_time_i).toSec()) * imu_msgs_.angular_velocity.z * M_PI / 180.0;
+            info_.d_w = fabs(imu.stamp - last_time_imu) / 1000 * 5 * imu_msgs_.angular_velocity.z * M_PI / 180.0;
+            //info_.d_w = imu.yaw * M_PI / 180.0;
         }
         last_time_imu = imu.stamp;
+        //last_time_i = now_time_;
         return;
     }
 

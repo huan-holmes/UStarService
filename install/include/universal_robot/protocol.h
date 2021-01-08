@@ -49,7 +49,6 @@ struct FourWheel {
 };
 
 struct AckerManNormal
-
 {
     uint32_t type;//0 encoder 1 speed
     uint32_t stamp; // time (ms)
@@ -68,12 +67,15 @@ struct Diff {
 struct Imu {
     uint32_t type;
     uint32_t stamp;
-    float gro_x;
-    float gro_y;
-    float gro_z;
+    float pitch;
+    float roll;
+    float yaw;
     float acc_x;
     float acc_y;
     float acc_z;
+    float gro_x;
+    float gro_y;
+    float gro_z;
 };
 
 /* CRC 高位字节值表 */

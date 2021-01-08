@@ -61,6 +61,8 @@ public:
 
 public:
     sensor_msgs::Imu imu_msgs_;
+    ros::Time last_time_;
+    ros::Time now_time_;
 private:
 
 
@@ -101,5 +103,6 @@ public:
     sensor_msgs::Imu imu_msgs_;
     bool odom_is_update_;
     UniversalDrive drive_;
+    
 
 };
