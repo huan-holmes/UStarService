@@ -445,6 +445,9 @@ costmap_SOURCE_DIR:STATIC=/home/boocax/UstarService/src/costmap
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/kinetic/share/cpp_common/cmake
 
+//The directory containing a CMake configuration file for cv_bridge.
+cv_bridge_DIR:PATH=/opt/ros/kinetic/share/cv_bridge/cmake
+
 //The directory containing a CMake configuration file for diagnostic_msgs.
 diagnostic_msgs_DIR:PATH=/opt/ros/kinetic/share/diagnostic_msgs/cmake
 
@@ -1049,6 +1052,8 @@ CMAKE_UNAME:INTERNAL=/bin/uname
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Bullet
 FIND_PACKAGE_MESSAGE_DETAILS_Bullet:INTERNAL=[/usr/lib/x86_64-linux-gnu/libBulletDynamics.so][/usr/lib/x86_64-linux-gnu/libBulletCollision.so][/usr/lib/x86_64-linux-gnu/libLinearMath.so][/usr/lib/x86_64-linux-gnu/libBulletSoftBody.so][/usr/include/bullet][v()]
+//Details about finding OpenCV
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/opt/ros/kinetic][v3.3.1()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
 //Details about finding PythonInterp
@@ -1101,7 +1106,7 @@ PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
 SDL_IMAGE_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SDL_IMAGE_LIBRARY
 SDL_IMAGE_LIBRARY-ADVANCED:INTERNAL=1
-SDL_LIBRARY_TEMP:INTERNAL=/usr/lib/x86_64-linux-gnu/libSDLmain.a;/usr/lib/x86_64-linux-gnu/libSDL.so;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread
+SDL_LIBRARY_TEMP:INTERNAL=/usr/lib/x86_64-linux-gnu/libSDLmain.a;/usr/lib/x86_64-linux-gnu/libSDL.so;-lpthread
 YAMLCPP_CFLAGS:INTERNAL=
 YAMLCPP_CFLAGS_I:INTERNAL=
 YAMLCPP_CFLAGS_OTHER:INTERNAL=

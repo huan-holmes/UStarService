@@ -56,28 +56,6 @@ CMAKE_BINARY_DIR = /home/boocax/UstarService/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"header\""
@@ -99,6 +77,28 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -166,19 +166,46 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-perception/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 perception/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : perception/CMakeFiles/_catkin_empty_exported_target.dir/rule
+perception/CMakeFiles/video_socket_write.dir/rule:
+	cd /home/boocax/UstarService/build && $(MAKE) -f CMakeFiles/Makefile2 perception/CMakeFiles/video_socket_write.dir/rule
+.PHONY : perception/CMakeFiles/video_socket_write.dir/rule
 
 # Convenience name for target.
-_catkin_empty_exported_target: perception/CMakeFiles/_catkin_empty_exported_target.dir/rule
+video_socket_write: perception/CMakeFiles/video_socket_write.dir/rule
 
-.PHONY : _catkin_empty_exported_target
+.PHONY : video_socket_write
 
 # fast build rule for target.
-_catkin_empty_exported_target/fast:
-	cd /home/boocax/UstarService/build && $(MAKE) -f perception/CMakeFiles/_catkin_empty_exported_target.dir/build.make perception/CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
+video_socket_write/fast:
+	cd /home/boocax/UstarService/build && $(MAKE) -f perception/CMakeFiles/video_socket_write.dir/build.make perception/CMakeFiles/video_socket_write.dir/build
+.PHONY : video_socket_write/fast
+
+src/test.o: src/test.cpp.o
+
+.PHONY : src/test.o
+
+# target to build an object file
+src/test.cpp.o:
+	cd /home/boocax/UstarService/build && $(MAKE) -f perception/CMakeFiles/video_socket_write.dir/build.make perception/CMakeFiles/video_socket_write.dir/src/test.cpp.o
+.PHONY : src/test.cpp.o
+
+src/test.i: src/test.cpp.i
+
+.PHONY : src/test.i
+
+# target to preprocess a source file
+src/test.cpp.i:
+	cd /home/boocax/UstarService/build && $(MAKE) -f perception/CMakeFiles/video_socket_write.dir/build.make perception/CMakeFiles/video_socket_write.dir/src/test.cpp.i
+.PHONY : src/test.cpp.i
+
+src/test.s: src/test.cpp.s
+
+.PHONY : src/test.s
+
+# target to generate assembly for a file
+src/test.cpp.s:
+	cd /home/boocax/UstarService/build && $(MAKE) -f perception/CMakeFiles/video_socket_write.dir/build.make perception/CMakeFiles/video_socket_write.dir/src/test.cpp.s
+.PHONY : src/test.cpp.s
 
 # Help Target
 help:
@@ -186,14 +213,17 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... list_install_components"
 	@echo "... install"
-	@echo "... _catkin_empty_exported_target"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... video_socket_write"
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... test"
+	@echo "... src/test.o"
+	@echo "... src/test.i"
+	@echo "... src/test.s"
 .PHONY : help
 
 

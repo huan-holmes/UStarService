@@ -1,22 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/boocax/UstarService/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a772c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a772c.dir/build.make CMakeFiles/cmTC_a772c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b3e38/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b3e38.dir/build.make CMakeFiles/cmTC_b3e38.dir/build
 make[1]: Entering directory '/home/boocax/UstarService/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a772c.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_a772c.dir/CheckSymbolExists.c.o   -c /home/boocax/UstarService/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_a772c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a772c.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_a772c.dir/CheckSymbolExists.c.o  -o cmTC_a772c -rdynamic 
-CMakeFiles/cmTC_a772c.dir/CheckSymbolExists.c.o：在函数‘main’中：
+Building C object CMakeFiles/cmTC_b3e38.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_b3e38.dir/CheckSymbolExists.c.o   -c /home/boocax/UstarService/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_b3e38
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3e38.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_b3e38.dir/CheckSymbolExists.c.o  -o cmTC_b3e38 -rdynamic 
+CMakeFiles/cmTC_b3e38.dir/CheckSymbolExists.c.o：在函数‘main’中：
 CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_a772c.dir/build.make:97: recipe for target 'cmTC_a772c' failed
-make[1]: *** [cmTC_a772c] Error 1
+CMakeFiles/cmTC_b3e38.dir/build.make:97: recipe for target 'cmTC_b3e38' failed
+make[1]: *** [cmTC_b3e38] Error 1
 make[1]: Leaving directory '/home/boocax/UstarService/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_a772c/fast' failed
-make: *** [cmTC_a772c/fast] Error 2
+Makefile:126: recipe for target 'cmTC_b3e38/fast' failed
+make: *** [cmTC_b3e38/fast] Error 2
 
 File /home/boocax/UstarService/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -36,37 +36,37 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/boocax/UstarService/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_91778/fast"
-/usr/bin/make -f CMakeFiles/cmTC_91778.dir/build.make CMakeFiles/cmTC_91778.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ccdea/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ccdea.dir/build.make CMakeFiles/cmTC_ccdea.dir/build
 make[1]: Entering directory '/home/boocax/UstarService/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_91778.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_91778.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_91778
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91778.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_91778.dir/CheckFunctionExists.c.o  -o cmTC_91778 -rdynamic -lpthreads 
+Building C object CMakeFiles/cmTC_ccdea.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ccdea.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ccdea
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ccdea.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_ccdea.dir/CheckFunctionExists.c.o  -o cmTC_ccdea -rdynamic -lpthreads 
 /usr/bin/ld: 找不到 -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_91778.dir/build.make:97: recipe for target 'cmTC_91778' failed
-make[1]: *** [cmTC_91778] Error 1
+CMakeFiles/cmTC_ccdea.dir/build.make:97: recipe for target 'cmTC_ccdea' failed
+make[1]: *** [cmTC_ccdea] Error 1
 make[1]: Leaving directory '/home/boocax/UstarService/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_91778/fast' failed
-make: *** [cmTC_91778/fast] Error 2
+Makefile:126: recipe for target 'cmTC_ccdea/fast' failed
+make: *** [cmTC_ccdea/fast] Error 2
 
 
 Determining if the include file pgm.h exists failed with the following output:
 Change Dir: /home/boocax/UstarService/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c5ec4/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c5ec4.dir/build.make CMakeFiles/cmTC_c5ec4.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_30b87/fast"
+/usr/bin/make -f CMakeFiles/cmTC_30b87.dir/build.make CMakeFiles/cmTC_30b87.dir/build
 make[1]: Entering directory '/home/boocax/UstarService/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c5ec4.dir/CheckIncludeFile.cxx.o
-/usr/bin/c++      -o CMakeFiles/cmTC_c5ec4.dir/CheckIncludeFile.cxx.o -c /home/boocax/UstarService/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Building CXX object CMakeFiles/cmTC_30b87.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++      -o CMakeFiles/cmTC_30b87.dir/CheckIncludeFile.cxx.o -c /home/boocax/UstarService/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
 /home/boocax/UstarService/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:17: fatal error: pgm.h: 没有那个文件或目录
 compilation terminated.
-CMakeFiles/cmTC_c5ec4.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_c5ec4.dir/CheckIncludeFile.cxx.o' failed
-make[1]: *** [CMakeFiles/cmTC_c5ec4.dir/CheckIncludeFile.cxx.o] Error 1
+CMakeFiles/cmTC_30b87.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_30b87.dir/CheckIncludeFile.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_30b87.dir/CheckIncludeFile.cxx.o] Error 1
 make[1]: Leaving directory '/home/boocax/UstarService/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_c5ec4/fast' failed
-make: *** [cmTC_c5ec4/fast] Error 2
+Makefile:126: recipe for target 'cmTC_30b87/fast' failed
+make: *** [cmTC_30b87/fast] Error 2
 
 
