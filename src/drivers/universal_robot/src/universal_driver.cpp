@@ -71,7 +71,6 @@ void UniversalDrive::CheckData() {
         info_.stamp = four_wheel.stamp;
         module_type_.four_wheel = 1;
         if (four_wheel.type) {
-            ROS_INFO("odom: %d", four_wheel.stamp);
             info_.vel = (four_wheel.left_front + four_wheel.right_front)
                         * kinematic_.wheel_radius * 2 * M_PI / (2 * kinematic_.slow_down * 60);
             //info_.w = (four_wheel.right_front - four_wheel.left_front) * kinematic_.wheel_radius * 2 * M_PI / (kinematic_.wheel_gauge * kinematic_.slow_down * 60);
@@ -148,10 +147,6 @@ void UniversalDrive::CheckData() {
         imu_msgs_.linear_acceleration.z = imu.acc_z;
         if (imu.type)
         {
-            ROS_INFO("imu: %d", imu.stamp);
-            //ROS_INFO_STREAM(imu.stamp);
-            //ROS_INFO_STREAM(fabs(imu.stamp - last_time_imu));
-            //ROS_INFO("a: %.3lf, av: %.3lf", imu.yaw, imu.gro_z);
             info_.d_w = fabs(imu.stamp - last_time_imu) / 1000 * imu.gro_z * M_PI / 180.0;
             //info_.d_w = imu.yaw;
             //info_.d_w = imu.yaw - yaw;
