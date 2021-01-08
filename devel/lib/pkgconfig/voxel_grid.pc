@@ -1,0 +1,8 @@
+prefix=/home/boocax/UstarService/devel
+
+Name: voxel_grid
+Description: Description of voxel_grid
+Version: 0.0.0
+Cflags: -I/home/boocax/UstarService/src/voxel_grid/include
+Libs: -L${prefix}/lib -lvoxel_grid
+Requires: roscpp

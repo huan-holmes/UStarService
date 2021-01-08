@@ -282,6 +282,7 @@ planning/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory
 planning/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.o: /home/boocax/UstarService/src/planning/base_local_planner/src/trajectory_planner_ros.cpp
 planning/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.o: /home/boocax/UstarService/src/planning/nav_core/include/nav_core/base_local_planner.h
 planning/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.o: /home/boocax/UstarService/src/planning/nav_core/include/nav_core/parameter_magic.h
+planning/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.o: /home/boocax/UstarService/src/voxel_grid/include/voxel_grid/voxel_grid.h
 planning/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.o: /opt/ros/kinetic/include/angles/angles.h
 planning/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.o: /opt/ros/kinetic/include/class_loader/./class_loader.hpp
 planning/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.o: /opt/ros/kinetic/include/class_loader/./multi_library_class_loader.hpp
@@ -426,7 +427,6 @@ planning/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory
 planning/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.o: /opt/ros/kinetic/include/tf2_msgs/FrameGraphResponse.h
 planning/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.o: /opt/ros/kinetic/include/tf2_ros/buffer.h
 planning/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.o: /opt/ros/kinetic/include/tf2_ros/buffer_interface.h
-planning/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.o: /opt/ros/kinetic/include/voxel_grid/voxel_grid.h
 planning/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
 planning/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
 planning/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.o: /usr/include/eigen3/Eigen/Core

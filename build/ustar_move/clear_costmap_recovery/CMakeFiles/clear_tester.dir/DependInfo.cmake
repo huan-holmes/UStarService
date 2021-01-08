@@ -20,6 +20,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/boocax/UstarService/src/ustar_move/clear_costmap_recovery/include"
   "/home/boocax/UstarService/devel/include"
   "/home/boocax/UstarService/src/costmap/include"
+  "/home/boocax/UstarService/src/voxel_grid/include"
   "/home/boocax/UstarService/src/planning/nav_core/include"
   "/opt/ros/kinetic/include"
   "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
@@ -33,6 +34,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/boocax/UstarService/build/gtest/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   "/home/boocax/UstarService/build/costmap/CMakeFiles/layers.dir/DependInfo.cmake"
   "/home/boocax/UstarService/build/costmap/CMakeFiles/costmap.dir/DependInfo.cmake"
+  "/home/boocax/UstarService/build/voxel_grid/CMakeFiles/voxel_grid.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

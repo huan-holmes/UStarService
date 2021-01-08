@@ -681,6 +681,7 @@ costmap/CMakeFiles/layers.dir/src/costmap/plugins/voxel_layer.cpp.o: /home/booca
 costmap/CMakeFiles/layers.dir/src/costmap/plugins/voxel_layer.cpp.o: /home/boocax/UstarService/src/costmap/include/costmap/utils/observation.h
 costmap/CMakeFiles/layers.dir/src/costmap/plugins/voxel_layer.cpp.o: /home/boocax/UstarService/src/costmap/include/costmap/utils/observation_buffer.h
 costmap/CMakeFiles/layers.dir/src/costmap/plugins/voxel_layer.cpp.o: /home/boocax/UstarService/src/costmap/src/costmap/plugins/voxel_layer.cpp
+costmap/CMakeFiles/layers.dir/src/costmap/plugins/voxel_layer.cpp.o: /home/boocax/UstarService/src/voxel_grid/include/voxel_grid/voxel_grid.h
 costmap/CMakeFiles/layers.dir/src/costmap/plugins/voxel_layer.cpp.o: /opt/ros/kinetic/include/class_loader/./class_loader.hpp
 costmap/CMakeFiles/layers.dir/src/costmap/plugins/voxel_layer.cpp.o: /opt/ros/kinetic/include/class_loader/class_loader.h
 costmap/CMakeFiles/layers.dir/src/costmap/plugins/voxel_layer.cpp.o: /opt/ros/kinetic/include/class_loader/class_loader_core.hpp
@@ -819,7 +820,6 @@ costmap/CMakeFiles/layers.dir/src/costmap/plugins/voxel_layer.cpp.o: /opt/ros/ki
 costmap/CMakeFiles/layers.dir/src/costmap/plugins/voxel_layer.cpp.o: /opt/ros/kinetic/include/tf2_ros/buffer.h
 costmap/CMakeFiles/layers.dir/src/costmap/plugins/voxel_layer.cpp.o: /opt/ros/kinetic/include/tf2_ros/buffer_interface.h
 costmap/CMakeFiles/layers.dir/src/costmap/plugins/voxel_layer.cpp.o: /opt/ros/kinetic/include/tf2_ros/message_filter.h
-costmap/CMakeFiles/layers.dir/src/costmap/plugins/voxel_layer.cpp.o: /opt/ros/kinetic/include/voxel_grid/voxel_grid.h
 costmap/CMakeFiles/layers.dir/src/costmap/plugins/voxel_layer.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
 costmap/CMakeFiles/layers.dir/src/costmap/plugins/voxel_layer.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
 costmap/CMakeFiles/layers.dir/src/costmap/plugins/voxel_layer.cpp.o: /usr/include/eigen3/Eigen/Core

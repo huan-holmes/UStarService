@@ -283,6 +283,7 @@ planning/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory
  /home/boocax/UstarService/src/planning/base_local_planner/src/trajectory_planner_ros.cpp
  /home/boocax/UstarService/src/planning/nav_core/include/nav_core/base_local_planner.h
  /home/boocax/UstarService/src/planning/nav_core/include/nav_core/parameter_magic.h
+ /home/boocax/UstarService/src/voxel_grid/include/voxel_grid/voxel_grid.h
  /opt/ros/kinetic/include/angles/angles.h
  /opt/ros/kinetic/include/class_loader/./class_loader.hpp
  /opt/ros/kinetic/include/class_loader/./multi_library_class_loader.hpp
@@ -427,7 +428,6 @@ planning/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory
  /opt/ros/kinetic/include/tf2_msgs/FrameGraphResponse.h
  /opt/ros/kinetic/include/tf2_ros/buffer.h
  /opt/ros/kinetic/include/tf2_ros/buffer_interface.h
- /opt/ros/kinetic/include/voxel_grid/voxel_grid.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
  /usr/include/eigen3/Eigen/Core

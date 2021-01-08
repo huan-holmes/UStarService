@@ -1833,6 +1833,7 @@ planning/base_local_planner/CMakeFiles/base_local_planner.dir/src/voxel_grid_mod
  /home/boocax/UstarService/src/planning/base_local_planner/include/base_local_planner/voxel_grid_model.h
  /home/boocax/UstarService/src/planning/base_local_planner/include/base_local_planner/world_model.h
  /home/boocax/UstarService/src/planning/base_local_planner/src/voxel_grid_model.cpp
+ /home/boocax/UstarService/src/voxel_grid/include/voxel_grid/voxel_grid.h
  /opt/ros/kinetic/include/geometry_msgs/Point.h
  /opt/ros/kinetic/include/geometry_msgs/Point32.h
  /opt/ros/kinetic/include/geometry_msgs/Polygon.h
@@ -1900,6 +1901,5 @@ planning/base_local_planner/CMakeFiles/base_local_planner.dir/src/voxel_grid_mod
  /opt/ros/kinetic/include/sensor_msgs/impl/point_cloud2_iterator.h
  /opt/ros/kinetic/include/sensor_msgs/point_cloud2_iterator.h
  /opt/ros/kinetic/include/std_msgs/Header.h
- /opt/ros/kinetic/include/voxel_grid/voxel_grid.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h

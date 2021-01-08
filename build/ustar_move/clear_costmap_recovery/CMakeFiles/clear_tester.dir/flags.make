@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"clear_costmap_recovery\"
 
-CXX_INCLUDES = -I/home/boocax/UstarService/src/ustar_move/clear_costmap_recovery/include -I/home/boocax/UstarService/devel/include -I/home/boocax/UstarService/src/costmap/include -I/home/boocax/UstarService/src/planning/nav_core/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 -I/home/boocax/UstarService/src/ustar_move/clear_costmap_recovery/test 
+CXX_INCLUDES = -I/home/boocax/UstarService/src/ustar_move/clear_costmap_recovery/include -I/home/boocax/UstarService/devel/include -I/home/boocax/UstarService/src/costmap/include -I/home/boocax/UstarService/src/voxel_grid/include -I/home/boocax/UstarService/src/planning/nav_core/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 -I/home/boocax/UstarService/src/ustar_move/clear_costmap_recovery/test 
 

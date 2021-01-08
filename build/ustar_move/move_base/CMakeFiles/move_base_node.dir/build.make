@@ -101,7 +101,7 @@ move_base_node_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/move_base/move_base: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/boocax/UstarService/devel/lib/move_base/move_base: /opt/ros/kinetic/lib/liblaser_geometry.so
 /home/boocax/UstarService/devel/lib/move_base/move_base: /opt/ros/kinetic/lib/libtf.so
-/home/boocax/UstarService/devel/lib/move_base/move_base: /opt/ros/kinetic/lib/libvoxel_grid.so
+/home/boocax/UstarService/devel/lib/move_base/move_base: /home/boocax/UstarService/devel/lib/libvoxel_grid.so
 /home/boocax/UstarService/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
 /home/boocax/UstarService/devel/lib/move_base/move_base: /opt/ros/kinetic/lib/libclass_loader.so
 /home/boocax/UstarService/devel/lib/move_base/move_base: /usr/lib/libPocoFoundation.so

@@ -108,7 +108,6 @@ point_grid_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/base_local_planner/point_grid: /opt/ros/kinetic/lib/libactionlib.so
 /home/boocax/UstarService/devel/lib/base_local_planner/point_grid: /opt/ros/kinetic/lib/libmessage_filters.so
 /home/boocax/UstarService/devel/lib/base_local_planner/point_grid: /opt/ros/kinetic/lib/libtf2.so
-/home/boocax/UstarService/devel/lib/base_local_planner/point_grid: /opt/ros/kinetic/lib/libvoxel_grid.so
 /home/boocax/UstarService/devel/lib/base_local_planner/point_grid: /opt/ros/kinetic/lib/libroscpp.so
 /home/boocax/UstarService/devel/lib/base_local_planner/point_grid: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 /home/boocax/UstarService/devel/lib/base_local_planner/point_grid: /usr/lib/x86_64-linux-gnu/libboost_signals.so
@@ -149,7 +148,7 @@ point_grid_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/base_local_planner/point_grid: /opt/ros/kinetic/lib/libactionlib.so
 /home/boocax/UstarService/devel/lib/base_local_planner/point_grid: /opt/ros/kinetic/lib/libmessage_filters.so
 /home/boocax/UstarService/devel/lib/base_local_planner/point_grid: /opt/ros/kinetic/lib/libtf2.so
-/home/boocax/UstarService/devel/lib/base_local_planner/point_grid: /opt/ros/kinetic/lib/libvoxel_grid.so
+/home/boocax/UstarService/devel/lib/base_local_planner/point_grid: /home/boocax/UstarService/devel/lib/libvoxel_grid.so
 /home/boocax/UstarService/devel/lib/base_local_planner/point_grid: /opt/ros/kinetic/lib/libroscpp.so
 /home/boocax/UstarService/devel/lib/base_local_planner/point_grid: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 /home/boocax/UstarService/devel/lib/base_local_planner/point_grid: /usr/lib/x86_64-linux-gnu/libboost_signals.so

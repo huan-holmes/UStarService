@@ -96,7 +96,6 @@ move_base_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/libmove_base.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/boocax/UstarService/devel/lib/libmove_base.so: /opt/ros/kinetic/lib/liblaser_geometry.so
 /home/boocax/UstarService/devel/lib/libmove_base.so: /opt/ros/kinetic/lib/libtf.so
-/home/boocax/UstarService/devel/lib/libmove_base.so: /opt/ros/kinetic/lib/libvoxel_grid.so
 /home/boocax/UstarService/devel/lib/libmove_base.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
 /home/boocax/UstarService/devel/lib/libmove_base.so: /opt/ros/kinetic/lib/libclass_loader.so
 /home/boocax/UstarService/devel/lib/libmove_base.so: /usr/lib/libPocoFoundation.so
@@ -138,7 +137,7 @@ move_base_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/libmove_base.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/boocax/UstarService/devel/lib/libmove_base.so: /opt/ros/kinetic/lib/liblaser_geometry.so
 /home/boocax/UstarService/devel/lib/libmove_base.so: /opt/ros/kinetic/lib/libtf.so
-/home/boocax/UstarService/devel/lib/libmove_base.so: /opt/ros/kinetic/lib/libvoxel_grid.so
+/home/boocax/UstarService/devel/lib/libmove_base.so: /home/boocax/UstarService/devel/lib/libvoxel_grid.so
 /home/boocax/UstarService/devel/lib/libmove_base.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
 /home/boocax/UstarService/devel/lib/libmove_base.so: /opt/ros/kinetic/lib/libclass_loader.so
 /home/boocax/UstarService/devel/lib/libmove_base.so: /usr/lib/libPocoFoundation.so

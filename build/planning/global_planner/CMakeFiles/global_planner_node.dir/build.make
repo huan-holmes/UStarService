@@ -96,7 +96,6 @@ global_planner_node_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/global_planner/global_planner_node: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/boocax/UstarService/devel/lib/global_planner/global_planner_node: /opt/ros/kinetic/lib/liblaser_geometry.so
 /home/boocax/UstarService/devel/lib/global_planner/global_planner_node: /opt/ros/kinetic/lib/libtf.so
-/home/boocax/UstarService/devel/lib/global_planner/global_planner_node: /opt/ros/kinetic/lib/libvoxel_grid.so
 /home/boocax/UstarService/devel/lib/global_planner/global_planner_node: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
 /home/boocax/UstarService/devel/lib/global_planner/global_planner_node: /opt/ros/kinetic/lib/libclass_loader.so
 /home/boocax/UstarService/devel/lib/global_planner/global_planner_node: /usr/lib/libPocoFoundation.so
@@ -135,7 +134,7 @@ global_planner_node_EXTERNAL_OBJECTS =
 /home/boocax/UstarService/devel/lib/global_planner/global_planner_node: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/boocax/UstarService/devel/lib/global_planner/global_planner_node: /opt/ros/kinetic/lib/liblaser_geometry.so
 /home/boocax/UstarService/devel/lib/global_planner/global_planner_node: /opt/ros/kinetic/lib/libtf.so
-/home/boocax/UstarService/devel/lib/global_planner/global_planner_node: /opt/ros/kinetic/lib/libvoxel_grid.so
+/home/boocax/UstarService/devel/lib/global_planner/global_planner_node: /home/boocax/UstarService/devel/lib/libvoxel_grid.so
 /home/boocax/UstarService/devel/lib/global_planner/global_planner_node: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
 /home/boocax/UstarService/devel/lib/global_planner/global_planner_node: /opt/ros/kinetic/lib/libclass_loader.so
 /home/boocax/UstarService/devel/lib/global_planner/global_planner_node: /usr/lib/libPocoFoundation.so

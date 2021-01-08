@@ -24,6 +24,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/boocax/UstarService/devel/include"
   "/home/boocax/UstarService/src/costmap/include"
+  "/home/boocax/UstarService/src/voxel_grid/include"
   "/opt/ros/kinetic/include"
   "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/opt/ros/kinetic/share/orocos_kdl/../../include"
@@ -33,6 +34,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/boocax/UstarService/build/costmap/CMakeFiles/costmap.dir/DependInfo.cmake"
+  "/home/boocax/UstarService/build/voxel_grid/CMakeFiles/voxel_grid.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
