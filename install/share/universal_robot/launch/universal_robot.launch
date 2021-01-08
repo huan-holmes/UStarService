@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="universal_robot" type="universal_robot" name="universal_driver_node" output="screen">
+       <param name="read_from_rosparam"  value="false"/>      
+    </node>
+</launch>
