@@ -82,6 +82,7 @@ public:
 
 
     void PublicOdom(const double v ,const double distance );
+    void PublicImu(const float av);
 
     double GetDtheta();
 
@@ -97,7 +98,7 @@ public:
     nav_msgs::Odometry odom_msg;
     tf::TransformBroadcaster odom_broadcaster; //里程计与base_link之间的变换发布
     ros::Subscriber sub_cmd_vel , sub_imu_msgs ;
-    ros::Publisher odom_pub;
+    ros::Publisher odom_pub, imu_pub_;
     std::string odom_dev_;
     KinematicParam kinematic_;
     sensor_msgs::Imu imu_msgs_;

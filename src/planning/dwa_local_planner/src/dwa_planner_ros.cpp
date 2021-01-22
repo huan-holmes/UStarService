@@ -175,14 +175,20 @@ namespace dwa_local_planner {
     */
 
     //pass along drive commands
-    //ROS_INFO_STREAM(drive_cmds);
+    //ROS_INFO_STREAM(drive_cmds); 
     cmd_vel.linear.x = drive_cmds.pose.position.x;
     cmd_vel.linear.y = drive_cmds.pose.position.y;
     cmd_vel.angular.z = tf2::getYaw(drive_cmds.pose.orientation);
     //if we cannot move... tell someone
     std::vector<geometry_msgs::PoseStamped> local_plan;
+    if (fabs(cmd_vel.linear.x) < 0.001)
+    {
+      ROS_INFO("vx: %.3f, vy: %.3f, va: %.3f", cmd_vel.linear.x, cmd_vel.linear.y, cmd_vel.angular.z);
+      cmd_vel.angular.z = 0;
+    }
     if(path.cost_ < 0) {
-      ROS_DEBUG_NAMED("dwa_local_planner",
+      ROS_INFO("cost: %.3f", path.cost_);
+      ROS_WARN_NAMED("dwa_local_planner",
           "The dwa local planner failed to find a valid plan, cost functions discarded all candidates. This can mean there is an obstacle too close to the robot.");
       local_plan.clear();
       publishLocalPlan(local_plan);
@@ -223,7 +229,7 @@ namespace dwa_local_planner {
     std::vector<geometry_msgs::PoseStamped> transformed_plan;
     if (!planner_util_.getLocalPlan(current_pose_, transformed_plan)) {
       ROS_ERROR("Could not get local plan");
-      return false;
+      return false; 
     }
     //if the global plan passed in is empty... we won't do anything
     if(transformed_plan.empty()) {
@@ -249,7 +255,7 @@ namespace dwa_local_planner {
           current_pose_,
           boost::bind(&DWAPlanner::checkTrajectory, dp_, _1, _2, _3));
     } else {
-      bool isOk = dwaComputeVelocityCommands(current_pose_, cmd_vel);
+      bool isOk = dwaComputeVelocityCommands(current_pose_, cmd_vel); 
       //ROS_INFO_STREAM(cmd_vel);
       if (isOk) {
         publishGlobalPlan(transformed_plan);

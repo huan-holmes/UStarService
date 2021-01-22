@@ -73,22 +73,22 @@ void UniversalDrive::CheckData() {
         if (four_wheel.type) {
             info_.vel = (four_wheel.left_front + four_wheel.right_front)
                         * kinematic_.wheel_radius * 2 * M_PI / (2 * kinematic_.slow_down * 60);
-            //info_.w = (four_wheel.right_front - four_wheel.left_front) * kinematic_.wheel_radius * 2 * M_PI / (kinematic_.wheel_gauge * kinematic_.slow_down * 60);
+            info_.w = (four_wheel.right_front - four_wheel.left_front) * kinematic_.wheel_radius * 2 * M_PI / (kinematic_.wheel_gauge * kinematic_.slow_down * 60);
             //if (four_wheel.right_front > 0)
-            if (four_wheel.right_front != four_wheel.left_front)
-            {
-                info_.w = (four_wheel.right_front + 1 - four_wheel.left_front) * kinematic_.wheel_radius * 2 * M_PI / (kinematic_.wheel_gauge * kinematic_.slow_down * 60);
-                //ROS_INFO("right+1: %d, left: %d", four_wheel.right_front + 1, four_wheel.left_front);
-            }
-            else
-            {
-                info_.w = (four_wheel.right_front - four_wheel.left_front) * kinematic_.wheel_radius * 2 * M_PI / (kinematic_.wheel_gauge * kinematic_.slow_down * 60);
-                //ROS_INFO("right: %d, left: %d", four_wheel.right_front, four_wheel.left_front);
-            }
+            // if (four_wheel.right_front != four_wheel.left_front)
+            // {
+            //     info_.w = (four_wheel.right_front + 1 - four_wheel.left_front) * kinematic_.wheel_radius * 2 * M_PI / (kinematic_.wheel_gauge * kinematic_.slow_down * 60);
+            //     //ROS_INFO("right+1: %d, left: %d", four_wheel.right_front + 1, four_wheel.left_front);
+            // }
+            // else
+            // {
+            //     info_.w = (four_wheel.right_front - four_wheel.left_front) * kinematic_.wheel_radius * 2 * M_PI / (kinematic_.wheel_gauge * kinematic_.slow_down * 60);
+            //     //ROS_INFO("right: %d, left: %d", four_wheel.right_front, four_wheel.left_front);
+            // }
             // if (four_wheel.right_front < 0)
             //     info_.w = (four_wheel.right_front + 1 - four_wheel.left_front) * kinematic_.wheel_radius * 2 * M_PI / (kinematic_.wheel_gauge * kinematic_.slow_down * 60);
             info_.distance = fabs(four_wheel.stamp - last_time) * info_.vel / 1000;
-            //info_.d_w = fabs(four_wheel.stamp - last_time) * info_.w / 1000;
+            info_.d_w = fabs(four_wheel.stamp - last_time) * info_.w / 1000;
         }
         last_time = four_wheel.stamp;
         //std::cout << four_wheel.stamp<< " "<< four_wheel.type<< " "<< four_wheel.left_back
@@ -130,30 +130,41 @@ void UniversalDrive::CheckData() {
         last_time = diff.stamp;
         return;
     }
+    // if (ImuFlag == packet_[1])
+    // {
+    //     static Imu imu;
+    //     memcpy(&imu, &packet_[2], sizeof(Imu));
+    //     static double last_time_imu = imu.stamp;
+    //     static ros::Time last_time_i = ros::Time();
+    //     static float yaw = imu.yaw;
+    //     now_time_ = ros::Time::now();
+    //     module_type_.imu_msg = 1;
+    //     imu_msgs_.angular_velocity.x = imu.gro_x;
+    //     imu_msgs_.angular_velocity.y = imu.gro_y;
+    //     imu_msgs_.angular_velocity.z = imu.gro_z;
+    //     imu_msgs_.linear_acceleration.x = imu.acc_x;
+    //     imu_msgs_.linear_acceleration.y = imu.acc_y;
+    //     imu_msgs_.linear_acceleration.z = imu.acc_z;
+    //     if (imu.type)
+    //     {
+    //         info_.d_w = fabs(imu.stamp - last_time_imu) / 1000 * imu.gro_z * M_PI / 180.0;
+    //         //info_.d_w = imu.yaw;
+    //         //info_.d_w = imu.yaw - yaw;
+    //     }
+    //     last_time_imu = imu.stamp;
+    //     //last_time_i = now_time_;
+    //     return;
+    // }
     if (ImuFlag == packet_[1])
     {
         static Imu imu;
         memcpy(&imu, &packet_[2], sizeof(Imu));
-        static double last_time_imu = imu.stamp;
-        static ros::Time last_time_i = ros::Time();
-        static float yaw = imu.yaw;
-        now_time_ = ros::Time::now();
-        module_type_.imu_msg = 1;
-        imu_msgs_.angular_velocity.x = imu.gro_x;
-        imu_msgs_.angular_velocity.y = imu.gro_y;
-        imu_msgs_.angular_velocity.z = imu.gro_z;
+        imu_msgs_.angular_velocity.x = imu.gro_x * M_PI / 180.0;
+        imu_msgs_.angular_velocity.y = imu.gro_y * M_PI / 180.0;
+        imu_msgs_.angular_velocity.z = imu.gro_z * M_PI / 180.0;
         imu_msgs_.linear_acceleration.x = imu.acc_x;
         imu_msgs_.linear_acceleration.y = imu.acc_y;
         imu_msgs_.linear_acceleration.z = imu.acc_z;
-        if (imu.type)
-        {
-            info_.d_w = fabs(imu.stamp - last_time_imu) / 1000 * imu.gro_z * M_PI / 180.0;
-            //info_.d_w = imu.yaw;
-            //info_.d_w = imu.yaw - yaw;
-        }
-        last_time_imu = imu.stamp;
-        //last_time_i = now_time_;
-        return;
     }
 
 
@@ -367,6 +378,7 @@ int UniversalDrive::SerialSet(int fd, int speed, int flow_ctrl, int databits, in
 
 UniversalNode::UniversalNode() {
     odom_pub = nh.advertise<nav_msgs::Odometry>("odom", 1); //
+    imu_pub_ = nh.advertise<sensor_msgs::Imu>("imu", 1);
 
     sub_cmd_vel = nh.subscribe("cmd_vel", 1, &UniversalNode::control_vel , this);
     sub_imu_msgs = nh.subscribe("imu", 1, &UniversalNode::get_imu_msgs , this);
@@ -432,6 +444,7 @@ void UniversalNode::Run() {
             num = 0;
         }
         PublicOdom(drive_.info_.vel, drive_.info_.distance);
+        PublicImu(imu_msgs_.angular_velocity.z);
         last_mseconds = drive_.info_.stamp ;
         loop_rate.sleep();
         ros::spinOnce();
@@ -479,7 +492,13 @@ void UniversalNode::PublicOdom(const double v, const double distance) {
     odom_broadcaster.sendTransform(odom_trans);
     odom_pub.publish(odom_msg);
 }
- 
+void UniversalNode::PublicImu(const float av)
+{
+    imu_msgs_.header.frame_id = "imu";
+    imu_msgs_.header.stamp = ros::Time::now();
+    imu_msgs_.angular_velocity.z = av;
+    imu_pub_.publish(imu_msgs_);
+}
 
 
 double UniversalNode::GetDtheta() {

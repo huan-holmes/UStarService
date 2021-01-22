@@ -259,6 +259,7 @@ bool LatchedStopRotateController::computeVelocityCommandsStopRotate(geometry_msg
         ROS_INFO("Error when rotating.");
         return false;
       }
+      ROS_INFO_STREAM("rotating_to_goal_: Rotating...");
       ROS_DEBUG("Rotating...");
     }
   }
