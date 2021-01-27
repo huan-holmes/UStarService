@@ -188,7 +188,7 @@ void UniversalDrive::CheckData()
             imu_msgs_.linear_acceleration.x = imu.acc_x;
             imu_msgs_.linear_acceleration.y = imu.acc_y;
             imu_msgs_.linear_acceleration.z = imu.acc_z;
-            ROS_INFO("gro_z: %.3f, angular_z: %.3f", imu.gro_x, imu_msgs_.angular_velocity.z);
+            //ROS_INFO("gro_z: %.3f, angular_z: %.3f", imu.gro_x, imu_msgs_.angular_velocity.z);
         }
         return;
     }
