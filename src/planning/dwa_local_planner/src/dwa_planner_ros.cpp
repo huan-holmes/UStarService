@@ -179,6 +179,11 @@ namespace dwa_local_planner {
     cmd_vel.linear.x = drive_cmds.pose.position.x;
     cmd_vel.linear.y = drive_cmds.pose.position.y;
     cmd_vel.angular.z = tf2::getYaw(drive_cmds.pose.orientation);
+    if (fabs(cmd_vel.linear.x) < 0.001)
+    {
+      ROS_INFO("vx: %.3f, vy: %.3f, va: %.3f", cmd_vel.linear.x, cmd_vel.linear.y, cmd_vel.angular.z);
+      cmd_vel.angular.z = 0;
+    }
     //if we cannot move... tell someone
     std::vector<geometry_msgs::PoseStamped> local_plan;
     if(path.cost_ < 0) {
