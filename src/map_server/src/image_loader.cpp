@@ -11,7 +11,7 @@
 #include <LinearMath/btQuaternion.h>
 
 #include "map_server/image_loader.h"
-
+#include "ros/ros.h"
 // compute linear index for given map coords
 #define MAP_IDX(sx, i, j) ((sx) * (j) + (i))
 
@@ -66,6 +66,8 @@ loadMapFromFile(nav_msgs::GetMap::Response* resp,
   // Get values that we'll need to iterate through the pixels
   rowstride = img->pitch;
   n_channels = img->format->BytesPerPixel;
+  ROS_INFO("mode: %d", mode);
+  ROS_INFO("chanel: %d", n_channels);
 
   // NOTE: Trinary mode still overrides here to preserve existing behavior.
   // Alpha will be averaged in with color channels when using trinary mode.
